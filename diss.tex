@@ -1,412 +1,351 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Template for a UBC-compliant dissertation
-% At the minimum, you will need to change the information found
-% after the "Document meta-data"
-%
-%!TEX TS-program = pdflatex
-%!TEX encoding = UTF-8 Unicode
+\documentclass[msc,oneside]{ubcthesis}%msc, phd, masc, ma, or meng
 
-%% The ubcdiss class provides several options:
-%%   gpscopy (aka fogscopy)
-%%       set parameters to exactly how GPS specifies
-%%         * single-sided
-%%         * page-numbering starts from title page
-%%         * the lists of figures and tables have each entry prefixed
-%%           with 'Figure' or 'Table'
-%%       This can be tested by `\ifgpscopy ... \else ... \fi'
-%%   10pt, 11pt, 12pt
-%%       set default font size
-%%   oneside, twoside
-%%       whether to format for single-sided or double-sided printing
-%%   balanced
-%%       when double-sided, ensure page content is centred
-%%       rather than slightly offset (the default)
-%%   singlespacing, onehalfspacing, doublespacing
-%%       set default inter-line text spacing; the ubcdiss class
-%%       provides \textspacing to revert to this configured spacing
-%%   draft
-%%       disable more intensive processing, such as including
-%%       graphics, etc.
-%%
+% ================================================================================
+% CHANGE THE FOLLOWING ACCORDING TO YOUR PROGRAM/THESIS
+% ================================================================================
+\institution{The University Of British Columbia}
+\faculty{THE COLLEGE OF GRADUATE STUDIES}
+\institutionaddress{Okanagan}
 
-% For submission to GPS
-\documentclass[gpscopy,onehalfspacing,11pt]{ubcdiss}
+% For an Honours thesis, use \documentclasss[msc,oneside]{ubcthesis} above and
+% uncomment and modify the next line:
+%\degreetitle{B.Sc. Computer Science Honours}
 
-% For your own copies (looks nicer)
-% \documentclass[balanced,twoside,11pt]{ubcdiss}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-%% FONTS:
-%% 
-%% The defaults below configures Times Roman for the serif font,
-%% Helvetica for the sans serif font, and Courier for the
-%% typewriter-style font.  Configuring fonts can be time
-%% consuming; we recommend skipping to END FONTS!
-%% 
-%% If you're feeling brave, have lots of time, and wish to use one
-%% your platform's native fonts, see the commented out bits below for
-%% XeTeX/XeLaTeX.  This is not for the faint at heart. 
-%% (And shouldn't you be writing? :-)
-%%
-
-%% NFSS font specification (New Font Selection Scheme)
-\usepackage{times,mathptmx,courier}
-\usepackage[scaled=.92]{helvet}
-
-%% Math or theory people may want to include the handy AMS macros
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-%% Added these packages myself
-\usepackage{mhchem}
-
-%% The pifont package provides access to the elements in the dingbat font.   
-%% Use \ding{##} for a particular dingbat (see p7 of psnfss2e.pdf)
-%%   Useful:
-%%     51,52 different forms of a checkmark
-%%     54,55,56 different forms of a cross (saltyre)
-%%     172-181 are 1-10 in open circle (serif)
-%%     182-191 are 1-10 black circle (serif)
-%%     192-201 are 1-10 in open circle (sans serif)
-%%     202-211 are 1-10 in black circle (sans serif)
-%% \begin{dinglist}{##}\item... or dingautolist (which auto-increments)
-%% to create a bullet list with the provided character.
-\usepackage{pifont}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Configure fonts for XeTeX / XeLaTeX using the fontspec package.
-%% Be sure to check out the fontspec documentation.
-%\usepackage{fontspec,xltxtra,xunicode}	% required
-%\defaultfontfeatures{Mapping=tex-text}	% recommended
-%% Minion Pro and Myriad Pro are shipped with some versions of
-%% Adobe Reader.  Adobe representatives have commented that these
-%% fonts can be used outside of Adobe Reader.
-%\setromanfont[Numbers=OldStyle]{Minion Pro}
-%\setsansfont[Numbers=OldStyle,Scale=MatchLowercase]{Myriad Pro}
-%\setmonofont[Scale=MatchLowercase]{Andale Mono}
-
-%% Other alternatives:
-%\setromanfont[Mapping=tex-text]{Adobe Caslon}
-%\setsansfont[Scale=MatchLowercase]{Gill Sans}
-%\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Futura}
-%\setmonofont[Scale=MatchLowercase]{Andale Mono}
-%\newfontfamily{\SYM}[Scale=0.9]{Zapf Dingbats}
-%% END FONTS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{A Computational Examination of the Effects of Alkali and
+  Alkaline Earth Metals on Hydrogen Atom Abstraction Reactions by
+  Oxygen Centered Radicals}
+%\subtitle{With a Subtitle}
+\author{Jeffrey A. van Santen} % Name as on Diplome
+\copyrightyear{2017}
+\submitdate{June 2017} % date of approved thesis
+\program{Chemistry}%or Mathematics, or Interdisciplinary Studies
+\previousdegree{B.Sc. Hons., The University of British Columbia, 2015}
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-%% Recommended packages
-%%
-\usepackage{checkend}	% better error messages on left-open environments
-\usepackage{graphicx}	% for incorporating external images
-
-%% booktabs: provides some special commands for typesetting tables as used
-%% in excellent journals.  Ignore the examples in the Lamport book!
-\usepackage{booktabs}
-
-%% listings: useful support for including source code listings, with
-%% optional special keyword formatting.  The \lstset{} causes
-%% the text to be typeset in a smaller sans serif font, with
-%% proportional spacing.
-\usepackage{listings}
-\lstset{basicstyle=\sffamily\scriptsize,showstringspaces=false,fontadjust}
-
-%% The acronym package provides support for defining acronyms, providing
-%% their expansion when first used, and building glossaries.  See the
-%% example in glossary.tex and the example usage throughout the example
-%% document.
-%% NOTE: to use \MakeTextLowercase in the \acsfont command below,
-%%   we *must* use the `nohyperlinks' option -- it causes errors with
-%%   hyperref otherwise.  See Section 5.2 in the ``LaTeX 2e for Class
-%%   and Package Writers Guide'' (clsguide.pdf) for details.
-\usepackage[printonlyused,nohyperlinks]{acronym}
-%% The ubcdiss.cls loads the `textcase' package which provides commands
-%% for upper-casing and lower-casing text.  The following causes
-%% the acronym package to typeset acronyms in small-caps
-%% as recommended by Bringhurst.
-\renewcommand{\acsfont}[1]{{\scshape \MakeTextLowercase{#1}}}
-
-%% color: add support for expressing colour models.  Grey can be used
-%% to great effect to emphasize other parts of a graphic or text.
-%% For an excellent set of examples, see Tufte's "Visual Display of
-%% Quantitative Information" or "Envisioning Information".
-\usepackage{color}
-\definecolor{greytext}{gray}{0.5}
-
-%% comment: provides a new {comment} environment: all text inside the
-%% environment is ignored.
-%%   \begin{comment} ignored text ... \end{comment}
-\usepackage{comment}
-
-%% The natbib package provides more sophisticated citing commands
-%% such as \citeauthor{} to provide the author names of a work,
-%% \citet{} to produce an author-and-reference citation,
-%% \citep{} to produce a parenthetical citation.
-%% We use \citeeg{} to provide examples
-\usepackage[numbers,sort&compress]{natbib}
-\newcommand{\citeeg}[1]{\citep[e.g.,][]{#1}}
-
-%% The titlesec package provides commands to vary how chapter and
-%% section titles are typeset.  The following uses more compact
-%% spacings above and below the title.  The titleformat that follow
-%% ensure chapter/section titles are set in singlespace.
-\usepackage[compact]{titlesec}
-\titleformat*{\section}{\singlespacing\raggedright\bfseries\Large}
-\titleformat*{\subsection}{\singlespacing\raggedright\bfseries\large}
-\titleformat*{\subsubsection}{\singlespacing\raggedright\bfseries}
-\titleformat*{\paragraph}{\singlespacing\raggedright\itshape}
-
-%% The caption package provides support for varying how table and
-%% figure captions are typeset.
-\usepackage[format=hang,indention=-1cm,labelfont={bf},margin=1em]{caption}
-
-%% url: for typesetting URLs and smart(er) hyphenation.
-%% \url{http://...} 
-\usepackage{url}
-\urlstyle{sf}	% typeset urls in sans-serif
+% ================================================================================
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-%% Possibly useful packages: you may need to explicitly install
-%% these from CTAN if they aren't part of your distribution;
-%% teTeX seems to ship with a smaller base than MikTeX and MacTeX.
-%%
-%\usepackage{pdfpages}	% insert pages from other PDF files
-%\usepackage{longtable}	% provide tables spanning multiple pages
-%\usepackage{chngpage}	% support changing the page widths on demand
-\usepackage{tabularx}	% an enhanced tabular environment
+\usepackage{ubcostyle} %loads packages
 
-%% enumitem: support pausing and resuming enumerate environments.
-%\usepackage{enumitem}
+% Glossary of notation
+% --------------------
+\usepackage[nosuper,toc]{glossaries}
+\makeglossaries
 
-%% rotating: provides two environments, sidewaystable and sidewaysfigure,
-%% for typesetting tables and figures in landscape mode.  
-%\usepackage{rotating}
+% Index
+% ---------
+\usepackage{makeidx}
+\makeindex
 
-%% subfig: provides for including subfigures within a figure,
-%% and includes being able to separately reference the subfigures.
-%\usepackage{subfig}
+% ===================================================================
+% CHANGE THE FOLLOWING COMMANDS ACCORDING TO YOUR NEEDS
+% ===================================================================
+\newcommand{\R}{\mathbb{R}}   %real number
+\newcommand{\Z}{\mathbb{Z}}   %integers
+\newcommand{\C}{\mathbb{C}}   %complex numbers
 
-%% ragged2e: provides several new new commands \Centering, \RaggedLeft,
-%% \RaggedRight and \justifying and new environments Center, FlushLeft,
-%% FlushRight and justify, which set ragged text and are easily
-%% configurable to allow hyphenation.
-%\usepackage{ragged2e}
+\newcommand{\dom}{\operatorname{dom}}
+\providecommand{\TT}[1]{\Theta\left(#1\right)} % big-Theta
+\providecommand{\OO}[1]{\mathcal{O}\left(#1\right)} % big-Oh
+% ===================================================================
 
-%% The ulem package provides a \sout{} for striking out text and
-%% \xout for crossing out text.  The normalem and normalbf are
-%% necessary as the package messes with the emphasis and bold fonts
-%% otherwise.
-%\usepackage[normalem,normalbf]{ulem}    % for \sout
+%Uncomment the next line if there are more than one appendix
+%\renewcommand*\appendixname{Appendices}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% HYPERREF:
-%% The hyperref package provides for embedding hyperlinks into your
-%% document.  By default the table of contents, references, citations,
-%% and footnotes are hyperlinked.
-%%
-%% Hyperref provides a very handy command for doing cross-references:
-%% \autoref{}.  This is similar to \ref{} and \pageref{} except that
-%% it automagically puts in the *type* of reference.  For example,
-%% referencing a figure's label will put the text `Figure 3.4'.
-%% And the text will be hyperlinked to the appropriate place in the
-%% document.
-%%
-%% Generally hyperref should appear after most other packages
+%If you have a glossary, you can automatically produce it. See
+% http://www.latex-community.org/index.php?option=com_content&view=article&id=263:glossaries-nomenclature-lists-of-symbols-and-acronyms&catid=55:latex-general&Itemid=114
 
-%% The following puts hyperlinks in very faint grey boxes.
-%% The `pagebackref' causes the references in the bibliography to have
-%% back-references to the citing page; `backref' puts the citing section
-%% number.  See further below for other examples of using hyperref.
-%% 2009/12/09: now use `linktocpage' (Jacek Kisynski): GPS now prefers
-%%   that the ToC, LoF, LoT place the hyperlink on the page number,
-%%   rather than the entry text.
-\usepackage[bookmarks,bookmarksnumbered,%
-    allbordercolors={0.8 0.8 0.8},%
-    pagebackref,linktocpage%
-    ]{hyperref}
-%% The following change how the the back-references text is typeset in a
-%% bibliography when `backref' or `pagebackref' are used
-\renewcommand\backrefpagesname{\(\rightarrow\) pages}
-\renewcommand\backref{\textcolor{greytext} \backrefpagesname\ }
-
-%% The following uses most defaults, which causes hyperlinks to be
-%% surrounded by colourful boxes; the colours are only visible in
-%% PDFs and don't show up when printed:
-%\usepackage[bookmarks,bookmarksnumbered]{hyperref}
-
-%% The following disables the colourful boxes around hyperlinks.
-%\usepackage[bookmarks,bookmarksnumbered,pdfborder={0 0 0}]{hyperref}
-
-%% The following disables all hyperlinking, but still enabled use of
-%% \autoref{}
-%\usepackage[draft]{hyperref}
-
-%% The following commands causes chapter and section references to
-%% uppercase the part name.
-\renewcommand{\chapterautorefname}{Chapter}
-\renewcommand{\sectionautorefname}{Section}
-\renewcommand{\subsectionautorefname}{Section}
-\renewcommand{\subsubsectionautorefname}{Section}
-
-%% If you have long page numbers (e.g., roman numbers in the 
-%% preliminary pages for page 28 = xxviii), you might need to
-%% uncomment the following and tweak the \@pnumwidth length
-%% (default: 1.55em).  See the tocloft documentation at
-%% http://www.ctan.org/tex-archive/macros/latex/contrib/tocloft/
-% \makeatletter
-% \renewcommand{\@pnumwidth}{3em}
-% \makeatother
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-%% Some special settings that controls how text is typeset
-%%
-% \raggedbottom		% pages don't have to line up nicely on the last line
-% \sloppy		% be a bit more relaxed in inter-word spacing
-% \clubpenalty=10000	% try harder to avoid orphans
-% \widowpenalty=10000	% try harder to avoid widows
-% \tolerance=1000
-
-%% And include some of our own useful macros
-\input{macros}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-%% Document meta-data: be sure to also change the \hypersetup information
-%%
-
-\title{On the Use of the \texttt{ubcdiss} Template}
-%\subtitle{If you want a subtitle}
-
-\author{Jeffrey A. van Santen}
-\previousdegree{B. Sc. Honours, University of British Columbia, 2015}
-
-% What is this dissertation for?
-\degreetitle{Master of Science}
-
-\institution{The University of British Columbia}
-\campus{Okanagan}
-
-\faculty{Irving K. Barber School of Arts and Science}
-\department{Chemistry}
-\submissionmonth{April}
-\submissionyear{2192}
-
-%% hyperref package provides support for embedding meta-data in .PDF
-%% files
-\hypersetup{
-  pdftitle={Change this title!  (DRAFT: \today)},
-  pdfauthor={Jeffrey A. van Santen},
-  pdfkeywords={Your keywords here}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% 
-%% The document content
-%%
-
-%% LaTeX's \includeonly commands causes any uses of \include{} to only
-%% include files that are in the list.  This is helpful to produce
-%% subsets of your thesis (e.g., for committee members who want to see
-%% the dissertation chapter by chapter).  It also saves time by 
-%% avoiding reprocessing the entire file.
-%\includeonly{intro,conclusions}
-%\includeonly{discussion}
 
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% From Thesis Components: Tradtional Thesis
-%% <http://www.grad.ubc.ca/current-students/dissertation-thesis-preparation/order-components>
+% This starts numbering in Roman numerals as required for the thesis
+% style.
+\frontmatter                    % Mandatory
 
-% Preliminary Pages (numbered in lower case Roman numerals)
-%    1. Title page (mandatory)
-\maketitle
+% The order of the following components should be preserved.  The order
+% listed here is the order currently required by FoGS.
+\maketitle                      % Mandatory
 
-%    2. Abstract (mandatory - maximum 350 words)
+\makeatletter
+
+The undersigned certify that they have read, and recommend to the
+College of Graduate Studies for acceptance, a thesis entitled: {\sc
+  \@title } submitted by {\sc \@author} in partial fulfilment of the
+requirements of the degree of \@degreetitle \makeatother
+
+\newlength{\linespace}
+\setlength{\linespace}{.75cm} %change .75cm to .5cm for smaller space
+                              %between signatures or 1cm if less
+                              %people have to sign
+\vspace{\linespace}\smaller
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% UPDATE THE FOLLOWING AS PER YOUR THESIS COMMITTEE
+
+\noindent\underline{\hspace{30em}} \\
+Supervisor, Professor (please print name and faculty/school above the line)
+
+\vspace{\linespace}
+
+\noindent\underline{\hspace{30em}} \\
+Supervisory Committee Member, Professor (please print name and faculty/school above the line)
+
+\vspace{\linespace}
+
+\noindent\underline{\hspace{30em}} \\
+Supervisory Committee Member, Professor (please print name and faculty/school above the line)
+
+\vspace{\linespace}
+
+\noindent\underline{\hspace{30em}} \\
+University Examiner, Professor (please print name and faculty/school above the line)
+
+\vspace{\linespace}
+
+\noindent\underline{\hspace{30em}} \\
+External Examiner, Professor (please print name and faculty/school above the line)
+
+\vspace{\linespace}
+
+\noindent\underline{\hspace{30em}} \\
+(Date Submitted to Grad Studies)
+
+\vspace{\linespace}
+
+Additional Committee Members include:
+
+\vspace{\linespace}
+
+\noindent\underline{\hspace{30em}} \\
+(please print name and faculty/school above the line)
+
+\vspace{\linespace}
+
+\noindent\underline{\hspace{30em}} \\
+(please print name and faculty/school above the line)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END COMMITTEE PAGE
+\normalsize
+
+%%%% ABSTRACT
+\newpage
 \include{abstract}
-\cleardoublepage
 
-%    3. Preface
+%%%% PREFACE
+\newpage
 \include{preface}
-\cleardoublepage
 
-%    4. Table of contents (mandatory - list all items in the preliminary pages
-%    starting with the abstract, followed by chapter headings and
-%    subheadings, bibliographies and appendices)
-\tableofcontents
-\cleardoublepage	% required by tocloft package
+%%% TABLES
+\newpage
+\phantomsection \label{tableofcontent}%set anchor at right location
+\addcontentsline{toc}{chapter}{\contentsname}
+\tableofcontents                % Mandatory: generate toc
+\newpage 
+\phantomsection \label{listoftab}%set anchor at right location
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables                   % Mandatory if thesis has tables
+\newpage
+\phantomsection \label{listoffig}%set anchor at right location
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures                  % Mandatory if thesis has figures
 
-%    5. List of tables (mandatory if thesis has tables)
-\listoftables
-\cleardoublepage	% required by tocloft package
+% ===========================================================================
+% GLOSSARY OF NOTATION STARTS HERE. DEFINE YOUR GLOSSARY ENTRIES HERE. USE
+% THE COMMAND \gls{keyword} AT THE POSITION WHERE YOU USE THE GLOSSARY
+% USE \glsadd{keyword} to record the page without showing the symbol
+% ENTRY THE FIRST TIME. THE GLOSSARY SHOULD ONLY LIST THE PAGE NUMBER WHERE
+% THE ENTRY IS USED FOR THE FIRST TIME.
+%
+% SEE PACKAGE DOCUMENTATION FOR THE GLOSSARIES PACKAGE FOR MORE INFORMATION.
+% ===========================================================================
+\newglossaryentry{Real}{name=\ensuremath{\R}, description={Real numbers},sort={A1}}
+\newglossaryentry{Rplus}{name=\ensuremath{\R_+}, description={Nonnegative real numbers},sort={A2}}
+\newglossaryentry{Rvec}{name=\ensuremath{\R^n}, description={Real $n$-vectors ($n\times 1$ matrices)},sort={A3}}
+\newglossaryentry{Cart}{name=\ensuremath{\mathcal{A} \times \mathcal{B}},description={Cartesian product $\{(x,y):x\in\mathcal{A},y\in\mathcal{B}\}$},sort={A4}}
+\newglossaryentry{Infinity}{name=\ensuremath{\infty}, description={Infinity},sort={B1}}
+\newglossaryentry{Infimum}{name=\ensuremath{\inf \mathcal{S}}, description={The infimum of set $S$},sort={B2}}
 
-%    6. List of figures (mandatory if thesis has figures)
-\listoffigures
-\cleardoublepage	% required by tocloft package
+\printglossary[title=Glossary of Notation,toctitle=Glossary of Notation,style=long]
+% ===========================================================================
 
-%    7. List of illustrations (mandatory if thesis has illustrations)
-%    8. Lists of symbols, abbreviations or other (optional)
-
-%    9. Glossary (optional)
-\input{glossary}	% always input, since other macros may rely on it
-
-\textspacing		% begin one-half or double spacing
-
-%   10. Acknowledgements (optional)
+%%% ACKNOWLEDGEMENT and DEDICATION
 \include{ack}
 
-%   11. Dedication (optional)
+% Any other unusual prefactory material should come here before the
+% main body.
 
-% Body of Thesis (not all sections may apply)
+% Now regular page numbering begins.
 \mainmatter
 
-\acresetall	% reset all acronyms used so far
+% Parts are the largest structural units, but are optional.
+%%\part{Thesis}
 
-%    1. Introduction
+% Chapters are the next main unit.
+%%% CHAPTERS
 \include{intro}
 
-%    2. Main body
-% Generally recommended to put each chapter into a separate file
-%\include{relatedwork}
-%\include{model}
-%\include{impl}
-%\include{discussion}
-%\include{conclusions}
+%% SAMPLE CHAPTERS
+%\include{content}
+%\include{landscape}
 
-%    3. Notes
-%    4. Footnotes
 
-%    5. Bibliography
-\begin{singlespace}
-\raggedright
-\bibliographystyle{abbrvnat}
-\bibliography{biblio}
-\end{singlespace}
+\include{conclusion}
 
-\appendix
-%    6. Appendices (including copies of all required UBC Research
-%       Ethics Board's Certificates of Approval)
-%\include{reb-coa}	% pdfpages is useful here
-\include{appendix}
 
-\backmatter
-%    7. Index
-% See the makeindex package: the following page provides a quick overview
-% <http://www.image.ufl.edu/help/latex/latex_indexes.shtml>
+%generate numerous entries to test pagestyle in index
+%source: http://www.tex.ac.uk/ctan/indexing/makeindex/doc/makeindex.pdf
+\index{a}\index{b}\index{c}\index{d}\index{e}
+\index{f}\index{g}\index{h}\index{i}\index{j}
+\index{k}\index{l}\index{m}\index{n}\index{o}
+\index{p}\index{q}\index{r}\index{s}\index{t}
+
+\index{aa}\index{ab}\index{ac}\index{ad}\index{ae}
+\index{af}\index{ag}\index{ah}\index{ai}\index{aj}
+\index{ak}\index{al}\index{am}\index{an}\index{ao}
+\index{ap}\index{aq}\index{ar}\index{as}\index{at}
+
+\index{aa}\index{ab}\index{ac}\index{ad}\index{ae}
+\index{af}\index{ag}\index{ah}\index{ai}\index{aj}
+\index{ak}\index{al}\index{am}\index{an}\index{ao}
+\index{ap}\index{aq}\index{ar}\index{as}\index{at}
+
+\index{aaa}\index{aab}\index{aac}\index{aad}\index{aae}
+\index{aaf}\index{aag}\index{aah}\index{aai}\index{aaj}
+\index{aak}\index{aal}\index{aam}\index{aan}\index{aao}
+\index{aap}\index{aaq}\index{aar}\index{aas}\index{aat}
+
+\index{aaaa}\index{aaab}\index{aaac}\index{aaad}\index{aaae}
+\index{aaaf}\index{aaag}\index{aaah}\index{aaai}\index{aaaj}
+\index{aaak}\index{aaal}\index{aaam}\index{aaan}\index{aaao}
+\index{aaap}\index{aaaq}\index{aaar}\index{aaas}\index{aaat}
+
+\index{aaaa}\index{aaab}\index{aaac}\index{aaad}\index{aaae}
+\index{aaaf}\index{aaag}\index{aaah}\index{aaai}\index{aaaj}
+\index{aaak}\index{aaal}\index{aaam}\index{aaan}\index{aaao}
+\index{aaap}\index{aaaq}\index{aaar}\index{aaas}\index{aaat}
+
+%subcategory
+\index{a!sub A}
+\index{a!sub B}
+\index{a!sub A!sub sub A}
+%indexing symbols
+\index{a@$\alpha$}
+
+
+
+% This file is setup to use a bibtex file sample.bib and uses the
+% plain style.  Other styles may be used depending on the conventions
+% of your field of study.
+%
+% Note: the bibliography must come before the appendices.
+
+
+%change heading ``Chapter 5 Bibliography''->''Bibliography''
+\newpage %newpage needed otherwise pagestyle applied to previous chapter. Does not actually create a new page
+\pagestyle{fancy}\chead{Bibliography}\rhead{}\cfoot{}\rfoot{\thepage}
+
+%Bibliography style is discipline dependent. Mathematic student can use e.g. SIAM
+\bibliographystyle{achemso}
+%\bibliographystyle{siam}
+\bibliography{biblio}%name of your .bib file
+
+\newpage
+\pagestyle{headings}
+
+\printindex
+
+\addtocontents{toc}{%
+\protect\renewcommand*\protect\cftchappresnum{\appendixname~}}
+
+%%\part{Appendix}
+
+\appendix 
+\addappheadtotoc %uses the current page number when it makes the entry in the ToC
+\appendixpage 
+
+\addtocontents{toc}{
+\setlength{\cftbeforechapskip}{\cftbeforesecskip}
+\setlength{\cftchapindent}{\cftsecindent}
+\protect\renewcommand{\cftchapfont}{\cftsecfont}
+\protect\renewcommand{\protect\cftchapdotsep}{\cftsecdotsep}
+}
+
+
+\chapter{Tables}
+
+Here you can have additional tables. Table captions are always on top.
+
+In order to use publication quality tables, one should use the
+guidelines in \cite{Fear:2005manual}. In short, do not use vertical
+rules or double rules, units in the column heading (not in the body of
+the table), precede decimals with a digit, and do not use ditto
+signs. Table \ref{table:food} is according to the guidelines.
+
+For tables, the caption goes on top, for figures, the caption goes on
+the bottom. If possible, always position tables and figures at the top
+of a page.\footnote{In this case, the chapter heading prevents the
+  table from being at the top.} Use the option \verb|tbph| for the
+placement.
+
+\begin{table}[tbph]
+\centering
+\caption{A publication quality table. Very very very very very very very very very very long title.
+\label{table:food}}
+\begin{tabular}{@{}llr@{}} \toprule 
+\multicolumn{2}{c}{Item} \\ \cmidrule(r){1-2} 
+Animal & Description & Price (\$)\\ \midrule 
+Gnat & per gram & 13.65 \\ 
+& each & 0.01 \\ 
+Gnu & stuffed & 92.50 \\ 
+Emu & stuffed & 33.33 \\ 
+Armadillo & frozen & 8.99 \\ \bottomrule 
+\end{tabular}
+\end{table}
+
+\newpage
+And other table materials (I needed to generate two pages for that
+appendix to test the formatting of the table of content).
+
+\begin{table}
+\caption{Another table}
+\end{table}
+
+\begin{table}
+\caption{Another table}
+\end{table}
+\begin{table}
+\caption{Another table}
+\end{table}
+\begin{table}
+\caption{Another table}
+\end{table}
+\begin{table}
+\caption{Another table}
+\end{table}
+
+\begin{table}
+\caption{Another table}
+\end{table}
+\begin{table}
+\caption{Another table}
+\end{table}
+\begin{table}
+\caption{Another table}
+\end{table}
+\begin{table}
+\caption{Another table}
+\end{table}
+\begin{table}
+\caption{Another table}
+\end{table}
+
+\chapter{Figures}
+Here you can have additional figures. Figure captions are always at the bottom.
+
+\newpage
+
+And other additional figures (again I needed to generate two pages :-).
+% Indices come here.
 
 
 \end{document}
+\endinput

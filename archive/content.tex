@@ -1,0 +1,53 @@
+\chapter{Sample Content Using Mathematical Notations}
+
+\section{Facts and theorems}
+
+If we use a well established fact or theorem\index{theorem}, we state
+it with a citation in the paragraph title of the fact or theorem. The
+following is from a well known textbook.\footnote{Note that in this
+  definition, we use the \texttt{gls} command for the newly used
+  symbols.}
+
+\begin{fact}\cite[Theorem~IV.2.4.2]{Hiriart-Urruty:1993-ConvexAnalysis}\label{def:marginalfunc}
+  Define the \emph{marginal function} $\gamma$ associated with
+  $g:\R^n\times\R^m\rightarrow \R\cup \{+\infty\}$ by
+  $z\mapsto \gamma(z):=\inf_x g(x,z)$. If $g$ is a proper convex
+  function and is bounded below on the set $\R^n \times \{z\}$ for all
+  $z$, then $\gamma$ is convex.
+  \glsadd{Real}\glsadd{Rvec}\glsadd{Cart}\glsadd{Infinity}\glsadd{Infimum}
+\end{fact}
+
+\section{Propositions and lemmas}
+
+Here is a lemma followed by its proof.
+\[
+D =\left\{ (x,\lambda)\in \R^d \times \R^+ : \frac{x}{\lambda} \in C\right\}.
+\]
+\glsadd{Rplus}
+
+\begin{lemma}
+  Assume $C$ is a nonempty closed convex set. Then the set $D$ is a
+  nonempty closed convex cone.
+\end{lemma}
+
+\begin{proof}
+  The fact that $D$ is nonempty and closed follows from $C$ being
+  non\-empty and closed. One can check directly that $D$ is a cone....
+
+Hence $D$ is convex.
+\end{proof}
+Make sure that the qed symbol is always on the last line of the
+proof. If the last line is an equation, you can enforce the qed on the
+same line with the \texttt{qedhere} command.
+
+For citations, please use BibTex. A sample article to verify
+formatting and style is \cite{Bauschke:2007-PA02}. Use the
+bibliography style \texttt{ubco}, which is basic \texttt{alphaurl}
+style with inline links enabled. Please compile multiple times when
+generating the references. The last entry in a reference are the back
+references to the pages with the citation. They need an additional
+compilation, once the bibtex entries are generated.
+
+Note that the bibliography style is discipline dependent so feel free
+to use the style adopted by your discipline, for example siam for
+mathematics.
