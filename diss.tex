@@ -13,29 +13,19 @@
 
 \title{A Computational Examination of the Effects of Alkali and
   Alkaline Earth Metals on Hydrogen Atom Abstraction Reactions by
-  Oxygen Centered Radicals}
+  Oxygen Centered Radicals.}
 %\subtitle{With a Subtitle}
 \author{Jeffrey A. van Santen} % Name as on Diplome
 \copyrightyear{2017}
 \submitdate{June 2017} % date of approved thesis
 \program{Chemistry}%or Mathematics, or Interdisciplinary Studies
-\previousdegree{B.Sc. Hons., The University of British Columbia, 2015}
+\previousdegree{B.Sc. Hons. Chemistry, The University of British Columbia, 2015}
 
 
 % ================================================================================
 
 
 \usepackage{ubcostyle} %loads packages
-
-% Glossary of notation
-% --------------------
-\usepackage[nosuper,toc]{glossaries}
-\makeglossaries
-
-% Index
-% ---------
-\usepackage{makeidx}
-\makeindex
 
 % ===================================================================
 % CHANGE THE FOLLOWING COMMANDS ACCORDING TO YOUR NEEDS
@@ -51,10 +41,6 @@
 
 %Uncomment the next line if there are more than one appendix
 %\renewcommand*\appendixname{Appendices}
-
-%If you have a glossary, you can automatically produce it. See
-% http://www.latex-community.org/index.php?option=com_content&view=article&id=263:glossaries-nomenclature-lists-of-symbols-and-acronyms&catid=55:latex-general&Itemid=114
-
 
 \begin{document}
 
@@ -139,7 +125,7 @@ Additional Committee Members include:
 \phantomsection \label{tableofcontent}%set anchor at right location
 \addcontentsline{toc}{chapter}{\contentsname}
 \tableofcontents                % Mandatory: generate toc
-\newpage 
+\newpage
 \phantomsection \label{listoftab}%set anchor at right location
 \addcontentsline{toc}{chapter}{\listtablename}
 \listoftables                   % Mandatory if thesis has tables
@@ -148,24 +134,6 @@ Additional Committee Members include:
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures                  % Mandatory if thesis has figures
 
-% ===========================================================================
-% GLOSSARY OF NOTATION STARTS HERE. DEFINE YOUR GLOSSARY ENTRIES HERE. USE
-% THE COMMAND \gls{keyword} AT THE POSITION WHERE YOU USE THE GLOSSARY
-% USE \glsadd{keyword} to record the page without showing the symbol
-% ENTRY THE FIRST TIME. THE GLOSSARY SHOULD ONLY LIST THE PAGE NUMBER WHERE
-% THE ENTRY IS USED FOR THE FIRST TIME.
-%
-% SEE PACKAGE DOCUMENTATION FOR THE GLOSSARIES PACKAGE FOR MORE INFORMATION.
-% ===========================================================================
-\newglossaryentry{Real}{name=\ensuremath{\R}, description={Real numbers},sort={A1}}
-\newglossaryentry{Rplus}{name=\ensuremath{\R_+}, description={Nonnegative real numbers},sort={A2}}
-\newglossaryentry{Rvec}{name=\ensuremath{\R^n}, description={Real $n$-vectors ($n\times 1$ matrices)},sort={A3}}
-\newglossaryentry{Cart}{name=\ensuremath{\mathcal{A} \times \mathcal{B}},description={Cartesian product $\{(x,y):x\in\mathcal{A},y\in\mathcal{B}\}$},sort={A4}}
-\newglossaryentry{Infinity}{name=\ensuremath{\infty}, description={Infinity},sort={B1}}
-\newglossaryentry{Infimum}{name=\ensuremath{\inf \mathcal{S}}, description={The infimum of set $S$},sort={B2}}
-
-\printglossary[title=Glossary of Notation,toctitle=Glossary of Notation,style=long]
-% ===========================================================================
 
 %%% ACKNOWLEDGEMENT and DEDICATION
 \include{ack}
@@ -244,23 +212,21 @@ Additional Committee Members include:
 \pagestyle{fancy}\chead{Bibliography}\rhead{}\cfoot{}\rfoot{\thepage}
 
 %Bibliography style is discipline dependent. Mathematic student can use e.g. SIAM
-\bibliographystyle{achemso}
-%\bibliographystyle{siam}
+%\bibliographystyle{achemso}
+\bibliographystyle{siam}
 \bibliography{biblio}%name of your .bib file
 
 \newpage
 \pagestyle{headings}
-
-\printindex
 
 \addtocontents{toc}{%
 \protect\renewcommand*\protect\cftchappresnum{\appendixname~}}
 
 %%\part{Appendix}
 
-\appendix 
+\appendix
 \addappheadtotoc %uses the current page number when it makes the entry in the ToC
-\appendixpage 
+\appendixpage
 
 \addtocontents{toc}{
 \setlength{\cftbeforechapskip}{\cftbeforesecskip}
@@ -290,14 +256,14 @@ placement.
 \centering
 \caption{A publication quality table. Very very very very very very very very very very long title.
 \label{table:food}}
-\begin{tabular}{@{}llr@{}} \toprule 
-\multicolumn{2}{c}{Item} \\ \cmidrule(r){1-2} 
-Animal & Description & Price (\$)\\ \midrule 
-Gnat & per gram & 13.65 \\ 
-& each & 0.01 \\ 
-Gnu & stuffed & 92.50 \\ 
-Emu & stuffed & 33.33 \\ 
-Armadillo & frozen & 8.99 \\ \bottomrule 
+\begin{tabular}{@{}llr@{}} \toprule
+\multicolumn{2}{c}{Item} \\ \cmidrule(r){1-2}
+Animal & Description & Price (\$)\\ \midrule
+Gnat & per gram & 13.65 \\
+& each & 0.01 \\
+Gnu & stuffed & 92.50 \\
+Emu & stuffed & 33.33 \\
+Armadillo & frozen & 8.99 \\ \bottomrule
 \end{tabular}
 \end{table}
 

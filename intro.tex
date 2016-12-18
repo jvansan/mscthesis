@@ -17,27 +17,6 @@ There are several packages\index{packages} included in
 \texttt{ubcostyle.sty}. So before you add a new package, check first
 if it is already included there.
 
-\section{Glossary}
-
-Should you wish to provide a glossary of notation, the ubcostyle file
-uses the package \texttt{glossaries}. Please read the documentation
-for this package.
-
-In short, you need to define glossary entries with a keyword at the beginning of the document. You can use the \texttt{gls} with the keyword to add the corresponding page number to the glossary, where the gls command appears. In general, only use this at the place where a symbol or notation is introduced the first time. Sorting can be done with the sort keyword. You can use subgroups (like number sets, operator families, etc.). However, within a group, sorting should be according to appearance in the document.
-
-Once you have all your entries defined, compile your LaTex document. After that, open a command line terminal and \texttt{cd} into the directory of your thesis. If your thesis file name is \texttt{ubc\_2010\_spring\_doe\_jane.tex} (which is standard file name required by UBC circle when uploading the thesis), then type
-
-\texttt{makeglossaries ubc\_2010\_spring\_doe\_jane}\\
-and compile your document again. The glossary should be there.
-
-\section{Index}
-
-Should you wish to provide an index, you need to add commands
-\texttt{\\index{thesis}} at the appropriate position in your
-text. Then run the makeindex command as \texttt{makeindex myfile.idx
-  -t myfile.ilg -o myfile.ind}.  where myfile is replaced by your
-filename e.g. ubc\_2010\_spring\_doe\_jane-index-glossary
-
 \section{Epigraph}
 
 If you want to add an epigraph to a chapter (epigraph in the sense of
