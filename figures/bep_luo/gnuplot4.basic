@@ -1,0 +1,15 @@
+set terminal pdf enhanced font "Helvetica, 20"
+set output 'xxx.pdf'
+
+f(x) = a*x + b
+g(x) = c*x + d
+
+fit f(x) '~/git/mscthesis/figures/bep_luo/luo_alkyl_all.tsv' u 2:3 via a, b
+fit g(x) '~/git/mscthesis/figures/bep_luo/luo_allylic_all.tsv' u 2:3 via c, d
+
+plot '~/git/mscthesis/figures/bep_luo/luo_nonfit_all.tsv' u 2:3 t 'Non-fit' pt 7 rgb "red",\
+     '~/git/mscthesis/figures/bep_luo/luo_alkyl_all.tsv' u 2:3 t 'Alkyl' pt 7 rgb "blue" ,\
+     '~/git/mscthesis/figures/bep_luo/luo_allylic_all.tsv' u 2:3 t 'Allylic/Benzylic' pt 7 rgb "green"
+#     f(x) lt rgb 'blue' 
+#     g(x) lt rgb 'green'
+
