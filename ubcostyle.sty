@@ -16,6 +16,12 @@
 \usepackage{fancyhdr}
 \addtolength{\headheight}{1.6pt}
 
+% Chemistry
+% ---------------
+\usepackage{achemso}
+\usepackage{chemstyle}
+\usepackage{chemformula}
+
 % General LaTex handling
 % ----------------------
 % extend memory and register space
@@ -25,7 +31,10 @@
 
 % Bibliography and citations
 % --------------------------
-\usepackage[numbers,sort&compress]{natbib}
+\usepackage[numbers,sort&compress,super]{natbib}
+%\bibliographystyle{achemso}
+\setkeys{acs}{usetitle = true}
+\renewcommand{\thefootnote}{\roman{footnote}}
 
 % Document structure and layout
 % -----------------------------
@@ -49,6 +58,8 @@
 \usepackage{ctable}
 \usepackage{xtab}
 \usepackage{rotating}
+\usepackage{longtable}
+\usepackage{changepage}
 
 % Formatting toc, lof, lot
 % -------------------------
@@ -82,6 +93,7 @@
 \usepackage{amssymb}
 \usepackage{multicol}
 \usepackage{amsfonts}
+
 % draws diagonal lines through arguments
 %\usepackage{cancel}
 % customize theorem styles
@@ -98,12 +110,12 @@
     %citebordercolor={0.8 0.8 0.8},filebordercolor={0.8 0.8 0.8},%
     %linkbordercolor={0.8 0.8 0.8},pagebordercolor={0.8 0.8 0.8},%
     %urlbordercolor={0.8 0.8 0.8},%
-    citebordercolor={0.7 1 0.7},
-    linkbordercolor={0.7 0.7 1},
+    %citebordercolor={0.7 1 0.7},
+    %linkbordercolor={0.7 0.7 1},
     %pagebordercolor={1 0.7 0.7},
 	pdfborder={0 0 0},%remove boxes around links
 	colorlinks=false,
-    pagebackref,linktocpage%
+    %pagebackref,linktocpage%
     ]{hyperref}
 %%% The following change how the the back-references text is typeset in a
 %%% bibliography when `backref' or `pagebackref' are used

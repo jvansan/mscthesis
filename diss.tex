@@ -11,11 +11,10 @@
 % uncomment and modify the next line:
 %\degreetitle{B.Sc. Computer Science Honours}
 
-\title{A Computational Examination of the Effects of Alkali and
-  Alkaline Earth Metals on Hydrogen Atom Abstraction Reactions by
-  Oxygen Centered Radicals.}
+\title{Formal Hydrogen Transfer Reactions and the Effects of Non-Redox
+  Active Metal Cations}
 %\subtitle{With a Subtitle}
-\author{Jeffrey A. van Santen} % Name as on Diplome
+\author{Jeffrey A. van Santen} % Name as on Diploma
 \copyrightyear{2017}
 \submitdate{June 2017} % date of approved thesis
 \program{Chemistry}%or Mathematics, or Interdisciplinary Studies
@@ -26,21 +25,18 @@
 
 
 \usepackage{ubcostyle} %loads packages
+\newcommand{\jnote}[1]{\textcolor{blue}{(#1)}}
+\newcommand{\cumo}{Cum\ch{O^.}}
+\newcommand{\Ms}{M$^{-1}$s$^{-1}$}
 
 % ===================================================================
 % CHANGE THE FOLLOWING COMMANDS ACCORDING TO YOUR NEEDS
 % ===================================================================
-\newcommand{\R}{\mathbb{R}}   %real number
-\newcommand{\Z}{\mathbb{Z}}   %integers
-\newcommand{\C}{\mathbb{C}}   %complex numbers
 
-\newcommand{\dom}{\operatorname{dom}}
-\providecommand{\TT}[1]{\Theta\left(#1\right)} % big-Theta
-\providecommand{\OO}[1]{\mathcal{O}\left(#1\right)} % big-Oh
 % ===================================================================
 
 %Uncomment the next line if there are more than one appendix
-%\renewcommand*\appendixname{Appendices}
+\renewcommand*\appendixname{Appendices}
 
 \begin{document}
 
@@ -57,6 +53,7 @@
 The undersigned certify that they have read, and recommend to the
 College of Graduate Studies for acceptance, a thesis entitled: {\sc
   \@title } submitted by {\sc \@author} in partial fulfilment of the
+
 requirements of the degree of \@degreetitle \makeatother
 
 \newlength{\linespace}
@@ -118,12 +115,11 @@ Additional Committee Members include:
 
 %%%% PREFACE
 \newpage
-\include{preface}
+\input{preface}
 
 %%% TABLES
 \newpage
 \phantomsection \label{tableofcontent}%set anchor at right location
-\addcontentsline{toc}{chapter}{\contentsname}
 \tableofcontents                % Mandatory: generate toc
 \newpage
 \phantomsection \label{listoftab}%set anchor at right location
@@ -133,7 +129,12 @@ Additional Committee Members include:
 \phantomsection \label{listoffig}%set anchor at right location
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures                  % Mandatory if thesis has figures
-
+\newpage
+\phantomsection \label{listofscheme}%set anchor at right location
+%\addcontentsline{toc}{chapter}{\listschemename}
+\listofschemes                  % Mandatory if thesis has figures
+\newpage
+\include{abbrev}
 
 %%% ACKNOWLEDGEMENT and DEDICATION
 \include{ack}
@@ -144,61 +145,19 @@ Additional Committee Members include:
 % Now regular page numbering begins.
 \mainmatter
 
-% Parts are the largest structural units, but are optional.
-%%\part{Thesis}
-
-% Chapters are the next main unit.
-%%% CHAPTERS
 \include{intro}
 
-%% SAMPLE CHAPTERS
-%\include{content}
-%\include{landscape}
+\include{theory}
 
+\include{methods}
+
+\include{arrhenius}
+
+\include{bde}
+
+\include{hat}
 
 \include{conclusion}
-
-
-%generate numerous entries to test pagestyle in index
-%source: http://www.tex.ac.uk/ctan/indexing/makeindex/doc/makeindex.pdf
-\index{a}\index{b}\index{c}\index{d}\index{e}
-\index{f}\index{g}\index{h}\index{i}\index{j}
-\index{k}\index{l}\index{m}\index{n}\index{o}
-\index{p}\index{q}\index{r}\index{s}\index{t}
-
-\index{aa}\index{ab}\index{ac}\index{ad}\index{ae}
-\index{af}\index{ag}\index{ah}\index{ai}\index{aj}
-\index{ak}\index{al}\index{am}\index{an}\index{ao}
-\index{ap}\index{aq}\index{ar}\index{as}\index{at}
-
-\index{aa}\index{ab}\index{ac}\index{ad}\index{ae}
-\index{af}\index{ag}\index{ah}\index{ai}\index{aj}
-\index{ak}\index{al}\index{am}\index{an}\index{ao}
-\index{ap}\index{aq}\index{ar}\index{as}\index{at}
-
-\index{aaa}\index{aab}\index{aac}\index{aad}\index{aae}
-\index{aaf}\index{aag}\index{aah}\index{aai}\index{aaj}
-\index{aak}\index{aal}\index{aam}\index{aan}\index{aao}
-\index{aap}\index{aaq}\index{aar}\index{aas}\index{aat}
-
-\index{aaaa}\index{aaab}\index{aaac}\index{aaad}\index{aaae}
-\index{aaaf}\index{aaag}\index{aaah}\index{aaai}\index{aaaj}
-\index{aaak}\index{aaal}\index{aaam}\index{aaan}\index{aaao}
-\index{aaap}\index{aaaq}\index{aaar}\index{aaas}\index{aaat}
-
-\index{aaaa}\index{aaab}\index{aaac}\index{aaad}\index{aaae}
-\index{aaaf}\index{aaag}\index{aaah}\index{aaai}\index{aaaj}
-\index{aaak}\index{aaal}\index{aaam}\index{aaan}\index{aaao}
-\index{aaap}\index{aaaq}\index{aaar}\index{aaas}\index{aaat}
-
-%subcategory
-\index{a!sub A}
-\index{a!sub B}
-\index{a!sub A!sub sub A}
-%indexing symbols
-\index{a@$\alpha$}
-
-
 
 % This file is setup to use a bibtex file sample.bib and uses the
 % plain style.  Other styles may be used depending on the conventions
@@ -213,11 +172,11 @@ Additional Committee Members include:
 
 %Bibliography style is discipline dependent. Mathematic student can use e.g. SIAM
 %\bibliographystyle{achemso}
-\bibliographystyle{siam}
-\bibliography{biblio}%name of your .bib file
+\bibliography{\string~/Dropbox/bib/MSc}%name of your .bib file
 
 \newpage
 \pagestyle{headings}
+
 
 \addtocontents{toc}{%
 \protect\renewcommand*\protect\cftchappresnum{\appendixname~}}
@@ -227,6 +186,10 @@ Additional Committee Members include:
 \appendix
 \addappheadtotoc %uses the current page number when it makes the entry in the ToC
 \appendixpage
+\pagestyle{plain}
+
+\include{appendix}
+
 
 \addtocontents{toc}{
 \setlength{\cftbeforechapskip}{\cftbeforesecskip}
@@ -235,83 +198,11 @@ Additional Committee Members include:
 \protect\renewcommand{\protect\cftchapdotsep}{\cftsecdotsep}
 }
 
-
-\chapter{Tables}
-
-Here you can have additional tables. Table captions are always on top.
-
-In order to use publication quality tables, one should use the
-guidelines in \cite{Fear:2005manual}. In short, do not use vertical
-rules or double rules, units in the column heading (not in the body of
-the table), precede decimals with a digit, and do not use ditto
-signs. Table \ref{table:food} is according to the guidelines.
-
-For tables, the caption goes on top, for figures, the caption goes on
-the bottom. If possible, always position tables and figures at the top
-of a page.\footnote{In this case, the chapter heading prevents the
-  table from being at the top.} Use the option \verb|tbph| for the
-placement.
-
-\begin{table}[tbph]
-\centering
-\caption{A publication quality table. Very very very very very very very very very very long title.
-\label{table:food}}
-\begin{tabular}{@{}llr@{}} \toprule
-\multicolumn{2}{c}{Item} \\ \cmidrule(r){1-2}
-Animal & Description & Price (\$)\\ \midrule
-Gnat & per gram & 13.65 \\
-& each & 0.01 \\
-Gnu & stuffed & 92.50 \\
-Emu & stuffed & 33.33 \\
-Armadillo & frozen & 8.99 \\ \bottomrule
-\end{tabular}
-\end{table}
-
-\newpage
-And other table materials (I needed to generate two pages for that
-appendix to test the formatting of the table of content).
-
-\begin{table}
-\caption{Another table}
-\end{table}
-
-\begin{table}
-\caption{Another table}
-\end{table}
-\begin{table}
-\caption{Another table}
-\end{table}
-\begin{table}
-\caption{Another table}
-\end{table}
-\begin{table}
-\caption{Another table}
-\end{table}
-
-\begin{table}
-\caption{Another table}
-\end{table}
-\begin{table}
-\caption{Another table}
-\end{table}
-\begin{table}
-\caption{Another table}
-\end{table}
-\begin{table}
-\caption{Another table}
-\end{table}
-\begin{table}
-\caption{Another table}
-\end{table}
-
-\chapter{Figures}
-Here you can have additional figures. Figure captions are always at the bottom.
-
-\newpage
-
-And other additional figures (again I needed to generate two pages :-).
-% Indices come here.
-
-
 \end{document}
 \endinput
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "diss"
+%%% End:

@@ -1644,6 +1644,16 @@
 \newenvironment{table*}
                {\@dblfloat{table}}
                {\end@dblfloat}
+\def\fps@scheme{tbp}
+\def\ftype@scheme{3}
+\def\ext@scheme{los}
+\def\fnum@scheme{{\tabelfont\schemename\nobreakspace\thescheme}}
+\newenvironment{scheme}
+               {\@float{scheme}}
+               {\end@float}
+\newenvironment{scheme*}
+               {\@dblfloat{scheme}}
+               {\end@dblfloat}
 \newlength\abovecaptionskip
 \newlength\belowcaptionskip
 \setlength\abovecaptionskip{10\p@}
@@ -1762,6 +1772,16 @@
     \@starttoc{lot}%
     \if@restonecol\twocolumn\fi
     }
+\newcommand\listofschemes{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter{\listschemename}%
+    \@starttoc{los}%
+    \if@restonecol\twocolumn\fi
+    }
 \newcommand*\l@table{\@dottedtocline{1}{\lotindent}{\lotlabelwidth}}
 \newdimen\bibindent
 \setlength\bibindent{1.5em}
@@ -1852,7 +1872,8 @@
 \newcommand\contentsname{Table of Contents}
 \newcommand\listfigurename{List of Figures}
 \newcommand\listtablename{List of Tables}
-\newcommand\bibname{Bibliography}
+\newcommand\listschemename{List of Schemes}
+\newcommand\bibname{References}
 \newcommand\indexname{Index}
 \newcommand\figurename{Figure}
 \newcommand\tablename{Table}
