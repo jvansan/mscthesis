@@ -1,0 +1,26 @@
+% The systematic investigation of KSEs lead to the development of the
+% empirical Snelgrove-Ingold equation\cite{Snelgrove2001,Litwinienko2007}
+% (Equation \ref{eq:kse}), which can quantitatively estimate HAT rate constants in
+% various solvents.
+
+% \begin{equation}
+%   \log(k_H^S) = \log(k_H^0) - 8.3\alpha_2^H_{subst}\beta_2^H
+%   \label{eq:kse}
+% \end{equation}
+
+% \noindent In the above equation, the rate constant in a given solvent
+% ($\logk_H^S$) can be obtained from a reference solvent ($k^0_H$), according to
+% the ability of the substrate to donate a hydrogen bond, measursed by the Abraham
+% HB donating parameter ($\alpha_2^H_{subst}$),\cite{Abraham1989} and the ability
+% of the solvent to accept hydrogen bonds, measured by the Abraham HB accepting
+% parameters ($\beta_2^H$).\cite{Abraham1990} Plots of log($k$,\Ms) against
+% $\beta_2^H$ give a linear free energy relationship (LFER) which quantifies KSEs
+% and gives good correlations for the HAT reactions.\cite{Valgimigli1995,
+%   Avila1995,Valgimigli1995,MacFaul1996,Valgimigli1999,Snelgrove2001,Foti2005,Litwinienko2007,Jha2008,Bietti2012}
+
+% Much of the work describing KSEs, including the Snelgrove-Ingold equation,
+% ignores the ability of the abstracting radical to HB with solvent. Work by
+% \citet{Bietti2012} has demonstrated this may not be true and that the
+% Snelgrove-Ingold equation can overestimate HAT rate constants in strong HB
+% donating solvents, implying that solvent-radical HB interactions are
+% non-neglible. 

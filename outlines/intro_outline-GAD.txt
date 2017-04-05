@@ -1,0 +1,182 @@
+Effects of Metal Cations of HAT Reactions - Introduction
+Jeff van Santen
+
+* Hydrogen atom transfer (HAT) reactions
+  - What is HAT
+    + Usually involve free radicals
+    + Transfer of a least one hydrogen atom
+* Processes involving HAT reactions
+  - Link HAT to biology
+    + Reactive oxygen species (ROS) and link to Oxidative Stress
+      * ROS come from O2
+	- Fenton chemistry produces most ROSs
+	- Hydroxyl radicals primarily initiate oxidation of biomaterials
+      * ROS/Radical induced damage of biomaterials = oxidative stress
+      * Examples of oxidative stress
+	- Protein damage
+	  + Initiated by HO* abstraction of alpha-C-H (or side chains)
+	G	Or sidechains: e.g. tyrosine has phenolic O-H with a BDE of less than 89 kcal/mol. 
+	  + Propagation through reactions with oxygen
+	G	You should also discuss termination. i.e. initiation, propogation, termination
+	  + Oxidised proteins accumulation linked to degenerative diseases 
+	
+	G	I wouldn't spend too much time on DNA/RNA, lipid damage, or enzymes. A few paragraphs at most - because your work is focussed on proteins models. Beyond that, I wouldn't want the Intro to go too far off-track.
+	- Nucleic acid damage
+	  + Both purine and pyrimidines bases, and deoxyribose backbone susceptible for oxidation
+	  + DNA lesions
+	    * 8-hydroxyguanine
+	  + Oxidation of DNA responsible for mutagenisis, carcinogenisis, etc
+	- Lipid damage
+	  + Polyunsaturated fatty acids extremely sensitive
+	  + Autoxidation of polyunsaturated fatty acids (linoleic acid for ex.) studied extensively
+	    * Radical cycle
+	    * Formation of aldehydes (MDA especially) leads to additional biological damage
+    + Enzymatic chemistry involving HAT
+      * Cytochromes P450 - hydroxylation of C-H 
+	- rebound mechanism initiated by HAT be iron-oxo
+  - Link HAT to chemistry
+    + Synthetic uses for HAT
+      * Early example Hofmann-Lofler-Freytag (1878 to 1909) 
+        - Formation of cyclic amines 
+	- Important intramolecular HAT
+      * Catalytic HAT
+	- Mimic Cytochrome P450 rebound mechanism for C-H bond activation
+	  * Hydroxylation \cite{Balcells2010}(DOI:10.1021/cr900315k)
+	  * Amination \cite{Driver2013}(DOI:10.1038/nchem.1739)
+* Physico-chemical determinants of HAT reactions
+  - Understanding chemical reactions
+    + thermodynamics and kinetics
+      * Reaction coordinate
+	- Slice of N-dimensional hypersurface of PES
+		G	This might be the place to talk about the features of the PES: i.e. pre- and post-reaction complexes, factors that determine kinetics = those that destabilize reactants and/or stabilize TS structures. 
+      * Thermochemistry = stability of products formed
+      * Kinetics = stability of TS complex
+	
+	G	The following seems more suitable for the theory section  
+----	  
+|	- Classical TST
+|	- Arrhenius equation to describe rate constant relative to barrier height
+|   + QM tunnelling
+|      * QM particles are capable of going through barriers rather than over
+|      * Important in HAT because light atoms
+|      * Model for accounting for QM tunnelling
+|	- Bell Model to determine transmission coefficient
+|	  + Strengths and weaknesses
+|	  + Use of alternative potentials - Eckart
+----
+  - Bond strengths (Bell-Evans-Polanyi (BEP))
+    + Bond strengths central to thermochemical understanding of rxns
+    + Evidence that bond strength for barrier heights (kinetics)
+      * BEP origins and general description
+      * Application of BEP to lipid autoxidation \cite{Pratt2003}
+	- Method of application
+	- Implications
+  - Non-covalent interactions in HAT reactions
+
+	G	It's unclear to me that a details discussion of the role of solvent is appropriate here. How will this figure-in to the rest of the thesis?
+  + The role of solvent
+      * Kinetic solvent effects (KSEs)
+	- Physical origins
+	  + Stabilisation or destabilisation of TS complex relative to Reactants/Products
+	  + HAT TS described with charge transfer
+	    * Resonance structures
+	    * Dipolar ion structures increasingly important when electronegativity
+              difference between H-atom acceptor/donor
+	- Experimental support (Phenols) - Ingold
+	  + Phenols = HBD so HBA solvents important
+	- KSEs for C-H bond
+	  + Smaller than phenols
+	  + Many C-H bond substrates are HBA -> HBD solvents important	  
+	  + Hypothesis of decrease in alpha-C-H-sigma star overlap thus
+            increasing C-H bond strength increase in activation energy
+    + Non-covalent interactions b/w substrate and radical
+      * Hydrogen bonding b/w O*-sigma radical and substrate
+	- PhO*/PhOH
+	- Iminoxyl/Oxime
+	- Amines and Amides with BnO/CumO
+	  + rate-determining H-bond formation with BnO
+      * Steric interactions
+	- Steric bulk can reduce H-Bonding b/w radical and substrate
+	  + link to above Amines and Amides with BnO/CumO
+	- Abstractable position with most thermodynamically favourable C-H bond
+          may be inaccessible
+	  + Example - Bietti tertiary amides
+  - Mechanistic details of HAT
+    + Formal HAT vs PCET
+      * Define formal HAT 
+	- Transfer of e- and H+ through same set of orbitals
+      * Define Proton-coupled electron transfer (PCET)
+	- Transfer of e- and H+ through different sets of orbitals
+      * PhO*/PhOH & PhCH2*/PhCH3 example for comparison - Mayer et al
+	- Compare TS structures and barrier heights
+	  + PhO*/PhOH h-bonded pre-reaction complex
+	  + PhO*/PhOH PCET - SOMO = pi-symmetry
+	  + PhCH2*/PhCH3 HAT - SOMO = sigma - symm
+	- Importance of NCIs - DiLabio and Johnson
+	
+	G	Somewhere in here you need to talk about the role an potential importance of NCIs in pre-reaction complex formation
+	  + pi-pi and LP-pi interactions which opens PCET channel in PhCH2*/PhCH3
+	  + PhO*/PhOH likely also pi-stacked TS
+	    * Confirmed by Munoz-Rugeles et al.
+	    * Reaction barriers for PCET are systematically lower than for HAT
+
+	G	I think a lot of the information below is off-target. In what you have above about the damaging effects of radicals provides motivation for your work, and I think it's sufficient. Some of the stuff below, though, is detail that doesn't support your thesis, e.g. cell-signalling, osmoreceptors. However, including some detail about the amount of non-redox active cations in a cell is valuable, in particular the numbers of ions per protein. You should be able to determine these numbers pretty easily.
+	
+	G	A second thing to consider is whether the experimental results you have in the list below belong in the Intro or in sepcific results sections of the thesis. For example, it may be worthwhile to mention some of the results in an overview fashion, but retain specific discussion for the Discussion Section.
+	
+* Effects of metal cations on HAT reactions
+  - Non-redox active metal cations
+    + Do not catalyse like TM metals because non-redox active
+    + Important in Biology
+      * Calcium
+        - Cellular signalling
+        - Contraction of muscle cells
+      * Sodium/Potassium
+	- Osmoreceptors / electrolytic balance (Na/K-ATPase pump)
+      * Intra and Inter-cellular concentrations
+  - Interactions of metals with organic substrates (no current literature for radicals)
+    + Crystallographic evidence that metals interact mainly with water molecules
+      then carbonyl O-atoms\cite{Harding}
+  - Background evidence (experiments and theory)
+    + Experiments to examine effects Lewis acids (LA) metal salts 
+      * Expected same kinetic effects as Lewis acidic solvents
+	- Reiterate decrease in hyperconjugative overlap
+      * Alkali/Alkaline Earth metals = Hard Lewis Acids
+      * Water and MeCN are Lewis Bases
+      * First time resolved studies of LA effect on HAT \cite{Bietti2013}(JACS)
+	- Experiments between CumO and Substrates
+	- Metal ions effect unimolecular decay of CumO
+	  + CumO decay pathway mainly beta-scission
+	  + Negligible HAT from solvent
+	  + Metals increase reactivity by interacting with O* 
+	    * Increased stabilisation along rxn coordinate as C-O*(sp3) --> C=O (sp2)
+	  + Effects of LiClO4 > Mg(ClO4)2 > NaClO4
+	- Cyclohexadiene - small increase in kH
+	  + Interaction of metal with alkoxyl and small effect on HAT reactivity
+	- THF - decrease in kH
+	  + Effects of Mg(ClO4)2 > Li(ClO4) ~ Li(OTf)
+	  + Mg > Li in terms of LA 
+	  + Counter-anion negligible role
+	  + Effects comparable in magnitude to KSEs
+	- Amines (TEA, PMP, TIBA) - small to large decrease in kH 
+	  + Effects of Mg(ClO4)2 >> Li(ClO4) 
+	  + Amines w/ 1.0 M Mg(ClO4)2 forms precipitate --> very strong Mg2+-Amine complex
+	  + Computational validation of increase in barrier height and BDE of TEA with Mg(ClO4)2 \cite{Nova2013}
+	    * See same effect of Redox-active metals with ligands (Metal "protects" ancillary ligands)
+      * Effects of metals on reactions of CumO with DMA and DMF
+	- Amides often used as simple models for amino acids
+	- Negligible effect from Na+
+	- 2-fold decrease in kH with Li+
+	- Strong deactivation for Ca2+ (up to four equiv)
+	- Mg2+ weak C-H deactivation for 2 equiv then strong deactivation of 2 equiv
+	  + No validated reasons
+	  + Possible due to octahedral coordination of Mg vs Li (coordinates 4 ligands)
+	  + Mg2+ interacts much more strongly with MeCN than Li+ \cite{Dudev2011}DOI:10.1021/ja201985s
+	- Effects not observed in DMSO 
+	  + DMSO > LA than DMA/DMF
+	  + Validates importance of Lewis acid/base interactions
+      * Additional experiments of metals with dialkylacetamides and dimethylalkanamides with CumO
+	- Strong deactivation for up to four equiv Li+ and Ca2+
+	- No effect of steric bulk increase for dialkylacetamides
+	- C-H deactivation decreased with increasing size or branching of alkanoyl for dimethylalkanamides
+     

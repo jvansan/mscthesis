@@ -1,0 +1,42 @@
+METHODS -*- mode: org -*-
+# Effects of Metal Cations of HAT Reactions - Methods
+#+STARTUP: showall
+
+* Notation note
+  - Quantum methods
+    + XXX/YYY//AAA/BBB
+    + XXX = method of SP w/ YYY Basis Sets
+    + AAA = method of opt w/ BBB Basis Sets
+* Pre-Exponent
+  - Conformational Analysis - Performed with BLYP-D3-BSIP/MINIs
+    + By hand first
+    + Systematic scan of dihedrals seconds
+  - Optimization + Freq w/ BLYP-D3-BSIP/pc-1
+  - SP w/ LCwPBE-D3/pc-2(spd)
+  - Exist some small negative frequencies due to large steric bulk -
+    + condifident near local minimum regardless
+* BDEs
+  - W1BD on all species to start
+  - B3LYP/cc-pVTZ+d opt on all that W1BD did not converge
+    + scale ZPE = 0.985
+  - Additional calcs w/ composite methods
+    + ROCCSD(T)/LDBS (LDBS = pc-3/3/2/1)//B3LYP/cc-pVTZ+d
+    + G4
+    + G4(MP2)
+    + CBS-QB3
+    + ROCBS-QB3
+    + CBS-APNO
+* Effects of Metal Cations
+  - Benchmark Studies
+    + Optimizations = Gaussian 
+      * LCwPBE-D3/6-31+G** Conformer Search
+      * Final OPT LCwPBE-D3/6-311+G(3df,3pd)
+    + Turbomole CCSD(T)/CBS w/ cc-pVNZ N=D,T,Q
+      * Problems w/ basis set convergence of metal cations
+      * Several other basis sets tested
+      * Settled on CCSD(T)-F12*/Def2-QZVPPD (check this) for benchmark quality results
+    + Tested N DFT methods with M basis sets
+      * Good results from X,Y,Z - Chose M05-2X w/ Pople sets
+      * Expect good kinetics and thermochem from this method as well - QM-ORSA
+  - Effects studies
+    + 

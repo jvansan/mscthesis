@@ -5,14 +5,14 @@
 %% The original source files were:
 %%
 %% ubcthesis.dtx  (with options: `genthesis')
-%% 
+%%
 %% This file was generated from the ubcthesis package.
 %% --------------------------------------------------------------
-%% 
+%%
 %% Copyright (C) 2001
 %% Michael McNeil Forbes
 %% mforbes@alum.mit.edu
-%% 
+%%
 %% This file may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.2
 %% of this license or (at your option) any later version.
@@ -20,14 +20,14 @@
 %%    http://www.latex-project.org/lppl.txt
 %% and version 1.2 or later is part of all distributions of LaTeX
 %% version 1999/12/01 or later.
-%% 
+%%
 %% This program consists of the files ubcthesis.dtx, ubcthesis.ins, and
 %% the sample figures fig.eps and fig.fig.
-%% 
+%%
 %% This file may only be distributed together with a copy of this
 %% program. You may, however, distribute this program without generated
 %% files such as this one.
-%% 
+%%
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{genthesis}[2009/11/19 v1.61 ^^J
@@ -1772,7 +1772,7 @@
     \@starttoc{lot}%
     \if@restonecol\twocolumn\fi
     }
-\newcommand\listofschemes{%
+\newcommand*\listofschemes{%
     \if@twocolumn
       \@restonecoltrue\onecolumn
     \else
@@ -1872,7 +1872,7 @@
 \newcommand\contentsname{Table of Contents}
 \newcommand\listfigurename{List of Figures}
 \newcommand\listtablename{List of Tables}
-\newcommand\listschemename{List of Schemes}
+\newcommand*\listschemename{List of Schemes}
 \newcommand\bibname{References}
 \newcommand\indexname{Index}
 \newcommand\figurename{Figure}

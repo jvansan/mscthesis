@@ -11,6 +11,10 @@
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{2}
 
+% Remove name clash errors in CLS
+\let\listschemename\relax
+\let\listofschemes\relax
+
 % Packages
 % ========
 \usepackage{fancyhdr}
@@ -21,13 +25,14 @@
 \usepackage{achemso}
 \usepackage{chemstyle}
 \usepackage{chemformula}
+\usepackage{physics}
 
 % General LaTex handling
 % ----------------------
 % extend memory and register space
 \usepackage{etex}
 % Better error messages
-\usepackage{checkend}
+%\usepackage{checkend}
 
 % Bibliography and citations
 % --------------------------
@@ -43,7 +48,7 @@
 \usepackage{lscape}
 \usepackage{psfrag}
 \usepackage{appendix}
-\usepackage{indentfirst} 
+\usepackage{indentfirst}
 
 % Graphics and figures
 % --------------------
@@ -55,7 +60,7 @@
 % --------------
 \usepackage{multirow}
 \usepackage{booktabs}
-\usepackage{ctable}
+%\usepackage{ctable}
 \usepackage{xtab}
 \usepackage{rotating}
 \usepackage{longtable}
@@ -93,6 +98,8 @@
 \usepackage{amssymb}
 \usepackage{multicol}
 \usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{bbold}
 
 % draws diagonal lines through arguments
 %\usepackage{cancel}
@@ -121,8 +128,10 @@
 %%% bibliography when `backref' or `pagebackref' are used
 \usepackage{color}
 \definecolor{greytext}{gray}{0.5}
-\renewcommand\backrefpagesname{\(\rightarrow\) pages}
-\renewcommand\backref{\textcolor{greytext} \backrefpagesname\ }
+%\renewcommand\backrefpagesname{\(\rightarrow\) pages}
+%\renewcommand\backref{\textcolor{greytext} \backrefpagesname\ }
+\newcommand\backrefpagesname{\(\rightarrow\) pages}
+\newcommand\backref{\textcolor{greytext} \backrefpagesname\ }
 
 % Permanent style changes
 % =======================
@@ -151,4 +160,3 @@
 
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
-

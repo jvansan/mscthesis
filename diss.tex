@@ -27,7 +27,10 @@
 \usepackage{ubcostyle} %loads packages
 \newcommand{\jnote}[1]{\textcolor{blue}{(#1)}}
 \newcommand{\cumo}{Cum\ch{O^.}}
-\newcommand{\Ms}{M$^{-1}$s$^{-1}$}
+\newcommand{\bno}{Bn\ch{O^.}}
+\newcommand{\Ms}{M$^{-1}$s$^{-1}$~}
+\newcommand{\kcalmol}{kcal mol$^{-1}$~}
+\newcommand{\hham}{\mathscr{H}}
 
 % ===================================================================
 % CHANGE THE FOLLOWING COMMANDS ACCORDING TO YOUR NEEDS
@@ -36,7 +39,7 @@
 % ===================================================================
 
 %Uncomment the next line if there are more than one appendix
-\renewcommand*\appendixname{Appendices}
+%\renewcommand*\appendixname{Appendices}
 
 \begin{document}
 
@@ -168,7 +171,7 @@ Additional Committee Members include:
 
 %change heading ``Chapter 5 Bibliography''->''Bibliography''
 \newpage %newpage needed otherwise pagestyle applied to previous chapter. Does not actually create a new page
-\pagestyle{fancy}\chead{Bibliography}\rhead{}\cfoot{}\rfoot{\thepage}
+\pagestyle{fancy}\chead{References}\rhead{}\cfoot{}\rfoot{\thepage}
 
 %Bibliography style is discipline dependent. Mathematic student can use e.g. SIAM
 %\bibliographystyle{achemso}
@@ -188,7 +191,7 @@ Additional Committee Members include:
 \appendixpage
 \pagestyle{plain}
 
-\include{appendix}
+%\include{appendix}
 
 
 \addtocontents{toc}{
@@ -200,9 +203,3 @@ Additional Committee Members include:
 
 \end{document}
 \endinput
-
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: "diss"
-%%% End:

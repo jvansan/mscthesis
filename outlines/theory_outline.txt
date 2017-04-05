@@ -1,0 +1,93 @@
+Theory Section
+Jeff van Santen
+
+* Theoretical Approaches
+  - Schroedinger Equation
+    + Non-relativistic time independent form
+  - Hartree-Fock Theory
+    + Spin and Spatial Orbitals
+    + Hartree-product
+      * Non-interacting electrons
+      * Product of N orbitals (spin+spacial coords)
+    + Slater Determinants
+      * Introduce anti-symmetry to wave functions
+      * Yields Pauli exclusion
+      * electron-exchange interactions for electrons of parallel spin
+	- motion of two electrons with parallel spin is correlated
+      * Does not correlate motion of electrons of opposite spin
+    + HF Approximation
+      * Need to make approximations to describe many-electron problems
+      * Hartree-fock equation 
+	- derived from variational principle w.r.t. slater determinants spin orbitals
+	- fock operator 
+	- Essentially make many-electron -> one-electron with average effects
+          from other electrons
+	- Non-linear and solved iteratively = self-consistent-field method
+    + Unrestricted vs. Restricted vs. Restricted Open-Shell
+    + Roothan Equation and Solving HF 
+  - Basis Sets
+    + MO-LCAO-like method forms linear combinations of basis functions
+    + STOs vs GTOs
+      * STOs used historically because of similarity with eigenfunctions of H atom
+      * STOs hard to calculate integrals for
+      * GTOs (integrals easy) used instead -> STO ~ linear combination of GTOs
+    + Minimal vs Extended Basis Sets
+      * Zeta = cardinal number
+      * Split-valence
+      * polarization functions
+      * diffuse functions
+    + Types of Basis Sets
+      * Pople
+      * Correlation consistent
+      * Polarization consistent 
+    + Basis Set Extrapolation
+    + BSIPs?
+  - Post-HF Methods
+    + Add electron correlation to HF ground-state
+    + Moller-Plesset PT
+      * Add electron correlation through Rayleigh-Schrodinger PT
+    + Coupled Cluster theory
+      * Use exponential cluser operators to construst multi-electron
+        wavefunctions -> electron correlation
+      * Exponential ansatz
+      * Cluster operators
+      * Coupled cluster euations 
+    + Explicit correlation (F12)
+  - Density-functional theory
+    + Kohn-Sham
+      - All properties of system uniquely defined by ground state rho=p
+      - No "recipe" for the "right" answer
+    + Computational cost benefit 
+    + DFT Energy functional
+      - E[p] = Tni[p] + Vne[p] + Vee[p] + 
+    + Types of modern functionals
+      - GGA -> meta-GGa -> Hybrid -> Range-Separated
+      - Benefits to each + relative cost
+    + Pitfalls of DFT and corrections thereto
+      - Dispersion - D3 correction
+      - Self-interaction error
+  - Composite Methods (briefly)
+    + What are they
+      * Relatively cheap optimization
+      * Additive corrections to get "best" wavefunction results
+    + Why are they useful
+      * Understood to give accurate results for many thermochemical properties
+    + Gaussian-n methods
+    + CBS methods
+    + W1 methods
+* Physical Organic Chemistry  
+  - Arrhenius equation 
+  - Classical TST
+  - QM tunnelling
+    + QM particles are capable of going through barriers rather than over
+    + Important in HAT because light atoms
+    + Model for accounting for QM tunnelling
+      * Bell Model to determine transmission coefficient
+	- Strengths and weaknesses
+	- Use of alternative potentials - Eckart
+  - Kinetic Isotope Effects
+    + Primary KIEs
+    + Physical origins
+      * ZPE
+    + Utility in mechanistic studies
+      + Useful in determining H atom being abstracted
