@@ -1,0 +1,21 @@
+VerbEnvir
+{
+chemstyle tabular
+}
+
+Silent
+{
+\cumo \bno \hhat \kcalmol \Ms \mainmatter \phantomsection
+}
+
+Abbrev
+{
+MeCN
+PES
+HAT
+}
+
+WipeArg
+{
+\ch:{}
+}
