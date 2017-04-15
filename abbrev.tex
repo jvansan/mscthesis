@@ -1,8 +1,10 @@
-\phantomsection \label{listofabb}
-%\addcontentsline{toc}{chapter}{List of Symbols and Abbreviations}
-\chapter{List of Symbols and Abbreviations}
+% !TEX root = diss.tex
 
-\begin{tabular}{m{3cm} l}
+\phantomsection \label{listofabb}
+
+\chapter{List of Symbols and Abbreviations}
+\SuspendCounters{table}
+\begin{longtable}{m{3cm} l}
 BDE & bond dissociation enthalpy \\
 BEP & Bell-Evans-Polanyi \\
 \bno & benzyloxyl radical \\
@@ -50,10 +52,6 @@ $\Delta S$ & entropic change of reaction \\
 $\nabla^2$ & Laplacian operator \\
 $\sigma_X$ & Hammett substituent parameter \\
 $\rho$ & sensitivity constant, or electron density
-%\caption*{}
-\end{tabular}
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: "diss"
-%%% End:
-
+\caption*{}
+\end{longtable}
+\ResumeSuspendedCounters

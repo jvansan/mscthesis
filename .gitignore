@@ -1,13 +1,10 @@
-
-# Created by https://www.gitignore.io/api/latex
-
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
 *.log
 *.lot
-*.los 
+*.los
 *.fls
 *.out
 *.toc
@@ -195,6 +192,7 @@ TSWLatexianTemp*
 # WinEdt
 *.bak
 *.sav
+.DS_Store
 
 # Texpad
 .texpadtmp
