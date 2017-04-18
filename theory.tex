@@ -5,20 +5,19 @@
 
 \section{The quantum mechanical approach}
 
-In quantum chemistry we seek solutions to the non-relativistic time-independent
-Schr{\"o}dinger equation
+The fundamental properties governing all of chemistry are dictated by their
+quantum mechanical wave functions, $\Psi$. Therefore, in quantum chemistry we
+seek solutions to the non-relativistic time-independent Schr{\"o}dinger equation
 
 \begin{equation}
 \hham \ket{\Psi} = E \ket{\Psi}
 \label{eq:schrodinger}
 \end{equation}
 
-
-
 \noindent where $\hham$ is the Hamiltonian operator for a system of nuclei and
-electrons, and $\Psi$ are the set of eigenvectors with energy eigenvalues
-$E$.\cite{Griffiths2016} For a system with $N$ electrons and $M$ nuclei, the
-full Hamiltonian in atomic units is
+electrons, and $\Psi$ is the wave function, defined as the set of eigenvectors
+with energy eigenvalues $E$.\cite{Griffiths2016} For a system with $N$ electrons
+and $M$ nuclei, the full Hamiltonian in atomic units is
 
 \begin{equation}
 \begin{split}
@@ -386,9 +385,9 @@ The polarisation consistent basis sets have been developed by Jensen and
 coworkers.\cite{Jensen2001} Like the correlation consistent basis sets, the
 polarisation consistent basis sets have been developed to systematically
 approach the HF limit, or analogous complete basis set limit in
-density-functional theory calculations. The notation adopted is ``pc-$X$", where
-$X$ is the cardinal number of the basis set minus one (i.e. $X$ =
-$N$-1). Polarisation functions are included by default in these basis sets, and
+density-functional theory calculations. The notation adopted is ``pc-$X$'',
+where $X$ is the cardinal number of the basis set minus one (i.e. $X$ = $N$-1).
+Polarisation functions are included by default in these basis sets, and
 additional diffuse functions can be specified with the same ``aug'' notation as
 the correlation consistent basis sets.
 
@@ -626,7 +625,7 @@ which states that there exists a unique electron density $\rho$ that defines the
 properties of a many-electron system. The second theorem defines an energy
 functional of the electron density and demonstrates that the correct ground
 state electron density minimises the energy functional through the variational
-theorem. \cite{Hohenberg1964,Koch2000} These theorems alone do not provide the
+theorem.\cite{Hohenberg1964,Koch2000} These theorems alone do not provide the
 solutions to the Schr{\"o}dinger equation.
 
 It wasn't until the formulation of Kohn-Sham DFT\cite{Kohn1965} that the theory
@@ -756,6 +755,9 @@ may occur.
 \section{Applying theory to chemical problems}
 
 \subsection{Geometry optimisation}
+
+\jnote{Introduce Hessian here}
+\jnote{Explain PES and important stationary points along it}
 
 All QM methods depend parametrically on the geometry of a molecular
 system. While the wave functions can describe any arbitrary geometry, we are
@@ -1039,7 +1041,7 @@ that the reactions depended more heavily on temperature than was intuitive, and
 thus introduced the $A$ constant, known often as the Arrhenius
 pre-factor.\cite{McQuarrie1997} The Arrhenius pre-factor is an empirical measure
 of how factors other than kinetic energy affect the rate constant. From the
-perspective of theory, Equation \ref{eq:arrhenius} has little meaning as the
+perspective of theory, Equation~\ref{eq:arrhenius} has little meaning as the
 parameters are empirical. Thus, to study rate constants theoretically we must
 turn to \emph{transition state theory}.
 
@@ -1049,7 +1051,7 @@ The study of transition state theory (TST) originates in the 1930s, and was
 developed primarily by Eyring.\cite{McQuarrie1997,Steinfeld1998} In TST we focus
 on the TS complex, which is defined as a transient species which exists at the
 top of the energy barrier of a reaction. If we consider the same reaction in
-Equation \ref{eq:a}, and set all the coefficients to 1, then TST states the
+Equation~\ref{eq:a}, and set all the coefficients to 1, then TST states the
 reaction proceeds in two steps, the first of which includes a quasi-equilibrium
 between the reactants and TS complex
 
@@ -1341,9 +1343,3 @@ applied, where applicable as
   k_{calc} = \kappa k_{TST} = \kappa
 \frac{k_BT}{hc^0}e^{-\Delta^\ddagger G^0}
 \end{equation}
-
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: "diss"
-%%% End:

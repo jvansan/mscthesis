@@ -1,0 +1,14 @@
+Arrhenius Pre-Factors and NCIs
+Jeff van Santen
+
+* Background
+  - "Understanding Chemical reactions" from old introduction
+  - Arrhenius equation
+  - NCIs
+  -
+* Methods
+  - Conformational Analysis
+    + Monomers
+    + Complexes
+  - Final Binding Energies
+*
