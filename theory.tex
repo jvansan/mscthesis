@@ -335,7 +335,7 @@ In order to calculate thermochemical and kinetic properties that are within a su
 \begin{figure}[htb]
   \centering
   \includegraphics[height=20em]{figures/compositemethods.eps}
-  \caption[Schematic representation of a quantum mechanical composite method.]{Schematic representation of a quantum mechanical composite method. Using a combination of Method 1 (low correlation/large basis set) and Method 2 (high correlation/small basis set), the Composite method approaches the exact energy.}
+  \caption[Schematic representation of a quantum mechanical composite method.]{Schematic representation of a quantum mechanical composite method. The exact energy can only be achieved at the limits of an infinite basis set and complete correlation. Using a combination of Method 1 (low correlation/large basis set) and Method 2 (high correlation/small basis set), the Composite method approaches the exact energy.}
   \label{fig:comp}
 \end{figure}
 
@@ -349,6 +349,7 @@ The framework behind conventional DFT is built into the description of the full 
 
 \begin{equation}
   E[\rho] = T_{ni}[\rho] + V_{ne}[\rho] + V_{ee}[\rho] + \Delta T[\rho] + \Delta V_{ee}[\rho]
+\label{eq:DFT}
 \end{equation}
 
 \noindent where $T_{ni}$ is the kinetic energy of non-interacting electrons, $V_{ne}$ is the potential of nuclear-electron interactions, and $V_{ee}$ is the classical electron-electron repulsion. The last two terms are collectively referred to as the exchange-correlation (XC) functionals, where $\Delta T$ is the dynamical correlation term, and $\Delta V_{ee}$ is the non-classical correction to electron-electron repulsion. All the functionals, except the XC functionals have an exact form. It is therefore the XC functionals in which there is currently empiricism.
@@ -383,11 +384,13 @@ A step above GGAs on the third rung of the ladder are meta-GGAs, which depend on
 
 The functionals described up to this point (LDAs, GGAs, meta-GGAs) depend only on the electron density. The fourth and fifth rungs of the ladder improve upon the prior functionals by inclusion of terms dependent on properties other than electron density. While this approach improves upon the accuracy of these functionals, it comes with an increase in computational cost. On the fourth rung sit functionals which depend to some percentage on the HF exact exchange . When the ratio of HF exchange is fixed, these functionals are termed hybrid functionals. Alternatively, functionals are said to be range-separated corrected if a different amount of exact-exchange to describe long and short range behaviours. In the cases of hybrid and range-separated functionals, the added computational cost comes from the calculation of the HF exact exchange.
 
-Alternative to stating that the fourth rung depends on HF exchange, one can say that fourth rung functionals depend on the occupied molecular orbitals. The fifth rung is then said to depend the unoccupied molecular orbitals. These functionals are typically referred to as double-hybrids, and incorporated correlation energy from a post-HF method, typically MP2. Double-hybrid DFT methods are once again more accurate than the lower rung methods, however, the computation of the MP2 correlation energy is considerably more computationally demanding than typical DFT calculations. Therefore, double-hybrid DFT methods have not gained popularity in the literature.
+Another description of the fourth rung functionals is the dependence exchange on the occupied molecular orbitals. The fifth rung then, is said to depend the unoccupied molecular orbitals. These functionals are typically referred to as double-hybrids, and incorporated correlation energy from a post-HF method, typically MP2. Double-hybrid DFT methods are once again more accurate than the lower rung methods, however, calculating the MP2 correlation energy is considerably more computationally demanding than traditional DFT approaches. Therefore, double-hybrid DFT methods have not gained popularity in the literature.
 
 There are many published XC functionals. Fortunately, there is a fairly standard system of nomenclature, such that density functionals are described as \emph{exchange functional}-\emph{correlation functional}. The most commonly used density functional is the  B3-LYP, which uses the 3-parameter hybrid exchange functional of Becke,\cite{Becke1993} and the correlation functional of Lee, Yang, and Parr.\cite{Lee1988} There are also standalone functionals which have built in exchange and correlation functionals. A common example of these are the Minnesota family of functionals from the Truhlar group.\cite{Zhao2006,Zhao2006a}
 
-Ignoring the problem of choosing functionals, solving DFT is computationally very similar to the HF method. The electron density is formed from a linear combination of basis functions composed of GTOs, and the energy comes out from iteratively solving the eigenvalues of the Kohn-Sham pseudo-eigenvalue equation for orbitals $\chi$:
+\jnote{expand this section}
+
+Aside from the problem of choosing density-functionals, solving DFT is computationally very similar to the HF method. The electron density is formed from a linear combination of basis functions composed of GTOs, and the energy comes out from iteratively solving the eigenvalues of the Kohn-Sham pseudo-eigenvalue equation for orbitals $\chi$:
 
 \begin{equation}
   \hat{h}_i^{KS} \chi_i = \varepsilon_i \chi_i
@@ -408,30 +411,26 @@ Ignoring the problem of choosing functionals, solving DFT is computationally ver
 
 \noindent where $V_{XC}$ is a functional derivative which describes the exchange-correlation energy.
 
-LDA -> GGA -> m-GGA -> Hybrid/LC -> Advanced (double hybrid)
-
-
-
-There are several classes of density functionals including pure functionals, hybrid functionals, and range-separated functionals. Pure functionals are those that depend only on the density ($\rho$) of a system. Many DFT functionals incorporate a percentage of HF exact-exchange into their formulation. If a fixed percentage of exact-exchange is used, these are referred to as hybrid functionals. B3LYP is an example of a hybrid functional which has 20\% HF exchange. Functionals which have a  A popular example of a range-separated functional is known as CAM-B3LYP,\cite{Yanai2004} which is a long range corrected version of the B3LYP functional. While the incorporation of HF-exchange into DFT procedures can improve the accuracy of a method, it does come with an increased computational cost.
-
 \subsubsection{Challenges for density-functional theory methods}
 
-The allure of DFT is clear, given its relatively low computational cost and reasonable accuracy. However, there are several problems which common DFT methods experience that lead to erroneous results in many cases.\cite{Cohen2012} It is well established that traditional DFT methods completely fail at describing non-covalent interactions.\cite{DiLabio2016} This shortcoming leads to poor descriptions of chemistry beyond equilibrium geometries, including transition states. Fortunately, there are several methods which can correct for this problem, commonly through the addition an energy correction term $E_{disp}$ to the DFT energy $E_{DFT}$, as
+The allure of pure DFT is clear, given its relatively low computational cost and potentially good accuracy. However, there are several problems which common DFT methods experience that lead to erroneous results in many cases.\cite{Cohen2012} It is well established that traditional DFT methods completely fail at describing non-covalent interactions.\cite{DiLabio2016} This shortcoming leads to poor descriptions of chemistry beyond equilibrium geometries, including transition states. Fortunately, there are several methods which can correct for this problem, commonly through the addition an energy correction term $E_{disp}$ to the DFT energy $E_{DFT}$, as
 
 \begin{equation}
   E_{tot} = E_{DFT} + E_{disp}
 \end{equation}
 
-\noindent The is most commonly done employing the empirical D3 pair-wise correction of Grimme,\cite{Grimme2010} paired with of the Becke-Johnson damping functions,\cite{Johnson2006} denoted as D3(BJ). This correction works by calculating the dispersion interactions between all pairs of atoms $A$ and $B$ separated by distance $R_{AB}$, with the following equation:
+\noindent It is common to employ the empirical D3 pair-wise correction of Grimme,\cite{Grimme2010} paired with of the Becke-Johnson damping functions,\cite{Johnson2006} denoted as D3(BJ). This correction works by calculating the dispersion interactions between all pairs of atoms $A$ and $B$ separated by distance $R_{AB}$, with the following equation:
 
 \begin{equation}
   E_{disp} - \sum_{A>B} \frac{C_6^{AB}}{R_{AB}^6} f_6(R_{AB}) + s_8
   \frac{C_8^{AB}}{R_{AB}^8} f_8(R_{AB})
 \end{equation}
 
-\noindent where $C_6$ and $C_8$ are dispersion coefficients , $s_8$ is an empirically determined scaling parameter, and $f_n$ are the damping functions which limit the range of dispersion correction, avoiding near singularities at small $R_{AB}$. Another approach to correcting for dispersion is to add parameters directly to the functional, as is the case in the Minnesota functionals.\cite{Zhao2006,Zhao2006} These empirical corrections have the benefit of adding minimal computational time, but must be parametrised for each DFT method for which they are employed with.
+\noindent where $C_6$ and $C_8$ are dispersion coefficients , $s_8$ is an empirically determined scaling parameter, and $f_n$ are the damping functions which limit the range of dispersion correction, avoiding near singularities at small $R_{AB}$. Another approach to correcting for dispersion is to add parameters directly to the functional, as is the case in the Minnesota functionals.\cite{Zhao2006,Zhao2006} Both of these empirical corrections have the benefit of adding negligible computational time, but must be parametrised for each DFT method with which they are employed.
 
-Another striking issue with DFT is the unphysical ability of an electron to interact with itself, termed \emph{self-interaction error}. This is most obvious in what is known as \emph{delocalisation error}, which is a result of many-electrons interacting with themselves, or many-electron self-interaction error. In HF theory, self-interaction error is exactly cancelled, thus DFT methods which have a high portion of HF exchange in their formulation are able to account for this issue. The most obvious manifestation of delocalisation error is incorrect treatment of charge-transfer in intramolecular interactions.\cite{MoriSanchez2008,OterodelaRoza2014} Charge-transfer occurs when a fraction of an electron is transferred between molecular entities. Specifically, charge-transfer is mistreated at longer ranges, thus range-separated functionals are suggested for systems in which charge-transfer may occur.
+Another striking issue with DFT is the unphysical ability of an electron to interact with itself, termed \emph{self-interaction error}. This is most obvious in what is known as \emph{delocalisation error}, which is a result of many-electrons interacting with themselves, or many-electron self-interaction error. In HF theory, self-interaction error is exactly cancelled, thus DFT methods which have a high portion of HF exchange in their formulation are able to account for this issue. Consider for a moment a one electron system: there should be exactly zero electron correlation. In terms of the energy functionals shown in Equation~\ref{eq:DFT}, the electronic repulsion term $V_{ee}[\rho]$ should cancel exactly with the XC term ($V_{ee}[\rho] = -E_{XC}[\rho]$).\cite{Cramer2004} Unfortunately, all pure DFT methods fail to reproduce this expected behaviour. An obvious manifestation of delocalisation error is the incorrect treatment of charge-transfer in intramolecular interactions,\cite{MoriSanchez2008,OterodelaRoza2014} as well as in transition state complexes. Even for the simplest HAT reaction \ch{H2 + H^. -> H^. + H2}, the calculated barrier height is underestimated by 8--9 \kcalmol using a GGA functional.\cite{Csonka1998} Charge-transfer occurs when a fraction of an electron is transferred between molecular entities. Specifically, charge-transfer is mistreated at longer ranges, thus either high percentage exact exchange hybrid functionals, or range-separated functionals are suggested for systems in which charge-transfer may occur.
+
+As is the case for most experimental methods, identifying the correct theoretical methods requires the careful consideration of the problem at hand. Choosing a DFT based method requires calibration, however, once a method has been tested and is known to provide reasonably accurate results, DFT methods have the ability to help understand chemical problem with relatively low computational costs.
 
 \section{Applying theory to chemical problems}
 
@@ -440,11 +439,31 @@ Another striking issue with DFT is the unphysical ability of an electron to inte
 \jnote{Introduce Hessian here}
 \jnote{Explain PES and important stationary points along it}
 
-All QM methods depend parametrically on the geometry of a molecular system. While the wave functions can describe any arbitrary geometry, we are typically only interested in certain geometries of a molecule. These geometries of interest are normally stationary states along a the potential energy surface of a system, that is, points where the gradient of energy with respect to nuclear coordinates is zero. Therefore, we perform \emph{geometry optimisation} calculations to determine these points.
+All QM methods depend parametrically on the geometry of a molecular system. That is the electronic energy of a system depends on the positions of the nuclei. While the wave functions can describe any arbitrary geometry, we are typically only interested in certain geometries of a molecule. These geometries of interest are normally stationary states along a the potential energy surface (PES) of a system, that is, points where the gradient of energy with respect to nuclear coordinates is zero. Therefore, we perform \emph{geometry optimisation} calculations to determine these points.
 
-As previously described, molecules have complex PESs. For a non-linear molecule, the nuclear PES has 3$N$-6 dimensions, where $N$ is the number of nuclei present.\cite{Heidrich1991} In geometry optimisation, we seek the local minima (reactants, products, or intermediates) and local maxima (TS complexes). Consider only local minima for a moment. Often complex molecules have more than one possible conformation, and each conformation represents a different local minimum along the PES. It is therefore important to ensure the correct conformation, typically the lowest energy structure (global minimum), is used when approaching chemical problems.
+Molecular systems have complex PESs. For a non-linear molecule, the nuclear PES has 3$N$-6 dimensions, where $N$ is the number of nuclei present.\cite{Heidrich1991} In geometry optimisation, we seek the local minima (reactants, products, or intermediates) and local maxima (TS complexes). Consider only local minima for a moment. Often complex molecules have more than one possible conformation, and each conformation represents a different local minimum along the PES. It is therefore important to ensure the correct conformation, typically the lowest energy structure (global minimum), is used when approaching chemical problems.
 
-Some additional caution must be taken in optimising molecular structures. Normal algorithms which optimise structures stop when the gradient of energy is sufficiently close to zero; however, often PES can be flat or very shallow in regions and non-optimised structures can be obtained. To overcome this, geometries are always subject to molecular vibration analysis.
+In order to efficiently perform geometry optimisation, numerical analysis techniques are employed. All geometry optimisation methods follow the same general framework.\cite{Hratchian2005} First, energy and necessary derivatives are computed from an initial geometry. Second, the geometry is modified to step towards the nearest stationary state. And last, some test is performed to determine if the new geometry is near enough to the stationary state along the PES. The most efficient method to do this is the \emph{Newton method}, in which the energy is expanded in a Taylor series (truncated at the second order point) about the current point, $\mathbf{x}_0$:
+
+\begin{equation}
+  E(\mathbf{x}) = E_0 + \mathbf{g}_0\Delta\mathbf{x} + \frac{1}{2}\Delta\mathbf{x}\mathbf{H}_0\Delta \mathbf{x}
+\end{equation}
+
+\noindent where $E_0$, $\mathbf{g}_0$, and $\mathbf{H}_0$ are the energy, gradient (Jacobian), and second derivative (Hessian) at point $\mathbf{x}_0$, and $\Delta \mathbf{x} = x_i - x_0$. The aim of the Newton method is to minimise the gradient of the Taylor expansion, $\mathbf{g(x)}$, such that
+
+\begin{equation}
+  \mathbf{g(x)} = \mathbf{g}_0 + \mathbf{H}_0 \Delta \mathbf{x}
+\end{equation}
+
+\noindent Solving for $\Delta \mathbf{x}$ gives the so-called Newton step that leads to minimisation:
+
+\begin{equation}
+  \Delta \mathbf{x} = -\mathbf{H}^{-1}_0\mathbf{g}_0
+\end{equation}
+
+The analytic computation of the Hessian is very expensive, especially for large systems. Therefore, to simply the problem at the beginning of geometry optimisation, the Hessian matrix is approximated and updated at each step in the optimisation, using clever algorithms.\cite{Hratchian2005} This is called the \emph{quasi-Newton method}, and is the default optimisation routine in the Gaussian\cite{Frisch2009} quantum chemistry package, as well as most other quantum chemistry packages.
+
+Some additional caution must be taken in optimising molecular structures. Normal algorithms which optimise structures stop when the gradient of energy is sufficiently close to zero; however, often PES can be flat or very shallow in regions and structures that are not fully optimised can be obtained. To avoid this, geometries are always subject to molecular vibration analysis.
 
 \subsection{Molecular vibrations}
 
@@ -455,7 +474,7 @@ The computation of molecular vibrations can be performed simply given a set of m
 \end{equation}
 
 
-\noindent where $F$ is the force, $k$ is the force constant, and $x$ is the displacement along one normal mode's coordinates. This approximation assumes the PES along the normal mode is parabolic, which in general is not true. Deviations from this approximation are known as \emph{anharmonicity}. In practise however, at normal temperatures ($\sim$ 298K) the harmonic approximation is sufficient to describe molecular vibrations as displacements are assumed to be small.
+\noindent where $F$ is the force, $k$ is the force constant, and $x$ is the displacement along one normal mode's coordinates. This approximation assumes the PES along the normal mode is parabolic, which in general is not true, but is a good approximation near the minima. Deviations from this approximation are known as \emph{anharmonicity}. In practise, however, at normal temperatures ($\sim$ 298K) the harmonic approximation is sufficient to describe molecular vibrations as displacements are assumed to be small.
 
 Typically to obtain molecular frequencies, one computes the mass-weighted Hessian matrix elements $F_{ij}$
 
@@ -469,7 +488,7 @@ Typically to obtain molecular frequencies, one computes the mass-weighted Hessia
   \nu_i = \frac{\sqrt{\lambda_i}}{2\pi}
 \end{equation}
 
-\noindent and the lowest 6 vibrations are then discarded to account for 3$N$-6 normal modes.
+\noindent and the lowest 6 modes are then discarded to account for 3$N$-6 normal modes. These lowest energy modes generally correspond the internal rotations, and thus must be discarded to correctly obtain thermochemical corrections.
 
 From these frequencies, the \emph{zero-point vibrational energy} (ZPE, $E_{ZPE}$) is calculated:
 
@@ -512,7 +531,7 @@ $q_{trans}$ is
 
 \noindent where $m$ is the mass of the molecule, $h$ is Planck's constants.
 
-The vibrational partition function $q_{vib}$ depends on the contributions of each of $K$ vibrational modes. Only the $3N-6$ (or $3N-5$ for linear molecules) real vibrational modes of a molecule are considered, and imaginary frequencies are ignored. Therefore, for molecules which posses an imaginary frequency (excluding TS-complexes) this thermodynamic analysis is invalid. Each vibrational mode has a characteristic vibrational electronic temperature, $\Theta_{\nu,K} = h\nu/k_B$, and the partition function is
+The vibrational partition function $q_{vib}$ depends on the contributions of each of $K$ vibrational modes. Only the $3N-6$ (or $3N-5$ for linear molecules) real vibrational modes of a molecule are considered, and imaginary frequencies are ignored. Therefore, for molecules which posses an imaginary frequency this thermodynamic analysis is invalid. TS complexes do posses a single imaginary frequency which is ignored, as it is assumed to not contribute to the overall vibrational partition function as no formal bond is said to be formed between acceptor-donor system.\jnote{I'm not 100\% sure about this} Each vibrational mode has a characteristic vibrational electronic temperature, $\Theta_{\nu,K} = h\nu/k_B$, and the partition function is
 
 \begin{equation}
   q_{vib} = \prod_K \frac{e^{-\Theta_{\nu,K}/2T}}{1 - e^{-\Theta_{\nu,K}/T}}
@@ -569,7 +588,7 @@ Using very simple statistical thermodynamic arguments, the properties of a bulk 
 
 \subsection{Modelling solvent}
 
-It is in principle possible to include solvent models explicitly in QM calculations: this is in practise, extremely cost prohibitive. In order to approximate the important contributions of solvation, so-called \emph{implicit continuum solvent models} are generally employed.\cite{Mennucci2007,Cramer2004} Mathematically, one describes this as
+It is in principle possible to include solvent molecules explicitly in QM calculations: this is in practise, extremely cost prohibitive. In order to approximate the important contributions of solvation, so-called \emph{implicit continuum solvent models} are generally employed.\cite{Mennucci2007,Cramer2004} Mathematically, one describes this as
 
 \begin{equation}
   \hat{H}^{tot}(\mathbf{r}_m) = \hat{H}^{mol}(\mathbf{r}_m) + \hat{V}^{mol+sol}(\mathbf{r}_m)
@@ -584,7 +603,7 @@ G_{solv~kinetic}
 
 \noindent where the total solvation free energy $G_{solv}$ contains terms from: the formation of a solvation cavity $G_{cavity}$, the electrostatic interactions between solvent and solute $G_{electrostatic}$, the dispersion interactions between solvent and solute $G_{dispersion}$, the QM exchange repulsion between solvent and solute $G_{repulsion}$, and the movement of solvent molecules $G_{solv~kinetic}$.
 
-The most widely used model for solvation comes from the Truhlar group, and is known as SMD.\cite{Marenich2009} The main parameter in implicit solvent models is the solvent dielectric constant ($\varepsilon$) with contributions from surface tension and the solvent-solute interface. SMD also includes terms which depend on the electron density of the solute.  While many other implicit solvent models require the use of the same QM method as they were parametrised,\cite{Ho2010} SMD is a \emph{universal} model which was parametrised using several QM methods. Therefore, it does not require the use of a specific QM method and can be applied broadly in both single point energy and geometry optimisation calculations.
+A widely used model for solvation comes from the Truhlar group, and is known as SMD.\cite{Marenich2009} The main parameter in implicit solvent models is the solvent dielectric constant ($\varepsilon$) with contributions from surface tension and the solvent-solute interface. SMD also includes terms which depend on the electron density of the solute.  While many other implicit solvent models require the use of the same QM method as they were parametrised,\cite{Ho2010} SMD is a \emph{universal} model which was parametrised using several QM methods. Therefore, it does not require the use of a specific QM method and can be applied broadly in both single point energy and geometry optimisation calculations.
 
 \subsection{Rate constants and transition state theory}
 
@@ -617,7 +636,7 @@ Most chemists are intimately familiar with the phenomenological \emph{Arrhenius 
 The study of transition state theory (TST) originates in the 1930s, and was developed primarily by Eyring.\cite{McQuarrie1997,Steinfeld1998} In TST we focus on the TS complex, which is defined as a transient species which exists at the top of the energy barrier of a reaction. If we consider the same reaction in Equation~\ref{eq:a}, and set all the coefficients to 1, then TST states the reaction proceeds in two steps, the first of which includes a quasi-equilibrium between the reactants and TS complex
 
 \begin{equation}
-  \ch{A + B <=>AB$^\ddagger$ -> C + D}
+  \ch{A + B <=>AB$^\ddagger$ <=> C + D}
   \label{eq:tst}
 \end{equation}
 
@@ -674,7 +693,7 @@ We must now invoke the statistical thermodynamics to make sense of Equation \ref
 \label{eq:c}
 \end{equation}
 
-\noindent where $q_A$, $q_B$, and $q^\ddagger$ are the partition functions of A, B, and AB$^\ddagger$, respectively.
+\noindent where $V$ is the volume, and $q_A$, $q_B$, and $q^\ddagger$ are the partition functions of A, B, and AB$^\ddagger$, respectively.
 
 Since we have defined the reaction to be occurring with one degree of freedom, the translational partition function $q_{trans}$ can be defined as
 
@@ -798,7 +817,7 @@ Atoms are quantum mechanical particles, and are thus subject to the strange prob
 \end{figure}
 
 
-In order to determine the effects of scattering, one must find transmission coefficients ($\kappa$) by solving the Schr{\"o}dinger equation. This is done by approximating the reaction barrier with an analytical potential, thus simplifying the problem mathematically. The earliest model potentials were introduced by Bell, who used a parabolic function to approximate the reaction barrier.\cite{Bell1980} To obtain $\kappa$, and thus the observed rate constant ($k_{obs}$), the following equations were used:
+In order to determine the effects of scattering, one must find transmission coefficients ($\kappa$) by solving the Schr{\"o}dinger equation.\cite{Griffiths2016} This is done by approximating the reaction barrier with an analytical potential, thus simplifying the problem mathematically. The earliest model potentials were introduced by Bell, who used a parabolic function to approximate the reaction barrier.\cite{Bell1980} To obtain $\kappa$, and thus the observed rate constant ($k_{obs}$), the following equations were used:
 
 \begin{align}
   k_{obs} &= \kappa A e^{-E_a/RT}  \\
@@ -817,7 +836,7 @@ The Bell model is a poor representation of an actual reaction barrier. One which
   y &= -e^{2\pi x/L}
 \end{align}
 
-\noindent where $x$ is the variable along the reaction coordinate and $L$ is called the characteristic length. If $A=0$ the potential becomes a symmetric function, further simplifying the problem; however, most reactions do not have a symmetric potential. $A$, $B$ and $L$ are related to the change in barrier height in the forward and reverse direction, $\Delta V1$ and $\Delta V_2$, respectively:
+\noindent where $x$ is the variable along the reaction coordinate and $L$ is called the characteristic length. If $A=0$ the potential becomes a symmetric function, further simplifying the problem; however, most reactions do not have a symmetric potential. $A$, $B$ and $L$ are related to the change in barrier height in the forward and reverse direction, $\Delta V_1$ and $\Delta V_2$, respectively:
 
 \begin{align}
   A &= \Delta V_1 - \Delta V_2 \\
@@ -826,7 +845,7 @@ The Bell model is a poor representation of an actual reaction barrier. One which
       \frac{1}{(\Delta V_2)^{1/2}}]^{-1}
 \end{align}
 
-\noindent where $F^* = d^2V/dx^2$ evaluated at the maximum of the potential. In this formulation, $V$ is a placeholder energy. Note that if a reaction is endoergic, tunnelling does not occur. Alteratively, one says tunnelling only occurs in exoergic or energy-neutral reactions.
+\noindent where $F^* = d^2V/dx^2$ evaluated at the maximum of the potential. In this formulation, $V$ is a placeholder energy. Note that if a reaction is endoergic, tunnelling does not occur. Alternatively, one says tunnelling only occurs in exoergic or energy-neutral reactions.
 
 The solutions to the Schr{\"o}dinger equation for the Eckart potential are analytical, thus that transmission coefficient $\kappa$ can easily be computed using standard numerical techniques. These tunnelling corrections will be applied, where applicable as
 
