@@ -61,11 +61,19 @@ The first steps towards describing an $N$ electron wave function come from the w
 \Psi^{HP}(\mathbf{x}_1,\mathbf{x}_2,\ldots,\mathbf{x}_N) = \chi_i(\mathbf{x}_1)\chi_j(\mathbf{x}_2)\dots\chi_k(\mathbf{x}_N)
 \end{equation}
 
-\noindent In such a system the Hamiltonian has the form of a sum of $N$ independent operators, each decribing an electron's kinetic and potential energy ($h(i)$):
+\noindent In such a system the Hamiltonian has the form of a sum of $N$ independent operators
 
 \begin{equation}
-  \hham = \sum_{i=1}^N h(i)
+  \hham = \sum_{i=1}^N \hat{h}(i)
 \end{equation}
+
+\noindent where $\hat{h}(i)$ is
+
+\begin{equation}
+  \hat{h}(i) = -\frac{1}{2} \nabla_i^2 + V(\mathbf{r}_i)
+\end{equation}
+
+\noindent such that the first term describes an electron's kinetic, and the second term describes potential felt by a single electron. If we consider the case which ignores electron-electron repulsion, then case $V$ describes only the nuclear-electron attraction. Alternatively, Hartree may have included electron-electron repulsion in some average way.
 
 Solutions to the Schr{\"o}dinger equation for this system of non-interacting electrons are facile to obtain as each $h(i)$ depends only on the variables of $\chi_i(\mathbf{x}_i)$, so that
 
@@ -125,7 +133,15 @@ Within the Hartree-Fock approximation, we approximate the full electronic Hamilt
 \hat{H}_0 = \sum_{i=1}^N \hat{f}(i)
 \end{equation}
 
-\noindent where $\hat{f}(i)$ is the Fock operator of the $ith$ electron.  The problem is now reduced to solving the eigenvalue Hartree-Fock equation of the form
+\noindent where $\hat{f}(i)$ is the Fock operator of the $i-th$ electron, defined as
+
+\begin{equation}
+  \hat{f}(i) = -\frac{1}{2}\nabla^2_i + \sum_{A=1}^M\frac{Z_A}{r_{iA}} + v^{HF}(i)
+\end{equation}
+
+\noindent The first two terms are familiarly the non-interacting one electron Hamiltonian, $\hat{h}(i)$. The third term, $v^{HF}(i)$, is the average potential experienced by each electron in the presence of other electrons.
+
+With these approximations, the quantum problem is now reduced to solving the eigenvalue Hartree-Fock equation of the form
 
 \begin{equation}
 \hat{f}(i)\chi(\mathbf{x}_i) = \epsilon_i\chi(\mathbf{x}_i)
@@ -651,7 +667,7 @@ The study of transition state theory (TST) originates in the 1930s, and was deve
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/TST-PES.png}
+    \includegraphics[width=0.6\textwidth]{figures/TST-PES.png}
     \caption[A reaction coordinate diagram for a generic reaction.]{A reaction
       coordinate diagram for the reaction of Equation \ref{eq:tst}. The TS complex is
       defined to exist in the small region $\delta$ above the reaction
