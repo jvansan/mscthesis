@@ -4,9 +4,30 @@
 Bond Dissociation Enthalpies correlated with Hydrogen Atom Transfer Rate Constants}
 \label{ch:bde}
 
-\jnote{Experimental BDEs from Bordwell\cite{Bordwell1988} cycle are possible unreliable in the case where PCET occurs \cite{Miller2016}}
 
-Bond dissociation enthalpies (BDEs) are one of the most fundamental properties used by chemists to understand chemical reactions. This is especially apparent in the case of related HAT reactions, where the hydrogen atom acceptor is constant in all cases. Then, the difference in enthalpy of formation will depend entirely on the BDE.  Moreover, BDEs are measurable using a large number of different experimental techniques. The \emph{de facto} reference for BDEs is \cite{Luo2002} CRC Handbook of Bond Dissociation Enthalpies.
+
+The Bell-Evans-Polanyi (BEP) principle states that for two closely related reactions, the difference in activation energy is proportional to the difference in their enthalpy of reaction.\cite{Bell1936,Evans1938,Dill2003} This is commonly expressed as the linear free energy relationship in~\ref{eq:bep}. Initially, the BEP principle was used as a simple model to explain the Br{\o}nsted catalysis law, which states that the stronger and acid is, the faster the catalysed reaction will proceed.\cite{Bronsted1924} These relationships can be described schematically: the more stable the product, the lower the reaction barrier, as seen in~\ref{fig:bep}.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.7\textwidth]{figures/bep}
+  \caption{Energy profiles for a series of related exothermic reactions illustrating the Bell-Evans-Polanyi Principle.}
+\label{fig:bep}
+\end{figure}
+
+A modern use of the BEP principle is to estimate the activation energy of related reactions. If the BEP relationship holds for a series of related HAT reactions, then bond dissociation enthalpies (BDEs) should correlate with the activation energy. In this case, increased bond strengths would represent a destabilisation in the TS complex, and thus a decrease in reaction rate. In practice, plots of BDEs against the logarithm of rate constant are used. An interesting example of this is the work of \citet{Pratt2003}, in which the free radical oxidation of unsaturated lipids is examined. They achieve this through the correlation of theoretically determined C-H and \ch{C-OO^.} bond strengths with experimentally measured HAT rate constants and \ch{O2} addition rate constants, respectively. BEP plots (BDE vs. $\log k$) for a large range of polyunsaturated fatty acid models show good correlation for both the C-H bonds and \ch{C-OO^.} bonds examined. This demonstrates that BDEs have a direct impact on the reaction barrier height, giving validation to the BEP principle.
+
+In addition to this, there is no prescription as to how broadly the BEP principle can be applied. In this work, I seek to explore this issue. In order to achieve this, I explore HAT reactions involving the abstraction of C-H bonds by \cumo, for which many rate constants have been published.\cite{Bietti2010, Bietti2011, Pischel2001, Salamone2011, Salamone2012, Salamone2012a, Salamone2013, Salamone2015} Additional unpublished rate constants have been provided by our experimental colleagues in Rome.
+
+BDEs are measurable using a large number of different experimental techniques. The \emph{de facto} reference for BDEs is the \emph{CRC Handbook of Bond Dissociation Enthalpies}.\cite{Luo2002} Unfortunately, not all experimental methods give reliable BDE data. For example, BDEs from Bordwell\cite{Bordwell1988} thermochemical cycle are possibly unreliable in the case where PCET occurs.\cite{Miller2016} Therefore, quantum chemistry is a useful tool for studying BDEs, as it is facile to compute reliable BDEs. For example, an arbitrary \ch{X-H} bond strength is given by:
+
+\begin{equation}
+  \Delta H(BDE) = H(\ch{X-H}) - H(\ch{X^.}) - H(\ch{H^.})
+\end{equation}
+
+\noindent where $\Delta H(BDE)$ is the BDE, and the right-hand terms are the enthalpies of the substrate, the incipient radical, and the hydrogen atom, respectively.
+
+DFT-based methods have been shown to give reliable relative BDEs, however, highly correlated methods are required to predict chemically accurate (sub-\kcalmol) BDEs.\cite{DiLabio1999, Chan2012, Wiberg2014} Often this is done using composite quantum chemical procedures. Unfortunately, due to the computational cost of some of these procedures, calculations are often limited to small molecules. Additionally, there is currently no literature which compares the ability of common composite methods to predict accurate BDEs. Therefore, another aim of the work is to determine which composite procedure most efficiently gives accurate BDEs.
 
 \section{Methods}
 
@@ -38,3 +59,106 @@ Atomic pair natural orbital (APNO) expansions are a method used for averaging ov
 The Gaussian$-n$ (G$n$) series of methods originate from the Pople group,\cite{Pople1989} where G4 is the fourth generation. G4 utilises moderately large basis sets and extrapolation techniques with CCSD(T) calculations to obtained highly correlated electronic energies. G4(MP2) uses MP2 in place is CCSD(T) and is thus less computationally expensive, but also gives a less complete description of electron correlation. Both methods use the B3LYP/6-31(2df,p) level of theory for optimisation and frequency calculations with a ZPE scaling factor of 0.9854. G4 results have been described as generally on par with CBS-QB3 results,\cite{Somers2015, Simmie2015} but calculations are more computationally expensive.
 
 \subsection{Transition state calculations}
+
+\section{Comparison of composite method for the prediction of BDEs}
+
+In order to determine the best method for BEP principle analysis, and to investigate which is the most accurate composite method, the BDEs of 49 species have been calculated. This set of species contains a wide variety of chemical functionalities, thus this set may be described as a comprehensive test of these methods for C-H BDEs. Given that W1BD is the most accurate method used, these results have been used for comparison to other composite method. Unfortunately, BDE for only 33 out of the 49 species studied were able to calculated by W1BD due to computational restrictions. Therefore, literature BDEs from \citet{Luo2002} for all species in the set are also used for comparison. The literature and calculated BDEs are listed in Appendix X, \jnote{TABLE REF}.
+
+One of the most used tools for assessing the quality of computational methods is the \emph{mean absolute error} (MAE) with respect to benchmark values for a given data set.\cite{Savin2014} The MAE is calculated as
+
+\begin{equation}
+  \mathrm{MAE} = \frac{1}{N} \sum | E_{ref} - E_{calc}|
+\end{equation}
+
+\noindent where for a set of $N$ reference values, the MAE is the average of the mean differences of the reference energy ($E_{ref}$) and the calculated value ($E_{calc}$). The MAE with respect to W1BD and literature shall be reported herein as ``MAE$_{\mathrm{W1BD}}$ (MAE$_{\mathrm{Literature}}$)''. An additional semi-quantitative metric which I used to evaluate the accuracy of composite procedures to reproduce experimental results, is a bar chart which summarises the number of deviations from literature within given error ranges. This bar chart is reported in Appendix X, \jnote{FIG REF}.
+
+Comparing W1BD results to literature, the MAE is 0.82 \kcalmol, with the majority of the data falls within 1--2 \kcalmol of each other. This suggests that both W1BD is consistent with the literature values. There are, however, two large outliers: dimethylsulfoxide\footnotemark~ and \emph{N,N}-dimethylacetamide, with experiment underestimating the BDEs by -8.03 and -8.22 \kcalmol, respectively. This result is consistent amongst all composite method, verifying the inaccuracy of these results.
+
+\footnotetext{The experimental BDE for dimethylsulfoxide was previously identified as accurate by Salamone et al.\cite{Salamone2012}}
+
+The best agreement with both W1BD and literature is the ROCBS-QB3 method (MAE = 0.18 (1.64) \kcalmol). In comparison, CBS-QB3 has an MAE = 0.32 (1.88) \kcalmol, while CBS-APNO has an MAE = 0.20 (1.40) \kcalmol.  The G4 method deviates from the W1BD reference by about 0.5 \kcalmol more, however, it appears to give reasonable agreement with experimental results (MAE = 0.70 (1.21) mol). The use of the MP2 variant of G4 gives somewhat questionable results, with an MAE of 0.88 (1.60) \kcalmol, as well as a large outlier of 6.23 kcal/mol that is not present in the other data from composite methods.
+
+An alternative method for visualising these data is through the use of one-to-one plots, in which BDEs from two methods are directly compared. An ideal plot should have a slope = 1 and y-intercept = 0. These plots are reported in Appendix X, \jnote{FIG REF}, where it can once seen that ROCBS-QB3 performs best for the calculation of BDEs while G4(MP2) performs worst. Given these data, and considering the relative computational cost, the ROCBS-QB3 method is recommended for the efficient calculation of accurate BDEs, particularly for large molecules for which more expensive computational methods are not possible. Importantly, we can now confidently continue investigating the BEP relationships using reliable calculated BDE data from the ROCBS-QB3 method.
+
+\section{Analysis of the Bell-Evans-Polanyi Relation}
+
+
+
+\newpage
+\jnote{Data to be moved to appendix}
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=\textwidth]{figures/bde-mae-barchart}
+  \caption{Summary of deviations of BDEs from reference for composite quantum chemical methods. Errors are relative to Reference~\citenum{Luo2002}. Numbers out of 49 represent the total number of data points which were computed for the given method.}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{figures/lit-w1bd}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{8cm}
+  \centering
+  \includegraphics[width=\textwidth]{figures/w1bd-cbsqb3}
+\end{minipage}%
+\begin{minipage}{8cm}
+  \centering
+  \includegraphics[width=\textwidth]{figures/lit-cbsqb3}
+\end{minipage}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{8cm}
+  \centering
+  \includegraphics[width=\textwidth]{figures/w1bd-rocbsqb3}
+\end{minipage}%
+\begin{minipage}{8cm}
+  \centering
+  \includegraphics[width=\textwidth]{figures/lit-rocbsqb3}
+\end{minipage}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{8cm}
+  \centering
+  \includegraphics[width=\textwidth]{figures/w1bd-cbsapno}
+\end{minipage}%
+\begin{minipage}{8cm}
+  \centering
+  \includegraphics[width=\textwidth]{figures/lit-cbsapno}
+\end{minipage}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{8cm}
+  \centering
+  \includegraphics[width=\textwidth]{figures/w1bd-g4}
+\end{minipage}%
+\begin{minipage}{8cm}
+  \centering
+  \includegraphics[width=\textwidth]{figures/lit-g4}
+\end{minipage}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{8cm}
+  \centering
+  \includegraphics[width=\textwidth]{figures/w1bd-g4mp2}
+\end{minipage}%
+\begin{minipage}{8cm}
+  \centering
+  \includegraphics[width=\textwidth]{figures/lit-g4mp2}
+\end{minipage}
+\end{figure}
+
+\begin{landscape}
+\input{org/bde-calc.tex}
+\end{landscape}
+
+\input{org/expt-bde.tex}

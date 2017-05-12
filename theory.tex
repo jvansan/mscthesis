@@ -313,7 +313,7 @@ Within the exponential ansatz, $e^{\hat{T}}$ is usually truncated and expanded i
 
 The inclusion of higher order excitations becomes decreasingly important with degree of excitation; however, the inclusion of triples is often found to be necessary for the accurate description of electron correlation (i.e. CCSDT). The computation of triples is prohibitively expensive in all but the simplest of systems, thus approximations based on perturbation theory are often used in substitution. The most commonly used perturbative triples method is CCSD(T), where the parenthesis indicate the use of perturbative arguments. Note also that traditionally, the use of CCSD(T) implies excitation of only the valence electrons, unless otherwise stated.
 
-CCSD(T) is commonly referred to as the \emph{gold standard} in quantum chemistry and is often used to obtain benchmark quality results for thermochemistry and NCIs.\cite{Levine2013} However, CCSD(T) scales with $N^7$ number of basis functions, and is thus significantly more computationally expensive than HF or MP2, restricting its application to small systems of molecules. Quadratic configuration interaction (QCI) is very closely related to CC and gives very similar results.\cite{Pople1987}
+CCSD(T) is commonly referred to as the \emph{gold standard} in quantum chemistry and is often used to obtain benchmark quality results for thermochemistry and NCIs.\cite{Levine2013} However, CCSD(T) scales with $N^7$ number of basis functions, and is thus significantly more computationally expensive than HF or MP2, restricting its application to small systems of molecules. Quadratic configuration interaction (QCI) is closely related to CC, except that is uses quadratic operators in place of exponential ones. QCISD(T) and CCSD(T) gives very similar results.\cite{Pople1987}
 
 \subsection{The complete basis set limit}
 
@@ -495,7 +495,7 @@ The computation of molecular vibrations can be performed simply given a set of m
 Typically to obtain molecular frequencies, one computes the mass-weighted Hessian matrix elements $F_{ij}$
 
 \begin{equation}
-  F_{ij} = \frac{1}{\sqrt{m_im_j}} mathbf{H}_ij
+  F_{ij} = \frac{1}{\sqrt{m_im_j}} \mathbf{H}_ij
 \end{equation}
 
 \noindent where the partial derivatives of internal coordinates $x_i$ of the potential energy $U$ are taken for 3$N$ atoms with mass $m$. One then seeks to diagonalise this $3N\times3N$ matrix to obtain eigenvalues $\lambda_i$, which describe the force constant of each normal mode. The harmonic frequencies $\nu_i$ are then obtained by
