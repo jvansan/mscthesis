@@ -17,21 +17,21 @@ The Bell-Evans-Polanyi (BEP) principle states that for two closely related react
 
 A modern use of the BEP principle is to estimate the activation energy of related reactions. If the BEP relationship holds for a series of related HAT reactions, then bond dissociation enthalpies (BDEs) should correlate with the activation energy. In this case, increased bond strengths would represent a destabilisation in the TS complex, and thus a decrease in reaction rate. In practice, plots of BDEs against the logarithm of rate constant are used. An interesting example of this is the work of \citet{Pratt2003}, in which the free radical oxidation of unsaturated lipids is examined. They achieve this through the correlation of theoretically determined C-H and \ch{C-OO^.} bond strengths with experimentally measured HAT rate constants and \ch{O2} addition rate constants, respectively. BEP plots (BDE vs. $\log k$) for a large range of polyunsaturated fatty acid models show good correlation for both the C-H bonds and \ch{C-OO^.} bonds examined. This demonstrates that BDEs have a direct impact on the reaction barrier height, giving validation to the BEP principle.
 
-In addition to this, there is no prescription as to how broadly the BEP principle can be applied. In this work, I seek to explore this issue. In order to achieve this, I explore HAT reactions involving the abstraction of C-H bonds by \cumo, for which many rate constants have been published.\cite{Bietti2010, Bietti2011, Pischel2001, Salamone2011, Salamone2012, Salamone2012a, Salamone2013, Salamone2015} Additional unpublished rate constants have been provided by our experimental colleagues in Rome.
+In addition to this, there is no prescription as to how broadly the BEP principle can be applied. In this work, I seek to explore this issue. In order to achieve this, I explore HAT reactions involving the abstraction of C-H bonds by \cumo, for which many rate constants have been published.\cite{Bietti2010, Bietti2011, Pischel2001, Salamone2011, Salamone2012, Salamone2012a, Salamone2013, Salamone2015} Additional unpublished rate constants have been provided by our experimental colleagues in Rome. We have hypothesised that there should exists two distinct BEP relations: one in which the incipient radical is delocalised into a $\pi$-system (benzylic-allylic), and the remaining alkyl radicals which are largely localised.
 
 BDEs are measurable using a large number of different experimental techniques. The \emph{de facto} reference for BDEs is the \emph{CRC Handbook of Bond Dissociation Enthalpies}.\cite{Luo2002} Unfortunately, not all experimental methods give reliable BDE data. For example, BDEs from Bordwell\cite{Bordwell1988} thermochemical cycle are possibly unreliable in the case where PCET occurs.\cite{Miller2016} Therefore, quantum chemistry is a useful tool for studying BDEs, as it is facile to compute reliable BDEs. For example, an arbitrary \ch{X-H} bond strength is given by:
 
 \begin{equation}
-  \Delta H(BDE) = H(\ch{X-H}) - H(\ch{X^.}) - H(\ch{H^.})
+  \Delta H(BDE) =  H(\ch{X^.}) + H(\ch{H^.}) - H(\ch{X-H})
 \end{equation}
 
-\noindent where $\Delta H(BDE)$ is the BDE, and the right-hand terms are the enthalpies of the substrate, the incipient radical, and the hydrogen atom, respectively.
+\noindent where $\Delta H(BDE)$ is the BDE, and the right-hand terms are the enthalpies of the incipient radical, the hydrogen atom, and the substrate, respectively.
 
-DFT-based methods have been shown to give reliable relative BDEs, however, highly correlated methods are required to predict chemically accurate (sub-\kcalmol) BDEs.\cite{DiLabio1999, Chan2012, Wiberg2014} Often this is done using composite quantum chemical procedures. Unfortunately, due to the computational cost of some of these procedures, calculations are often limited to small molecules. Additionally, there is currently no literature which compares the ability of common composite methods to predict accurate BDEs. Therefore, another aim of the work is to determine which composite procedure most efficiently gives accurate BDEs.
+DFT-based methods have been shown to give reliable relative BDEs, however, highly correlated wave function based methods are required to predict chemically accurate (sub-\kcalmol) BDEs.\cite{DiLabio1999, Chan2012, Wiberg2014} For this purpose, we shall use composite quantum chemical procedures. Unfortunately, due to the computational cost of some of these procedures, calculations are often limited to small molecules. Additionally, there is currently no literature which compares the ability of common composite methods to predict accurate BDEs. Therefore, another aim of the work is to determine which composite procedure most efficiently gives accurate BDEs.
 
 \section{Methods}
 
-Experimental rate constants were have either provided from unpublised results from our colleagues, the Bietti group in Rome, or come from literature sources.\cite{Bietti2010, Bietti2011, Pischel2001, Salamone2011, Salamone2012, Salamone2012a, Salamone2013, Salamone2015} All rate constants come from laser flash photolysis (LFP) experiments of \cumo~ with the substrates of interest. Acetonitrile solvent and ambient conditions (298 K and 1 atm) were used in all cases. For those results which have are unpublished, \cumo~ is generated by laser pulses at either 266 nm or 355 nm in solutions of excess dicumyl peroxide. Many of the literature results are also from the Bietti group, where the same procedure is used. Other results may have small variations in experimental details, however, all results are well time-resolved.
+Experimental rate constants were have either provided from unpublished results from our colleagues, the Bietti group in Rome, or come from literature sources.\cite{Bietti2010, Bietti2011, Pischel2001, Salamone2011, Salamone2012, Salamone2012a, Salamone2013, Salamone2015} All rate constants come from laser flash photolysis (LFP) experiments of \cumo~ with the substrates of interest. Acetonitrile solvent and ambient conditions (298 K and 1 atm) were used in all cases. For those results which have are unpublished, \cumo~ is generated by laser pulses at either 266 nm or 355 nm in solutions of excess dicumyl peroxide. Many of the literature results are also from the Bietti group, where the same procedure is used. Other results may have small variations in experimental details, however, all results are well time-resolved.
 
 Observed rate constants ($k_{obs}$) are obtained from transient absorption decay traces of \cumo monitored at 485 nm. The observed rate constant is plotted against concentration of substrate to provide bimolecular HAT rate constants ($k_H$) as the slope ($k_{obs} = k_0 + k_H[substrate]$). The unimolecular decay rate constant for \cumo ($k_0$) in acetonitrile is on the order of 7.5 \E{5} s$^{-1}$.\cite{Avila1995}
 
@@ -80,7 +80,36 @@ The best agreement with both W1BD and literature is the ROCBS-QB3 method (MAE = 
 
 An alternative method for visualising these data is through the use of one-to-one plots, in which BDEs from two methods are directly compared. An ideal plot should have a slope = 1 and y-intercept = 0. These plots are reported in Appendix X, \jnote{FIG REF}, where it can once seen that ROCBS-QB3 performs best for the calculation of BDEs while G4(MP2) performs worst. Given these data, and considering the relative computational cost, the ROCBS-QB3 method is recommended for the efficient calculation of accurate BDEs, particularly for large molecules for which more expensive computational methods are not possible. Importantly, we can now confidently continue investigating the BEP relationships using reliable calculated BDE data from the ROCBS-QB3 method.
 
-\section{Analysis of the Bell-Evans-Polanyi Relation}
+\section{Analysis of the Bell-Evans-Polanyi Principle}
+
+We can now to the application of accurate BDEs on the BEP Principle. Experimental HAT rate constants have been collected for 32 reactions involving \cumo and organic substrates. The BEP plot of the logarithm of normalised rate constants against BDEs is shown in~\ref{bde-bep}.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=\textwidth]{figures/bde-bep}
+\begin{tabularx}{\textwidth}{| l X l X |}
+  \hline
+  1 & Acetone & 2 & Acetonitrile \\
+  3 & Cyclopentane & 4 & 2,2-dimethylbutane \\
+  5 & 2,3-dimethylbutane & 6 & Cyclohexane \\
+  7 & Cycloheptane & 8 & Cyclooctane \\
+  9 & Adamantane (2$^\circ$) & 10 & Adamantane (3$^\circ$) \\
+  11 & Diethyl Ether & 12 & Piperazine \\
+  13 & Piperidine & 14 & Pyrrolidine \\
+  15 & Tetrahydrofuran & 16 & Dioxane \\
+  17 & Triethylamine & 18 & DABCO \\
+  19 & Dimethylsulfoxide & 20 & Benzaldehyde \\
+  21 & HMPA & 22 & Morpholine \\
+  23 & Diethylamine & 24 & Propylamine \\
+  25 & Cyclohexadiene & 26 & Toluene \\
+  27 & Benzyl Alcohol & 28 & Ethylbenzene \\
+  29 & Cumene & 30 & Diphenylmethane \\
+  31 & Dibenzyl Ether & 32 & 9,10-dihydroanthracene \\
+  \hline
+\end{tabularx}
+  \caption{Bell-Evans-Polanyi plot of experimental rate constants for HAT between \cumo~ and substrates. Acetone and acetonitrile are note included in fitting as the experimental rate constants are approximate. Needs revision to move labels around.}
+  \label{bde-bep}
+\end{figure}
 
 
 
@@ -89,7 +118,7 @@ An alternative method for visualising these data is through the use of one-to-on
 \begin{figure}[htb]
   \centering
   \includegraphics[width=\textwidth]{figures/bde-mae-barchart}
-  \caption{Summary of deviations of BDEs from reference for composite quantum chemical methods. Errors are relative to Reference~\citenum{Luo2002}. Numbers out of 49 represent the total number of data points which were computed for the given method.}
+  \caption[Summary of deviations of BDEs from reference for composite quantum chemical methods.]{Summary of deviations of BDEs from reference for composite quantum chemical methods. Errors are relative to Reference~\protect\citenum{Luo2002}. Numbers out of 49 represent the total number of data points which were computed for the given method.}
 \end{figure}
 
 \begin{figure}
