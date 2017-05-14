@@ -1,12 +1,13 @@
 % !TEX root = diss.tex
 
-\chapter{Interrogation of the Bell-Evans-Polanyi Principle: Investigation of the
-Bond Dissociation Enthalpies correlated with Hydrogen Atom Transfer Rate Constants}
+\chapter{Interrogation of the Bell-Evans-Polanyi Principle: Investigation of the Bond Dissociation Enthalpies correlated with Hydrogen Atom Transfer Rate Constants}
 \label{ch:bde}
+
+\jnote{Appendix Data is listed in the last section}
 
 \section{Introduction}
 
-The Bell-Evans-Polanyi (BEP) principle states that for two closely related reactions, the difference in activation energy is proportional to the difference in their enthalpy of reaction.\cite{Bell1936,Evans1938,Dill2003} This is commonly expressed as the linear free energy relationship in Equation~\ref{eq:bep}. Initially, the BEP principle was used as a simple model to explain the Br{\o}nsted catalysis law, which states that the stronger and acid is, the faster the catalysed reaction will proceed.\cite{Bronsted1924} These relationships can be described schematically: the more stable the product, the lower the reaction barrier, as seen in~\ref{fig:bep}.
+The Bell-Evans-Polanyi (BEP) Principle states that for two closely related reactions, the difference in activation energy is proportional to the difference in their enthalpy of reaction.\cite{Bell1936,Evans1938,Dill2003} This is commonly expressed as the linear free energy relationship in Equation 1.1 \jnote{Introduction}. Initially, the BEP Principle was used as a simple model to explain the Br{\o}nsted catalysis law, which states that the stronger and acid is, the faster the catalysed reaction will proceed.\cite{Bronsted1924} A key assumptions is made for the BEP Principle: the position along the reaction coordinate for all reactions is the same. The relationship can be described schematically: the more stable the product, the lower the reaction barrier, as seen in~\ref{fig:bep}.
 
 \begin{figure}[htb]
   \centering
@@ -15,11 +16,11 @@ The Bell-Evans-Polanyi (BEP) principle states that for two closely related react
 \label{fig:bep}
 \end{figure}
 
-A modern use of the BEP principle is to estimate the activation energy of related reactions. If the BEP relationship holds for a series of related HAT reactions, then bond dissociation enthalpies (BDEs) should correlate with the activation energy. In this case, increased bond strengths would represent a destabilisation in the TS complex, and thus a decrease in reaction rate. In practice, plots of BDEs against the logarithm of rate constant are used. An interesting example of this is the work of \citet{Pratt2003}, in which the free radical oxidation of unsaturated lipids is examined. They achieve this through the correlation of theoretically determined C-H and \ch{C-OO^.} bond strengths with experimentally measured HAT rate constants and \ch{O2} addition rate constants, respectively. BEP plots (BDE vs. $\log k$) for a large range of polyunsaturated fatty acid models show good correlation for both the C-H bonds and \ch{C-OO^.} bonds examined. This demonstrates that BDEs have a direct impact on the reaction barrier height, giving validation to the BEP principle.
+A modern use of the BEP Principle is to estimate rate constants of related reactions. If the relationship holds for a series of related HAT reactions, then bond dissociation enthalpies (BDEs) should correlate with the activation energy, and thus through the Arrhenius equation, rate constants. For instance, an increase in bond strength would represent a destabilisation in the TS complex, and thus a decrease in reaction rate. In application, plots of BDEs against the logarithm of rate constant are used. An interesting example of this is the work of \citet{Pratt2003}, in which the free radical oxidation of unsaturated lipids was examined. They demonstrate the correlation of theoretically determined C-H and \ch{C-OO^.} bond strengths with experimentally measured HAT rate constants and \ch{O2} addition rate constants, respectively. BEP plots (BDE vs. $\log k$) for a large range of polyunsaturated fatty acid models show good correlation for both the C-H bonds and \ch{C-OO^.} bonds examined. This establishes that BDEs have a direct impact on the reaction barrier height, giving validation to the BEP Principle. Importantly, these results also provide a means for predicting rate constants of related HAT and oxygen addition reactions by means of calculating BDEs.
 
-In addition to this, there is no prescription as to how broadly the BEP principle can be applied. In this work, I seek to explore this issue. In order to achieve this, I explore HAT reactions involving the abstraction of C-H bonds by \cumo, for which many rate constants have been published.\cite{Bietti2010, Bietti2011, Pischel2001, Salamone2011, Salamone2012, Salamone2012a, Salamone2013, Salamone2015} Additional unpublished rate constants have been provided by our experimental colleagues in Rome. We have hypothesised that there should exists two distinct BEP relations: one in which the incipient radical is delocalised into a $\pi$-system (benzylic-allylic), and the remaining alkyl radicals which are largely localised.
+Unfortunately, there is no prescription as to how broadly the BEP Principle can be applied. In this work, I seek to explore this issue. In order to achieve this, I explore HAT reactions involving the abstraction of C-H bonds by \cumo, for which many rate constants have been published.\cite{Bietti2010, Bietti2011, Pischel2001, Salamone2011, Salamone2012, Salamone2012a, Salamone2013, Salamone2015} Additional unpublished rate constants have been provided by our experimental colleagues in Rome. We have hypothesised that there should exist two distinct BEP relations: one in which the incipient radical is delocalised into a $\pi$-system (benzylic or allylic), and the remaining alkyl radicals which are largely localised.
 
-BDEs are measurable using a large number of different experimental techniques. The \emph{de facto} reference for BDEs is the \emph{CRC Handbook of Bond Dissociation Enthalpies}.\cite{Luo2002} Unfortunately, not all experimental methods give reliable BDE data. For example, BDEs from Bordwell\cite{Bordwell1988} thermochemical cycle are possibly unreliable in the case where PCET occurs.\cite{Miller2016} Therefore, quantum chemistry is a useful tool for studying BDEs, as it is facile to compute reliable BDEs. For example, an arbitrary \ch{X-H} bond strength is given by:
+BDEs are measurable using a large number of different experimental techniques, and a great deal of data exists in the literature. Fortunately, much of this data has been compiled. Thus, the \emph{de facto} reference for BDEs is the \emph{CRC Handbook of Bond Dissociation Enthalpies}.\cite{Luo2002} Unfortunately, not all experimental methods give reliable BDE data. For example, BDEs from Bordwell\cite{Bordwell1988} thermochemical cycle are possibly unreliable in the case where PCET occurs.\cite{Miller2016} Therefore, quantum chemistry is a useful tool for studying BDEs, as it is facile to compute reliable BDEs. For example, an arbitrary \ch{X-H} bond strength is given by:
 
 \begin{equation}
   \Delta H(BDE) =  H(\ch{X^.}) + H(\ch{H^.}) - H(\ch{X-H})
@@ -60,9 +61,11 @@ The Gaussian$-n$ (G$n$) series of methods originate from the Pople group,\cite{P
 
 \subsection{Transition state calculations}
 
+Calculations were performed to identify the lowest energy TS complex of several reactions between \cumo~ and organic substrates. In all cases cisoid and transoid conformations were explored. All optimisation calculations were performed at the B3LYP-D3(BJ)/6-31+G$^*$ level of theory. Single-point energy calculation were carried out at the LC-$\omega$PBE-D3(BJ)/6-311+G(2d,2p) level of theory.
+
 \section{Comparison of composite method for the prediction of BDEs}
 
-In order to determine the best method for BEP principle analysis, and to investigate which is the most accurate composite method, the BDEs of 49 species have been calculated. This set of species contains a wide variety of chemical functionalities, thus this set may be described as a comprehensive test of these methods for C-H BDEs. Given that W1BD is the most accurate method used, these results have been used for comparison to other composite method. Unfortunately, BDE for only 33 out of the 49 species studied were able to calculated by W1BD due to computational restrictions. Therefore, literature BDEs from \citet{Luo2002} for all species in the set are also used for comparison. The literature and calculated BDEs are listed in Appendix X, \jnote{TABLE REF}.
+In order to determine the best method for BEP Principle analysis, and to investigate which is the most efficient yet accurate composite method, the BDEs of 49 species have been calculated. This set of species contains a wide variety of chemical functionalities, thus this set may be described as a comprehensive test of these methods for C-H BDEs. Given that W1BD is the most accurate method used, these results have been used for comparison to other composite method. Unfortunately, BDE for only 33 out of the 49 species studied were able to calculated by W1BD due to computational restrictions. Therefore, literature BDEs from \citet{Luo2002} for all species in the set are also used for comparison. The literature and calculated BDEs are listed in Appendix X, \jnote{TABLE REF}.
 
 One of the most used tools for assessing the quality of computational methods is the \emph{mean absolute error} (MAE) with respect to benchmark values for a given data set.\cite{Savin2014} The MAE is calculated as
 
@@ -84,7 +87,9 @@ An alternative method for visualising these data is through the use of one-to-on
 
 We turn now to the application of accurate BDEs on the BEP Principle. Experimental HAT rate constants have been collected for 32 reactions involving \cumo and organic substrates. The BEP plot of the logarithm of normalised rate constants against BDEs is shown in~\ref{fig:bde-bep}.
 
-\begin{figure}[htb]
+There clearly exists two general trends in~\ref{fig:bde-bep}, inline with our initial hypothesis that there should exist two linear relations: one for benzylic/allylic C-H bonds and another for alkyl C-H bonds. However, the correlation of one of these trends is poor, a result which is inconsistent with our hypothesis. For the series of C-H BDEs which result in a radical which is delocalised, the correlation coefficient is 0.89, suggesting a valid correlation. Therefore, there is predictive power from a BEP relation for C-H bond cleavage which results in a delocalised radical. Furthermore, this result is consistent with the correlation of rate constants with C-H BDEs for model unsaturated fatty acids, described by Pratt et al.\cite{Pratt2003}
+
+\begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{figures/bde-bep}
 \begin{tabularx}{\textwidth}{| l X l X |}
@@ -111,15 +116,48 @@ We turn now to the application of accurate BDEs on the BEP Principle. Experiment
 \label{fig:bde-bep}
 \end{figure}
 
-There clearly exists two general trends in~\ref{fig:bde-bep}, inline with our intial hypothesis that there should exist two linear relations: one for benzylic/allylic C-H bonds and another for alkyl C-H bonds. However, the correlation of one of these trends is poor, a result which is inconsistent with our hypothesis. For the series of C-H BDEs which result in a radical which is delocalised, the correlation coeffecient is 0.89, suggesting a valid correlation. Therefore, there is predictive power from a BEP relation for C-H bond cleavage which results in a delocalised radical. Furthermore, this result is consisent with the correlation of rate constants with C-H BDEs for model unsaturated fatty acids, described by Pratt et al.\cite{Pratt2003}
+In contrast, the alkyl C-H BDEs shows very weak correlation with HAT rate constants, with a correlation coefficient of 0.63. However, with the exception of two larger outlier, cyclooctane and the secondary hydrogen position of adamantane, the majority of the data fall within half an order of magnitude of rate a rate constant which is consistent with the line of best fit. The two large outliers are approximately twice as far from the trendline. While this result may not seem positive, there is actually some predictive power in the BEP relation established for alkyl C-H bonds. This is because in the calculations of rate constants, an error of only 1.2 \kcalmol can result in a order of magnitude difference in rate constant. Errors of this magnitude are not uncommon for DFT-based mechanistic studies. For example, barrier heights for a set\cite{Zhao2005,Zhao2009} of 76 hydrogen transfer, heavy atom transfer, nucleophilic substitution, unimolecular, and association reactions calculated with at the B3LYP-D3(BJ)/Def2-QZVP level of theory give a mean absolute error of 5.20 \kcalmol, with errors exceeding 11 \kcalmol.\cite{Goerigk2011}
 
-In contrast, the alkyl C-H BDEs show only very weak correlation with HAT rate constants, with a correlation coefficient of 0.63. This result suggests that there are competing factors in determining the HAT rate constant. In order to determine what effects appear to be most important, I have calculated TS strucutres for 19 of the reactions.
+In sum, these results suggest that the BEP Principle is overly simple to directly correlate the large groups of allylic/benzylic and alkyl C-H bonds with HAT rate constant. Nonetheless, BEP relations offer predictive capabilities for rate constants to within an order of magnitude. Importantly, this result indicates that there are additional factors which contribute to the HAT rate constants studied herein.
 
 \section{Transition state analysis}
 
+In order to determine what effects appear to be most important, I have calculated TS structures for 19 of the reactions at the LC-$\omega$PBE-D3(BJ)/6-311+G(2d,2p)//B3LYP-D3(BJ)/6-31+G$^*$ level of theory. Comparing the calculated rate constants both with and without tunnelling corrections, there is a large degree of variability in the agreement with experiment. \ref{fig:kH-theory} demonstrates that the calculated rate constants deviate rather significantly from the experimental rate constants, both with and without the inclusion of a tunnelling correction. This result is perhaps unsurprising given the neglect of solvent effects, and the fairly low level of theory used for optimisation. Note however, that the goal of these calculations was not to reproduce experimental rate constants, but to obtain TS complex structures to analyse the structural differences that may lead to the deviations from the BEP Principle.
+
+\begin{figure}[htb]
+\centering
+\begin{minipage}{8cm}
+  \centering
+  \includegraphics[width=\textwidth]{figures/kH-theorya}
+\end{minipage}%
+\begin{minipage}{8cm}
+  \centering
+  \includegraphics[width=\textwidth]{figures/kH-theoryb}
+\end{minipage}
+\caption[One-to-one plots of theoretically determined logarithm of rate constant or HAT reactions between \cumo~ and organic substrates against experimental values.]{One-to-one plots of theoretically determined logarithm of rate constant for HAT reactions between \cumo~ and organic substrates against experimental values. The plot on the left does not include a tunnelling correction while the plot on the right includes the Eckart potential tunnelling correction.}
+\label{fig:kH-theory}
+\end{figure}
+
+The first factor which may lead to deviations from the BEP is the possibility for different HAT reaction mechanisms, i.e. direct HAT or PCET. Consider first the reaction of toluene with \cumo. As this reaction is similar to the self-exchange reaction of the benzyl-toluene couple as described by DiLabio and Johnson,\cite{DiLabio2007} one might expect the reaction to proceed via PCET. The lowest energy TS complex has a partially $\pi$-stacked conformation with the rings oriented about 40$^\circ$ relative to one another. Surprisingly, examination of the SOMO and HOMO reveals no $\pi$-$\pi$ partial bonding interaction, as can be seen in~\ref{fig:cumo-toluene}. The electron density of the SOMO is largely localised on the toluene portion of the complex. This is likely due to the additional non-conjugated carbon centre of \cumo, which prevent an additional electron channel for PCET to occur. Therefore, this reaction takes place through direct HAT. This behaviour is specific to the \cumo radical, thus all the reactions likely also take place through a direct HAT mechanism, and this should not factor into the deviations in the observed BEP Principle relationships.
+
+\begin{figure}[htb]
+  \includegraphics[width=\textwidth]{figures/cumo-toluene}
+  \caption{Insert better images of \cumo-toluene TS complex with A) SOMO and B) HOMO.}
+  \label{fig:cumo-toluene}
+\end{figure}
+
+There are several other possible deviations which may arise from differences in intermolecular interactions due to structural differences in the substrates. For example, cyclooctane may deviate from the trend observed due to the many possible conformations of the ring which are comparable in energy.\cite{Dorofeeva1985} Alternatively, the position of the TS complex along the reaction coordinate may differ between the various reactions. This would break the assumption of the BEP Principle, and may result in deviation from the expected trend.
+
+\jnote{I am having a hard time finding further explanations from the data I have. Any input here is greatly appreciated.}
+
+\section{Summary}
+
+Firstly, a number of composite quantum mechanical methods were tested for the accurate prediction of C-H BDEs. The ROCBS-QB3 method was determined to be the most efficient accurate method for this purpose. Additionally, the widespread applicability of the BEP Principle was investigated through utilisation of these accurate C-H BDEs and experimental HAT rate constants for reaction of \cumo with organic substrates.
+
+As was hypothesised, two relationships exist for the BEP Principle when investigating a wide range of HAT reactions from C-H bonds. C-H bonds which result in a radical which can be delocalised into neighbour $\pi$ systems (benzylic/allylic) correlate well with experimental rate constants. The remaining alkyl C-H bonds, correlate weakly with experimental rate constants and offer only order of magnitude predictions of rate constants. Altogether, these results suggest that the BEP Principle must be carefully applied if accurate rate constants are the desired target, however, they also suggest that as the BEP Principle holds as a reasonably general principle.
 
 \newpage
-\jnote{Data to be moved to appendix}
+\section{Data and figures to be moved to appendix}
 \begin{figure}[htb]
   \centering
   \includegraphics[width=\textwidth]{figures/bde-mae-barchart}
@@ -130,6 +168,7 @@ In contrast, the alkyl C-H BDEs show only very weak correlation with HAT rate co
   \centering
   \includegraphics[width=0.7\textwidth]{figures/lit-w1bd}
 \end{figure}
+
 
 \begin{figure}
 \centering
