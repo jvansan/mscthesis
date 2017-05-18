@@ -18,14 +18,14 @@ The fundamental properties governing all of chemistry are dictated by the quantu
 \hham = &-\sum_{i=1}^N \frac{1}{2}\nabla_i^2 - \sum_{A=1}^M\frac{1}{2M_A}\nabla_A^2
 -\sum_{i=1}^M\sum_{A=1}^M\frac{Z_A}{r_{iA}} \\
 &+ \sum_{i=1}^N\sum_{j>i}^N \frac{1}{r_{ij}} + \sum_{A=1}^M\sum_{B>A}^M
-\frac{Z_AZ_B}{R_{AB}}
+\frac{Z_A Z_B}{R_{AB}}
 \label{eq:ham}
 \end{split}
 \end{equation}
 
 \noindent In this equation, $Z_A$ is the atomic number of nucleus $A$ with a mass $M_A$ divided by the mass of an electron. The Laplacian operators $\nabla_i^2$ and $\nabla_A^2$ represent differentiation with respect to the coordinates of the $ith$ electron and $Ath$ nucleus. The first and second terms are the kinetic energies of the electrons and nuclei, respectively. The third term represents the Coulomb attraction between electrons and nuclei with distance $r_{iA}$. The fourth and fifth terms represent repulsion between two electrons with distance $r_{ij}$, and between two nuclei with distance $R_{AB}$, respectively.
 
-Nuclei move slowly relative to electrons, due to their much greater mass. This is the central pillar of the Born-Oppenheimer approximation that is nearly always applied in molecular electronic structure calculations. The application of this approximation allows for the simplification of Equation \ref{eq:ham}: using a separation of electronic an nuclear variables, the second term for nuclear kinetic energy is solved separately. Also, the last term of nuclear repulsion is constant, and thus is generally ignored. This leaves us with the electronic Hamiltonian
+Nuclei move slowly relative to electrons, due to their much greater mass. This is the central pillar of the Born-Oppenheimer approximation that is nearly always applied in molecular electronic structure calculations. The application of this approximation allows for the simplification of Equation~\ref{eq:ham}: using a separation of electronic an nuclear variables, the second term for nuclear kinetic energy is solved separately. Also, the last term of nuclear repulsion is constant, and thus is generally ignored. This leaves us with the electronic Hamiltonian
 
 \begin{equation}
   \hham_{elec} = -\sum_{i=1}^N \frac{1}{2}\nabla_i^2  -\sum_{i=1}^M\sum_{A=1}^M\frac{Z_A}{r_{iA}}
@@ -45,7 +45,7 @@ We will refer to the wave function of a single particle as an orbital. Naturally
 \label{eq:orthonormal}
 \end{equation}
 
-\noindent where the left-hand side is standard Dirac \emph{bra-ket} notation representing the same integral in the middle. The right-hand side of Equation \ref{eq:orthonormal} is the standard Kronecker delta.
+\noindent where the left-hand side is standard Dirac \emph{bra-ket} notation representing the same integral in the middle. The right-hand side of Equation~\ref{eq:orthonormal} is the standard Kronecker delta.
 
 The spin of an electron is represented by two orthonormal functions $\alpha(\omega)$ and $\beta(\omega)$, or spin up and spin down. If a wave function describes both the spatial distribution and spin of an electron it is a spin orbital, $\chi_i(\mathbf{r})$, where \textbf{x} represents both the spatial distribution and spin coordination of an electron ($\mathbf{x} = \{ \mathbf{r}, \omega \}$). Since $\psi_i(\mathbf{r})$ and $\alpha(\omega)/\beta(\omega)$ are orthonormal, so too is $\chi_i(\mathbf{x})$
 
@@ -84,7 +84,7 @@ Solutions to the Schr{\"o}dinger equation for this system of non-interacting ele
 \noindent gives an eigenvalue energy solution $E$ that is the sum of $N$ spin orbital energies $\varepsilon_i$
 
 \begin{equation}
-E = \varepsilon_1 + \varepsilon_2 + \dots + \varepsilon_N
+E = \varepsilon_1 + \varepsilon_2 + \cdots + \varepsilon_N
 \end{equation}
 
 While this theory does allow one to calculate energies for an $N$ electron system, it has a basic deficiency: the antisymmetry principle of wave functions is not obeyed. The antisymmetry principle states that the electronic wave function must change sign (be antisymmetric) with respect to the exchange of spacial and spin coordinate of any two electrons. Hartree accounted for this by nominally applying the Pauli exclusion principle, however, this description is still incomplete in the sense that it does not describe the statistical nature of quantum particles.
@@ -96,10 +96,10 @@ In order to satisfy the antisymmetry principle, a linear combination of Hartree 
 \begin{equation}
 \Psi(\mathbf{x_1},\ldots,\mathbf{x_N}) = \frac{1}{\sqrt{N!}}
 \begin{vmatrix}
-\chi_i(\mathbf{x}_1) & \chi_j(\mathbf{x}_1) & \dots & \chi_k(\mathbf{x}_1) \\
-\chi_i(\mathbf{x}_2) & \chi_j(\mathbf{x}_2) & \dots & \chi_k(\mathbf{x}_2) \\
+\chi_i(\mathbf{x}_1) & \chi_j(\mathbf{x}_1) & \cdots & \chi_k(\mathbf{x}_1) \\
+\chi_i(\mathbf{x}_2) & \chi_j(\mathbf{x}_2) & \cdots & \chi_k(\mathbf{x}_2) \\
 \vdots & \vdots & \ddots & \vdots \\
-\chi_i(\mathbf{x}_N) & \chi_j(\mathbf{x}_N) & \dots & \chi_k(\mathbf{x}_N) \\
+\chi_i(\mathbf{x}_N) & \chi_j(\mathbf{x}_N) & \cdots & \chi_k(\mathbf{x}_N) \\
 \end{vmatrix}
 \end{equation}
 
@@ -148,7 +148,7 @@ With these approximations, the quantum problem is now reduced to solving the eig
 \label{eq:hf}
 \end{equation}
 
-Solving Equation \ref{eq:hf} directly is computationally very challenging, as there are infinite possible solutions.  However in 1951, \citet{Roothaan1951} demonstrated that the problem can be simplified by expanding each spin orbital into a linear combination of a known finite number $K$ basis functions:
+Solving Equation~\ref{eq:hf} directly is computationally very challenging, as there are infinite possible solutions.  However in 1951, \citet{Roothaan1951} demonstrated that the problem can be simplified by expanding each spin orbital into a linear combination of a known finite number $K$ basis functions:
 
 \begin{equation}
 \chi_i = \sum_{\mu=1}^K C_{\mu,i}\phi_{\mu}
@@ -156,14 +156,14 @@ Solving Equation \ref{eq:hf} directly is computationally very challenging, as th
 
 \noindent where $C_{\mu,i}$ is a weighting coefficient and $\phi_{\mu}$ is a basis function. As $K$ approaches $\infty$, the set \{$\phi_{\mu}$\} becomes more complete and the energy approaches the so-called \emph{Hartree-Fock limit}, or the exact energy in the Hartree-Fock approximation. One is, however, always limited to a finite number of basis functions, leaving deficiencies in the desired wave function $\Psi_0$.
 
-The expansion of spin orbitals into a basis allows Equation \ref{eq:hf} to be written in terms of the \emph{Roothaan matrix equation}
+The expansion of spin orbitals into a basis allows Equation~\ref{eq:hf} to be written in terms of the \emph{Roothaan matrix equation}
 
 \begin{equation}
 \mathbf{F}\mathbf{C} = \mathbf{S}\mathbf{C}\mathbf{\varepsilon}
 \label{eq:roothan}
 \end{equation}
 
-\noindent where $\mathbf{F} = \sum_{l,m} \bra{\chi_l} \hat{f}(i) \ket{\chi_m}$ is the Fock matrix, $\mathbf{S} = \sum_{l,m} = \bra{\chi_l}\ket{\chi_m}$ is the orbital overlap matrix. $\mathbf{C}$ is the orbital coefficient matrix, and $\mathbf{\varepsilon}$ is the diagonal matrix of orbital energies $\varepsilon_i$, which are generally the desire solutions. By performing a transformation of basis to an orthonormal basis, the overlap matrix $\mathbf{S}$ becomes the identity matrix $\mathbb{1}$, and simplifies the problem. Thus, utilising \ref{eq:roothan} reduces the problem to the of diagonalisation $\mathbf{F}$. Unfortunately, this must be done iteratively, as $\mathbf{F}$ depends on its own solution, hence the name self-consistent field method.
+\noindent where $\mathbf{F} = \sum_{l,m} \bra{\chi_l} \hat{f}(i) \ket{\chi_m}$ is the Fock matrix, $\mathbf{S} = \sum_{l,m} = \bra{\chi_l}\ket{\chi_m}$ is the orbital overlap matrix. $\mathbf{C}$ is the orbital coefficient matrix, and $\mathbf{\varepsilon}$ is the diagonal matrix of orbital energies $\varepsilon_i$, which are generally the desire solutions. By performing a transformation of basis to an orthonormal basis, the overlap matrix $\mathbf{S}$ becomes the identity matrix $\mathbb{1}$, and simplifies the problem. Thus, utilising~\ref{eq:roothan} reduces the problem to the of diagonalisation $\mathbf{F}$. Unfortunately, this must be done iteratively, as $\mathbf{F}$ depends on its own solution, hence the name self-consistent field method.
 
 \subsection{Basis sets}
 
@@ -172,26 +172,26 @@ Choosing optimal basis functions can help significantly in terms of determining 
 Early basis sets were composed of \emph{Slater-type orbitals} (STOs), due to their resemblance to the atom orbitals (AOs) of the hydrogen atom. These are functions of the form
 
 \begin{equation}
-\phi_i^{STO}(\zeta,n,a,b,c,x,y,z) = Nr^{n-1}e^{-\zeta r}x^ay^bz^c
+\phi_i^{STO}(\zeta,n,a,b,c,x,y,z) = Nr^{n-1}e^{-\zeta r}x^a y^b z^c
 \end{equation}
 
-\noindent where $N$ is a normalisation constant, $\zeta$ is a constant related to the effective nuclear charge of the nucleus, $r$ is the distance of the electron from the atomic nucleus, $n$ is a natural number that plays the role of the principle quantum number, and $x$, $y$, and $z$ are cartesian coordinates. The angular component $x^ay^bz^c$ describes the shape of the function, such that if a+b+c=0 $\phi_i^{STO}$ is of $s$-type; if $a+b+c=1$, $\phi_i^{GTO}$ is of $p$-type, and so forth. Although STOs approximate the long and short range behaviour of atomic orbitals correctly, performing integration with these functions is computationally very demanding, due primarily to the complexity of the integrals involved describing in electron-electron interactions.
+\noindent where $N$ is a normalisation constant, $\zeta$ is a constant related to the effective nuclear charge of the nucleus, $r$ is the distance of the electron from the atomic nucleus, $n$ is a natural number that plays the role of the principle quantum number, and $x$, $y$, and $z$ are cartesian coordinates. The angular component $x^a y^b z^c$ describes the shape of the function, such that if a+b+c=0 $\phi_i^{STO}$ is of $s$-type; if $a+b+c=1$, $\phi_i^{GTO}$ is of $p$-type, and so forth. Although STOs approximate the long and short range behaviour of atomic orbitals correctly, performing integration with these functions is computationally very demanding, due primarily to the complexity of the integrals involved describing in electron-electron interactions.
 
 \begin{equation}
-\phi_i^{GTO}(\alpha,a,b,c,x,y,z) = N e^{-\alpha r^2} x^ay^bz^c
+\phi_i^{GTO}(\alpha,a,b,c,x,y,z) = N e^{-\alpha r^2} x^a y^b z^c
 \end{equation}
 
-\noindent where $N$ is a normalisation constant, $\alpha$ is the orbital exponent coefficient, $x$, $y$, and $z$ are cartesian coordinates, $r$ is the radius ($r^2=x^2+y^2+z^2$), and the angular portion is described the same as in an STO. It takes a linear combination of several GTOs to represent the same function as an STO. These linear combinations of GTOS are known as \emph{contracted GTOs} (CGTO) with $n$ GTOs combined as
+\noindent where $N$ is a normalisation constant, $\alpha$ is the orbital exponent coefficient, $x$, $y$, and $z$ are cartesian coordinates, $r$ is the radius ($r^2=x^2+y^2+z^2$), and the angular portion is described the same as in an STO.\@ It takes a linear combination of several GTOs to represent the same function as an STO. These linear combinations of GTOS are known as \emph{contracted GTOs} (CGTO) with $n$ GTOs combined as
 
 \begin{equation}
-\phi_i^{CTGO}(\alpha,a,b,c,x,y,z) = N \sum_{i=1}^n c_i e^{-\alpha r^2} x^ay^bz^c
+\phi_i^{CTGO}(\alpha,a,b,c,x,y,z) = N \sum_{i=1}^n c_i e^{-\alpha r^2} x^a y^b z^c
 \end{equation}
 
-\noindent where $c_i$ is referred to as the contraction coefficient which describes the weighting of each GTO. Although it requires more GTOs than STOs to accurately describe the atomic orbitals, the integrals can be computed 4-5 times faster, and thus calculations involving GTOs are much more efficient.\cite{Gill1994}
+\noindent where $c_i$ is referred to as the contraction coefficient which describes the weighting of each GTO.\@ Although it requires more GTOs than STOs to accurately describe the atomic orbitals, the integrals can be computed 4--5 times faster, and thus calculations involving GTOs are much more efficient.\cite{Gill1994}
 
 \subsubsection{Basis set nomenclature}
 
-Standard basis sets are composed of basis functions which represent atomic orbitals and that each basis function is a CGTO composed of several GTOs. A \emph{minimal basis set} is one in which each AO is represented by a single basis function. To more accurately represent AOs, more basis functions should be used, although basis set size needs to be balanced with computational cost. Larger basis sets are referred to by their cardinal number, the number of basis functions which represent each AO. When two basis functions are used to represent each AO, this is called a \emph{double-zeta} basis set. If three basis functions represent each AO, this is called a \emph{triple-zeta} basis set. Generalised, a basis set is $N$-zeta in size when $N$ basis functions are used per AO.
+Standard basis sets are composed of basis functions which represent atomic orbitals and that each basis function is a CGTO composed of several GTOs. A \emph{minimal basis set} is one in which each AO is represented by a single basis function. To more accurately represent AOs, more basis functions should be used, although basis set size needs to be balanced with computational cost. Larger basis sets are referred to by their cardinal number, the number of basis functions which represent each AO.\@ When two basis functions are used to represent each AO, this is called a \emph{double-zeta} basis set. If three basis functions represent each AO, this is called a \emph{triple-zeta} basis set. Generalised, a basis set is $N$-zeta in size when $N$ basis functions are used per AO.\@
 
 A \emph{split-valence} basis set is one in which a single basis function is used to represent each core AO, while more basis functions are used to represent the valence AOs. Constructing basis sets in this way can help reduce the computational cost while still accurately representing the electrons which are most important to chemistry.
 
@@ -207,13 +207,13 @@ A large number of basis sets currently exist in the literature.\cite{Jensen2012}
 
 Perhaps the most utilised basis sets in chemistry are those arising from the group of Pople.\cite{Hehre1969} These basis sets were defined by fitting to HF wave functions. The earliest of these basis sets are the minimal STO-$N$G basis sets, where $N$ describes the number of GTOs that go into each contraction.
 
-The practise of using minimal basis sets has diminished significantly as technology has advanced, thus these basis sets are largely considered out of date. It is more common to utilise the split-valence basis sets, denoted as $n-ijG$ or $n-ijkG$ for double and triple zeta split-valence basis sets, respectively. In this system of notation, $n$ represents the number of GTOs that comprise the core AOs, and $i, j, k$ describe the number of GTOs for contractions in the valence AOs. Polarisation functions are denoted either with asterisks or with the specific shell and number of functions which are being added. Diffuse functions are denoted with either a single or double ``+'', indicating diffuse $s$ and $p$-type functions for non-hydrogen atoms, and the addition of diffuse $s$-type functions for hydrogen, respectively. For example, the 6-31+G(d,p) $\equiv$ 6-31+G** double-zeta basis set is one which has: 6 GTOs per core AO, 3 GTOs for the first valence set of AOs, and 1 GTO for the second, along with $s$ and $p$ diffuse functions of the heavy atoms, a single $d$ polarisation function of heavy atoms, and a single $p$ polarisation function of hydrogen atoms.
+The practise of using minimal basis sets has diminished significantly as technology has advanced, thus these basis sets are largely considered out of date. It is more common to utilise the split-valence basis sets, denoted as $n-ijG$ or $n-ijkG$ for double and triple zeta split-valence basis sets, respectively. In this system of notation, $n$ represents the number of GTOs that comprise the core AOs, and $i, j, k$ describe the number of GTOs for contractions in the valence AOs. Polarisation functions are denoted either with asterisks or with the specific shell and number of functions which are being added. Diffuse functions are denoted with either a single or double ``+'', indicating diffuse $s$ and $p$-type functions for non-hydrogen atoms, and the addition of diffuse $s$-type functions for hydrogen, respectively. For example, the 6--31+G(d,p) $\equiv$ 6--31+G** double-zeta basis set is one which has: 6 GTOs per core AO, 3 GTOs for the first valence set of AOs, and 1 GTO for the second, along with $s$ and $p$ diffuse functions of the heavy atoms, a single $d$ polarisation function of heavy atoms, and a single $p$ polarisation function of hydrogen atoms.
 
 \vspace{3mm}
 \noindent{\large\emph{Correlation consistent basis sets}}
 \vspace{1mm}
 
-Post-Hartree-Fock methods (\emph{vide infra}) are commonly used in quantum chemistry. In 1989, Dunning\cite{Dunning1989} identified that the use of basis sets optimised for HF were inappropriate for post-HF methods. The basis sets that came from Dunning and co-workers, which are referred to as ``correlation consistent'' basis sets are commonly used in, but not limited to, state of the art wave function calculations. These basis sets are said to be correlation consistent as they treat electron correlation (\emph{vide infra}) in a manner which systematically approached the complete basis set limit. Correlation consistent basis sets are denoted as ``cc-pV$N$Z'', where $N$=D,T,Q,5,6,... is the cardinal number of the basis set. These are large sets containing polarisation functions by default and can be additionally augmented with diffuse functions, denoted by ``aug.'' A commonly used basis set is aug-cc-pVTZ, which is a triple-zeta basis set with implicit polarisation functions and specified diffuse functions on all atoms.
+Post-Hartree-Fock methods (\emph{vide infra}) are commonly used in quantum chemistry. In 1989, Dunning\cite{Dunning1989} identified that the use of basis sets optimised for HF were inappropriate for post-HF methods. The basis sets that came from Dunning and co-workers, which are referred to as ``correlation consistent'' basis sets are commonly used in, but not limited to, state of the art wave function calculations. These basis sets are said to be correlation consistent as they treat electron correlation (\emph{vide infra}) in a manner which systematically approached the complete basis set limit. Correlation consistent basis sets are denoted as ``cc-pV$N$Z'', where $N$=D,T,Q,5,6,\ldots is the cardinal number of the basis set. These are large sets containing polarisation functions by default and can be additionally augmented with diffuse functions, denoted by ``aug.'' A commonly used basis set is aug-cc-pVTZ, which is a triple-zeta basis set with implicit polarisation functions and specified diffuse functions on all atoms.
 
 \vspace{3mm}
 \noindent{\large\emph{Polarisation consistent basis sets}}
@@ -235,7 +235,7 @@ The HF method gives an approximation to the ground state wave function of a mole
   E_{corr} = \Xi_{exact} - E_0
 \end{equation}
 
-\noindent $E_corr$ is the difference between the full non-relativistic energy from the Schr{\"o}dinger equation, $\Xi_{exact}$, and a reference ground state energy $E_0$, usually the HF energy.
+\noindent $E_{corr}$ is the difference between the full non-relativistic energy from the Schr{\"o}dinger equation, $\Xi_{exact}$, and a reference ground state energy $E_0$, usually the HF energy.
 
 We shall briefly describe two important methods for accounting for electron correlation and obtaining $E_{corr}$: M{\o}ller-Plesset perturbation theory, and the related configuration interaction and coupled cluster theories.
 
@@ -269,7 +269,7 @@ Within this formulation, the zeroth-order energy is the expectation of $\hat{H}$
   E_{MP1} = \bra{\phi_0}\hat{V}\ket{\phi_0} = 0
 \end{equation}
 
-\noindent by Brillouin's Theorem of singly excited determinants. Thus, the first useful correction occurs at the second order of perturbation, which is known as MP2. Additional orders of perturbation are referred to as MP3, MP4, \emph{etc}. The MP2 method has been popular in quantum chemistry because it scales with $N^5$ number of basis functions and is a significant improvement on the treatment of electron correlation compared to HF. One may expect higher order of perturbation theory to more accurately describe a system. Practically however, the expansions used in MP$N$ theory do not converge smoothly to a limit with higher order of perturbation.\cite{Leininger2000} As a result, for molecular properties calculated with MP3 or higher are not guaranteed to give more accurate results than MP2.
+\noindent by Brillouin's Theorem of singly excited determinants. Thus, the first useful correction occurs at the second order of perturbation, which is known as MP2. Additional orders of perturbation are referred to as MP3, MP4, \emph{etc}. The MP2 method has been popular in quantum chemistry because it scales with $N^5$ number of basis functions and is a significant improvement on the treatment of electron correlation compared to HF.\@ One may expect higher order of perturbation theory to more accurately describe a system. Practically however, the expansions used in MP$N$ theory do not converge smoothly to a limit with higher order of perturbation.\cite{Leininger2000} As a result, for molecular properties calculated with MP3 or higher are not guaranteed to give more accurate results than MP2.
 
 \subsubsection{Configuration interaction and coupled cluster theory}
 
@@ -335,20 +335,20 @@ A new technique which is gaining popularity among post-HF methods is the inclusi
 
 \subsection{Composite quantum chemistry methods}
 
-In order to calculate thermochemical and kinetic properties that are within a sub-\kcalmol range of experiment, multistep \emph{ab initio} procedures which are referred to as \emph{composite methods} have been developed.\cite{Karton2016} These procedures work by including important energy terms which contribute to molecular properties. Generally, composite methods make use of a combination of low correlation methods with large basis sets and high correlation methods with small basis sets, as is illustrated in \ref{fig:comp}. Some of the relevant energy terms include: core-valence, relativistic, spin-orbital, Born-Oppenheimer, and zero-point vibrational energy corrections. There exist many composite methods, each of which makes use of a variety of quantum mechanical (QM) methods and different basis set extrapolation techniques in order to best approximate energy terms which are relevant, with the ultimate goal of achieving the exact energy of a system. In our work, we have made use of several composite methods including: the G4 and G4(MP2) methods,\cite{Curtiss2007,Curtiss2007a} CBS-QB3 and CBS-APNO methods,\cite{Montgomery1999,Montgomery2000,Ochterski1996} and the W1BD method.\cite{Barnes2009} A description of these methods will be provided in Chapter \ref{ch:bde}.
+In order to calculate thermochemical and kinetic properties that are within a sub-\kcalmol range of experiment, multistep \emph{ab initio} procedures which are referred to as \emph{composite methods} have been developed.\cite{Karton2016} These procedures work by including important energy terms which contribute to molecular properties. Generally, composite methods make use of a combination of low correlation methods with large basis sets and high correlation methods with small basis sets, as is illustrated in~\ref{fig:comp}. Some of the relevant energy terms include: core-valence, relativistic, spin-orbital, Born-Oppenheimer, and zero-point vibrational energy corrections. There exist many composite methods, each of which makes use of a variety of quantum mechanical (QM) methods and different basis set extrapolation techniques in order to best approximate energy terms which are relevant, with the ultimate goal of achieving the exact energy of a system. In our work, we have made use of several composite methods including: the G4 and G4(MP2) methods,\cite{Curtiss2007,Curtiss2007a} CBS-QB3 and CBS-APNO methods,\cite{Montgomery1999,Montgomery2000,Ochterski1996} and the W1BD method.\cite{Barnes2009} A description of these methods will be provided in Chapter~\ref{ch:bde}.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[height=20em]{figures/compositemethods.eps}
   \caption[Schematic representation of a quantum mechanical composite method.]{Schematic representation of a quantum mechanical composite method. The exact energy can only be achieved at the limits of an infinite basis set and complete correlation. Using a combination of Method 1 (low correlation/large basis set) and Method 2 (high correlation/small basis set), the Composite method approaches the exact energy.}
-  \label{fig:comp}
+\label{fig:comp}
 \end{figure}
 
 \subsection{Density-functional theory}
 
 Density-functional theory (DFT) is the most popular quantum chemical method applied to date. It relies on the two Hohenberg-Kohn theorems, the first of which states that there exists a unique electron density $\rho$ that defines the properties of a many-electron system. The second theorem defines an energy functional of the electron density and demonstrates that the correct ground state electron density minimises the energy functional through the variational theorem.\cite{Hohenberg1964,Koch2000} These theorems alone do not provide the solutions to the Schr{\"o}dinger equation.
 
-It wasn't until the formulation of Kohn-Sham DFT\cite{Kohn1965} that the theory began gaining ground as a useful quantum theory. Kohn-Sham DFT scales formally with $N^3$ number of electrons\cite{Cramer2004} which is better than HF by a factor of $N$. In addition, DFT is a complete theory like FCI; however, there is no straightforward way to determine the correct functionals of the electron density as the exact form of the functionals is unknown. Nonetheless, the drive for the development of the correct density-functional has been one of the main endeavours in quantum chemistry in the last two decades.
+It wasn't until the formulation of Kohn-Sham DFT\cite{Kohn1965} that the theory began gaining ground as a useful quantum theory. Kohn-Sham DFT scales formally with $N^3$ number of electrons\cite{Cramer2004} which is better than HF by a factor of $N$. In addition, DFT is a complete theory like FCI;\@ however, there is no straightforward way to determine the correct functionals of the electron density as the exact form of the functionals is unknown. Nonetheless, the drive for the development of the correct density-functional has been one of the main endeavours in quantum chemistry in the last two decades.
 
 The framework behind conventional DFT is built into the description of the full energy functional $E$:
 
@@ -373,7 +373,7 @@ The second rung on the ladder corresponds to generalised-gradient approximation 
   E_{XC}^{GGA} = \int \rho(\mathbf{r}) \varepsilon_{XC}^{GGA}(\rho(\mathbf{r}), \nabla \rho(\mathbf{r})) \mathrm{d}r
 \end{equation}
 
-\noindent where, $\varepsilon(\rho(\mathbf{r}), \nabla \rho(\mathbf{r})) \mathrm{d}r$ is the energy density associated with a given GGA. GGA functionals provide a substantial improvement over LDAs, and most are constructed so that they correct the LDA energy:
+\noindent where, $\varepsilon(\rho(\mathbf{r}), \nabla \rho(\mathbf{r})) \mathrm{d}r$ is the energy density associated with a given GGA.\@ GGA functionals provide a substantial improvement over LDAs, and most are constructed so that they correct the LDA energy:
 
 \begin{equation}
   \varepsilon_{XC}^{GGA}(\rho(\mathbf{r}), \nabla \rho(\mathbf{r})) = \varepsilon_{XC}^{LDA}(\rho(\mathbf{r})) \mathrm{d}r + \Delta \varepsilon_{XC}\left( \frac{\nabla \rho(\mathbf{r})}{\rho^{4/3}({\mathbf{r}})}\right)
@@ -387,7 +387,7 @@ A step above GGAs on the third rung of the ladder are meta-GGAs, which depend on
 
 \noindent where $\chi_i(\mathbf{r})$ are the self-consistently determined Kohn-Sham orbitals. Meta-GGAs improve upon the accuracy of GGAs at a comparable cost.\cite{Cramer2004}
 
-The XC functionals described up to this point (LDAs, GGAs, meta-GGAs) depend only on the electron density and derivatives of the electron density. The fourth and fifth rungs of the ladder improve upon the prior functionals by inclusion of terms dependent on additional properties. While this approach improves upon the accuracy of these functionals, it comes with an increase in computational cost. On the fourth rung sit functionals which depend to some percentage on the HF exact exchange . When the ratio of HF exchange is fixed, these functionals are termed hybrid functionals. Alternatively, functionals are said to be range-separated corrected if a different amount of exact-exchange to describe long and short-range behaviours. In the cases of hybrid and range-separated functionals, the added computational cost comes from the calculation of the HF exact exchange.
+The XC functionals described up to this point (LDAs, GGAs, meta-GGAs) depend only on the electron density and derivatives of the electron density. The fourth and fifth rungs of the ladder improve upon the prior functionals by inclusion of terms dependent on additional properties. While this approach improves upon the accuracy of these functionals, it comes with an increase in computational cost. On the fourth rung sit functionals which depend to some percentage on the HF exact exchange. When the ratio of HF exchange is fixed, these functionals are termed hybrid functionals. Alternatively, functionals are said to be range-separated corrected if a different amount of exact-exchange to describe long and short-range behaviours. In the cases of hybrid and range-separated functionals, the added computational cost comes from the calculation of the HF exact exchange.
 
 Alternatively, one can describe the fourth rung functionals as the depending upon the properties of the occupied molecular orbitals. The fifth rung then, is said to depend on the properties of unoccupied molecular orbitals. These functionals are typically referred to as double-hybrids, and incorporated correlation energy from a post-HF method, typically MP2.\cite{Goerigk2014} Double-hybrid DFT methods are once again more accurate than the lower rung methods, however, calculating the MP2 correlation energy is considerably more computationally demanding than traditional DFT approaches. Therefore, double-hybrid DFT methods have not gained popularity in the literature.
 
@@ -396,7 +396,7 @@ There are many published XC functionals. Fortunately, there is a fairly standard
 Aside from the problem of choosing density-functionals, solving DFT is computationally very similar to the HF method. Within Kohn-Sham (KS) DFT, we define a fictitious system of non-interacting electrons with the same electron density as the real system. This is achieved by the use of a Hamiltonian in which there is an effective local potential, $V_s(\mathbf{r})$:
 
 \begin{equation}
-  \hat{H}_s = -\frac{1}{2}\sum_i^N\nabla_i^2 | \sum_i^NV_S(\mathbf{r}_i)
+  \hat{H}_s = -\frac{1}{2}\sum_i^N\nabla_i^2 | \sum_i^N V_S(\mathbf{r}_i)
 \end{equation}
 
 \noindent The ground state wave function of this non-interacting Hamiltonian is represented by a single Slater determinant with spin orbitals ($\chi$), completely analogous to the HF problem. These spin orbitals, referred to as \emph{Kohn-Sham orbitals} are determined by
@@ -445,7 +445,7 @@ Pure DFT has low computational cost and potentially good accuracy, hence its pop
   \frac{C_8^{AB}}{R_{AB}^8} f_8(R_{AB})
 \end{equation}
 
-\noindent where $C_6$ and $C_8$ are dispersion coefficients , $s_8$ is an empirically determined scaling parameter, and $f_n$ are the damping functions which limit the range of dispersion correction, avoiding near singularities at small $R_{AB}$. Another approach to correcting for dispersion is to add parameters directly to the functional, as is the case in the Minnesota functionals.\cite{Zhao2006,Zhao2006} Both of these empirical corrections have the benefit of adding negligible computational time, but must be parametrised for each DFT method with which they are employed.
+\noindent where $C_6$ and $C_8$ are dispersion coefficients, $s_8$ is an empirically determined scaling parameter, and $f_n$ are the damping functions which limit the range of dispersion correction, avoiding near singularities at small $R_{AB}$. Another approach to correcting for dispersion is to add parameters directly to the functional, as is the case in the Minnesota functionals.\cite{Zhao2006,Zhao2006} Both of these empirical corrections have the benefit of adding negligible computational time, but must be parametrised for each DFT method with which they are employed.
 
 Another striking issue with DFT is the unphysical ability of an electron to interact with itself, termed \emph{self-interaction error}. This is most obvious in what is known as \emph{delocalisation error}, which is a result of many-electrons interacting with themselves, or many-electron self-interaction error. In HF theory, self-interaction error is exactly cancelled, thus DFT methods which have a high portion of HF exchange in their formulation are able to account for this issue. Consider for a moment a one electron system: there should be exactly zero electron correlation. In terms of the energy functionals shown in Equation~\ref{eq:DFT}, the electronic repulsion term $V_{ee}[\rho]$ should cancel exactly with the XC term ($V_{ee}[\rho] = -E_{XC}[\rho]$).\cite{Cramer2004} Unfortunately, all pure DFT methods fail to reproduce this expected behaviour. An obvious manifestation of delocalisation error is the incorrect treatment of charge-transfer in intramolecular interactions,\cite{MoriSanchez2008,OterodelaRoza2014} as well as in transition state complexes. Even for the simplest HAT reaction \ch{H2 + H^. -> H^. + H2}, the calculated barrier height is underestimated by 8--9 \kcalmol using a GGA functional.\cite{Csonka1998} Charge-transfer occurs when a fraction of an electron is transferred between molecular entities. Specifically, charge-transfer is mistreated at longer ranges, thus either high percentage exact exchange hybrid functionals, or range-separated functionals are suggested for systems in which charge-transfer may occur.
 
@@ -457,9 +457,9 @@ As is the case for most experimental methods, identifying the correct theoretica
 
 All QM methods depend parametrically on the geometry of a molecular system. That is the electronic energy of a system depends on the positions of the nuclei. While the wave functions can describe any arbitrary geometry, we are typically only interested in certain geometries of a molecule. These geometries of interest are normally stationary states along a the potential energy surface (PES) of a system, that is, points where the gradient of energy with respect to nuclear coordinates is zero. Therefore, we perform \emph{geometry optimisation} calculations to determine these points.
 
-Molecular systems have complex PESs. For a non-linear molecule, the nuclear PES has 3$N$-6 dimensions, where $N$ is the number of nuclei present.\cite{Heidrich1991} In geometry optimisation, we seek the local minima (reactants, products, or intermediates) and local maxima (TS complexes). Consider only local minima for a moment. Often complex molecules have more than one possible conformation, and each conformation represents a different local minimum along the PES. It is therefore important to ensure the correct conformation, typically the lowest energy structure (global minimum), is used when approaching chemical problems.
+Molecular systems have complex PESs. For a non-linear molecule, the nuclear PES has 3$N$-6 dimensions, where $N$ is the number of nuclei present.\cite{Heidrich1991} In geometry optimisation, we seek the local minima (reactants, products, or intermediates) and local maxima (TS complexes). Consider only local minima for a moment. Often complex molecules have more than one possible conformation, and each conformation represents a different local minimum along the PES.\@ It is therefore important to ensure the correct conformation, typically the lowest energy structure (global minimum), is used when approaching chemical problems.
 
-In order to efficiently perform geometry optimisation, numerical analysis techniques are employed. All geometry optimisation methods follow the same general framework.\cite{Hratchian2005} First, energy and necessary derivatives are computed from an initial geometry. Second, the geometry is modified to step towards the nearest stationary state. And last, some test is performed to determine if the new geometry is near enough to the stationary state along the PES. The most efficient method to do this is the \emph{Newton method}, in which the energy is expanded in a Taylor series (truncated at the second order point) about the current point, $\mathbf{x}_0$:
+In order to efficiently perform geometry optimisation, numerical analysis techniques are employed. All geometry optimisation methods follow the same general framework.\cite{Hratchian2005} First, energy and necessary derivatives are computed from an initial geometry. Second, the geometry is modified to step towards the nearest stationary state. And last, some test is performed to determine if the new geometry is near enough to the stationary state along the PES.\@ The most efficient method to do this is the \emph{Newton method}, in which the energy is expanded in a Taylor series (truncated at the second order point) about the current point, $\mathbf{x}_0$:
 
 \begin{equation}
   E(\mathbf{x}) = E_0 + \mathbf{g}_0\Delta\mathbf{x} + \frac{1}{2}\Delta\mathbf{x}\mathbf{H}_0\Delta \mathbf{x}
@@ -495,7 +495,7 @@ The computation of molecular vibrations can be performed simply given a set of m
 Typically to obtain molecular frequencies, one computes the mass-weighted Hessian matrix elements $F_{ij}$
 
 \begin{equation}
-  F_{ij} = \frac{1}{\sqrt{m_im_j}} \mathbf{H}_ij
+  F_{ij} = \frac{1}{\sqrt{m_i m_j}} \mathbf{H}_{ij}
 \end{equation}
 
 \noindent where the partial derivatives of internal coordinates $x_i$ of the potential energy $U$ are taken for 3$N$ atoms with mass $m$. One then seeks to diagonalise this $3N\times3N$ matrix to obtain eigenvalues $\lambda_i$, which describe the force constant of each normal mode. The harmonic frequencies $\nu_i$ are then obtained by
@@ -520,14 +520,14 @@ U = E_{elec} + E_{ZPE}
 
 \noindent where $E_{elec}$ is the QM electronic energy.
 
-If a normal mode describes a non-minimum along the PES, the energy gradient will be negative (imaginary) instead of positive. Only energy maxima or saddle-points (TS structures) should have a single imaginary mode. Therefore, if a non-TS molecular structure calculation yields one or more imaginary modes, the geometry optimisation has yielded a structure which is not at minimum on the PES. In this situation additional steps must be taken to find a corrected structure.
+If a normal mode describes a non-minimum along the PES, the energy gradient will be negative (imaginary) instead of positive. Only energy maxima or saddle-points (TS structures) should have a single imaginary mode. Therefore, if a non-TS molecular structure calculation yields one or more imaginary modes, the geometry optimisation has yielded a structure which is not at minimum on the PES.\@ In this situation additional steps must be taken to find a corrected structure.
 
 \subsection{Thermochemistry}
 
 Up until this point we have been viewing molecules from a microscopic perspective; however, this is not useful for describing properties of bulk systems. Fortunately, fundamental statistical thermodynamics can be used to approximately describe a system in bulk.\cite{McQuarrie1999,McQuarrie2000} We approximate our system as an ensemble of non-interacting particles: the ideal gas. Within statistical thermodynamics, the fundamental starting point is the partition function $Q$,\cite{note4} from which all thermodynamic properties can be calculated. For our ensemble, the molecular partition function is
 
 \begin{equation}
-  Q = \sum_J e^{\varepsilon_j/k_BT}
+  Q = \sum_J e^{\varepsilon_j/k_B T}
 \end{equation}
 
 \noindent where a Boltzmann distribution of $j$ energy states $\varepsilon$ is taken at temperature $T$, and $k_B$ is the Boltzmann constant. All calculations herein are defined under conditions of temperature $T$ = 298.15 K and pressure $P$ = 1 atm.
@@ -542,12 +542,12 @@ Normally, the molecular partition function is decomposed into contributions from
 $q_{trans}$ is
 
 \begin{equation}
-  q_{trans} = \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \frac{k_BT}{P}
+  q_{trans} = \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \frac{k_B T}{P}
 \end{equation}
 
 \noindent where $m$ is the mass of the molecule, $h$ is Planck's constants.
 
-The vibrational partition function $q_{vib}$ depends on the contributions of each of $K$ vibrational modes. Only the $3N-6$ (or $3N-5$ for linear molecules) real vibrational modes of a molecule are considered, and imaginary frequencies are ignored. Therefore, for molecules which posses an imaginary frequency this thermodynamic analysis is invalid. TS complexes do posses a single imaginary frequency which is ignored, as it is assumed to not contribute to the overall vibrational partition function as no formal bond is said to be formed between acceptor-donor system.\jnote{I'm not 100\% sure about this} Each vibrational mode has a characteristic vibrational electronic temperature, $\Theta_{\nu,K} = h\nu/k_B$, and the partition function is
+The vibrational partition function $q_{vib}$ depends on the contributions of each of $K$ vibrational modes. Only the $3N-6$ (or $3N-5$ for linear molecules) real vibrational modes of a molecule are considered, and imaginary frequencies are ignored. Therefore, for molecules which posses an imaginary frequency this thermodynamic analysis is invalid. TS complexes do posses a single imaginary frequency which is ignored, as it is assumed to not contribute to the overall vibrational partition function as no formal bond is said to be formed in the acceptor-donor system. Each vibrational mode has a characteristic vibrational electronic temperature, $\Theta_{\nu,K} = h\nu/k_B$, and the partition function is
 
 \begin{equation}
   q_{vib} = \prod_K \frac{e^{-\Theta_{\nu,K}/2T}}{1 - e^{-\Theta_{\nu,K}/T}}
@@ -567,10 +567,10 @@ The rotational partition function depends on the geometry of a system. For a sin
 
 \noindent where $\Theta_{r,x}, \Theta_{r,y}$, and $\Theta_{r,z}$ describe contributions of the moment of inertia in each of the x, y, and z-planes.
 
-Finally, we make an important assumption that electronic contributions are assumed to exist in only the ground state, as excited states are generally safely assumed to be much larger than $k_BT$ in energy. The full electronic partition function is
+Finally, we make an important assumption that electronic contributions are assumed to exist in only the ground state, as excited states are generally safely assumed to be much larger than $k_B T$ in energy. The full electronic partition function is
 
 \begin{equation}
-  q_{elec} = \sum_{i=0} \omega_i e^{-\epsilon_i/k_BT}
+  q_{elec} = \sum_{i=0} \omega_i e^{-\epsilon_i/k_B T}
 \end{equation}
 
 \noindent where $\omega$ is the degeneracy of an energy level with energy $\epsilon$. Applying our assumption, and by setting the ground state energy $\epsilon_0=0$, our problem simplifies dramatically, such that $q_{elec} = \omega_0$, which is simply the spin multiplicity of the molecule.
@@ -584,20 +584,20 @@ We now have all the information needed to calculate the thermodynamic quantities
 \noindent From each of the partition functions, the entropy of a system with $N$ moles, $S_{tot} = S_{trans} + S_{vib } +S_{rot} + S_{elec}$, is calculated using the relation
 
 \begin{equation}
-  S = Nk_B + Nk_B\ln\left( \frac{Q}{N} \right) + Nk_BT \left( \frac{\partial
+  S = Nk_B + Nk_B\ln\left( \frac{Q}{N} \right) + Nk_B T \left( \frac{\partial
       \ln Q}{\partial T} \right)_V
 \end{equation}
 
 \noindent Similarly, the internal energy of a system, $E_{int,tot} = E_{int,trans} + E_{int,vib} + E_{int,rot} + E_{int,elec}$, is given by the relation
 
 \begin{equation}
-  E_{int} = Nk_BT^2\left( \frac{\partial \ln Q}{\partial T} \right)_V
+  E_{int} = Nk_B T^2\left( \frac{\partial \ln Q}{\partial T} \right)_V
 \end{equation}
 
 \noindent Finally, the enthalpy is obtained from
 
 \begin{equation}
-  H_{tot} = E_{int,tot} + k_BT
+  H_{tot} = E_{int,tot} + k_B T
 \end{equation}
 
 Using very simple statistical thermodynamic arguments, the properties of a bulk system are easily computed. It is important to emphasise that these results are for particles in the gas phase, thus additional steps must be taken if one desires to compare results to experiments performed in solvent.
@@ -633,7 +633,7 @@ In the discussion of chemical kinetics, the rate ($r$) of a bimolecular reaction
 \noindent is determined by the \emph{rate law}, which can generally be described as
 
 \begin{equation}
-  r = \frac{d \text{C}}{dt} =\frac{d \text{D}}{dt} = k[A]^a[B]^b
+  r = \frac{d \text{C}}{dt} =\frac{d \text{D}}{dt} = k[A]^a [B]^b
 \end{equation}
 
 \noindent where $k$ is the rate constant, $t$ is time, $A, B, C$, and $D$ are chemical species with stoichiometric coefficients $a, b, c$, and $d$, and $k$ is the rate constant. Computational chemistry is in general, not useful for determining rate laws: this must be done experimentally. Where computational studies can be useful, is in determining reaction mechanisms, and how the reaction barrier height can be altered. In doing so, we focus entirely on $k$.
@@ -668,26 +668,23 @@ The study of transition state theory (TST) originates in the 1930s, and was deve
 \begin{figure}[htb]
     \centering
     \includegraphics[width=0.6\textwidth]{figures/TST-PES.png}
-    \caption[A reaction coordinate diagram for a generic reaction.]{A reaction
-      coordinate diagram for the reaction of Equation \ref{eq:tst}. The TS complex is
-      defined to exist in the small region $\delta$ above the reaction
-      barrier. Figure taken from Reference {\protect\citenum{McQuarrie1997}}.}
-    \label{fig:tst-pes}
+    \caption[A reaction coordinate diagram for a generic reaction.]{A reaction coordinate diagram for the reaction of Equation~\ref{eq:tst}. The TS complex is defined to exist in the small region $\delta$ above the reaction barrier.}
+\label{fig:tst-pes}
 \end{figure}
 
-In TST, we define the TS complex to exist throughout a small region of width $\delta$ above the reaction barrier (\ref{fig:tst-pes}). From the second step of the reaction in Equation \ref{eq:tst}, we can define a reaction rate dependent on the concentration $[\ch{AB}^\ddagger]$ and $v_c$, a factor which defines the frequency with which the complexes proceed over the barrier:
+In TST, we define the TS complex to exist throughout a small region of width $\delta$ above the reaction barrier (\ref{fig:tst-pes}). From the second step of the reaction in Equation~\ref{eq:tst}, we can define a reaction rate dependent on the concentration $[\ch{AB}^\ddagger]$ and $v_c$, a factor which defines the frequency with which the complexes proceed over the barrier:
 
 \begin{equation}
   r = v_c [\ch{AB}^\ddagger]
 \end{equation}
 
-From Equations \ref{eq:a} and \ref{eq:tst}, we now have two equivalent expressions for the reaction rate, which allows us to derive the following
+From Equations~\ref{eq:a} and~\ref{eq:tst}, we now have two equivalent expressions for the reaction rate, which allows us to derive the following
 
 \begin{equation}
   r = k[\ch{A}][\ch{B}] = v_c [\ch{AB}^\ddagger]
 \end{equation}
 
-\noindent and solving Equation \ref{eq:K} for $[\ch{AB}^\ddagger]$ results in
+\noindent and solving Equation~\ref{eq:K} for $[\ch{AB}^\ddagger]$ results in
 
 
 \begin{equation}
@@ -697,11 +694,11 @@ From Equations \ref{eq:a} and \ref{eq:tst}, we now have two equivalent expressio
 \noindent or
 
 \begin{equation}
-  k = \frac{v_cK_c^\ddagger}{c^0}
+  k = \frac{v_c K_c^\ddagger}{c^0}
 \label{eq:b}
 \end{equation}
 
-We must now invoke the statistical thermodynamics to make sense of Equation \ref{eq:b}. We can rewrite the equilibrium expression $K_c^\ddagger$ in terms of partition functions of each molecular species:
+We must now invoke the statistical thermodynamics to make sense of Equation~\ref{eq:b}. We can rewrite the equilibrium expression $K_c^\ddagger$ in terms of partition functions of each molecular species:
 
 \begin{equation}
     K_c^{\ddagger} = \frac{[\ch{AB}^\ddagger]/c^0}{[\ch{A}]/c^0[\ch{B}]/c^0}
@@ -714,50 +711,50 @@ We must now invoke the statistical thermodynamics to make sense of Equation \ref
 Since we have defined the reaction to be occurring with one degree of freedom, the translational partition function $q_{trans}$ can be defined as
 
 \begin{equation}
-  q_{trans} = \frac{\sqrt{2\pi m^\ddagger k_BT}}{h}\delta
+  q_{trans} = \frac{\sqrt{2\pi m^\ddagger k_B T}}{h}\delta
 \end{equation}
 
-\noindent where $m^\ddagger$ is the mass of the TS complex. The partion function of the TS complex can be written as the product $q^\ddagger = q_{trans}q_{int}^\ddagger$, where the second term accounts for all remaining degrees of freedom of the TS complex. We can use this and rewrite Equations \ref{eq:c} and \ref{eq:b} as
+\noindent where $m^\ddagger$ is the mass of the TS complex. The partion function of the TS complex can be written as the product $q^\ddagger = q_{trans}q_{int}^\ddagger$, where the second term accounts for all remaining degrees of freedom of the TS complex. We can use this and rewrite Equations~\ref{eq:c} and~\ref{eq:b} as
 
 \begin{equation}
-  K_c^{\ddagger} =  \frac{\sqrt{2\pi m^\ddagger k_BT}}{h}\delta\frac{(q_{int}^\ddagger/V)c^0}{(q_A/V)(q_b/V)}
+  K_c^{\ddagger} =  \frac{\sqrt{2\pi m^\ddagger k_B T}}{h}\delta\frac{(q_{int}^\ddagger/V)c^0}{(q_A/V)(q_b/V)}
 \end{equation}
 
 \noindent and
 
 \begin{equation}
  k = v_c \frac{\sqrt{2\pi m^\ddagger
-     k_BT}}{hc^0}\delta\frac{(q_{int}^\ddagger/V)c^0}{(q_A/V)(q_b/V)}
+     k_B T}}{hc^0}\delta\frac{(q_{int}^\ddagger/V)c^0}{(q_A/V)(q_b/V)}
 \label{eq:d}
 \end{equation}
 
 We are now left with the two terms $v_c$ and $\delta$ which are ill-defined. However, the product of these two terms is the average speed at which the TS complex crosses the barrier, $\langle u_{TS} \rangle = v_c\delta$. A Maxwell-Boltzmann distribution is used to calculate the value of $\langle u_{TS} \rangle$:
 
 \begin{equation}
-  \langle u_{TS} \rangle = \left( \frac{m^\ddagger}{2\pi k_BT} \right)^{1/2}
-  \int_0^\infty u e^{-m^\ddagger u^2/2k_BT}du = \left( \frac{m^\ddagger}{2\pi
-      k_BT m^\ddagger} \right)^{1/2}
+  \langle u_{TS} \rangle = \left( \frac{m^\ddagger}{2\pi k_B T} \right)^{1/2}
+  \int_0^\infty u e^{-m^\ddagger u^2/2k_B T}du = \left( \frac{m^\ddagger}{2\pi
+      k_B T m^\ddagger} \right)^{1/2}
 \label{eq:e}
 \end{equation}
 
-\noindent Substituting Equation \ref{eq:e} into Equation \ref{eq:d} for $v_c\delta$ yields
+\noindent Substituting Equation \ref{eq:e} into Equation~\ref{eq:d} for $v_c\delta$ yields
 
 \begin{equation}
   k =
-  \frac{\sqrt{k_BT}}{hc^0}\frac{(q_{int}^\ddagger/V)c^0}{(q_A/V)(q_b/V)} = \frac{k_BT}{hc^0}K_c^\ddagger
+  \frac{\sqrt{k_B T}}{hc^0}\frac{(q_{int}^\ddagger/V)c^0}{(q_A/V)(q_b/V)} = \frac{k_B T}{hc^0}K_c^\ddagger
 \label{eq:f}
 \end{equation}
 
-Now, define the standard Gibbs free energy of activation ($\Delta ^\ddagger G^0$) to be the change in Gibbs free energy in going from reactants to TS. The thermodynamical expression is
+Now, define the standard Gibbs free energy of activation ($\Delta ^\ddagger G^0$) to be the change in Gibbs free energy in going from reactants to TS.\@ The thermodynamical expression is
 
 \begin{equation}
   \Delta ^\ddagger G^0 = -RT \ln K_c^\ddagger
 \end{equation}
 
-\noindent which can be substituted into Equation \ref{eq:f}
+\noindent which can be substituted into Equation~\ref{eq:f}
 
 \begin{equation}
-  k = \frac{k_BT}{hc^0} e^{-\Delta^\ddagger G^0/RT}
+  k = \frac{k_B T}{hc^0} e^{-\Delta^\ddagger G^0/RT}
 \label{eq:g}
 \end{equation}
 
@@ -770,11 +767,11 @@ The standard Gibbs free energy of activation can be expressed in terms of enthal
 \noindent which, upon substitution gives the equation
 
 \begin{equation}
-  k = \frac{k_BT}{hc^0} e^{-\Delta^\ddagger S^0/R} e^{-\Delta^\ddagger H^0/RT}
+  k = \frac{k_B T}{hc^0} e^{-\Delta^\ddagger S^0/R} e^{-\Delta^\ddagger H^0/RT}
 \label{eq:M}
 \end{equation}
 
-At this point, we can draw a direct comparison to the Arrhenius equation (Equation \ref{eq:arrhenius}) by expressing $E_a$ in terms of $\Delta^\ddagger H^0$ and $A$ in terms of $\Delta^\ddagger S^0$.  We must differentiate the natural logarithm of Equation \ref{eq:f}, as well as Equation \ref{eq:arrhenius} (assuming that $A$ is independent of temperature):
+At this point, we can draw a direct comparison to the Arrhenius equation (Equation~\ref{eq:arrhenius}) by expressing $E_a$ in terms of $\Delta^\ddagger H^0$ and $A$ in terms of $\Delta^\ddagger S^0$.  We must differentiate the natural logarithm of Equation~\ref{eq:f}, as well as Equation~\ref{eq:arrhenius} (assuming that $A$ is independent of temperature):
 
 \begin{equation}
   \frac{d \ln k}{dT} = \frac{1}{T} + \frac{d \ln K_c^\ddagger}{dT}
@@ -793,33 +790,33 @@ At this point, we can draw a direct comparison to the Arrhenius equation (Equati
   \label{eq:j}
 \end{equation}
 
-\noindent Additionally, $\Delta ^\ddagger H^0 = \Delta ^\ddagger U^0 + RT \Delta^\ddagger n$ ($\Delta^\ddagger n = 1$), as so Equation \ref{eq:j} can be rewritten as
+\noindent Additionally, $\Delta ^\ddagger H^0 = \Delta ^\ddagger U^0 + RT \Delta^\ddagger n$ ($\Delta^\ddagger n = 1$), as so Equation~\ref{eq:j} can be rewritten as
 
 \begin{equation}
   \frac{d \ln k}{dT} = \frac{\Delta ^\ddagger H^0 + 2RT}{RT^2}
   \label{eq:k}
 \end{equation}
 
-\noindent Therefore, by comparison of Equation \ref{eq:k} and \ref{eq:i}, we get
+\noindent Therefore, by comparison of Equation~\ref{eq:k} and \ref{eq:i}, we get
 
 \begin{equation}
   E_a = \Delta^\ddagger H^0 + 2RT
 \end{equation}
 
-\noindent which then converts Equation \ref{eq:M} into the form
+\noindent which then converts Equation~\ref{eq:M} into the form
 
 \begin{equation}
-  k = \frac{e^2k_BT}{hc^0}e^{\Delta^\ddagger S^0/R}e^{-E_a/RT}
+  k = \frac{e^2k_B T}{hc^0}e^{\Delta^\ddagger S^0/R}e^{-E_a/RT}
 \end{equation}
 
 Therefore, a statistical thermodynamical picture of the Arrhenius equation arises from TST, and the Arrhenius pre-factor $A$ can be expressed as
 
 \begin{equation}
-  A = \frac{e^2k_BT}{hc^0}e^{\Delta^\ddagger S^0/R}
+  A = \frac{e^2k_B T}{hc^0}e^{\Delta^\ddagger S^0/R}
 \label{eq:afactor}
 \end{equation}
 
-In practise, we use the form of Equation \ref{eq:g} to compute the rate constant of a reaction, which we shall denote as $k_{TST}$. The conventional TST makes an assumption that the reaction coordinate is static along the lowest energy pathway. This can be corrected by the use of \emph{variational transition state theory}.\cite{Truhlar1984} We shall not consider variational TST in this work, as with careful application, conventional TST does a remarkably good job at accounting for the magnitude and temperature dependence of a wide range of reactions.\cite{Steinfeld1998} Additionally, if one makes corrections for \emph{QM tunnelling}, conventional TST can easily give a more complete description of the rate constant.
+In practise, we use the form of Equation~\ref{eq:g} to compute the rate constant of a reaction, which we shall denote as $k_{TST}$. The conventional TST makes an assumption that the reaction coordinate is static along the lowest energy pathway. This can be corrected by the use of \emph{variational transition state theory}.\cite{Truhlar1984} We shall not consider variational TST in this work, as with careful application, conventional TST does a remarkably good job at accounting for the magnitude and temperature dependence of a wide range of reactions.\cite{Steinfeld1998} Additionally, if one makes corrections for \emph{QM tunnelling}, conventional TST can easily give a more complete description of the rate constant.
 
 \subsubsection{Quantum mechanical tunnelling}
 
@@ -829,8 +826,8 @@ Atoms are quantum mechanical particles, and are thus subject to the strange prob
   \centering
   \includegraphics[width=0.5\textwidth]{figures/tunnelling-1}
   \caption{Quantum mechanical tunnelling occurs when a particle penetrates a
-    reaction barrier, rather than surmounting it. Figure adapted from Reference ~\citenum{McMahon2003}.}
-  \label{fig:tunnelling}
+    reaction barrier, rather than surmounting it. Figure adapted from Reference~\citenum{McMahon2003}.}
+\label{fig:tunnelling}
 \end{figure}
 
 
@@ -868,5 +865,5 @@ The solutions to the Schr{\"o}dinger equation for the Eckart potential are analy
 
 \begin{equation}
   k_{calc} = \kappa k_{TST} = \kappa
-\frac{k_BT}{hc^0}e^{-\Delta^\ddagger G^0}
+\frac{k_B T}{hc^0}e^{-\Delta^\ddagger G^0}
 \end{equation}

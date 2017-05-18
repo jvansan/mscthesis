@@ -55,30 +55,11 @@ Density-functional theory (DFT) calculations were carried out using the Gaussian
 
 The lowest energy radicals and substrates were combined to generate the appropriate pre-reaction complexes. These pre-reaction complexes were subject to conformational analysis using the same BLYP-D3(BJ)-BSIP/MINIs method. Geometries were initially manipulated by hand. It became apparent that manual manipulation resulted in an unsatisfactory exploration of the conformational space. To solve this, all the necessary dihedral angles were scanned systematically using a combination of scripts.\cite{note5} All manipulated geometries were subject to optimisation. For each complex, the top 5--10 complex geometries were subject to further optimisation using a higher level of theory (BLYP-D3(BJ)/pc-1) to obtain the final minimum energy pre-reaction complex structures. Due to the free rotation of $t$-butyl and methyl groups, some of the optimised pre-reaction complex structures contain small imaginary frequencies, and thus do not represent proper stationary states. Several measures were taken to resolve this, however, no resolution was obtained. Regardless, the complexes adequately represent the pre-reaction complex and differences in ``true'' binding energies should be negligible.
 
-To obtain accurate pre-reaction complex binding energies, the substrates and complexes were subject to single-point energy calculations using the LC-$\omega$PBE long-range corrected density functional\cite{Vydrov2006,Vydrov2006a} with D3(BJ) dispersion corrections and pc-2 basis sets with truncated $f$-type functions (pc-2-spd).\cite{Johnson2013} This method was selected on the recommendation of work by \citet{Johnson2013}, which demonstrated the accuracy of this method for the calculation of NCIs. On the basis of the reported mean absolute error in Reference \citenum{Johnson2013} for the S66 benchmark set of sixty-six different non-covalently interacting dimers,\cite{Rezac2011} the calculated binding energies reported herein from the LC-$\omega$PBE-D3(BJ)/pc-2-spd level of theory carry a 0.2 \kcalmol margin of error.
+To obtain accurate pre-reaction complex binding energies, the substrates and complexes were subject to single-point energy calculations using the LC-$\omega$PBE long-range corrected density functional\cite{Vydrov2006,Vydrov2006a} with D3(BJ) dispersion corrections and pc-2 basis sets with truncated $f$-type functions (pc-2-spd).\cite{Johnson2013} This method was selected on the recommendation of work by \citet{Johnson2013}, which demonstrated the accuracy of this method for the calculation of NCIs. On the basis of the reported mean absolute error in Reference \citenum{Johnson2013} for the S66 benchmark set of sixty-six different non-covalently interacting dimers,\cite{Rezac2011} the calculated binding energies reported herein from the LC-$\omega$PBE-D3(BJ)/pc-2-spd level of theory carry an estimated 0.2 \kcalmol margin of error.
 
 \section{Results and discussion}
 
-The theoretically determined electronic binding energies calculated for the lowest energy pre-reaction complex of each system are listed in~\ref{tab:Arrhenius-theory}, along with images of the three-dimensional structures. The logarithm of A-factor against binding energy was plotted, as shown in~\ref{fig:Arrhenius}. The overall correlation is quite poor ($R^2$=0.33), however, the majority of the data is grouped about a single, well correlated line ($R^2$=0.95). Interestingly, the intercept of the fitted line which corresponds to zero binding energy is 8.63, a result which is in line with the observed A-factor in ``normal'' HAT reactions, \emph{viz. }$10^{8.5\pm0.5}$ \Ms.\cite{Benson1976} This suggests that the observed correlation is valid, that is, NCIs may have an impact on A-factors. I shall demonstrate that the data which do not correlate are reasonable outliers. In fact, using simple rational I shall demonstrate that different regimes of sterics result in different processes leading to the TS complex. As a result, deviations from the relationship between A-factor and binding energy are observed.
-
-% \newcommand{\tabStruct}[1]{\includegraphics[width=5cm]{figures/#1}}
-% \jnote{This table might go better in an appendix}
-% \begin{longtable}[c]{l >{\centering}m{8cm} >{\centering}m{2.7cm} m{0em}}
-% \caption{Table of theoretical results which needs revision}\label{tab:Arrhenius-theory}\\
-%   ID & Structure & Binding Energy (\kcalmol) & \\
-%   \toprule
-% \endhead{}
-%   1 & \tabStruct{complex1} & -10.82 & \\
-%   2 & \tabStruct{complex2} & -14.79 & \\
-%   3 & \tabStruct{complex3} & -10.12 & \\
-%   4 & \tabStruct{complex4} & -10.04 & \\
-%   5 & \tabStruct{complex5} & -6.75 & \\
-%   6 & \tabStruct{complex6} & -14.84 & \\
-%   7 & \tabStruct{complex7} & -8.56 & \\
-%   8 & \tabStruct{complex8} & -5.50 & \\
-%   9 & \tabStruct{complex9} & -5.56 & \\
-%   10 & \tabStruct{complex10} & -7.99 & \\
-% \end{longtable}
+The theoretically determined electronic binding energies calculated for the lowest energy pre-reaction complex of each system are listed in~\ref{tab:Arrhenius-expt}. The logarithm of A-factor against binding energy was plotted, as shown in~\ref{fig:Arrhenius}. The overall correlation is quite poor ($R^2$=0.33), however, the majority of the data is grouped about a single, well correlated line ($R^2$=0.95). Interestingly, the intercept of the fitted line which corresponds to zero binding energy is 8.63, a result which is in line with the observed A-factor in ``normal'' HAT reactions, \emph{viz. }$10^{8.5\pm0.5}$ \Ms.\cite{Benson1976} This suggests that the observed correlation is valid, that is, NCIs may have an impact on A-factors. I shall demonstrate that the data which do not correlate are reasonable outliers. In fact, using simple rational I shall demonstrate that different regimes of sterics result in different processes leading to the TS complex. As a result, deviations from the relationship between A-factor and binding energy are observed.
 
 \begin{figure}[htb]
   \centering
@@ -87,13 +68,89 @@ The theoretically determined electronic binding energies calculated for the lowe
 \label{fig:Arrhenius}
 \end{figure}
 
-In order to illustrate this, consider the fundamental properties of the HAT reaction involved here; the two important concerted reaction mechanisms which can occur, direct HAT and PCET.\@ Specifically, we must consider the geometric constraints in which these reactions occur. For direct HAT to occur, the SOMO of the radical must overlap with the O-H $\sigma^*$ anti-bonding orbital. Often this requires the rotation of the hydroxyl group out of the plane, the barrier to which can be as much as 3.1 \kcalmol on the basis of the rotational barrier in phenol.\cite{Kim1994} In PCET, there are two possibilities: the SOMO of the radical must be able to overlap with the corresponding oxygen $p$-orbital, as seen in the work of \citet{Mayer2002}; or a lone pair-$\pi$ or $\pi$-$\pi$ overlap must occur, as seen in the work of \citet{DiLabio2007}. Due to time constraints, I was unable to obtain TS complex structures. Nonetheless, from the pre-reaction complex one can surmise as to the TS complex. Thus, by applying these basic principles, it is possible to rationalise the trend observed in~\ref{fig:Arrhenius}.
+In order to illustrate this, consider the fundamental properties of the HAT reaction involved here; the two important concerted reaction mechanisms which can occur, direct HAT and PCET.\@ Specifically, we must consider the geometric constraints in which these reactions occur. For direct HAT to occur, the SOMO of the radical must overlap with the O-H $\sigma^*$ anti-bonding orbital. Often this requires the rotation of the hydroxyl group out of the plane, the barrier to which can be as much as 3.1 \kcalmol on the basis of the rotational barrier in phenol.\cite{Kim1994} In PCET, there are two possibilities: the SOMO of the radical must be able to overlap with the corresponding oxygen $p$-orbital, as seen in the work of \citet{Mayer2002}; or a lone pair-$\pi$ or $\pi$-$\pi$ overlap must occur, as seen in the work of \citet{DiLabio2007}. Due to time constraints, I did not seek to obtain TS complex structures. Nonetheless, from the pre-reaction complex one can surmise as to the TS complex. Thus, by applying these basic principles, it is possible to rationalise the trend observed in~\ref{fig:Arrhenius}.
 
-We shall begin by examining the points which fall on the expected line, complexes 2--4 and 8--10, all of which require small conformational changes to proceed through formal HAT reactions. Complexes 2 and 3 are very similar in structure, both are hydroxylamine-nitroxyl couples with similar degrees of steric bulk adjacent to the reacting centres. Both the $t$-butyl and methyl groups prevent the alignment of the NO-H-ON frameworks in a PCET manner. Additionally both pre-reaction complexes must undergo the rotation of the hydroxyl group for direct HAT.\@ In the most stable stacked conformation, complex 4 cannot undergo PCET as the steric clash of the para-position $t$-butyl groups prevent $\pi$-$\pi$ overlap. In order to react $via$ HAT, the hydroxyl group must rotate out of the plane. Alternatively, an open conformation for complex 4 is possible, which lies ca. 2 \kcalmol higher in energy than the stacked complex, a result which is also consistent with the observed trendline. From the open conformation, PCET is still not possible due to the steric bulk of the ortho-position $t$-butyl groups of the radical, thus this reaction likely proceeds through direct HAT.\@
+\begin{figure}[!h]
+\centering
+\hspace*{-1.8cm}
+\begin{minipage}{8cm}
+  \centering
+  \begin{overpic}[width=\textwidth]{figures/complex2_hbond}
+  \put(5,91) {\large\textbf{A.}}
+\end{overpic}
+\end{minipage}%
+\begin{minipage}{8cm}
+  \centering
+  \begin{overpic}[width=\textwidth]{figures/complex3_hbond}
+  \put(5,90) {\large\textbf{B.}}
+\end{overpic}
+\end{minipage}
+\caption[Three-dimensional stuctures of pre-reaction complexes 2 (TEMPO-H and 4-oxo-TEMPO) and 3 (di-$t$-butyl-hydroxylamine and di-$t$-butyl-nitroxyl).]{Three-dimensional structures of \textbf{A} complex 2, and \textbf{B} complex 3. Hydrogen bond distances are shown in units of \AA.\@ The elements are coloured as white for carbon, light blue for hydrogen, red for oxygen, and blue for nitrogen.}
+\label{fig:com2-3}
+\end{figure}
 
-Complexes 8 and 9 are similar systems, in which \ch{$t$-BuOO^.} reacts with unhindered phenolic substrates. As seen by the structures in~\ref{tab:Arrhenius-theory}, the bound complexes are somewhat dissimilar. The hydroxyl group of complex 8 is rotated out of the plane 24$^\circ$, while this is not true for complex 9. It is likely that the larger aromatic system of 2-naphtol results in a larger OH rotational barrier, and thus the most favourable conformation is entirely in the plane. Complex 8 was previously studied by \citet{DiLabio2007}, where it was demonstrated that a partial bonding interaction exists between the peroxyl lone-pair and phenolic $\pi$-system, giving a PCET mechanism. Although the pre-reaction complexes are somewhat dissimilar, the conformational changes necessary to reach the PCET TS complex, similar to that reported in reference \citenum{DiLabio2007}, are likely not dramatically different in terms of energetic barriers. Any small differences that are observed result in noise in the observed trend.
+We shall begin by examining the points which fall on the expected line, complexes 2--4 and 8--10, all of which require small conformational changes to proceed through HAT reactions. Complexes 2 and 3 and shown in~\ref{fig:com2-3}, and are very similar in structure, both are hydroxylamine-nitroxyl couples with similar degrees of steric bulk adjacent to the reacting centres. Both the $t$-butyl and methyl groups prevent the alignment of the NO-H-ON frameworks in a PCET manner. Additionally both pre-reaction complexes must undergo the rotation of the hydroxyl group for direct HAT.\@ In the most stable stacked conformation, complex 4 cannot undergo PCET as the steric clash of the para-position $t$-butyl groups prevent $\pi$-$\pi$ overlap. In order to react $via$ HAT, the hydroxyl group must rotate out of the plane. Alternatively, an open conformation for complex 4 is possible, which lies ca. 2 \kcalmol higher in energy than the stacked complex, a result which is also consistent with the observed trendline. From the open conformation, PCET is still not possible due to the steric bulk of the ortho-position $t$-butyl groups of the radical, thus this reaction likely proceeds through direct HAT.\@
+
+\begin{figure}[htb]
+\centering
+\hspace*{-1.8cm}
+\begin{minipage}{8cm}
+  \centering
+  \begin{overpic}[width=\textwidth]{figures/complex4_hbond}
+  \put(0,100) {\large\textbf{A.}}
+\end{overpic}
+\end{minipage}%
+\begin{minipage}{8cm}
+  \centering
+  \begin{overpic}[width=\textwidth]{figures/complex4_steric}
+  \put(0,100) {\large\textbf{B.}}
+\end{overpic}
+\end{minipage}
+\caption[Three-dimensional stucture of pre-reaction complex 4 between 2,4,6-tri-$t$-butylphenol and  4-$t$-butylphenoxyl.]{Three-dimensional structure of pre-reaction complex 4 between 2,4,6-tri-$t$-butylphenol and  4-$t$-butylphenoxyl. \textbf{A} demonstrates the hydrogen bond distances in units of \AA, and the out-of-plane rotation by 35.2$^\circ$ of the phenolic hydroxyl group. \textbf{B} demonstrates the steric clash (highlighed by red box) between the para-position $t$-butyl groups. The elements are coloured as white for carbon, light blue for hydrogen, and red for oxygen.}
+\label{fig:com4}
+\end{figure}
+
+Complexes 8 and 9 are similar systems, in which \ch{$t$-BuOO^.} reacts with unhindered phenolic substrates. As seen by the structures in~\ref{fig:com8-9}, the bound complexes are somewhat dissimilar. The hydroxyl group of complex 8 is rotated out of the plane 24$^\circ$, while this is not true for complex 9. It is likely that the larger aromatic system of 2-naphtol results in a larger OH rotational barrier, and thus the most favourable conformation is entirely in the plane. Complex 8 was previously studied by \citet{DiLabio2007}, where it was demonstrated that a partial bonding interaction exists between the peroxyl lone-pair and phenolic $\pi$-system, giving a PCET mechanism. Although the pre-reaction complexes are somewhat dissimilar, the conformational changes necessary to reach the PCET TS complex, similar to that reported in reference \citenum{DiLabio2007}, are likely not dramatically different in terms of energetic barriers. Any small differences that are observed result in noise in the observed trend.
+
+\begin{figure}[htb]
+\centering
+\hspace*{-1.8cm}
+\begin{minipage}{8cm}
+  \centering
+  \begin{overpic}[width=\textwidth]{figures/complex8_hbond}
+  \put(0,100) {\large\textbf{A.}}
+\end{overpic}
+\end{minipage}%
+\begin{minipage}{8cm}
+  \centering
+  \begin{overpic}[width=\textwidth]{figures/complex9_hbond}
+  \put(0,100) {\large\textbf{B.}}
+\end{overpic}
+\end{minipage}
+\caption[Three-dimensional stuctures of pre-reaction complexes 8 ($t$-butylperoxyl and phenol) and 9 ($t$-butylperoxyl and 2-naphthol).]{Three-dimensional stuctures of pre-reaction complexes \textbf{A.} 8 ($t$-butylperoxyl and phenol) and \textbf{B.} 9 ($t$-butylperoxyl and 2-naphthol). Hydrogen bond distances are shown in units of \AA.\@ Complex 8 has an out of plane rotation of the phenolic hydroxyl group of 24.1$^\circ$/ The elements are coloured as white for carbon, light blue for hydrogen, and red for oxygen.}
+\label{fig:com8-9}
+\end{figure}
 
 Complex 10 is unique in that it is the only reaction between a peroxide and a peroxyl radical. The self-exchange reaction between \ch{HOO^.} and \ch{HOOH} can be considered the simplest reference for the reaction of $\alpha$-tetralin peroxide with $t$-butylperoxyl. To the best of my knowledge, the mechanism of the hydroperoxyl-hydrogen peroxide couple has not been characterised previously in the literature, although the TS structure has been previously reported.\cite{Isborn2005} Using this structure, calculations reveal a lone pair-lone pair interaction leading to partial bonding in the TS, i.e.\ a PCET mechanism. Details of this can be found in Appendix X. For complex 10 to achieve the same lone pair-lone pair interaction, the two species must rotate by approximately 30$^\circ$ relative to one another. This is somewhat unfavourable due to steric clash.
+
+\begin{figure}[htb]
+\centering
+\hspace*{-1.8cm}
+\begin{minipage}{8cm}
+  \centering
+  \begin{overpic}[width=\textwidth]{figures/complex4_hbond}
+  \put(0,100) {\large\textbf{A.}}
+\end{overpic}
+\end{minipage}%
+\begin{minipage}{8cm}
+  \centering
+  \begin{overpic}[width=\textwidth]{figures/complex4_steric}
+  \put(0,100) {\large\textbf{B.}}
+\end{overpic}
+\end{minipage}
+\caption[Three-dimensional stucture of pre-reaction complex 10 between $t$-butylperoxyl and $\alpha$-tetralin peroxide.]{Three-dimensional stucture of pre-reaction complex 10 between $t$-butylperoxyl and $\alpha$-tetralin peroxide. \textbf{A} demonstrates the hydrogen bond distances in units of \AA, and the out-of-plane rotation by 35.2$^\circ$ of the phenolic hydroxyl group. \textbf{B} demonstrates the steric clash (highlighed by red box) between the para-position $t$-butyl groups. The elements are coloured as white for carbon, light blue for hydrogen, and red for oxygen.}
+\label{fig:com10}
+\end{figure}
 
 \jnote{Add HOOH-OOH TS details to appendix}
 \begin{figure}[htb]
