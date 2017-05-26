@@ -45,38 +45,38 @@ print("Allylic slope %1.3f"%slope)
 plt.scatter(mat2[:,3], mat2[:,2], s=60, facecolors='none', edgecolors='r',label = 'Non-fit')
 
 # add labels to each data point
-ax.annotate('1',  xy=( 96.7,3.30))   #Acetone
-ax.annotate('2',  xy=( 96.6,3.48))   #Acetonitrile
-ax.annotate('3',  xy=( 96.3,4.98))   #Cyclopentane
-ax.annotate('4',  xy=( 99.3,4.68)) #22dimethylbutane
-ax.annotate('5',  xy=( 97.8,5.45)) #23dimethylbutane
-ax.annotate('6',  xy=( 99.3,4.96))   #Cyclohexane
-ax.annotate('7',  xy=( 95.8,5.20))   #Cycloheptane
-ax.annotate('8',  xy=( 92.4,5.27))   #Cyclooctane
-ax.annotate('9',  xy=(100.4,5.30))    #Adamantane-sec
-ax.annotate('10', xy=( 99.9,6.05))     #Adamantane-ter
-ax.annotate('11', xy=( 95.5,5.81))     #DiethylEther
-ax.annotate('12', xy=( 93.5,7.46))    #Piperazine
-ax.annotate('13', xy=( 92.2,7.45))    #Piperidine
-ax.annotate('14', xy=( 90.7,7.49))    #Pyrrolidine
-ax.annotate('15', xy=( 93.8,6.16))    #Tetrahydrofuran
-ax.annotate('16', xy=( 97.6,5.01))    #Dioxane
-ax.annotate('17', xy=( 91.2,7.52))    #Triethylamine
-ax.annotate('18', xy=( 98.8,5.90))    #DABCO
-ax.annotate('19', xy=(102.3,4.26))    #Dimethylsulfoxide
-ax.annotate('20', xy=( 91.4,7.08))    #Benzaldehyde
-ax.annotate('21', xy=( 93.9,6.02))    #HMPA
-ax.annotate('22', xy=( 93.3,7.10))    #Morpholine
-ax.annotate('23', xy=( 91.9,7.44))    #Diethylamine
-ax.annotate('24', xy=( 91.2,6.73))    #Propylamine
-ax.annotate('25', xy=( 75.0,7.22))     #Cyclohexadiene
-ax.annotate('26', xy=( 89.7,4.80))     #Toluene
-ax.annotate('27', xy=( 83.2,6.17))     #BenzylAlcohol
-ax.annotate('28', xy=( 87.6,5.60))     #Ethylbenzene
-ax.annotate('29', xy=( 86.9,5.75))     #Cumene
-ax.annotate('30', xy=( 82.8,5.64))     #Diphenylmethane
-ax.annotate('31', xy=( 82.7,6.15))     #DibenzylEther
-ax.annotate('32', xy=( 78.1,7.10))     #Dihydroanthracene
+ax.annotate('1',  xy=( 97.1,3.30))   #Acetone
+ax.annotate('2',  xy=( 97.0,3.48))   #Acetonitrile
+ax.annotate('3',  xy=( 94.9,4.90))   #Cyclopentane
+ax.annotate('4',  xy=( 99.7,4.55)) #22dimethylbutane
+ax.annotate('5',  xy=( 98.2,5.45)) #23dimethylbutane
+ax.annotate('6',  xy=( 99.9,4.96))   #Cyclohexane
+ax.annotate('7',  xy=( 94.2,5.20))   #Cycloheptane
+ax.annotate('8',  xy=( 91.0,5.27))   #Cyclooctane
+ax.annotate('9',  xy=(100.8,5.30))    #Adamantane-sec
+ax.annotate('10', xy=( 100.3,6.05))     #Adamantane-ter
+ax.annotate('11', xy=( 94.0,5.65))     #DiethylEther
+ax.annotate('12', xy=( 93.9,7.46))    #Piperazine
+ax.annotate('13', xy=( 92.2,7.55))    #Piperidine
+ax.annotate('14', xy=( 88.7,7.55))    #Pyrrolidine
+ax.annotate('15', xy=( 91.8,6.16))    #Tetrahydrofuran
+ax.annotate('16', xy=( 97.6,5.10))    #Dioxane
+ax.annotate('17', xy=( 90.5,7.72))    #Triethylamine
+ax.annotate('18', xy=( 99.2,5.70))    #DABCO
+ax.annotate('19', xy=(102.9,4.20))    #Dimethylsulfoxide
+ax.annotate('20', xy=( 89.5,7.00))    #Benzaldehyde
+ax.annotate('21', xy=( 94.3,5.92))    #HMPA
+ax.annotate('22', xy=( 93.7,7.00))    #Morpholine
+ax.annotate('23', xy=(91.9,7.44), xytext=( 92.2,7.84), arrowprops=dict(facecolor='black', width=0.5, headwidth=0))    #Diethylamine
+ax.annotate('24', xy=( 89.5,6.73))    #Propylamine
+ax.annotate('25', xy=( 75.4,7.22))     #Cyclohexadiene
+ax.annotate('26', xy=( 90.0,4.65))     #Toluene
+ax.annotate('27', xy=( 83.6,6.17))     #BenzylAlcohol
+ax.annotate('28', xy=( 87.9,5.50))     #Ethylbenzene
+ax.annotate('29', xy=( 87.1,5.80))     #Cumene
+ax.annotate('30', xy=( 83.2,5.54))     #Diphenylmethane
+ax.annotate('31', xy=( 81.0,6.00))     #DibenzylEther
+ax.annotate('32', xy=( 78.5,7.10))     #Dihydroanthracene
 
 
 # properties and show plot
@@ -86,7 +86,7 @@ plt.ylim(3,9)
 plt.xlabel('Bond Dissociation Enthalpy (kcal mol$^{-1}$)')
 plt.ylabel('$\log_{10}(k_H)$')
 plt.tight_layout()
-plt.show()
+#plt.show()
 
 # Save Figure to fig.png with 2x default dpi
-#fig.savefig("fig.png", dpi = (400))
+fig.savefig("figures/bde-bep.png", dpi = (400))
