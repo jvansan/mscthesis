@@ -5,9 +5,9 @@ from scipy import stats
 from pylab import *
 
 # load data
-mat0 = genfromtxt("data/rocbsqb3_alkyl_all.tsv")
-mat1 = genfromtxt("data/rocbsqb3_allylic_all.tsv")
-mat2 = genfromtxt("data/rocbsqb3_nonfit_all.tsv")
+mat0 = genfromtxt("figures/data/rocbsqb3_alkyl_all.tsv")
+mat1 = genfromtxt("figures/data/rocbsqb3_allylic_all.tsv")
+mat2 = genfromtxt("figures/data/rocbsqb3_nonfit_all.tsv")
 
 # initialize figure
 fig = plt.figure()
@@ -41,11 +41,7 @@ plt.scatter(mat1[:,3], mat1[:,2], s=30, label = "Allylic/Benzylic", color='green
 ax.annotate("y = %1.4f x + %1.4f \n$R^2$ = %1.3f"%(slope,intercept,r_value**2), (72,4), color='green', bbox=dict(boxstyle="square", fc="w", ec="g"))
 print("Allylic slope %1.3f"%slope)
 
-A = mat2[:,3]
-B = mat2[:,2]
-labels = mat2[:,0]
-#for i, txt in enumerate(labels):
-#    ax.annotate(int(txt),(A[i],B[i]))
+
 plt.scatter(mat2[:,3], mat2[:,2], s=60, facecolors='none', edgecolors='r',label = 'Non-fit')
 
 # add labels to each data point
@@ -93,4 +89,4 @@ plt.tight_layout()
 plt.show()
 
 # Save Figure to fig.png with 2x default dpi
-fig.savefig("fig.png", dpi = (400))
+#fig.savefig("fig.png", dpi = (400))

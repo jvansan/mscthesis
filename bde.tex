@@ -5,28 +5,53 @@
 
 \section{Introduction}
 
-The Bell-Evans-Polanyi (BEP) principle is a conceptual framework that states, for two closely related reactions, the difference in activation energy is proportional to the difference in their enthalpy of reaction.\cite{Bell1936,Evans1938,Dill2003} This is commonly expressed as the linear free energy relationship in Equation 1.1 \jnote{Introduction}. Initially, the BEP principle was used as a simple model to explain the Br{\o}nsted catalysis law, which states that the stronger and acid is, the faster the catalysed reaction will proceed.\cite{Bronsted1924} A key assumptions is made for the BEP principle: the position of the TS along the reaction coordinate is the same for all reactions. The relationship can be described schematically: the more stable the product, the lower the reaction barrier, as seen in~\ref{fig:bep}.
+The Bell-Evans-Polanyi (BEP) principle is a conceptual framework that states, for two closely related reactions, the difference in activation energy is proportional to the difference in their enthalpy of reaction.\cite{Bell1936,Evans1938,Dill2003} This is commonly expressed as the linear free energy relationship: $E_a = E_0 + \alpha \Delta H$ (Equation~\ref{eq:bep}). Initially, the BEP principle was used as a simple model to explain the Br{\o}nsted catalysis law, which states that the stronger and acid is, the faster the catalysed reaction will proceed.\cite{Bronsted1924} A key assumptions is made for the BEP principle: the position of the TS along the reaction coordinate is the same for all reactions. The relationship can be described schematically: the more stable the product, the lower the reaction barrier, as seen in~\ref{fig:bep}.
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.7\textwidth]{figures/bep}
   \caption{Energy profiles for a series of related exothermic reactions illustrating the Bell-Evans-Polanyi principle.}
 \label{fig:bep}
 \end{figure}
 
-A modern use of the BEP principle is to estimate rate constants of related reactions. If the relationship holds for a series of related HAT reactions, then bond dissociation enthalpies (BDEs) should correlate with the activation energy, and thus through the Arrhenius equation, rate constants. For instance, an increase in bond strength would represent a destabilisation in the TS complex, and thus a decrease in reaction rate. In application, plots of the logarithm of the rate constant, $k$, against BDEs are used. An interesting example of this is the work of \citet{Pratt2003}, in which the free radical oxidation of unsaturated lipids was examined. They demonstrate the correlation of theoretically determined allylic or benzylic C-H and \ch{C-OO^.} bond strengths with experimentally measured HAT rate constants and \ch{O2} addition rate constants, respectively. BEP plots ($\log k$ vs. BDE) for a large range of polyunsaturated fatty acid models show good correlation for \ch{C-OO^.} bonds examined, and reasonable correlation for \ch{C-H} bonds. This demonstrates that BDEs have a direct impact on the reaction barrier height, thus providing validation of the BEP principle. Importantly, these results also provide a means for predicting rate constants of related HAT and oxygen addition reactions by means of calculating BDEs.
+A modern use of the BEP principle is to estimate rate constants of related reactions. In application, plots of the logarithm of the rate constant against BDEs are used: $\log(k_\mathrm{H}) = \alpha \Delta H + constant$. For HAT reactions involving abstraction by \cumo, $\Delta H$ is directly related to the strength of the breaking bond: $\Delta H =$ BDE(\ch{C-H}) $-$ BDE(\ch{CumO-H}). If the relationship holds for a series of related HAT reactions, then bond dissociation enthalpies (BDEs) should correlate with the activation energy. It would then stand that an increase in bond strength represents a destabilisation in the TS complex, and thus a decrease in reaction rate. This concept is also important for the work in Chapter~\ref{ch:hat}, where the interaction of non-redox active metals cations results in an increase in effective bond strength, and decrease in rate constant.
 
-\jnote{Expand this section}
-A major problem is the lack of applicability criterion for how broadly the BEP principle can be utilised. In this work, I explore this issue. In order to achieve this, I examine HAT reactions involving the abstraction of C-H bonds by \cumo, for which many rate constants have been published.\cite{Bietti2010, Bietti2011, Pischel2001, Salamone2011, Salamone2012, Salamone2012a, Salamone2013, Salamone2015} Additional unpublished rate constants have been provided by our experimental colleagues in Rome. We have hypothesised that there should exist two distinct BEP relations: one in which the incipient radical is delocalised into a $\pi$-system (benzylic or allylic), and the remaining alkyl radicals which are largely localised.
+An interesting application of the BEP principle is the work of \citet{Pratt2003}, in which the free radical oxidation of unsaturated lipids was examined. They studied the correlation of theoretically determined allylic or benzylic C-H and \ch{C-OO^.} bond strengths with experimentally measured HAT rate constants and \ch{O2} addition rate constants, respectively. BEP plots ($\log k$ vs. BDE) for a large range of polyunsaturated fatty acid models show good correlation for \ch{C-OO^.} bonds examined, and reasonable correlation for \ch{C-H} bonds. This demonstrates that BDEs can have a direct impact on the reaction barrier height, thus providing validation of the BEP principle. Additionally, these results provide the important ability of predicting rate constants for HAT and oxygen addition reactions related to unsatureated lipid models, by means of calculating BDEs. It is important to note that if the BEP principle breaks down for reaction which appear related, then different physico-chemical factors may be influencing the reaction barrier.
 
+A significant gap in the literature is the lack of applicability criterion for how broadly the BEP principle can be utilised. In this work, I explore this issue. In order to achieve this, I have studied HAT reactions involving the abstraction of C-H bonds by \cumo, for which many rate constants have been published.\cite{Bietti2010, Bietti2011, Pischel2001, Salamone2011, Salamone2012, Salamone2012a, Salamone2013, Salamone2015} Additional unpublished rate constants have been provided by our experimental colleagues in Rome. These reactions are all exothermic, and thus have early transition state by the Hammond Postulate.\cite{Russell1973}  these rate constants against literature BDEs (\ref{fig:bep-expt}) there appears to be evidence for two BEP relations. This has led us to the hypothesise that this two general for C-H bond: one in which the incipient radical is delocalised into a $\pi$-system (benzylic or allylic), and one in which the remaining alkyl radicals are largely localised.
 
-BDEs are measurable using a large number of different experimental techniques, and a great deal of data exists in the literature. Much of this data has been compiled in the \emph{de facto} reference for BDEs: the CRC Handbook of Bond Dissociation Enthalpies.\cite{Luo2002} However, caution must be taken with experimentally determined BDEs, as not all experimental methods give reliable data. For example, BDEs from the Bordwell\cite{Bordwell1988} thermochemical cycle are possibly unreliable.\cite{Salamone2012, Miller2016} This was demonstrated for the BDE of dimethyl sulfoxide (DMSO), for which the experimentally determined BDE is about 8 \kcalmol lower than the best computational estimate.\cite{Salamone2012} Therefore, quantum chemistry is a useful tool for studying BDEs, as it is facile to compute BDEs. For example, an arbitrary \ch{X-H} bond strength is given by:
+\begin{figure}[H]
+  \centering
+  \hspace*{-2cm}
+  \includegraphics[width=1.2\textwidth]{figures/bep-expt}
+\begin{tabularx}{\textwidth}{| l X l X |}
+  \hline
+  1 & 2,2-dimethylbutane & 2 & 2,3-dimethylbutane \\
+  3 & Benzaldehyde & 4 & DABCO \\
+  5 & Diethyl Ether & 6 & Dioxane \\
+  7 & Dimethyl sulfoxide & 8 & HMPA \\
+  9 & Pyrrolidine & 10 & Tetrahydrofuran \\
+  11 & Diethyl Ether & 12 & Piperazine \\
+  13 & Cumene & 14 & Cyclohexadiene \\
+  15 & Dibenzyl Ether & 16 & 9,10-dihydroanthracene \\
+  17 & Diphenylmethane & 18 & Ethylbenzene \\
+  19 & Toluene & 20 & Adamantane (2$^\circ$) \\
+  21 & Adamantane (3$^\circ$) & 22 & Cycloheptane \\
+  23 & Cyclohexane & 24 & Cyclooctane \\
+  25 & Cyclopentane &  &  \\
+  \hline
+\end{tabularx}
+  \caption[Bell-Evans-Polanyi plot of experimental rate constants against literature BDEs.]{Bell-Evans-Polanyi plot of experimental rate constants (normalised for the number of equivalent hydrogen atoms) for HAT between \cumo~ and substrates against literature BDEs. BDEs for dimethyl sulfoxide and hexamethylphosphoramide are from Ref.~\protect\citenum{Salamone2012}, while all other BDEs are from Ref.~\protect\citenum{Luo2002}.}
+\label{fig:bep-expt}
+\end{figure}
+
+There is a considerable amount of scatter in~\ref{fig:bep-expt}, which may be due to differences in experimental procedures. BDEs are measurable using a large number of different experimental techniques, and a great deal of data exists in the literature. Much of this data has been compiled in the \emph{de facto} reference for BDEs: the CRC Handbook of Bond Dissociation Enthalpies.\cite{Luo2002} However, caution must be taken with experimentally determined BDEs, as not all experimental methods give reliable data. For example, BDEs from the Bordwell\cite{Bordwell1988} thermochemical cycle are possibly unreliable.\cite{Salamone2012, Miller2016} This was demonstrated for the BDE of dimethyl sulfoxide, for which the experimentally determined BDE is about 8 \kcalmol lower than the best computational estimate.\cite{Salamone2012} Therefore, quantum chemistry is a useful tool for studying BDEs, as it is facile to compute BDEs. For example, an arbitrary \ch{X-H} bond strength is given by:
 
 \begin{equation}
   \Delta H(BDE) =  H(\ch{X^.}) + H(\ch{H^.}) - H(\ch{X-H})
 \end{equation}
 
-\noindent where $\Delta H(BDE)$ is the BDE, and the right-hand terms are the enthalpies of the incipient radical, the hydrogen atom, and the substrate, respectively.
+\noindent where $\Delta H(BDE)$ is the BDE, and the right-hand terms are the enthalpies of the radical product, the hydrogen atom, and the substrate, respectively. The aim of this work was to compute the most accurate possible BDEs for
 
 DFT-based methods have been shown to give reliable relative BDEs, however, highly correlated wave function based methods are required to predict chemically accurate (sub-\kcalmol) BDEs.\cite{DiLabio1999, Chan2012, Wiberg2014} For this purpose, we shall use composite quantum chemical procedures. Unfortunately, due to the computational cost of some of these procedures, calculations are often limited to small molecules. Additionally, there is currently no literature which compares the ability of common composite methods to predict accurate BDEs. Therefore, another aim of the work is to determine which composite procedure can be used to compute accurate BDEs for relatively large molecules.
 
@@ -34,9 +59,9 @@ DFT-based methods have been shown to give reliable relative BDEs, however, highl
 
 Experimental rate constants were have either provided from unpublished results from our colleagues, the Bietti group in Rome, or come from literature sources.\cite{Bietti2010, Bietti2011, Pischel2001, Salamone2011, Salamone2012, Salamone2012a, Salamone2013, Salamone2015} All rate constants come from laser flash photolysis (LFP) experiments of \cumo~ with the substrates of interest. Acetonitrile solvent and ambient conditions (298 K and 1 atm) were used in all cases. For those results which have are unpublished, \cumo~ is generated by laser pulses at either 266 nm or 355 nm in solutions of excess dicumyl peroxide. Many of the literature results are also from the Bietti group, where the same procedure is used. Other results may have small variations in experimental details, however, all results are well time-resolved.
 
-Observed rate constants ($k_{obs}$) are obtained from transient absorption decay traces of \cumo monitored at 485 nm. The observed rate constant is plotted against concentration of substrate to provide the bimolecular HAT rate constant ($k_H$) as the slope ($k_{obs} = k_0 + k_H[substrate]$). The \cumo radical decays unimolecularly through the $\beta$-scission of a methyl group, giving acetophenone and a methyl radical, as shown in~\ref{fig:cumo-decay}. The unimolecular decay rate constant\cite{Avila1995} for \cumo ($k_0$) in acetonitrile is on the order of 7.5 \E{5} s$^{-1}$.
+Observed rate constants ($k_{obs}$) are obtained from transient absorption decay traces of \cumo~ monitored at 485 nm. The observed rate constant is plotted against concentration of substrate to provide the bimolecular HAT rate constant ($k_H$) as the slope ($k_{obs} = k_0 + k_H[substrate]$). The \cumo~ radical decays unimolecularly through the $\beta$-scission of a methyl group, giving acetophenone and a methyl radical, as shown in~\ref{fig:cumo-decay}. The unimolecular decay rate constant\cite{Avila1995} for \cumo ($k_0$) in acetonitrile is on the order of 7.5 \E{5} s$^{-1}$ at 298 K.
 
-\begin{scheme}[h!]
+\begin{scheme}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{figures/cumobeta.eps}
 \caption{Unimolecular decay of the cumyloxyl radical.}
@@ -55,9 +80,9 @@ The highest accuracy method used is W1BD, which employs seven different calculat
 
 \noindent \textbf{LDBS approach}
 
-Locally-dense basis sets have been used in the past to calculated BDEs for relatively large molecules.\cite{DiLabio1999LDBS, Wright2001} The principle is to use large basis sets to treat the atoms in which chemistry takes place, and use progressively smaller basis sets for ``remote'' portions of the molecule. We chose a method which best approximate W1BD results for a small subset of molecules. The scheme utilised herein obtains geometries and scaled thermochemical corrections from DFT-based B3LYP/cc-pVTZ+d, as used in the W1BD procedure. Single-point energy calculations were then performed using ROCCSD(T) and an LDBS partitioning scheme demonstrated in~\ref{fig:ldbs}, which uses the polarisation consistent basis sets.\cite{Jensen2001}
+Locally-dense basis sets have been used in the past to calculated BDEs for relatively large molecules.\cite{DiLabio1999LDBS, Wright2001} The principle is to use large basis sets to treat the atoms in which chemistry takes place, and use progressively smaller basis sets for ``remote'' portions of the molecule. We chose a method which best approximate W1BD results for a small subset of molecules. The scheme utilised herein obtains geometries and scaled thermochemical corrections from DFT-based B3LYP/cc-pVTZ+d, as used in the W1BD procedure. Single-point energy calculations were then performed using ROCCSD(T) and an LDBS partitioning scheme demonstrated in~\ref{fig:ldbs}, which uses the pc-$N$ polarisation consistent basis sets.\cite{Jensen2001}
 
-\begin{scheme}[!ht]
+\begin{scheme}[H]
 \centering
 \includegraphics[width=0.75\textwidth]{figures/ldbs}
 \caption[Locally-dense basis set partitioning used in the calculation of BDEs.]{Locally-dense basis set partitioning used in the calculation of BDEs. The scheme is referred to as pc-3/3/2/1, where for the shown benzene molecule, the centre of \ch{C-H} cleavage and the immediately adjacent groups are treated with high-level pc-3 basis sets. The next groups are treated with medium level pc-2 basis sets, and all other atoms are treated with low-level pc-1 basis sets.}
@@ -77,44 +102,65 @@ The Gaussian$-n$ (G$n$) series of methods originate from the Pople group,\cite{P
 
 \subsection{Transition state calculations}
 
-Calculations were performed to identify the lowest energy TS complex of several reactions between \cumo~ and organic substrates. In all cases cisoid and transoid conformations were explored. All optimisation calculations were performed at the B3LYP-D3(BJ)/6-31+G$^*$ level of theory. Single-point energy calculation were carried out at the LC-$\omega$PBE-D3(BJ)/6-311+G(2d,2p) level of theory.
+Calculations were performed to identify the lowest energy TS complex of several reactions between \cumo~ and organic substrates. In all cases cisoid and transoid conformations were explored. All optimisation calculations were performed at the B3LYP-D3(BJ)/6-31+G$^*$ level of theory, followed by single-point energy calculations at the LC-$\omega$PBE-D3(BJ)/6-311+G$^{**}$ level of theory. The latter DFT-based method was selected to minimise delocalisation error in the TS complex.\cite{OterodelaRoza2014} Transition states were visualised using the Chemcraft program\cite{ccraft} to confirm a single imaginary frequency connecting reactants to products. In some cases, a small secondary imaginary frequency was observed, indicating a TS complex which is not fully optimised. Necessary steps were taken to re-optimise the structures and eliminate the small imaginary frequencies, however, this was not always successful. Nonetheless, I am confident the structures reported herein sufficiently represent the true TS complex geometries and relative energies. Results from stuctures which are not fully optimised are indicated as such appropriately.
 
 \section{Comparison of composite method for the prediction of BDEs}
 \jnote{Convince ROCBS-QB3 is best}
-In order to determine the best method for BEP principle analysis, and to investigate which is the most efficient yet accurate composite method, the BDEs of 49 species have been calculated. This set of species contains a wide variety of chemical functionalities, thus this set may be described as a comprehensive test of these methods for C-H BDEs. Given that W1BD is the most accurate method used, these results have been used for comparison to other composite method. Unfortunately, BDEs for only 33 out of the 49 species studied were able to be calculated using W1BD due to computational cost restrictions: hard disk capacity was insufficient for large systems. Therefore, literature BDEs from \citet{Luo2002} for all species in the set are also used for comparison. The literature and calculated BDEs are listed in~\ref{tab:bde-calc}.
+In order to determine the best method for BEP principle analysis, and to investigate which is the most efficient yet accurate composite method, the BDEs of 49 species have been calculated. This set of species contains a wide variety of chemical functionalities with bond strengths ranging from 75--113 \kcalmol, thus this set may be described as a comprehensive test of these methods for C-H BDEs. Given that W1BD is the most accurate method used, these results have been used for comparison to other composite method. Unfortunately, BDEs for only 33 out of the 49 species studied were able to be calculated using W1BD due to computational cost restrictions: hard disk capacity was insufficient for large systems. Therefore, literature BDEs from \citet{Luo2002} for all species in the set are also used for comparison. The literature and calculated BDEs are listed in~\ref{tab:bde-calc}.
 
 \begin{landscape}
 \input{org/bde-calc.tex}
 \end{landscape}
 
-Mean absolute error (MAE) is used to assess the quality of computational methods, with errors calculated with respect to benchmark values for a given data set.\cite{Savin2014} The MAE is calculated as
+Mean absolute error (MAE) is used to assess the quality of computational methods, where errors are calculated with respect to benchmark values for a given data set.\cite{Savin2014} The MAE is calculated as
 
 \begin{equation}
   \mathrm{MAE} = \frac{1}{N} \sum | E_{ref} - E_{calc}|
 \end{equation}
 
-\noindent where for a set of $N$ reference values, the MAE is the average of the mean differences of the reference energy ($E_{ref}$) and the calculated value ($E_{calc}$). The MAE with respect to W1BD and literature shall be reported herein as ``MAE$_{\mathrm{W1BD}}$ (MAE$_{\mathrm{Lit.}}$)''. An additional semi-quantitative metric which I used to evaluate the accuracy of composite procedures to reproduce experimental results, is a bar chart which summarises the number of deviations from literature within given error ranges. This bar chart is reported in~\ref{fig:maebarchart}
+\noindent where, for a set of $N$ reference values, the MAE is the average of the mean differences of the reference energy ($E_{ref}$) and the calculated value ($E_{calc}$). The MAE with respect to W1BD and literature shall be reported herein as ``MAE$_{\mathrm{W1BD}}$ (MAE$_{\mathrm{Lit.}}$)''. An additional semi-quantitative metric which I used to evaluate the accuracy of composite procedures to reproduce experimental results, is a bar chart which summarises the number of deviations from literature within given error ranges. This bar chart is reported in~\ref{fig:maebarchart}. Also, an alternative method for visualising these data is through the use of one-to-one plots, in which BDEs from two methods are directly compared. An ideal plot should have a slope = 1 and y-intercept = 0.
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{figures/bde-barchart}
   \caption[Summary of deviations of BDEs from literature for composite quantum chemical methods.]{Summary of deviations of BDEs from literature or composite quantum chemical methods. Errors are units of \kcalmol and are relative to Reference~\protect\citenum{Luo2002}. Numbers out of 49 represent the total number of data points which were computed for the given method.}
   \label{fig:maebarchart}
 \end{figure}
 
-Comparing W1BD results to literature, the MAE is 0.82 \kcalmol, with the majority of the data falls within 1--2 \kcalmol of each other. This suggests that W1BD is consistent with the literature values. There are, however, two large outliers: dimethylsulfoxide\footnotemark~ and \emph{N,N}-dimethylacetamide, with experiment underestimating the BDEs by -8.0 and -8.2 \kcalmol, respectively. This result is consistent amongst all composite method, verifying the inaccuracy of these results.
+Comparing W1BD results to literature, the MAE is 0.82 \kcalmol, where the majority of the data matching to within 1--2 \kcalmol of literature. Thus, W1BD is largely consistent with the literature values. Additionally, the one-to-one plots comparing W1BD to literature in~\ref{fig:1-1-W1BD}, show reasonable agreement with slope of 0.98 and a y-intercept of 2.35. There are, however, two large outliers: dimethyl sulfoxide\footnotemark~ and \emph{N,N}-dimethylacetamide, with experiment underestimating the BDEs by -8.0 and -8.2 \kcalmol, respectively. These large outliers are consistent amongst all composite method, suggesting the literature BDEs for dimethyl sulfoxide and \emph{N,N}-dimethylacetamide are incorrect.
 
-\footnotetext{The experimental BDE for dimethylsulfoxide was previously identified as accurate by Salamone et al.\protect\cite{Salamone2012}}
+\footnotetext{The experimental BDE for dimethyl sulfoxide was previously identified as accurate by Salamone et al.\protect\cite{Salamone2012}}
 
-The best agreement with both W1BD and literature is the ROCBS-QB3 method (MAE = 0.18 (1.64) \kcalmol). In comparison, CBS-QB3 has an MAE = 0.32 (1.88) \kcalmol, while CBS-APNO has an MAE = 0.20 (1.40) \kcalmol.  The G4 method deviates from the W1BD reference by about 0.5 \kcalmol more, however, it appears to give reasonable agreement with experimental results (MAE = 0.70 (1.21) mol). The use of the MP2 variant of G4 gives somewhat questionable results, with an MAE of 0.88 (1.60) \kcalmol, as well as a large outlier of 6.2 kcal/mol that is not present in the other data from composite methods.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/lit-w1bd}
+  \caption[One-to-one plot of BDEs from literature and as calculated by the W1BD composite method.]{One-to-one plot of BDEs from literature\protect\cite{Luo2002} and as calculated by the W1BD composite method. The red line represents the least squares line of best fit, while black line represents a perfect one-to-one correlation.}
+  \label{fig:1-1-W1BD}
+\end{figure}
 
-An alternative method for visualising these data is through the use of one-to-one plots, in which BDEs from two methods are directly compared. An ideal plot should have a slope = 1 and y-intercept = 0. These plots are reported in Appendix X, \jnote{FIG REF}, where it can once seen that ROCBS-QB3 performs best for the calculation of BDEs while G4(MP2) performs worst. Given these data, and considering the relative computational cost, the ROCBS-QB3 method is recommended for the efficient calculation of accurate BDEs, particularly for large molecules for which more expensive computational methods are not possible. Importantly, we can now confidently continue investigating the BEP relationships using reliable calculated BDE data from the ROCBS-QB3 method.
+The method which gives the best combined agreement with W1BD and literature is ROCBS-QB3 wiht an MAE = 0.18 (1.64) \kcalmol. It is also apperant from the one-to-one plots in~\ref{fig:1-1-ROCBSQB3}, that ROCBS-QB3 matches well with literature and experiment. In comparison, CBS-QB3 has an MAE = 0.32 (1.88) \kcalmol, while CBS-APNO has an MAE = 0.20 (1.40) \kcalmol. The LDBS approach also performs well with an MAE = 0.22 (1.60) \kcalmol. The G4 method deviates from the W1BD reference by about 0.5 \kcalmol more, however, it appears to give reasonable agreement with experimental results (MAE = 0.70 (1.21) mol). The use of the MP2 variant of G4 gives somewhat questionable results, with an MAE of 0.88 (1.60) \kcalmol, as well as a large outlier of 6.2 kcal/mol that is not present in the other data from composite methods. One-to-one plots of all other methods are presented in Appendix~\ref{ap:bde}.
+
+\begin{figure}[H]
+  \hspace*{-1.5cm}
+  \begin{minipage}{8cm}
+    \centering
+    \includegraphics[width=\textwidth]{figures/lit-rocbsqb3}
+  \end{minipage}%
+  \begin{minipage}{8cm}
+    \centering
+    \includegraphics[width=\textwidth]{figures/w1bd-rocbsqb3}
+  \end{minipage}
+  \caption[One-to-one plot comparing calculated BDEs calculated by ROCBS-QB3 to literature and W1BD BDEs.]{One-to-one plot comparing calculated BDEs calcualted by the ROCBS-QB3 to reference literature\protect\cite{Luo2002} and W1BD BDE values, respectively. The red line represents the least squares line of best fit, while black line represents a perfect one-to-one correlation.}
+  \label{fig:1-1-ROCBSQB3}
+\end{figure}
+
+In summary, ROCBS-QB3 performs best for the calculation of \ch{C-H} BDEs while G4(MP2) performs worst. Given these data, and considering the relative computational cost, the ROCBS-QB3 method is recommended for the calculation of accurate BDEs, particularly for large molecules for which more expensive computational methods are not possible. Importantly, we can now confidently continue investigating the BEP relationships using reliable calculated BDE data from the ROCBS-QB3 method. Furthermore, these results can be extended to even larger systems as the ROCBS-QB3 approach is one of the least computationally expensive composite methods. For example, for calculations on the cyclohexane molecule, which take about 20 minutes using ROCBS-QB3 on SGI Altix compute nodes with 6 processors and 8 GB RAM, while G4 takes about 27 times longer, the LDBS approach takes about 500 times longer, and W1BD takes about 1100 times longer.
 
 \section{Analysis of the Bell-Evans-Polanyi principle}
 
-We turn now to the application of accurate BDEs on the BEP principle. Experimental HAT rate constants have been collected for 32 reactions involving \cumo and organic substrates. The BEP plot of the logarithm of normalised rate constants against BDEs is shown in~\ref{fig:bde-bep}.
+We turn now to the application of accurate BDEs on the BEP principle. Experimental HAT rate constants have been collected for 32 reactions involving \cumo and organic substrates. The BEP plot of the logarithm of rate constants divided by the number of equivalent H atoms (i.e. normalised) against BDEs is shown in~\ref{fig:bde-bep}.
 
-There clearly exists two general trends in~\ref{fig:bde-bep}, inline with our initial hypothesis that there should exist two linear relations: one for benzylic/allylic C-H bonds and another for alkyl C-H bonds. However, the correlation of one of these trends is poor, a result which is inconsistent with our hypothesis. For the series of C-H BDEs which result in a radical which is delocalised, the correlation coefficient is 0.89, suggesting a valid correlation. Therefore, there is predictive power from a BEP relation for C-H bond cleavage which results in a delocalised radical. Furthermore, this result is consistent with the correlation of rate constants with C-H BDEs for model unsaturated fatty acids, described by Pratt et al.\cite{Pratt2003}
+There clearly exists two distinct regions in~\ref{fig:bde-bep}, inline with our initial hypothesis that there should exist two linear relations: one for benzylic/allylic C-H bonds and another for alkyl C-H bonds. However, the correlation of one of these trends is poor, a result which is inconsistent with our hypothesis. For the series of C-H BDEs which result in a radical which is delocalised, the correlation coefficient is 0.89, suggesting a valid correlation. Therefore, there is predictive power from a BEP relation for C-H bond cleavage which results in a delocalised radical. Furthermore, this result is consistent with the correlation of rate constants with C-H BDEs for model unsaturated fatty acids, described by Pratt et al.\cite{Pratt2003}
 
 \begin{figure}[H]
   \centering
@@ -139,20 +185,21 @@ There clearly exists two general trends in~\ref{fig:bde-bep}, inline with our in
   31 & Dibenzyl Ether & 32 & 9,10-dihydroanthracene \\
   \hline
 \end{tabularx}
-  \caption{Bell-Evans-Polanyi plot of experimental rate constants for HAT between \cumo~ and substrates. Acetone and acetonitrile are note included in fitting as the experimental rate constants are approximate. Needs revision to move labels around.}
+  \caption{Bell-Evans-Polanyi plot of experimental rate constants (normalised for the number of equivalent hydrogen atoms) for HAT between \cumo~ and substrates. Acetone and acetonitrile are note included in fitting as the experimental rate constants are approximate. Needs revision to move labels around.}
 \label{fig:bde-bep}
 \end{figure}
 
+\jnote{fix}
 In contrast, the alkyl C-H BDEs shows very weak correlation with HAT rate constants, with a correlation coefficient of 0.63. However, with the exception of two larger outlier, cyclooctane and the secondary hydrogen position of adamantane, the majority of the data fall within half an order of magnitude of rate a rate constant which is consistent with the line of best fit. The two large outliers are approximately twice as far from the trendline. While this result may not seem positive, there is actually some predictive power in the BEP relation established for alkyl C-H bonds. This is because in the calculations of rate constants, an error of only 1.2 \kcalmol can result in a order of magnitude difference in rate constant. Errors of this magnitude are not uncommon for DFT-based mechanistic studies. For example, barrier heights for a set\cite{Zhao2005, Zhao2009} of 76 hydrogen transfer, heavy atom transfer, nucleophilic substitution, unimolecular, and association reactions calculated with at the B3LYP-D3(BJ)/Def2-QZVP level of theory give a mean absolute error of 5.20 \kcalmol, with errors exceeding 11 \kcalmol.\cite{Goerigk2011}
 
 In sum, these results suggest that the BEP principle is overly simple to directly correlate the large groups of allylic/benzylic and alkyl C-H bonds with HAT rate constant. Nonetheless, BEP relations offer predictive capabilities for rate constants to within an order of magnitude. Importantly, this result indicates that there are additional factors which contribute to the HAT rate constants studied herein.
 
 \section{Transition state analysis}
 
-In order to determine what effects appear to be most important, I have calculated TS structures for 19 of the reactions at the LC-$\omega$PBE-D3(BJ)/6-311+G(2d,2p)//B3LYP-D3(BJ)/6-31+G$^*$ level of theory. Comparing the calculated rate constants both with and without tunnelling corrections, there is a large degree of variability in the agreement with experiment. \ref{fig:kH-theory} demonstrates that the calculated rate constants deviate rather significantly from the experimental rate constants, both with and without the inclusion of a tunnelling correction. This result is perhaps unsurprising given the neglect of solvent effects, and the fairly low level of theory used for optimisation. Note however, that the goal of these calculations was not to reproduce experimental rate constants, but to obtain TS complex structures to analyse the structural differences that may lead to the deviations from the BEP principle.
+In order to determine what effects appear to be most important, I have calculated TS structures for 20 of the reactions at the LC-$\omega$PBE-D3(BJ)/6-311+G(2d,2p)//B3LYP-D3(BJ)/6-31+G$^*$ level of theory. Comparing the calculated rate constants both with and without tunnelling corrections, there is a large degree of variability in the agreement with experiment. \ref{fig:kH-theory} demonstrates that the calculated rate constants deviate rather significantly from the experimental rate constants, both with and without the inclusion of a tunnelling correction. This result is perhaps unsurprising given the neglect of solvent effects, and the fairly low level of theory used for optimisation. Note however, that the goal of these calculations was not to reproduce experimental rate constants, but to obtain TS complex structures to analyse the structural differences that may lead to the deviations from the BEP principle.
 
 \begin{figure}[htb]
-\centering
+\hspace*{-1.5cm}
 \begin{minipage}{8cm}
   \centering
   \includegraphics[width=\textwidth]{figures/kH-theorya}
@@ -182,74 +229,3 @@ There are several other possible deviations which may arise from differences in 
 Firstly, a number of composite quantum mechanical methods were tested for the accurate prediction of C-H BDEs. The ROCBS-QB3 method was determined to be the most efficient accurate method for this purpose. Additionally, the widespread applicability of the BEP principle was investigated through utilisation of these accurate C-H BDEs and experimental HAT rate constants for reaction of \cumo with organic substrates.
 
 As was hypothesised, two relationships exist for the BEP principle when investigating a wide range of HAT reactions from C-H bonds. C-H bonds which result in a radical which can be delocalised into neighbour $\pi$ systems (benzylic/allylic) correlate well with experimental rate constants. The remaining alkyl C-H bonds, correlate weakly with experimental rate constants and offer only order of magnitude predictions of rate constants. Altogether, these results suggest that the BEP principle must be carefully applied if accurate rate constants are the desired target, however, they also suggest that as the BEP principle holds as a reasonably general principle.
-
-\newpage
-\section{Data and figures to be moved to appendix}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.7\textwidth]{figures/lit-w1bd}
-\end{figure}
-
-
-\begin{figure}
-\centering
-\begin{minipage}{8cm}
-  \centering
-  \includegraphics[width=\textwidth]{figures/w1bd-cbsqb3}
-\end{minipage}%
-\begin{minipage}{8cm}
-  \centering
-  \includegraphics[width=\textwidth]{figures/lit-cbsqb3}
-\end{minipage}
-\end{figure}
-
-\begin{figure}
-\centering
-\begin{minipage}{8cm}
-  \centering
-  \includegraphics[width=\textwidth]{figures/w1bd-rocbsqb3}
-\end{minipage}%
-\begin{minipage}{8cm}
-  \centering
-  \includegraphics[width=\textwidth]{figures/lit-rocbsqb3}
-\end{minipage}
-\end{figure}
-
-\begin{figure}
-\centering
-\begin{minipage}{8cm}
-  \centering
-  \includegraphics[width=\textwidth]{figures/w1bd-cbsapno}
-\end{minipage}%
-\begin{minipage}{8cm}
-  \centering
-  \includegraphics[width=\textwidth]{figures/lit-cbsapno}
-\end{minipage}
-\end{figure}
-
-\begin{figure}
-\centering
-\begin{minipage}{8cm}
-  \centering
-  \includegraphics[width=\textwidth]{figures/w1bd-g4}
-\end{minipage}%
-\begin{minipage}{8cm}
-  \centering
-  \includegraphics[width=\textwidth]{figures/lit-g4}
-\end{minipage}
-\end{figure}
-
-\begin{figure}
-\centering
-\begin{minipage}{8cm}
-  \centering
-  \includegraphics[width=\textwidth]{figures/w1bd-g4mp2}
-\end{minipage}%
-\begin{minipage}{8cm}
-  \centering
-  \includegraphics[width=\textwidth]{figures/lit-g4mp2}
-\end{minipage}
-\end{figure}
-
-\input{org/expt-bde.tex}

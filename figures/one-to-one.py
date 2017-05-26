@@ -8,7 +8,7 @@ from scipy import stats
 from pylab import *
 
 # load data
-mat0 = genfromtxt("data/bde_w1bd_rocbsqb3.tsv")
+mat0 = genfromtxt("figures/data/bde_luo_ldbs.tsv")
 
 
 # initialize figure
@@ -23,15 +23,15 @@ x = np.arange(120)
 y = slope*x+intercept
 plt.plot(x,y,'-r')
 plt.scatter(mat0[:,1], mat0[:,2], color='black')
-ax.annotate("y=%1.3f x+ %1.3f\n $R^2$=%1.4f\n N=33"%(slope,intercept,r_value**2),(90,80))
+ax.annotate("y=%1.3f x+ %1.3f\n$R^2$=%1.4f\nN=49"%(slope,intercept,r_value**2),(90,80))
 
 # properties and show plot
 #plt.legend(fancybox=True,prop={'size':8},scatterpoints=1)
 plt.xlim(70,110)
 plt.ylim(70,110)
-plt.ylabel('ROCBS-QB3 BDE (kcal/mol)')
-plt.xlabel('W1BD BDE (kcal/mol)')
-plt.show()
+plt.xlabel('Literature BDE (kcal mol$^{-1}$)')
+plt.ylabel('LDBS BDE (kcal mol$^{-1}$)')
+#plt.show()
 
 # Save Figure to fig.png with 4x default dpi
-# fig.savefig("w1bd-rocbsqb3.png", dpi = (400))
+fig.savefig("figures/lit-ldbs.png", dpi = (400))
