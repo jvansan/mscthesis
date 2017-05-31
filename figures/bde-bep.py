@@ -47,28 +47,33 @@ plt.scatter(mat2[:,3], mat2[:,2], s=60, facecolors='none', edgecolors='r',label 
 # add labels to each data point
 ax.annotate('1',  xy=( 97.1,3.30))   #Acetone
 ax.annotate('2',  xy=( 97.0,3.48))   #Acetonitrile
+
 ax.annotate('3',  xy=( 94.9,4.90))   #Cyclopentane
-ax.annotate('4',  xy=( 99.7,4.55)) #22dimethylbutane
-ax.annotate('5',  xy=( 98.2,5.45)) #23dimethylbutane
-ax.annotate('6',  xy=( 99.9,4.96))   #Cyclohexane
-ax.annotate('7',  xy=( 94.2,5.20))   #Cycloheptane
-ax.annotate('8',  xy=( 91.0,5.27))   #Cyclooctane
+ax.annotate('4',  xy=( 99.9,4.96))   #Cyclohexane
+ax.annotate('5',  xy=( 94.2,5.20))   #Cycloheptane
+ax.annotate('6',  xy=( 91.0,5.27))   #Cyclooctane
+ax.annotate('7',  xy=( 99.7,4.55)) #22dimethylbutane
+ax.annotate('8',  xy=( 98.2,5.45)) #23dimethylbutane
 ax.annotate('9',  xy=(100.8,5.30))    #Adamantane-sec
 ax.annotate('10', xy=( 100.3,6.05))     #Adamantane-ter
-ax.annotate('11', xy=( 94.0,5.65))     #DiethylEther
+
+ax.annotate('11', xy=(91.9,7.44), xytext=( 92.2,7.84), arrowprops=dict(facecolor='black', width=0.5, headwidth=0))    #Diethylamine
 ax.annotate('12', xy=( 93.9,7.46))    #Piperazine
 ax.annotate('13', xy=( 92.2,7.55))    #Piperidine
 ax.annotate('14', xy=( 88.7,7.55))    #Pyrrolidine
-ax.annotate('15', xy=( 91.8,6.16))    #Tetrahydrofuran
-ax.annotate('16', xy=( 97.6,5.10))    #Dioxane
+ax.annotate('15', xy=( 93.7,7.00))    #Morpholine
+ax.annotate('16', xy=( 89.5,6.73))    #Propylamine
+
 ax.annotate('17', xy=( 90.5,7.72))    #Triethylamine
 ax.annotate('18', xy=( 99.2,5.70))    #DABCO
-ax.annotate('19', xy=(102.9,4.20))    #Dimethylsulfoxide
-ax.annotate('20', xy=( 89.5,7.00))    #Benzaldehyde
-ax.annotate('21', xy=( 94.3,5.92))    #HMPA
-ax.annotate('22', xy=( 93.7,7.00))    #Morpholine
-ax.annotate('23', xy=(91.9,7.44), xytext=( 92.2,7.84), arrowprops=dict(facecolor='black', width=0.5, headwidth=0))    #Diethylamine
-ax.annotate('24', xy=( 89.5,6.73))    #Propylamine
+
+ax.annotate('19', xy=( 91.8,6.16))    #Tetrahydrofuran
+ax.annotate('20', xy=( 97.6,5.10))    #Dioxane
+ax.annotate('21', xy=(102.9,4.20))    #Dimethylsulfoxide
+ax.annotate('22', xy=( 89.5,7.00))    #Benzaldehyde
+ax.annotate('23', xy=( 94.3,5.92))    #HMPA
+ax.annotate('24', xy=( 94.0,5.65))     #DiethylEther
+
 ax.annotate('25', xy=( 75.4,7.22))     #Cyclohexadiene
 ax.annotate('26', xy=( 90.0,4.65))     #Toluene
 ax.annotate('27', xy=( 83.6,6.17))     #BenzylAlcohol
