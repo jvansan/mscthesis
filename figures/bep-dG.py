@@ -25,6 +25,7 @@ slope, intercept, r_value, p_value, std_err = stats.linregress(mat0[:,2],mat0[:,
 # plt.plot(x,y,'-k')
 plt.scatter(mat0[:,2], mat0[:,3], s=30, label = "Cyclic Alkanes $R^2$ = %.3f"%r_value**2, color='red', marker='s')
 
+
 slope, intercept, r_value, p_value, std_err = stats.linregress(mat1[:,2],mat1[:,3])
 # x = np.arange(120)
 # y = slope*x+intercept
@@ -44,7 +45,7 @@ slope, intercept, r_value, p_value, std_err = stats.linregress(mat4[:,2],mat4[:,
 # y = slope*x+intercept
 # plt.plot(x,y,'-k')
 plt.scatter(mat4[:,2], mat4[:,3], s=30, label = "Allylic $R^2$ = %.3f"%r_value**2, color='green', marker='o')
-
+print(slope, intercept)
 
 plt.scatter(mat5[:,2], mat5[:,3], label = "Non-fit", s=60, facecolors='none', edgecolors='r')
 

@@ -72,7 +72,7 @@ plt.legend(fancybox=True,prop={'size':8},scatterpoints=1)
 plt.xlim(85,105)
 plt.ylim(4,8)
 plt.xlabel('Bond Dissociation Enthalpy (kcal mol$^{-1}$)')
-plt.ylabel('$\log_{10}(k_H)$')
+plt.ylabel('$\log(k_H/n)$')
 plt.tight_layout()
 #plt.show()
 
