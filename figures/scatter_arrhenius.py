@@ -15,7 +15,7 @@ xo = [-10.82,-6.75]
 yo = [3.7,4.2]
 
 outliersHigh = [6,7]
-x1 = [-14.84,-8.56]
+x1 = [-13.64,-8.56]
 y1 = [7.0,8.3]
 slope, intercept, r_value, p_value, std_err = stats.linregress(x, y)
 

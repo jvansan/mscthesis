@@ -91,7 +91,7 @@ While this theory does allow one to calculate energies for an $N$ electron syste
 
 \subsection{Slater determinants}
 
-In order to satisfy the antisymmetry principle, a linear combination of Hartree products can be taken. Although the method was first utilised independently by Heisenberg\cite{Heisenberg1926} and Dirac,\cite{Dirac1926} this method is called a \emph{Slater determinant} after Slater.\cite{Slater1929} For an $N$ electron system, a Slater determinant is written as
+In order to satisfy the antisymmetry principle, a linear combination of Hartree products can be taken. Although the method was first utilized independently by Heisenberg\cite{Heisenberg1926} and Dirac,\cite{Dirac1926} this method is called a \emph{Slater determinant} after Slater.\cite{Slater1929} For an $N$ electron system, a Slater determinant is written as
 
 \begin{equation}
 \Psi(\mathbf{x_1},\ldots,\mathbf{x_N}) = \frac{1}{\sqrt{N!}}
@@ -103,7 +103,7 @@ In order to satisfy the antisymmetry principle, a linear combination of Hartree 
 \end{vmatrix}
 \end{equation}
 
-\noindent where $1/\sqrt(N!)$ is a normalisation factor. This simple mathematical trick ensures antisymmetry since the interchange of two electrons requires the exchange of two rows in the determinant, which changes the sign. Normally the short-hand form, which implicitly includes the normalisation factor and assumes the ordering of electrons is $\mathbf{x}_1,\mathbf{x}_2,\dots,\mathbf{x}_N$, is written as only the diagonal elements of the determinant:
+\noindent where $1/\sqrt(N!)$ is a normalization factor. This simple mathematical trick ensures antisymmetry since the interchange of two electrons requires the exchange of two rows in the determinant, which changes the sign. Normally the short-hand form, which implicitly includes the normalization factor and assumes the ordering of electrons is $\mathbf{x}_1,\mathbf{x}_2,\dots,\mathbf{x}_N$, is written as only the diagonal elements of the determinant:
 
 \begin{equation}
   \Psi(\mathbf{x}_1,\mathbf{x}_2,\dots,\mathbf{x}_N) = \ket{\chi_i\chi_j\dots\chi_k}
@@ -119,13 +119,13 @@ Now that we have a method for describing many-electron wave functions, we can co
 \ket{\Psi_0} = \ket{\chi_1\chi_2\dots\chi_N}
 \end{equation}
 
-\noindent By applying the variational method to the Schr{\"o}dinger equation, we hope to find the lowest possible ground state energy, $E_0$. One applies the variational principle by choosing a trial wave function ($\phi$) dependent on some number of parameters. These parameters are optimised so that that expectation value of the energy is minimised:
+\noindent By applying the variational method to the Schr{\"o}dinger equation, we hope to find the lowest possible ground state energy, $E_0$. One applies the variational principle by choosing a trial wave function ($\phi$) dependent on some number of parameters. These parameters are optimized so that that expectation value of the energy is minimized:
 
 \begin{equation}
   E_0 \leq \bra{\phi}\hham\ket{\phi}
 \end{equation}
 
-\noindent The trial wave function minimises $E_0$ only when $\phi$ = $\Psi_0$, the ground state wave function.
+\noindent The trial wave function minimizes $E_0$ only when $\phi$ = $\Psi_0$, the ground state wave function.
 
 Within the Hartree-Fock approximation, we approximate the full electronic Hamiltonian $\hham$ with a related operator $\hat{H}_0$:
 
@@ -163,7 +163,7 @@ The expansion of spin orbitals into a basis allows Equation~\ref{eq:hf} to be wr
 \label{eq:roothan}
 \end{equation}
 
-\noindent where $\mathbf{F} = \sum_{l,m} \bra{\chi_l} \hat{f}(i) \ket{\chi_m}$ is the Fock matrix, $\mathbf{S} = \sum_{l,m} = \bra{\chi_l}\ket{\chi_m}$ is the orbital overlap matrix. $\mathbf{C}$ is the orbital coefficient matrix, and $\mathbf{\varepsilon}$ is the diagonal matrix of orbital energies $\varepsilon_i$, which are generally the desire solutions. By performing a transformation of basis to an orthonormal basis, the overlap matrix $\mathbf{S}$ becomes the identity matrix $\mathbb{1}$, and simplifies the problem. Thus, utilising~\ref{eq:roothan} reduces the problem to the of diagonalisation $\mathbf{F}$. Unfortunately, this must be done iteratively, as $\mathbf{F}$ depends on its own solution, hence the name self-consistent field method.
+\noindent where $\mathbf{F} = \sum_{l,m} \bra{\chi_l} \hat{f}(i) \ket{\chi_m}$ is the Fock matrix, $\mathbf{S} = \sum_{l,m} = \bra{\chi_l}\ket{\chi_m}$ is the orbital overlap matrix. $\mathbf{C}$ is the orbital coefficient matrix, and $\mathbf{\varepsilon}$ is the diagonal matrix of orbital energies $\varepsilon_i$, which are generally the desire solutions. By performing a transformation of basis to an orthonormal basis, the overlap matrix $\mathbf{S}$ becomes the identity matrix $\mathbb{1}$, and simplifies the problem. Thus, utilizing~\ref{eq:roothan} reduces the problem to the of diagonalisation $\mathbf{F}$. Unfortunately, this must be done iteratively, as $\mathbf{F}$ depends on its own solution, hence the name self-consistent field method.
 
 \subsection{Basis sets}
 
@@ -175,13 +175,13 @@ Early basis sets were composed of \emph{Slater-type orbitals} (STOs), due to the
 \phi_i^{STO}(\zeta,n,a,b,c,x,y,z) = Nr^{n-1}e^{-\zeta r}x^a y^b z^c
 \end{equation}
 
-\noindent where $N$ is a normalisation constant, $\zeta$ is a constant related to the effective nuclear charge of the nucleus, $r$ is the distance of the electron from the atomic nucleus, $n$ is a natural number that plays the role of the principle quantum number, and $x$, $y$, and $z$ are cartesian coordinates. The angular component $x^a y^b z^c$ describes the shape of the function, such that if a+b+c=0 $\phi_i^{STO}$ is of $s$-type; if $a+b+c=1$, $\phi_i^{GTO}$ is of $p$-type, and so forth. Although STOs approximate the long and short range behaviour of atomic orbitals correctly, performing integration with these functions is computationally very demanding, due primarily to the complexity of the integrals involved describing in electron-electron interactions.
+\noindent where $N$ is a normalization constant, $\zeta$ is a constant related to the effective nuclear charge of the nucleus, $r$ is the distance of the electron from the atomic nucleus, $n$ is a natural number that plays the role of the principle quantum number, and $x$, $y$, and $z$ are cartesian coordinates. The angular component $x^a y^b z^c$ describes the shape of the function, such that if a+b+c=0 $\phi_i^{STO}$ is of $s$-type; if $a+b+c=1$, $\phi_i^{GTO}$ is of $p$-type, and so forth. Although STOs approximate the long and short range behaviour of atomic orbitals correctly, performing integration with these functions is computationally very demanding, due primarily to the complexity of the integrals involved describing in electron-electron interactions.
 
 \begin{equation}
 \phi_i^{GTO}(\alpha,a,b,c,x,y,z) = N e^{-\alpha r^2} x^a y^b z^c
 \end{equation}
 
-\noindent where $N$ is a normalisation constant, $\alpha$ is the orbital exponent coefficient, $x$, $y$, and $z$ are cartesian coordinates, $r$ is the radius ($r^2=x^2+y^2+z^2$), and the angular portion is described the same as in an STO.\@ It takes a linear combination of several GTOs to represent the same function as an STO. These linear combinations of GTOS are known as \emph{contracted GTOs} (CGTO) with $n$ GTOs combined as
+\noindent where $N$ is a normalization constant, $\alpha$ is the orbital exponent coefficient, $x$, $y$, and $z$ are cartesian coordinates, $r$ is the radius ($r^2=x^2+y^2+z^2$), and the angular portion is described the same as in an STO.\@ It takes a linear combination of several GTOs to represent the same function as an STO. These linear combinations of GTOS are known as \emph{contracted GTOs} (CGTO) with $n$ GTOs combined as
 
 \begin{equation}
 \phi_i^{CTGO}(\alpha,a,b,c,x,y,z) = N \sum_{i=1}^n c_i e^{-\alpha r^2} x^a y^b z^c
@@ -191,11 +191,11 @@ Early basis sets were composed of \emph{Slater-type orbitals} (STOs), due to the
 
 \subsubsection{Basis set nomenclature}
 
-Standard basis sets are composed of basis functions which represent atomic orbitals and that each basis function is a CGTO composed of several GTOs. A \emph{minimal basis set} is one in which each AO is represented by a single basis function. To more accurately represent AOs, more basis functions should be used, although basis set size needs to be balanced with computational cost. Larger basis sets are referred to by their cardinal number, the number of basis functions which represent each AO.\@ When two basis functions are used to represent each AO, this is called a \emph{double-zeta} basis set. If three basis functions represent each AO, this is called a \emph{triple-zeta} basis set. Generalised, a basis set is $N$-zeta in size when $N$ basis functions are used per AO.\@
+Standard basis sets are composed of basis functions which represent atomic orbitals and that each basis function is a CGTO composed of several GTOs. A \emph{minimal basis set} is one in which each AO is represented by a single basis function. To more accurately represent AOs, more basis functions should be used, although basis set size needs to be balanced with computational cost. Larger basis sets are referred to by their cardinal number, the number of basis functions which represent each AO.\@ When two basis functions are used to represent each AO, this is called a \emph{double-zeta} basis set. If three basis functions represent each AO, this is called a \emph{triple-zeta} basis set. Generalized, a basis set is $N$-zeta in size when $N$ basis functions are used per AO.\@
 
 A \emph{split-valence} basis set is one in which a single basis function is used to represent each core AO, while more basis functions are used to represent the valence AOs. Constructing basis sets in this way can help reduce the computational cost while still accurately representing the electrons which are most important to chemistry.
 
-Additional basis functions are often added to basis sets in order to correctly describe molecular properties. \emph{Polarisation functions} are basis functions which are one or more angular momentum channels greater than the natural electronic configuration of an atom. For example, a single $p$-type basis function can be added to the minimal basis of a hydrogen atom. Polarisation functions are essential to accurately describe chemical bonding, as the presence of other atoms distorts the spherical symmetry of a single atom's AOs.\cite{Szabo1996} \emph{Diffuse functions} are basis functions which extend further into space, typically by the inclusion of a very shallow Gaussian function (small $\zeta$ exponent). Diffuse functions are necessary to accurately describe anions, very electronegative atoms, and large systems in which NCIs are important.
+Additional basis functions are often added to basis sets in order to correctly describe molecular properties. \emph{Polarization functions} are basis functions which are one or more angular momentum channels greater than the natural electronic configuration of an atom. For example, a single $p$-type basis function can be added to the minimal basis of a hydrogen atom. Polarization functions are essential to accurately describe chemical bonding, as the presence of other atoms distorts the spherical symmetry of a single atom's AOs.\cite{Szabo1996} \emph{Diffuse functions} are basis functions which extend further into space, typically by the inclusion of a very shallow Gaussian function (small $\zeta$ exponent). Diffuse functions are necessary to accurately describe anions, very electronegative atoms, and large systems in which NCIs are important.
 
 \subsubsection{Commonly used basis sets}
 
@@ -205,27 +205,27 @@ A large number of basis sets currently exist in the literature.\cite{Jensen2012}
 \noindent{\large\emph{Pople-style basis sets}}
 \vspace{1mm}
 
-Perhaps the most utilised basis sets in chemistry are those arising from the group of Pople.\cite{Hehre1969} These basis sets were defined by fitting to HF wave functions. The earliest of these basis sets are the minimal STO-$N$G basis sets, where $N$ describes the number of GTOs that go into each contraction.
+Perhaps the most utilized basis sets in chemistry are those arising from the group of Pople.\cite{Hehre1969} These basis sets were defined by fitting to HF wave functions. The earliest of these basis sets are the minimal STO-$N$G basis sets, where $N$ describes the number of GTOs that go into each contraction.
 
-The practise of using minimal basis sets has diminished significantly as technology has advanced, thus these basis sets are largely considered out of date. It is more common to utilise the split-valence basis sets, denoted as $n-ijG$ or $n-ijkG$ for double and triple zeta split-valence basis sets, respectively. In this system of notation, $n$ represents the number of GTOs that comprise the core AOs, and $i, j, k$ describe the number of GTOs for contractions in the valence AOs. Polarisation functions are denoted either with asterisks or with the specific shell and number of functions which are being added. Diffuse functions are denoted with either a single or double ``+'', indicating diffuse $s$ and $p$-type functions for non-hydrogen atoms, and the addition of diffuse $s$-type functions for hydrogen, respectively. For example, the 6--31+G(d,p) $\equiv$ 6--31+G** double-zeta basis set is one which has: 6 GTOs per core AO, 3 GTOs for the first valence set of AOs, and 1 GTO for the second, along with $s$ and $p$ diffuse functions of the heavy atoms, a single $d$ polarisation function of heavy atoms, and a single $p$ polarisation function of hydrogen atoms.
+The practise of using minimal basis sets has diminished significantly as technology has advanced, thus these basis sets are largely considered out of date. It is more common to utilize the split-valence basis sets, denoted as $n-ijG$ or $n-ijkG$ for double and triple zeta split-valence basis sets, respectively. In this system of notation, $n$ represents the number of GTOs that comprise the core AOs, and $i, j, k$ describe the number of GTOs for contractions in the valence AOs. Polarization functions are denoted either with asterisks or with the specific shell and number of functions which are being added. Diffuse functions are denoted with either a single or double ``+'', indicating diffuse $s$ and $p$-type functions for non-hydrogen atoms, and the addition of diffuse $s$-type functions for hydrogen, respectively. For example, the 6--31+G(d,p) $\equiv$ 6--31+G** double-zeta basis set is one which has: 6 GTOs per core AO, 3 GTOs for the first valence set of AOs, and 1 GTO for the second, along with $s$ and $p$ diffuse functions of the heavy atoms, a single $d$ polarization function of heavy atoms, and a single $p$ polarization function of hydrogen atoms.
 
 \vspace{3mm}
 \noindent{\large\emph{Correlation consistent basis sets}}
 \vspace{1mm}
 
-Post-Hartree-Fock methods (\emph{vide infra}) are commonly used in quantum chemistry. In 1989, Dunning\cite{Dunning1989} identified that the use of basis sets optimised for HF were inappropriate for post-HF methods. The basis sets that came from Dunning and co-workers, which are referred to as ``correlation consistent'' basis sets are commonly used in, but not limited to, state of the art wave function calculations. These basis sets are said to be correlation consistent as they treat electron correlation (\emph{vide infra}) in a manner which systematically approached the complete basis set limit. Correlation consistent basis sets are denoted as ``cc-pV$N$Z'', where $N$=D,T,Q,5,6,\ldots is the cardinal number of the basis set. These are large sets containing polarisation functions by default and can be additionally augmented with diffuse functions, denoted by ``aug.'' A commonly used basis set is aug-cc-pVTZ, which is a triple-zeta basis set with implicit polarisation functions and specified diffuse functions on all atoms.
+Post-Hartree-Fock methods (\emph{vide infra}) are commonly used in quantum chemistry. In 1989, Dunning\cite{Dunning1989} identified that the use of basis sets optimized for HF were inappropriate for post-HF methods. The basis sets that came from Dunning and co-workers, which are referred to as ``correlation consistent'' basis sets are commonly used in, but not limited to, state of the art wave function calculations. These basis sets are said to be correlation consistent as they treat electron correlation (\emph{vide infra}) in a manner which systematically approached the complete basis set limit. Correlation consistent basis sets are denoted as ``cc-pV$N$Z'', where $N$=D,T,Q,5,6,\ldots is the cardinal number of the basis set. These are large sets containing polarization functions by default and can be additionally augmented with diffuse functions, denoted by ``aug.'' A commonly used basis set is aug-cc-pVTZ, which is a triple-zeta basis set with implicit polarization functions and specified diffuse functions on all atoms.
 
 \vspace{3mm}
-\noindent{\large\emph{Polarisation consistent basis sets}}
+\noindent{\large\emph{Polarization consistent basis sets}}
 \vspace{1mm}
 
-The polarisation consistent basis sets have been developed by Jensen and coworkers.\cite{Jensen2001} The polarisation consistent basis sets have been developed to systematically complete basis set limit in density-functional theory calculations through the use of higher order polarisation functions. The notation adopted is ``pc-$X$'', where $X$ is the cardinal number of the basis set minus one (i.e. $X$ = $N$-1). Polarisation functions are included by default in these basis sets, and additional diffuse functions can be specified with the same ``aug'' notation as the correlation consistent basis sets.
+The polarization consistent basis sets have been developed by Jensen and coworkers.\cite{Jensen2001} The polarization consistent basis sets have been developed to systematically complete basis set limit in density-functional theory calculations through the use of higher order polarization functions. The notation adopted is ``pc-$X$'', where $X$ is the cardinal number of the basis set minus one (i.e. $X$ = $N$-1). Polarization functions are included by default in these basis sets, and additional diffuse functions can be specified with the same ``aug'' notation as the correlation consistent basis sets.
 
 \vspace{3mm}
 \noindent{\large\emph{Ahlrich basis sets}}
 \vspace{1mm}
 
-The last basis sets we will mention are those developed by Ahlrich and coworkers.\cite{Schafer1992,Weigend2005} These are the ``Def2'' basis sets, named as such because they are the second generation of default basis set in the Turbomole quantum chemistry package.\cite{turbomole} Additionally, these basis sets have been developed so that consistent errors are obtained for nearly every element on the periodic table: a unique trait among modern basis sets. The nomenclature for these basis sets is fairly straightforward where either SV is used for split valence, or $N$Z is used for cardinal number. Addition of polarisation and diffuse functions is specified with a P and D, respectively. For example, Def2-SVP is the basis set of split-valence double-zeta quality with polarisation functions; Def2-TZVP is the triple-zeta basis set with polarisation functions; Def2-QZVPD is the quadruple-zeta basis set with polarisation and diffuse functions.
+The last basis sets we will mention are those developed by Ahlrich and coworkers.\cite{Schafer1992,Weigend2005} These are the ``Def2'' basis sets, named as such because they are the second generation of default basis set in the Turbomole quantum chemistry package.\cite{turbomole} Additionally, these basis sets have been developed so that consistent errors are obtained for nearly every element on the periodic table: a unique trait among modern basis sets. The nomenclature for these basis sets is fairly straightforward where either SV is used for split valence, or $N$Z is used for cardinal number. Addition of polarization and diffuse functions is specified with a P and D, respectively. For example, Def2-SVP is the basis set of split-valence double-zeta quality with polarization functions; Def2-TZVP is the triple-zeta basis set with polarization functions; Def2-QZVPD is the quadruple-zeta basis set with polarization and diffuse functions.
 
 \subsection{Post-Hartree-Fock methods}
 
@@ -326,7 +326,7 @@ In accordance with the variational principle, the energy obtained by a particula
   Y(x) &= Y(\infty) + A/x^3
 \end{align}
 
-\noindent where the molecular property as a function of basis set cardinal number $Y(x)$ is fit using parameters $A$ and $B$. Typically calculations of this nature are performed using the correlation consistent basis sets (cc-pV$N$Z), however there is evidence that the polarisation consistent basis sets (pc-$X$) more rapidly approach the CBS limit for some molecular properties.\cite{Kupka2007} The true \emph{gold standard} in quantum chemistry is referred to as CCSD(T)/CBS, which typically means CCSD(T) with complete basis set extrapolation with aug-cc-pV$N$Z basis sets, where $N$=D, T, Q, or 5. Although extrapolation is useful for approximating highly accurate results, there is an inherent amount of uncertainty associated with the final fitted results, which may be unclear from the nomenclature.
+\noindent where the molecular property as a function of basis set cardinal number $Y(x)$ is fit using parameters $A$ and $B$. Typically calculations of this nature are performed using the correlation consistent basis sets (cc-pV$N$Z), however there is evidence that the polarization consistent basis sets (pc-$X$) more rapidly approach the CBS limit for some molecular properties.\cite{Kupka2007} The true \emph{gold standard} in quantum chemistry is referred to as CCSD(T)/CBS, which typically means CCSD(T) with complete basis set extrapolation with aug-cc-pV$N$Z basis sets, where $N$=D, T, Q, or 5. Although extrapolation is useful for approximating highly accurate results, there is an inherent amount of uncertainty associated with the final fitted results, which may be unclear from the nomenclature.
 
 \subsubsection{Explicit correlation methods}
 
@@ -346,7 +346,7 @@ In order to calculate thermochemical and kinetic properties that are within a su
 
 \subsection{Density-functional theory}
 
-Density-functional theory (DFT) is the most popular quantum chemical method applied to date. It relies on the two Hohenberg-Kohn theorems, the first of which states that there exists a unique electron density $\rho$ that defines the properties of a many-electron system. The second theorem defines an energy functional of the electron density and demonstrates that the correct ground state electron density minimises the energy functional through the variational theorem.\cite{Hohenberg1964,Koch2000} These theorems alone do not provide the solutions to the Schr{\"o}dinger equation.
+Density-functional theory (DFT) is the most popular quantum chemical method applied to date. It relies on the two Hohenberg-Kohn theorems, the first of which states that there exists a unique electron density $\rho$ that defines the properties of a many-electron system. The second theorem defines an energy functional of the electron density and demonstrates that the correct ground state electron density minimizes the energy functional through the variational theorem.\cite{Hohenberg1964,Koch2000} These theorems alone do not provide the solutions to the Schr{\"o}dinger equation.
 
 It wasn't until the formulation of Kohn-Sham DFT\cite{Kohn1965} that the theory began gaining ground as a useful quantum theory. Kohn-Sham DFT scales formally with $N^3$ number of electrons\cite{Cramer2004} which is better than HF by a factor of $N$. In addition, DFT is a complete theory like FCI;\@ however, there is no straightforward way to determine the correct functionals of the electron density as the exact form of the functionals is unknown. Nonetheless, the drive for the development of the correct density-functional has been one of the main endeavours in quantum chemistry in the last two decades.
 
@@ -367,7 +367,7 @@ The ultimate goal in describing XC functionals is to find the ``correct'' XF fun
 
 \noindent where $\varepsilon_{XC}(\rho(\mathbf{r}))$ is the exchange-correlation energy per particle (energy density) of a uniform electron gas of density $\rho(\mathbf{r})$. This approximation is overly simple and applies only when the electron density if constant at all points, and are thus not generally applied in chemical problems. Nonetheless, LDA based approaches are commonly employed in solid state physics.
 
-The second rung on the ladder corresponds to generalised-gradient approximation (GGA) based functionals, which are still amongst some of the most popular density-functionals. GGAs depend on both the electron density and the gradient of the electron density at a point:
+The second rung on the ladder corresponds to generalized-gradient approximation (GGA) based functionals, which are still amongst some of the most popular density-functionals. GGAs depend on both the electron density and the gradient of the electron density at a point:
 
 \begin{equation}
   E_{XC}^{GGA} = \int \rho(\mathbf{r}) \varepsilon_{XC}^{GGA}(\rho(\mathbf{r}), \nabla \rho(\mathbf{r})) \mathrm{d}r
@@ -413,13 +413,13 @@ Aside from the problem of choosing density-functionals, solving DFT is computati
   \label{eq:ksoperator}
 \end{equation}
 
-It is crucial to realise that this procedure does not give us the exact energy of a system, but rather is used to determine an electron density which represents our real system. The connection between this fictitious system comes from the chose of the effective potential such that the density of our real system is a result of summing over the squared moduli of the KS orbitals:
+It is crucial to realize that this procedure does not give us the exact energy of a system, but rather is used to determine an electron density which represents our real system. The connection between this fictitious system comes from the chose of the effective potential such that the density of our real system is a result of summing over the squared moduli of the KS orbitals:
 
 \begin{equation}
   \rho(\mathbf{r}) = \sum_i | \chi_i |^2
 \end{equation}
 
-Once again in analogy to HF theory, on applies the variational principle to minimise the total energy functional in Equation~\ref{eq:DFT} with respect to $\chi$. The effective potential which variationally minimises the energy is given by\cite{Parr1995}
+Once again in analogy to HF theory, on applies the variational principle to minimize the total energy functional in Equation~\ref{eq:DFT} with respect to $\chi$. The effective potential which variationally minimizes the energy is given by\cite{Parr1995}
 
 \begin{equation}
 \begin{split}
@@ -445,41 +445,41 @@ Pure DFT has low computational cost and potentially good accuracy, hence its pop
   \frac{C_8^{AB}}{R_{AB}^8} f_8(R_{AB})
 \end{equation}
 
-\noindent where $C_6$ and $C_8$ are dispersion coefficients, $s_8$ is an empirically determined scaling parameter, and $f_n$ are the damping functions which limit the range of dispersion correction, avoiding near singularities at small $R_{AB}$. Another approach to correcting for dispersion is to add parameters directly to the functional, as is the case in the Minnesota functionals.\cite{Zhao2006,Zhao2006} Both of these empirical corrections have the benefit of adding negligible computational time, but must be parametrised for each DFT method with which they are employed.
+\noindent where $C_6$ and $C_8$ are dispersion coefficients, $s_8$ is an empirically determined scaling parameter, and $f_n$ are the damping functions which limit the range of dispersion correction, avoiding near singularities at small $R_{AB}$. Another approach to correcting for dispersion is to add parameters directly to the functional, as is the case in the Minnesota functionals.\cite{Zhao2006,Zhao2006} Both of these empirical corrections have the benefit of adding negligible computational time, but must be parametrized for each DFT method with which they are employed.
 
-Another striking issue with DFT is the unphysical ability of an electron to interact with itself, termed \emph{self-interaction error}. This is most obvious in what is known as \emph{delocalisation error}, which is a result of many-electrons interacting with themselves, or many-electron self-interaction error. In HF theory, self-interaction error is exactly cancelled, thus DFT methods which have a high portion of HF exchange in their formulation are able to account for this issue. Consider for a moment a one electron system: there should be exactly zero electron correlation. In terms of the energy functionals shown in Equation~\ref{eq:DFT}, the electronic repulsion term $V_{ee}[\rho]$ should cancel exactly with the XC term ($V_{ee}[\rho] = -E_{XC}[\rho]$).\cite{Cramer2004} Unfortunately, all pure DFT methods fail to reproduce this expected behaviour. An obvious manifestation of delocalisation error is the incorrect treatment of charge-transfer in intramolecular interactions,\cite{MoriSanchez2008,OterodelaRoza2014} as well as in transition state complexes. Even for the simplest HAT reaction \ch{H2 + H^. -> H^. + H2}, the calculated barrier height is underestimated by 8--9 \kcalmol using a GGA functional.\cite{Csonka1998} Charge-transfer occurs when a fraction of an electron is transferred between molecular entities. Specifically, charge-transfer is mistreated at longer ranges, thus either high percentage exact exchange hybrid functionals, or range-separated functionals are suggested for systems in which charge-transfer may occur.
+Another striking issue with DFT is the unphysical ability of an electron to interact with itself, termed \emph{self-interaction error}. This is most obvious in what is known as \emph{delocalization error}, which is a result of many-electrons interacting with themselves, or many-electron self-interaction error. In HF theory, self-interaction error is exactly cancelled, thus DFT methods which have a high portion of HF exchange in their formulation are able to account for this issue. Consider for a moment a one electron system: there should be exactly zero electron correlation. In terms of the energy functionals shown in Equation~\ref{eq:DFT}, the electronic repulsion term $V_{ee}[\rho]$ should cancel exactly with the XC term ($V_{ee}[\rho] = -E_{XC}[\rho]$).\cite{Cramer2004} Unfortunately, all pure DFT methods fail to reproduce this expected behaviour. An obvious manifestation of delocalization error is the incorrect treatment of charge-transfer in intramolecular interactions,\cite{MoriSanchez2008,OterodelaRoza2014} as well as in transition state complexes. Even for the simplest HAT reaction \ch{H2 + H^. -> H^. + H2}, the calculated barrier height is underestimated by 8--9 \kcalmol using a GGA functional.\cite{Csonka1998} Charge-transfer occurs when a fraction of an electron is transferred between molecular entities. Specifically, charge-transfer is mistreated at longer ranges, thus either high percentage exact exchange hybrid functionals, or range-separated functionals are suggested for systems in which charge-transfer may occur.
 
 As is the case for most experimental methods, identifying the correct theoretical methods requires the careful consideration of the problem at hand. Choosing a DFT based method requires calibration, however, once a method has been tested and is known to provide reasonably accurate results, DFT methods have the ability to help understand chemical problem with relatively low computational costs.
 
 \section{Applying theory to chemical problems}
 
-\subsection{Geometry optimisation}
+\subsection{Geometry optimization}
 
-All QM methods depend parametrically on the geometry of a molecular system. That is the electronic energy of a system depends on the positions of the nuclei. While the wave functions can describe any arbitrary geometry, we are typically only interested in certain geometries of a molecule. These geometries of interest are normally stationary states along a the potential energy surface (PES) of a system, that is, points where the gradient of energy with respect to nuclear coordinates is zero. Therefore, we perform \emph{geometry optimisation} calculations to determine these points.
+All QM methods depend parametrically on the geometry of a molecular system. That is the electronic energy of a system depends on the positions of the nuclei. While the wave functions can describe any arbitrary geometry, we are typically only interested in certain geometries of a molecule. These geometries of interest are normally stationary states along a the potential energy surface (PES) of a system, that is, points where the gradient of energy with respect to nuclear coordinates is zero. Therefore, we perform \emph{geometry optimization} calculations to determine these points.
 
-Molecular systems have complex PESs. For a non-linear molecule, the nuclear PES has 3$N$-6 dimensions, where $N$ is the number of nuclei present.\cite{Heidrich1991} In geometry optimisation, we seek the local minima (reactants, products, or intermediates) and local maxima (TS complexes). Consider only local minima for a moment. Often complex molecules have more than one possible conformation, and each conformation represents a different local minimum along the PES.\@ It is therefore important to ensure the correct conformation, typically the lowest energy structure (global minimum), is used when approaching chemical problems.
+Molecular systems have complex PESs. For a non-linear molecule, the nuclear PES has 3$N$-6 dimensions, where $N$ is the number of nuclei present.\cite{Heidrich1991} In geometry optimization, we seek the local minima (reactants, products, or intermediates) and local maxima (TS complexes). Consider only local minima for a moment. Often complex molecules have more than one possible conformation, and each conformation represents a different local minimum along the PES.\@ It is therefore important to ensure the correct conformation, typically the lowest energy structure (global minimum), is used when approaching chemical problems.
 
-In order to efficiently perform geometry optimisation, numerical analysis techniques are employed. All geometry optimisation methods follow the same general framework.\cite{Hratchian2005} First, energy and necessary derivatives are computed from an initial geometry. Second, the geometry is modified to step towards the nearest stationary state. And last, some test is performed to determine if the new geometry is near enough to the stationary state along the PES.\@ The most efficient method to do this is the \emph{Newton method}, in which the energy is expanded in a Taylor series (truncated at the second order point) about the current point, $\mathbf{x}_0$:
+In order to efficiently perform geometry optimization, numerical analysis techniques are employed. All geometry optimization methods follow the same general framework.\cite{Hratchian2005} First, energy and necessary derivatives are computed from an initial geometry. Second, the geometry is modified to step towards the nearest stationary state. And last, some test is performed to determine if the new geometry is near enough to the stationary state along the PES.\@ The most efficient method to do this is the \emph{Newton method}, in which the energy is expanded in a Taylor series (truncated at the second order point) about the current point, $\mathbf{x}_0$:
 
 \begin{equation}
   E(\mathbf{x}) = E_0 + \mathbf{g}_0\Delta\mathbf{x} + \frac{1}{2}\Delta\mathbf{x}\mathbf{H}_0\Delta \mathbf{x}
 \end{equation}
 
-\noindent where $E_0$, $\mathbf{g}_0$, and $\mathbf{H}_0$ are the energy, gradient (Jacobian), and second derivative (Hessian) at point $\mathbf{x}_0$, and $\Delta \mathbf{x} = x_i - x_0$. The aim of the Newton method is to minimise the gradient of the Taylor expansion, $\mathbf{g(x)}$, such that
+\noindent where $E_0$, $\mathbf{g}_0$, and $\mathbf{H}_0$ are the energy, gradient (Jacobian), and second derivative (Hessian) at point $\mathbf{x}_0$, and $\Delta \mathbf{x} = x_i - x_0$. The aim of the Newton method is to minimize the gradient of the Taylor expansion, $\mathbf{g(x)}$, such that
 
 \begin{equation}
   \mathbf{g(x)} = \mathbf{g}_0 + \mathbf{H}_0 \Delta \mathbf{x}
 \end{equation}
 
-\noindent Solving for $\Delta \mathbf{x}$ gives the so-called Newton step that leads to minimisation:
+\noindent Solving for $\Delta \mathbf{x}$ gives the so-called Newton step that leads to minimization:
 
 \begin{equation}
   \Delta \mathbf{x} = -\mathbf{H}^{-1}_0\mathbf{g}_0
 \end{equation}
 
-The analytic computation of the Hessian is very expensive, especially for large systems. Therefore, to simply the problem at the beginning of geometry optimisation, the Hessian matrix is approximated and updated at each step in the optimisation, using clever algorithms.\cite{Hratchian2005} This is called the \emph{quasi-Newton method}, and is the default optimisation routine in the Gaussian\cite{Frisch2009} quantum chemistry package, as well as many other quantum chemistry packages.
+The analytic computation of the Hessian is very expensive, especially for large systems. Therefore, to simply the problem at the beginning of geometry optimization, the Hessian matrix is approximated and updated at each step in the optimization, using clever algorithms.\cite{Hratchian2005} This is called the \emph{quasi-Newton method}, and is the default optimization routine in the Gaussian\cite{Frisch2009} quantum chemistry package, as well as many other quantum chemistry packages.
 
-Some additional caution must be taken in optimising molecular structures. Normal algorithms which optimise structures stop when the gradient of energy is sufficiently close to zero; however, often PES can be flat or very shallow in regions and structures that are not fully optimised can be obtained. To avoid this, geometries are always subject to molecular vibration analysis.
+Some additional caution must be taken in optimising molecular structures. Normal algorithms which optimize structures stop when the gradient of energy is sufficiently close to zero; however, often PES can be flat or very shallow in regions and structures that are not fully optimized can be obtained. To avoid this, geometries are always subject to molecular vibration analysis.
 
 \subsection{Molecular vibrations}
 
@@ -498,7 +498,7 @@ Typically to obtain molecular frequencies, one computes the mass-weighted Hessia
   F_{ij} = \frac{1}{\sqrt{m_i m_j}} \mathbf{H}_{ij}
 \end{equation}
 
-\noindent where the partial derivatives of internal coordinates $x_i$ of the potential energy $U$ are taken for 3$N$ atoms with mass $m$. One then seeks to diagonalise this $3N\times3N$ matrix to obtain eigenvalues $\lambda_i$, which describe the force constant of each normal mode. The harmonic frequencies $\nu_i$ are then obtained by
+\noindent where the partial derivatives of internal coordinates $x_i$ of the potential energy $U$ are taken for 3$N$ atoms with mass $m$. One then seeks to diagonalize this $3N\times3N$ matrix to obtain eigenvalues $\lambda_i$, which describe the force constant of each normal mode. The harmonic frequencies $\nu_i$ are then obtained by
 
 \begin{equation}
   \nu_i = \frac{\sqrt{\lambda_i}}{2\pi}
@@ -520,7 +520,7 @@ U = E_{elec} + E_{ZPE}
 
 \noindent where $E_{elec}$ is the QM electronic energy.
 
-If a normal mode describes a non-minimum along the PES, the energy gradient will be negative (imaginary) instead of positive. Only energy maxima or saddle-points (TS structures) should have a single imaginary mode. Therefore, if a non-TS molecular structure calculation yields one or more imaginary modes, the geometry optimisation has yielded a structure which is not at minimum on the PES.\@ In this situation additional steps must be taken to find a corrected structure.
+If a normal mode describes a non-minimum along the PES, the energy gradient will be negative (imaginary) instead of positive. Only energy maxima or saddle-points (TS structures) should have a single imaginary mode. Therefore, if a non-TS molecular structure calculation yields one or more imaginary modes, the geometry optimization has yielded a structure which is not at minimum on the PES.\@ In this situation additional steps must be taken to find a corrected structure.
 
 \subsection{Thermochemistry}
 
@@ -600,7 +600,7 @@ We now have all the information needed to calculate the thermodynamic quantities
   H_{tot} = E_{int,tot} + k_B T
 \end{equation}
 
-Using very simple statistical thermodynamic arguments, the properties of a bulk system are easily computed. It is important to emphasise that these results are for particles in the gas phase, thus additional steps must be taken if one desires to compare results to experiments performed in solvent.
+Using very simple statistical thermodynamic arguments, the properties of a bulk system are easily computed. It is important to emphasize that these results are for particles in the gas phase, thus additional steps must be taken if one desires to compare results to experiments performed in solvent.
 
 \subsection{Modelling solvent}
 
@@ -619,7 +619,7 @@ G_{solv~kinetic}
 
 \noindent where the total solvation free energy $G_{solv}$ contains terms from: the formation of a solvation cavity $G_{cavity}$, the electrostatic interactions between solvent and solute $G_{electrostatic}$, the dispersion interactions between solvent and solute $G_{dispersion}$, the QM exchange repulsion between solvent and solute $G_{repulsion}$, and the movement of solvent molecules $G_{solv~kinetic}$.
 
-A widely used model for solvation comes from the Truhlar group, and is known as SMD.\cite{Marenich2009} The main parameter in implicit solvent models is the solvent dielectric constant ($\varepsilon$) with contributions from surface tension and the solvent-solute interface. SMD also includes terms which depend on the electron density of the solute.  While many other implicit solvent models require the use of the same QM method as they were parametrised,\cite{Ho2010} SMD is a \emph{universal} model which was parametrised using several QM methods. Therefore, it does not require the use of a specific QM method and can be applied broadly in both single point energy and geometry optimisation calculations.
+A widely used model for solvation comes from the Truhlar group, and is known as SMD.\cite{Marenich2009} The main parameter in implicit solvent models is the solvent dielectric constant ($\varepsilon$) with contributions from surface tension and the solvent-solute interface. SMD also includes terms which depend on the electron density of the solute.  While many other implicit solvent models require the use of the same QM method as they were parametrized,\cite{Ho2010} SMD is a \emph{universal} model which was parametrized using several QM methods. Therefore, it does not require the use of a specific QM method and can be applied broadly in both single point energy and geometry optimization calculations.
 
 \subsection{Rate constants and transition state theory}
 
