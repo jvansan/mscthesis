@@ -121,26 +121,71 @@
 
 ### Methods
 * On basis of benchmark and QM-ORSA
-  - M05-2X/6-31+G** gas-phase optimisations
-    + Attempted solvent phase optimisations, but many calculations failed
+  - M05-2X/6-31+G** gas-phase optimizations
+    + Attempted solvent phase optimizations, but many calculations failed
   - M05-2X/6-311+G(2d,2p) single point in continuum solvent SMD=MeCN to estimate solvent effects
+  - NBO/NPA analysis used (As implemented in g09)
+  - TS calculations were technically challenging
+    + Required the use of CalcAll keyword - explain
 
-### Can DFT be used to capture unimolecular decay of CumO* w/ metals?
+### How well does DFT capture unimolecular decay of CumO* w/ metals?
 * Main decay path of CumO* (as in BDE Ch.) = CumO* -> Acetophenone + CH3* ($k_\beta = 6.3 \times 10^5 s^{-1}$ \cite{Avila1993, Avila1995} in MeCN @ 298 K)
 * Interaction w/ O* results in increase in beta-scission rate -> stabilises TS complex relative to Complex b/c stronger interaction w/ more sp2-like O than sp3
 * Exptl (Dependent on Conc. M+) for 1.0M of three salts: LiClO4 ($k_\beta = 1.8 \times 10^6 s^{-1}$), Mg(ClO4)2 ($k_\beta = 1.6 \times 10^6 s^{-1}$), NaClO4 ($k_\beta = 1.1 \times 10^6 s^{-1}$)
 * Results: M05-2X-SMD/6-311+G(2d,2p)//M05-2X/6-31+G**
 
+<center>
+
 |   Species    |  $k_H$ (Calc)      | $\Delta \Delta G^\ddagger$ |
 |--------------|--------------------|----------------------------|
 |  TS          |  $2.7 \times 10^5$ |   0.0                      |
 |  TS-Na       |  $7.8 \times 10^7$ |  -3.4                      |
-|  TS-Mg       |  $5.2 \times 10^6$ |  -1.8                      |
-|  TS-Na-ClO4  |                    |                            |
-|  TS-Na-Cl    |  $1.8 \times 10^7$ |                            |
+|  TS-Mg       |  N/A               |                            |
+|  TS-Na-ClO4  |  $3.2 \times 10^6$ |  -1.5                      |
+|  TS-Na-Cl    |  $1.8 \times 10^7$ |  -2.5                      |
 | TS-Mg-(ClO4)2|  N/A               |                            |
 |  TS-Mg-Cl2   | $2.1\times10^{12}$ |  -9.4                      |          
-* Some problems with results
+
+</center>
+
+* Calculated kH is in reasonable agreement w/ experiment
+* Bare metal cation over estimate effects of metal cation binding
+  - perturb CumO electron density too much
+* Include counteranions
+  - expertiments use ClO4- because of solubility in MeCN
+  - Calculations w/ Na+ and Cl- or ClO4- show both demish effects of cation both still over estimate effects
+    + Differences in minimum energy structures
+    + Cl- and ClO4- change degree to which Na+ pulls electron density to O* and stabilizes TS complex
+    + NPA charges on O* for TS = -0.64 e- Na+ = -0.77 NaCl = -0.72 NaClO4 = -0.69
+  - Calculations w/ Mg2+ are problematic
+    + TS of CumO--Mg2+ has vibration, but does not connect reactants to products
+    + Only converged structure is for MgCl2 bu the TS is overly stabilized
+      * IP of Mg2+ and CumO*-TS are too close --> never observe in realistic system
+* Overall: poor description of system. Tried including explicit solvent molecules, but no resolution
+  - Chose to continue work with NaCl (and continue trying with MgCl2) as these are smaller systems
 
 ### Does non-redox active metal cation binding decrease BDE
-*
+
+* Explation was metal cation reducing BDE by decreasing hyperconjugative overlap
+  - Is this the case?
+* Calculated BDEs of substrates w/ M05-2X/6-311+G(2d,2p)-SMD//M05-2X/6-31+G** (ROCBS-QB3)
+
+<center>
+
+| Substrate       |  Bare  |  Na+  |  NaCl  |  Mg++  |  MgCl2  |
+|-----------------|--------|-------|--------|--------|---------|
+| DMA (acetyl)    |  98.5(99.5)  |  97.8(99.9) |  98.4  |  97.4  |  |
+| DMA (cis)       |  92.2(93.9)  |  93.2(95.5) |  94.0  |  138.3 |  |
+| DMA (trans)     |  91.6(92.3)  |  92.8(95.7) |  92.6  |  137.3 |  |
+| DIA (acetyl)    |  97.8(99.1)  |  97.5  | | | |
+| DIA (a)         |  95.7(96.6)  |  96.5  | | | |
+| DIA (b)         |  96.4(97.9)  |  94.8  | | | |
+| DIA (c)         |  93.0(93.1)  |  93.8  | | | |
+| DIA (d)         |  95.3(96.9)  |  95.5  | | | |
+| DMSO            |  103.4(102.2)|  104.4 |  103.7  |  106.7  |  105.5  |
+| MeCN            |  97.4(96.6)  |  98.3  | |  99.5  |  |
+| HMPA(a)         |  92.9(93.9)  |  93.8  | |  98.7  |  |
+| TBPO(a)         |  97.2(97.8)  |  97.4  | | 97.9 | |
+| TBPO(b)         |  95.1(96.9)  |  95.5  | | 143.3 | |
+
+</center>
