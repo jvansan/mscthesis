@@ -12,11 +12,6 @@
     + Bind predominantly to O centres in metals \cite{Harding1999, Harding2001}
     + Divalent ions tend to bind to protein directly (Ca 4-6 binding sites Mg 1-2 binding sites -> others occupied by water)
     + Monoionic ions tend to be solvated heavily but appear in solvent cavities of proteins (some bind to carbonyl or carboxylates)\cite{Harding2010}
-  - Borrow information from studies of Hofmeister series
-    + "spectroscopic experiments and molecular simulations show that biologically relevant ions can strongly influence only their immediate solvation shell and do not show any long-range kosmotropic effects in water"\cite{Omta2003, Funker2011}
-    + "Cations Bind Only Weakly to Amides in Aqueous Solutions"\cite{Okur2013}
-      * No experimental evidence of Na+ or K+ binding in aqua
-    + Radial distribution function for Na/K w/ NMA in aq\cite{Heyda2009}
   - Table of ionic concentrations inside mamallian cells (M. C.) and in blood (Units of mM)\cite{Karp1999, Milo2015} (http://book.bionumbers.org/what-are-the-concentrations-of-different-ions-in-cells/)
 
 <center>
@@ -36,6 +31,8 @@
   - Third paper bulky acetamides/alkanamides \cite{Salamone2016} (previously w/o metals\cite{Salamone2014})
   - Solvent hydrogen bond donation to amide/amine destabilises TS by decreasing electron density at incipient radical (DMSO worse hydrogen bond donor than MeCN)\cite{Salamone2015metals}
   - Metal cations w/ simple amides shown three-distinct regions of HAT reactivity: $k_{0}$ = full deactivation (only CumO beta-scission), $k_{H1}$ = moderate deactivation, $k_{H2}$ = minor deactivation
+  - One previous theoretical study of TEA+Mg(ClO4)2-CumO rxn\cite{Nova2014}
+    + Interested in in metal (redox or non-redox active) "protects" ligand
 
 <center>
 
@@ -128,64 +125,160 @@
   - TS calculations were technically challenging
     + Required the use of CalcAll keyword - explain
 
-### How well does DFT capture unimolecular decay of CumO* w/ metals?
-* Main decay path of CumO* (as in BDE Ch.) = CumO* -> Acetophenone + CH3* ($k_\beta = 6.3 \times 10^5 s^{-1}$ \cite{Avila1993, Avila1995} in MeCN @ 298 K)
-* Interaction w/ O* results in increase in beta-scission rate -> stabilises TS complex relative to Complex b/c stronger interaction w/ more sp2-like O than sp3
-* Exptl (Dependent on Conc. M+) for 1.0M of three salts: LiClO4 ($k_\beta = 1.8 \times 10^6 s^{-1}$), Mg(ClO4)2 ($k_\beta = 1.6 \times 10^6 s^{-1}$), NaClO4 ($k_\beta = 1.1 \times 10^6 s^{-1}$)
-* Results: M05-2X-SMD/6-311+G(2d,2p)//M05-2X/6-31+G**
+### Exploring the Nature of metal cation substrate interactions
 
+#### How long-range is the interaction b/w metal cation and substrates
+
+* Expt'l results are in MeCN, but obviously biology happens in water
+* Ingold and Litwienko have shown that C-H abstraction does not depend strongly on solvent\cite{Litwienko2007}
+* Therefore, if MeCN and H2O have similar binding interactions, then extrapolating to biological systems is reasonable
+
+* Literature suggest that metal cation-amide interaction are v. short range
+  - Borrow information from studies of Hofmeister series
+    + "spectroscopic experiments and molecular simulations show that biologically relevant ions can strongly influence only their immediate solvation shell and do not show any long-range kosmotropic effects in water"\cite{Omta2003, Funker2011}
+    + "Cations Bind Only Weakly to Amides in Aqueous Solutions"\cite{Okur2013}
+    * No experimental evidence of Na+ or K+ binding in aqua
+    + Radial distribution function for Na/K w/ NMA in aq\cite{Heyda2009}
+  - How short range is this interaction?
+  - DMA--Na+
+  ![PES of BE for DMA C=O--Na+ interaction](../figures/dma-na-pes.png)
+  - DMA--Na-Cl
+  ![PES of BE for DMA C=O--Na-Cl interaction](../figures/dma-na-cl-pes.png)
+  - DMA--Mg++
+  ![PES of BE for DMA C=O--Mg2+ interaction](../figures/dma-mg-pes.png)
+  - DMA--MgCl2
+  ![PES of BE for DMA C=O--Mg-Cl2 interaction](../figures/dma-mg-cl2-pes.png)
+
+* Problems w/ Mg++ again
+  - Explain on basis of IP of DMA vs Mg++
+    + Expt'l IP of DMA = 8.8\cite{Slifkin1967}-9.2\cite{Baldwin1977} eV
+    + Gas phase calc M05-2X/6-311+G(2d,2p) = 8.9 eV
+    + Solvent calc M05-2X-SMD(MeCN)/6-311+G(2d,2p) = 6.4 eV
+    + Expt'l 2nd IP for Mg is 15.0 eV \cite{CRC2016}
+    + Gas phase M05-2X/6-311+G(2d,2p) = 14.9 eV
+    + Solvent calc M05-2X-SMD(MeCN)/6-311+G(2d,2p) = 3.3 eV!
+    + Na expt'l = 5.1 eV \cite{CRC2016} Gas = 5.0 eV Solvent = 1.9 eV
+* Interaction is short range w/ implicit solvent
+  - Less than 5 Angstrom
+
+#### Do metal cations decrease BDEs?
+
+  * Explanation was metal cation reducing BDE by decreasing hyperconjugative overlap
+    - Is this the case?
+  * Calculated BDEs(BDFEs) (kcal/mol) of substrates w/ M05-2X/6-311+G(2d,2p)-SMD//M05-2X/6-31+G** (ROCBS-QB3)
+
+  <center>
+
+  | Substrate       | ROCBS-QB3  |    Bare    |     Na+    |    NaCl    |  Mg++  |  MgCl2  |
+  |-----------------|------------|------------|------------|------------|--------|---------|
+  | DMA (acetyl)    | 99.5(91.3) | 98.5(90.3) | 97.8(91.0) | 98.4(90.4) |  97.4  |  97.8   |
+  | DMA (cis)       | 93.9(86.0) | 92.2(84.5) | 93.2(85.8) | 94.0(89.4) |  138.3 |  93.5   |
+  | DMA (trans)     | 92.3(84.3) | 91.6(83.4) | 92.8(85.5) | 92.6(86.1) |  137.3 |  93.3   |
+  | DIA (acetyl)    | 99.1(90.7) | 97.8(89.0) | 97.5(89.1) |            |  96.7  |         |
+  | DIA (a)         | 96.6(87.9) | 95.7(87.0) | 96.5(87.4) |            |  126.9 |         |
+  | DIA (b)         | 97.9(88.1) | 96.4(86.4) | 94.8(85.2) |            |  85.7  |         |
+  | DIA (c)         | 93.1(84.7) | 93.0(84.2) | 93.8(84.9) |            |  123.2 |         |
+  | DIA (d)         | 96.9(87.0) | 95.3(85.4) | 95.5(85.3) |            |  127.1 |         |
+  | DMSO            | 102.2(93.6)| 103.4(94.7)| 104.4(95.5)| 103.7(97.4)|  106.7 |  105.5  |
+  | MeCN            | 96.6(88.3) | 97.4(89.1) | 98.3(89.9) |            |  99.5  |         |
+  | HMPA(a)         | 93.9(85.6) | 92.9(84.3) | 93.8(85.8) |            |  98.7  |         |
+  | TBPO(a)         | 97.8(88.6) | 97.2(87.6) | 97.4(88.0) |            |  97.9  |         |
+  | TBPO(b)         | 96.9(87.9) | 95.1(86.2) | 95.5(86.7) |            | 143.3  |         |
+
+  ![DMA resonance forms](../figures/DMA-resonance.png)
+
+  </center>
+
+  * Yes, metal cation binding do decrease BDEs
+    - Abundant technical problems
+      + For DMA, DFT-based method says acetyl BDE decreases, while ROCBS-QB3 says the opposite
+      + Also, see problems with Mg++ and MgCl2 -> IP of substrates are too close to Mg++
+
+  * NPA/NBO analysis reveals that binding of metal changes preference of resonance form
+      - Normally about an even split of LH vs/ RH but binding changes increases RH character
+      - Increases effective charge at Carbonyl C, therefore increasing hyperconjugative overlap w/ acetyl and decreasing BDE
+      - Decreases effective charge at N, therefore decreases hyperconjugative overlap w/ cis/trans and increases BDE
+
+
+  ### How well does DFT capture unimolecular decay of CumO* w/ metals?
+
+  * Main decay path of CumO* (as in BDE Ch.) = CumO* -> Acetophenone + CH3* ($k_\beta = 6.3 \times 10^5 s^{-1}$ \cite{Avila1993, Avila1995} in MeCN @ 298 K)
+  * Interaction w/ O* results in increase in beta-scission rate -> stabilises TS complex relative to Complex b/c stronger interaction w/ more sp2-like O than sp3
+  * Exptl (Dependent on Conc. M+) for 1.0M of three salts: LiClO4 ($k_\beta = 1.8 \times 10^6 s^{-1}$), Mg(ClO4)2 ($k_\beta = 1.6 \times 10^6 s^{-1}$), NaClO4 ($k_\beta = 1.1 \times 10^6 s^{-1}$)
+  * Results: M05-2X-SMD/6-311+G(2d,2p)//M05-2X/6-31+G**
+
+  <center>
+
+  |   Species    |  $k_H$ (Calc)      | $\Delta \Delta G^\ddagger$ |
+  |--------------|--------------------|----------------------------|
+  |  TS          |  $2.7 \times 10^5$ |   0.0                      |
+  |  TS-Na       |  $7.8 \times 10^7$ |  -3.4                      |
+  |  TS-Mg       |  N/A               |                            |
+  |  TS-Na-ClO4  |  $3.2 \times 10^6$ |  -1.5                      |
+  |  TS-Na-Cl    |  $1.8 \times 10^7$ |  -2.5                      |
+  | TS-Mg-(ClO4)2|  N/A               |                            |
+  |  TS-Mg-Cl2   | $2.1\times10^{12}$ |  -9.4                      |          
+
+  </center>
+
+  * Calculated kH is in reasonable agreement w/ experiment
+  * Bare metal cation over estimate effects of metal cation binding
+    - perturb CumO electron density too much
+  * Include counteranions
+    - experiments use ClO4- because of solubility in MeCN
+    - Calculations w/ Na+ and Cl- or ClO4- show both diminish effects of cation both still over estimate effects
+      + Differences in minimum energy structures
+      + Cl- and ClO4- change degree to which Na+ pulls electron density to O* and stabilizes TS complex
+      + NPA charges on O* for TS = -0.64 e- Na+ = -0.77 NaCl = -0.72 NaClO4 = -0.69
+    - Calculations w/ Mg2+ are problematic
+      + TS of CumO--Mg2+ has vibration, but does not connect reactants to products
+      + Only converged structure is for MgCl2 but the TS is overly stabilized
+        * IP of Mg2+ and CumO*-TS are too close --> never observe in realistic system
+  * Overall: poor description of system. Tried including explicit solvent molecules, but no resolution
+    - Chose to continue work with NaCl (and continue trying with MgCl2) as these are smaller systems
+    - May actually be advantageous for the effects to be exaggerated, as they are subtle experimentally (i.e. only 2-3 fold in some cases which is about 0.4 kcal/mol wrt $\Delta G^\ddagger$)
+
+### Reactions of DMA w/ RO*
+
+* Full reaction coordinates including metals cations were not successful in many cases
+  - Optimizations including metal cations failed
+* Present mostly data including NaCl (and others where applicable)
+
+* DMA w/ CumO and BnO studied in \cite{Salamone2013}
+  - BnO described as having being kinetically limited by formation of strong pre-reaction complex w/ $\alpha$-C-H of BnO
+    + $k_H'$ is unimolecular and dominant for cis-N-methyl where $\Delta G^\ddagger$ = 5.7 kcal/mol ($5.4 \times 10^8 s^-1$)
+  - CumO has non-specific binding due to lack of hydrogen bond donation group but increased dispersion interactions w/ methyl groups
 <center>
 
-|   Species    |  $k_H$ (Calc)      | $\Delta \Delta G^\ddagger$ |
-|--------------|--------------------|----------------------------|
-|  TS          |  $2.7 \times 10^5$ |   0.0                      |
-|  TS-Na       |  $7.8 \times 10^7$ |  -3.4                      |
-|  TS-Mg       |  N/A               |                            |
-|  TS-Na-ClO4  |  $3.2 \times 10^6$ |  -1.5                      |
-|  TS-Na-Cl    |  $1.8 \times 10^7$ |  -2.5                      |
-| TS-Mg-(ClO4)2|  N/A               |                            |
-|  TS-Mg-Cl2   | $2.1\times10^{12}$ |  -9.4                      |          
+![Previously calculated data for DMA w/ CumO and BnO](../figures/dma-ro-calc.png)
+
+|   Reaction   |  Abstraction Site   |  $\Delta G^\ddagger$ |  $\Delta \Delta G^\ddagger$ |
+|--------------|---------------------|----------------------|-----------------------------|
+|  DMA + CumO  |  trans              |  17.3                |                             |
+|              |  cis                |  17.5                |                             |
+|              |  acetyl             |  21.6                |                             |
+|DMA-Na-Cl+CumO|  trans              |  20.3                |    3.0                      |
+|              |  cis                |  18.4                |    0.9                      |
+|              |  acetyl             |  21.0                |   -0.6                      |
+|  DMA + BnO   |  trans              |  16.5                |                             |
+|              |  cis                |  17.5                |                             |
+|              |  acetyl             |  20.8                |                             |
+|DMA-Na-Cl+BnO |  trans              |  18.6                |    2.1                      |
+|              |  cis                |  17.8                |    0.3                      |
+|              |  acetyl             |  22.0                |    1.2                      |
 
 </center>
 
-* Calculated kH is in reasonable agreement w/ experiment
-* Bare metal cation over estimate effects of metal cation binding
-  - perturb CumO electron density too much
-* Include counteranions
-  - expertiments use ClO4- because of solubility in MeCN
-  - Calculations w/ Na+ and Cl- or ClO4- show both demish effects of cation both still over estimate effects
-    + Differences in minimum energy structures
-    + Cl- and ClO4- change degree to which Na+ pulls electron density to O* and stabilizes TS complex
-    + NPA charges on O* for TS = -0.64 e- Na+ = -0.77 NaCl = -0.72 NaClO4 = -0.69
-  - Calculations w/ Mg2+ are problematic
-    + TS of CumO--Mg2+ has vibration, but does not connect reactants to products
-    + Only converged structure is for MgCl2 bu the TS is overly stabilized
-      * IP of Mg2+ and CumO*-TS are too close --> never observe in realistic system
-* Overall: poor description of system. Tried including explicit solvent molecules, but no resolution
-  - Chose to continue work with NaCl (and continue trying with MgCl2) as these are smaller systems
-
-### Does non-redox active metal cation binding decrease BDE
-
-* Explation was metal cation reducing BDE by decreasing hyperconjugative overlap
-  - Is this the case?
-* Calculated BDEs of substrates w/ M05-2X/6-311+G(2d,2p)-SMD//M05-2X/6-31+G** (ROCBS-QB3)
-
-<center>
-
-| Substrate       |  Bare  |  Na+  |  NaCl  |  Mg++  |  MgCl2  |
-|-----------------|--------|-------|--------|--------|---------|
-| DMA (acetyl)    |  98.5(99.5)  |  97.8(99.9) |  98.4  |  97.4  |  |
-| DMA (cis)       |  92.2(93.9)  |  93.2(95.5) |  94.0  |  138.3 |  |
-| DMA (trans)     |  91.6(92.3)  |  92.8(95.7) |  92.6  |  137.3 |  |
-| DIA (acetyl)    |  97.8(99.1)  |  97.5  | | | |
-| DIA (a)         |  95.7(96.6)  |  96.5  | | | |
-| DIA (b)         |  96.4(97.9)  |  94.8  | | | |
-| DIA (c)         |  93.0(93.1)  |  93.8  | | | |
-| DIA (d)         |  95.3(96.9)  |  95.5  | | | |
-| DMSO            |  103.4(102.2)|  104.4 |  103.7  |  106.7  |  105.5  |
-| MeCN            |  97.4(96.6)  |  98.3  | |  99.5  |  |
-| HMPA(a)         |  92.9(93.9)  |  93.8  | |  98.7  |  |
-| TBPO(a)         |  97.2(97.8)  |  97.4  | | 97.9 | |
-| TBPO(b)         |  95.1(96.9)  |  95.5  | | 143.3 | |
-
-</center>
+* Calculated barrier are much higher than previous and are in poor agreement with experiment
+  - Geometries are similar to previously calculated
+* Continued w/ M05-2X as it appears to give reasonable relative energies and thus should still help provide insight --> i.e. relative energies will be the important part
++ Strongly bonded pre-reaction complexes - Binding w/ aromatic ring of CumO/BnO (BE = 3 - 6 kcalmol for CumO and 6 - 19 kcalmol for BnO)
+* For DMA + CumO, Na-Cl decreases barrier for acetyl, and increases cis/trans
+  - Expected on basis of hypothesis
+  - For Trans - the amount of charge separation in TS is less than for acetyl and cis accounting
+    + greater effect because charge separation stabilizes TS
+* For DMA + BnO, Na-Cl increases barrier for all bonds
+  - Difference in acetyl from CumO?
+    + Na-Cl interacting with aromatic ring in TS (only case where this happens)
+      * Stretches Na--O interaction and may decreases effect
+      * Could be calculation error - unable to isolate another TS structure

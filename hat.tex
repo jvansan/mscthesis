@@ -5,15 +5,15 @@
 
 \section{Introduction}
 
-Metal cations are ubiquitous in biological systems and play an important role in biological function. As such, there is a great deal of intrest in studying metas in biological systems. Proteins in particular are often associated with metals, and in the worldwide Protein Data Bank,\cite{Harding2010, Berman2007} over one-third of crystal structures contain metals. Redox active metals, such as copper and iron, act as co-factors in metalloenzymes for important catalyic processes.\cite{Atkins2010}
+Metal cations are ubiquitous in biological systems and play an important role in biological function. As such, there is a great deal of interest in studying metals in biological systems. Proteins in particular are often associated with metals, and in the worldwide Protein Data Bank,\cite{Harding2010, Berman2007} over one-third of crystal structures contain metals. Redox active metals, such as copper and iron, act as co-factors in metalloenzymes for important catalytic processes.\cite{Atkins2010}
 
-Non-redox active metal cations are equally as important in biological function as redox active metals, where they are essential to protein structure and function, along with cellular and neuronal signaling.\cite{Karp1999} Sodium and calcium ions are most abudant extracellurly, while potassium and magnesium are dominant inside of cells. While specific ionic concentrations vary dramatically dependening on physiological conditions, estimates for equilibrium concentrations in both mamallian heart cells\cite{Ingwall2006} and blood plasma\cite{daSilva2001} are listed in~\ref{tab:metalconc}.
+Non-redox active metal cations are equally as important in biological function as redox active metals, where they are essential to protein structure and function, along with cellular and neuronal signaling.\cite{Karp1999} Sodium and calcium ions are most abundant extracellurly, while potassium and magnesium are dominant inside of cells. While specific ionic concentrations vary dramatically dependening on physiological conditions, estimates for equilibrium concentrations in both mammalian heart cells\cite{Ingwall2006} and blood plasma\cite{daSilva2001} are listed in~\ref{tab:metalconc}. As sodium and magnesium are most abundant alkali and alkaline earth metals found in biologically relevant systems, they are of prime interest for investigation.
 
 \begin{table}[!htbp]
-  \caption{Ionic concentrations inside a mamallian cell and in the blood. Concentrations are in units of mM. Values are rounded to one significant figure. Data are from Ref. \protect\citenum{Ingwall2006} and \protext\citenum{daSilva2001}.}
+  \caption{Ionic concentrations inside a mammalian heart cell and in the blood plasma. Concentrations are in units of mM. Values are rounded to one significant figure. Data are from Ref. \protect\citenum{Ingwall2006} and \protect\citenum{daSilva2001}.}
   \label{tab:metalconc}
 \begin{tabular}{l c c}
-  Ion Conc. & Mamallian Cell & Blood Plasma \\
+  Ion Conc. & Mammalian Cells & Blood Plasma \\
   \hline
   \ch{Na^+} & 10 & 100--200 \\
   \ch{Mg^{2+}} & 10 & 1 \\
@@ -22,17 +22,48 @@ Non-redox active metal cations are equally as important in biological function a
 \end{tabular}
 \end{table}
 
-Extensive crystallographic surveys indicate that metals bind predominantly to oxygen centres in proteins.\cite{Harding1999, Harding2001, Hsin2006} Divalent metals are normally found bound directly to proteins. Calcium has been found to bind anywhere from 4 to 6 binding sites in protein crystal structures, while magnesium binds only 1 or 2. Monoionic metals, on the other hand, are often heavily solvated and so they appear in solvent cavities of proteins, although sodium or potassium sometimes found bound directly to carbonyl or carboxylate oxygen centres.\cite{Harding2010}
+Extensive crystallographic surveys indicate that metals bind predominantly to oxygen centres in proteins.\cite{Harding1999, Harding2001, Hsin2006} Divalent metals are most often found bound directly to proteins. Calcium binds anywhere from 4 to 6 binding sites in protein crystal structures, while magnesium binds only 1 or 2. Monovalent metals, on the other hand, are often heavily solvated and so they appear in solvent cavities of proteins, although sodium or potassium are sometimes found bound directly to carbonyl or carboxylate oxygen centres.\cite{Harding2010}
 
-Recent studies have focussed on \ch{Ca^{2+}} in the context of reactive oxygen-centred radical production.\cite{Goerlach2015} Specifically, \ch{Ca^{2+}} are important in the mitrochondria, where, depending on physiological conditions and concentrations, they can act as inhibitor or promoters of free-radical production in the electron transport chain.\cite{AdamVizi2010} In explanation is that \ch{Ca^{2+}} induce conformational changes of the proteins involved in the electron transport chain which are responsible for radical generation.\cite{Brookes2004} Mitochondrial free-radicals, when present in moderate amounts, can act as cell signalling molecules to activate pro-growth responses.\cite{Sullivan2014} However, ``dysfunctional'' mitochondrial can produce excess radicals which can lead to oxidative damage which has been linked to degenerative diseases.
+A great deal of research has focussed on \ch{Ca^{2+}} in the context of reactive oxygen-centred radical production.\cite{Goerlach2015} Specifically, \ch{Ca^{2+}} ions are important in the mitochondria, where, depending on physiological conditions and concentrations, they can act as inhibitor or promoters of free-radical production in the electron transport chain.\cite{AdamVizi2010} In explanation is that \ch{Ca^{2+}} induce conformational changes of the proteins involved in the electron transport chain which are responsible for radical generation.\cite{Brookes2004} Mitochondrial free-radicals, when present in moderate amounts, can act as cell signalling molecules to activate pro-growth responses.\cite{Sullivan2014} However, ``dysfunctional'' mitochondria can produce excess radicals leading to oxidative damage which has been linked to degenerative diseases.
 
-Until recently, kinetic studies of protein oxidation have not considered the mechanistic role of non-redox active metals. Is a series of three papers, 
+Given the significant importance alkali and alkaline earth metals play in biological systems, their impact on protein oxidation must be considered. However, until recently, kinetic studies of protein oxidation have not investigated the mechanistic role of non-redox active metals. In a series of three papers,\cite{Salamone2013a, Salamone2015metals, Salamone2016} Bietti and colleagues have shown that alkali and alkaline earth metals have an inhibitory effect on HAT reactions involving oxygen radicals and organic substrates. The experimental results of these papers are summarized in~\ref{tab:hat-metals}. All results are from time-resolved LFP in nitrogen or argon-saturated acetonitrile (MeCN) at 298 K, as was previously described in section~\ref{sec:hat-methods}.
+
+\begin{table}
+  \caption{Bleh}
+  \label{tab:hat-metals}
+  \begin{tabular}{l l c c}
+    Substrate & Conditions & $k_H$ & $k_H$(MeCN)/$k_H$(M$^{n+}$) \\
+    \hline
+    1,4-cyclohexadiene &  & 6.7\E{7} & \\
+    (CHD)  & \ch{LiClO4} 1.0 M & 7.5\E{7} & 0.89 \\
+     & \ch{Mg(ClO4)2} 1.0 M & 7.0\E{7} & 0.96 \\
+    tetrahydrofuran &  & 5.7\E{6} & \\
+    (THF) & \ch{LiClO4} 1.0 M & 2.9\E{6} & 1.7 \\
+     & \ch{LiOTf} 1.0 M & 2.8\E{6} & 2.0 \\
+     & \ch{Mg(ClO4)2} 1.0 M & 1.8\E{6} & 3.2 \\
+    triethylamine &  & 2.0\E{8} & \\
+    (TEA) & \ch{LiClO4} 1.0 M & 9.4\E{7} & 2.1 \\
+     & \ch{Mg(ClO4)2} 0.005 M & $<$1\E{6} & $>$200 \\
+    1,2,2,6,6-pentamethylpiperidine &  & 1.7\E{8} & \\
+    (PMP) & \ch{LiClO4} 1.0 M & 9.0\E{7} & 1.9 \\
+     & \ch{Mg(ClO4)2} 0.005 M & $<$1\E{6} & $>$170 \\
+    $N,N$-dimethylformamide & & 1.2\E{6} & \\
+    (DMF) & \ch{LiClO4} 0.5 M & $k_{H1}$ = 8.9\E{5} & 1.3 \\
+      & & $k_{H2}$ = 1.5\E{6} & 0.80 \\
+      & \ch{NaClO4} 0.2 M & $k_{H1}$ = 9.6\E{5} & 1.3 \\
+      & & $k_{H2}$ = 1.4\E{6} & 0.86 \\
+      & \ch{Mg(ClO4)2} 0.2 M & $k_{H1}$ =
+    $N,N$-dimethylacetamide & &
+  \end{tabular}
+\end{table}
+
+\section{Computational methods and details}
 
 \section{Benchmarking Density Functional Theory Based Methods for the Binding of Alkali and Alkaline Earth Metals to Organic Substrates and Oxygen Centred Radicals}
 
 \subsection{Background}
 
-In order to study the central hypothesis propsed in this work, we must carefully select a computational method. In particular, we wish to use density-functional theory (DFT), which is known to be prone to various problems such as self-interaction error \cite{Dutoi2006}, delocalization error,\cite{OterodelaRoza2014} and the inability to treat non-covalent interactions.\cite{Johnson2009,DiLabio2016} The latter of these can be corrected by the selection of a method capable correcting the non-covalent corrections such as a pair-wise dispersion model \jnote{\textbackslash-cite{D3}}, or atom centered potentials developed by our group \jnote{\textbackslash-cite{DCPS}}. Other errors can be ignored through the careful selection of a DFT method.
+In order to study the central hypothesis proposed in this work, we must carefully select a computational method. In particular, we wish to use density-functional theory (DFT), which is known to be prone to various problems such as self-interaction error \cite{Dutoi2006}, delocalization error,\cite{OterodelaRoza2014} and the inability to treat non-covalent interactions.\cite{Johnson2009,DiLabio2016} The latter of these can be corrected by the selection of a method capable correcting the non-covalent corrections such as a pair-wise dispersion model \jnote{\textbackslash-cite{D3}}, or atom centered potentials developed by our group \jnote{\textbackslash-cite{DCPS}}. Other errors can be ignored through the careful selection of a DFT method.
 
 We are interested in selecting a method which can accuratetly treat the interactions between alkali and alkaline earth metal cations, and organic substrates and radicals. To this end, there exists little literature, with one notable paper\cite{Suarez2011} which examines the binding of calcium cations to organic substrates. In this paper, \citet{Suarez2011} provide accurate energetic, electronic, and structural results for the binding of calcium to organic neutral and charged species, as well as assess the performance of four different DFT methods. They also analyze the nature of ligand-metal bonding interactions using a symmetry-adapted perturbation theory approach (SAPT) \jnote{EXPAND ON THIS}
 
@@ -55,27 +86,9 @@ Due to our interest in alkali and alkaline earth metal cations in FHT, we determ
 
 \subsection{Methods}
 
-Conformers were generated using Hyperchem with the AM1 semi-empirical
-molecular orbital (MO) method \jnote{\textbackslash-cite{hyperchem}}
-followed by optimization calulations of 5-10 lowest energy structures
-using at the \jnote{(currently unpublished)} BLYP-D3/pc1 level of
-theory, including our own groups basis set incomplete potential
-(BSIPs).\jnote{(CITATIONS)}
+Conformers were generated using Hyperchem with the AM1 semi-empirical molecular orbital (MO) method \jnote{\textbackslash-cite{hyperchem}} followed by optimization calulations of 5-10 lowest energy structures using at the \jnote{(currently unpublished)} BLYP-D3/pc1 level of theory, including our own groups basis set incomplete potential (BSIPs).\jnote{(CITATIONS)}
 
-On the basis of the work by \citet{OterodelaRoza2014}, which showed
-that in systems which are halogen bonded, erroneous charge transfer
-can be significant, and given the charge on the metal cations, the
-LC-$\omega$PBE density functional with D3 dispersion correction and
-moderate 6-31+G(2d,2p) \jnote{(CITATIONS for DFT and D3)} basis sets
-were applied to determine the most strongly bound complexes of
-substrates and metal cations. Global minima monomers and complexes
-were optimized with the LC-$\omega$PBE-D3 method near the basis set
-limit (6-311+G(3df,3pd).  Highly correlated wavefunction results were
-obtained at the CCSD(T) level of theory with extrapolation to the
-complete basis set limit.\jnote{CITATION} Calculations were performed
-using the Gaussian 09 package\cite{Frisch2009}, and wavefunction
-calculations were performed using the TURBOMOLE\cite{turbomole}
-package.
+On the basis of the work by \citet{OterodelaRoza2014}, which showed that in systems which are halogen bonded, erroneous charge transfer can be significant, and given the charge on the metal cations, the LC-$\omega$PBE density functional with D3 dispersion correction and moderate 6-31+G(2d,2p) \jnote{(CITATIONS for DFT and D3)} basis sets were applied to determine the most strongly bound complexes of substrates and metal cations. Global minima monomers and complexes were optimized with the LC-$\omega$PBE-D3 method near the basis set limit (6-311+G(3df,3pd).  Highly correlated wavefunction results were obtained at the CCSD(T) level of theory with extrapolation to the complete basis set limit.\jnote{CITATION} Calculations were performed using the Gaussian 09 package\cite{Frisch2009}, and wavefunction calculations were performed using the TURBOMOLE\cite{turbomole} package.
 
 
 \subsection{Benchmark systems}
