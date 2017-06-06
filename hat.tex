@@ -26,10 +26,10 @@ Extensive crystallographic surveys indicate that metals bind predominantly to ox
 
 A great deal of research has focussed on \ch{Ca^{2+}} in the context of reactive oxygen-centred radical production.\cite{Goerlach2015} Specifically, \ch{Ca^{2+}} ions are important in the mitochondria, where, depending on physiological conditions and concentrations, they can act as inhibitor or promoters of free-radical production in the electron transport chain.\cite{AdamVizi2010} In explanation is that \ch{Ca^{2+}} induce conformational changes of the proteins involved in the electron transport chain which are responsible for radical generation.\cite{Brookes2004} Mitochondrial free-radicals, when present in moderate amounts, can act as cell signalling molecules to activate pro-growth responses.\cite{Sullivan2014} However, ``dysfunctional'' mitochondria can produce excess radicals leading to oxidative damage which has been linked to degenerative diseases.
 
-Given the significant importance alkali and alkaline earth metals play in biological systems, their impact on protein oxidation must be considered. However, until recently, kinetic studies of protein oxidation have not investigated the mechanistic role of non-redox active metals. In a series of three papers,\cite{Salamone2013a, Salamone2015metals, Salamone2016} Bietti and colleagues have shown that alkali and alkaline earth metals have an inhibitory effect on HAT reactions involving oxygen radicals and organic substrates. The experimental results of these papers are summarized in~\ref{tab:hat-metals}. All results are from time-resolved LFP in nitrogen or argon-saturated acetonitrile (MeCN) at 298 K, as was previously described in section~\ref{sec:hat-methods}.
+Given the significant importance alkali and alkaline earth metals play in biological systems, their impact on protein oxidation must be considered. However, until recently, kinetic studies of protein oxidation have not investigated the mechanistic role of non-redox active metals. In a series of three papers,\cite{Salamone2013a, Salamone2015metals, Salamone2016} Bietti and colleagues have shown that alkali and alkaline earth metals have an inhibitory effect on HAT reactions involving oxygen radicals and organic substrates. The experimental results of these papers are summarized in~\ref{tab:hat-metals}. All results are from time-resolved LFP in nitrogen or argon-saturated acetonitrile (MeCN) at 298 K, as was previously described in section~\ref{sec:hat-methods}. Experiments also demonstrate that metal cations increase the rate of $\beta$-scission decay of \cumo,
 
 \begin{table}
-  \caption{Bleh}
+  \caption{Table summary of experimental data - Needs completion}
   \label{tab:hat-metals}
   \begin{tabular}{l l c c}
     Substrate & Conditions & $k_H$ & $k_H$(MeCN)/$k_H$(M$^{n+}$) \\
@@ -57,7 +57,17 @@ Given the significant importance alkali and alkaline earth metals play in biolog
   \end{tabular}
 \end{table}
 
+Firstly, rate constants for
+
 \section{Computational methods and details}
+
+All quantum mechanical calculations were performed using the Gaussian 09 software package,\cite{Frisch2009} or the TURBOMOLE software package.\cite{turbomle} Calculations for the benchmark quality data to test metal binding to substrates were first optimized at the LC-$\omega$PBE-D3(BJ)/6-31+G(2d,2p) level of theory, and later re-optimized with larger 6-311+G(3df,3pd) basis sets. Single-point energy calculations were then carried out using the CCSD(T) methodology and various basis sets, as described in Section~\ref{sec:benchmark}. Final benchmark quality binding energies have been calculated using the F12$^*$ explicitly correlated method with Def2-QZVPPD primary basis sets and Def2-QZVPP auxiliary basis sets required for the resolution-of-the-identity approximation as implemented in TURBOMOLE, which is used to reduce the computational cost associated with calculating MO integrals.\cite{note-book} DFT-based methods were tested both by single-point energy calculations on the benchmark structures, and by geometry optimization starting from the benchmark structures.
+
+To test the effects of metal cations on HAT barrier heights, calculations were first performed the reactions not involving metal cations. Geometry optimizations were performed at the M05-2X/6-31+G$^{**}$ level of theory. Transition state (TS) structure optimization was performed by first freezing the acceptor-hydrogen-donor bond lengths with multiple initial orientations. The frozen bonds were then relaxed to give the final TS structure, which was then used to identify the pre- and post-reaction complexes associated with tat TS structure. All structures were verified minima (or saddle-points with a single imaginary frequency connecting reactants to products for TS structures) by harmonic frequency calculation. Single-point energy calculations were performed at the M05-2X/6-311+G(2d,2p) level of theory. The effects of MeCN solvent were estimated by inclusion of the SMD continuum solvent model in single-point energy calculations. Geometry optimizations were also performed for all reactions, however many calculations failed to converge.
+
+The inclusion of metal cations proved to be technically very challenging. 
+
+
 
 \section{Benchmarking Density Functional Theory Based Methods for the Binding of Alkali and Alkaline Earth Metals to Organic Substrates and Oxygen Centred Radicals}
 

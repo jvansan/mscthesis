@@ -22,6 +22,7 @@
 | Na+  |         10         | 100-200 |
 | Mg2+ | 10(bound) 0.5(free)|    1    |
 | Ca2+ |      0.01-0.1      |    2    |
+
 </center>
 
 * Experimental (and past theoretical) evidence for inhibition of reactivity
