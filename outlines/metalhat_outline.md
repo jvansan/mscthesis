@@ -142,13 +142,13 @@
     + Radial distribution function for Na/K w/ NMA in aq\cite{Heyda2009}
   - How short range is this interaction?
   - DMA--Na+
-  ![PES of BE for DMA C=O--Na+ interaction](../figures/dma-na-pes.png)
+  ![PES of BE for DMA C=O--Na+ interaction](../figures/pes_dma_na.png)
   - DMA--Na-Cl
-  ![PES of BE for DMA C=O--Na-Cl interaction](../figures/dma-na-cl-pes.png)
+  ![PES of BE for DMA C=O--Na-Cl interaction](../figures/pes_dma_nacl.png)
   - DMA--Mg++
-  ![PES of BE for DMA C=O--Mg2+ interaction](../figures/dma-mg-pes.png)
+  ![PES of BE for DMA C=O--Mg2+ interaction](../figures/pes_dma_mg.png)
   - DMA--MgCl2
-  ![PES of BE for DMA C=O--Mg-Cl2 interaction](../figures/dma-mg-cl2-pes.png)
+  ![PES of BE for DMA C=O--Mg-Cl2 interaction](../figures/pes_dma_mgcl2.png)
 
 * Problems w/ Mg++ again
   - Explain on basis of IP of DMA vs Mg++
