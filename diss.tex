@@ -25,7 +25,7 @@
 
 
 \usepackage{ubcostyle} %loads packages
-\usepackage[doublespacing]{setspace}
+% \usepackage[doublespacing]{setspace}
 
 \newcommand{\jnote}[1]{\textcolor{blue}{(#1)}}
 \newcommand{\cumo}{Cum\ch{O^.}}
@@ -42,7 +42,7 @@
 % ===================================================================
 
 % Uncomment the next line if there are more than one appendix
-%\renewcommand*\appendixname{Appendices}
+% \renewcommand*\appendixname{Appendices}
 
 
 \begin{document}
@@ -164,6 +164,8 @@ Additional Committee Members include:
 
 \include{conclusion}
 
+\nocite{Hyperchem16}
+
 % This file is setup to use a bibtex file sample.bib and uses the
 % plain style.  Other styles may be used depending on the conventions
 % of your field of study.
@@ -181,8 +183,6 @@ Additional Committee Members include:
 
 \newpage
 \pagestyle{headings}
-
-
 \addtocontents{toc}{%
 \protect\renewcommand*\protect\cftchappresnum{\appendixname~}}
 
@@ -191,10 +191,7 @@ Additional Committee Members include:
 \appendix
 \addappheadtotoc %uses the current page number when it makes the entry in the ToC
 \appendixpage
-\pagestyle{plain}
-
-\include{appendix}
-
+%\pagestyle{plain}
 
 \addtocontents{toc}{
 \setlength{\cftbeforechapskip}{\cftbeforesecskip}
@@ -202,6 +199,8 @@ Additional Committee Members include:
 \protect\renewcommand{\cftchapfont}{\cftsecfont}
 \protect\renewcommand{\protect\cftchapdotsep}{\cftsecdotsep}
 }
+
+\input{append}
 
 \end{document}
 \endinput

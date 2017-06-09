@@ -4,30 +4,41 @@ import numpy as np
 from scipy import stats
 from pylab import *
 
-# mat0 = genfromtxt("figures/data/pes_dma_na.txt")
-mat0 = genfromtxt("figures/data/pes_dma_nacl.txt")
-# mat0 = genfromtxt("figures/data/pes_dma_mg.txt")
+x = [2, 3, 4, 5]
+Li = [0, -0.004, -0.0173, -0.022]
+Na = [0, -0.0246, -0.0856, -0.1419]
+Mg = [0, -0.022, -0.0817, -0.1474]
+K = [0, -0.1061, -0.158, -0.2089]
+Ca = [0, -0.101, -0.1585, -0.2176]
 
-# line at x=0
-x = [0,1,2,3,4,5,6,7,8]
-y = [0,0,0,0,0,0,0,0,0]
-plt.plot(x , y,'k-',lw=1)
 
-# gas-phase
-plt.plot(mat0[:,0],mat0[:,1], color='k')
-plt.plot(mat0[:,0],mat0[:,1], 'ko', ms='4' )
+# Li
+plt.plot(x, Li, color='ko')
+
+# Na
+plt.plot(x, Na, color='ko')
+
+# Mg
+plt.plot(x, Mg, color='ko')
+
+# K
+plt.plot(x, K, color='ko')
+
+# Ca
+plt.plot(x, Ca, color='ko')
 
 # MeCN
-plt.plot(mat0[:,0],mat0[:,2], color='grey')
-plt.plot(mat0[:,0],mat0[:,2], 'grey', marker='s', ms='4' )
+# plt.plot(mat0[:,0],mat0[:,2], color='grey')
+# plt.plot(mat0[:,0],mat0[:,2], 'grey', marker='s', ms='4' )
+#
+# # Water'
+# plt.plot(mat0[:,0],mat0[:,3], '--',lw=1, color='k' )
+# plt.plot(mat0[:,0],mat0[:,3], "o", ms='4', markerfacecolor='white', markeredgecolor='black', )
 
-# Water'
-plt.plot(mat0[:,0],mat0[:,3], '--',lw=1, color='k' )
-plt.plot(mat0[:,0],mat0[:,3], "o", ms='4', markerfacecolor='white', markeredgecolor='black', )
-
-plt.xlim(1,6)
-plt.ylim(-25,15)
-plt.xlabel('O-Na Interatomic Distance ($\mathrm{\AA}$)')
-plt.ylabel('BE (kcal mol$^{-1}$)')
+# plt.xlim(1,6)
+# plt.ylim(-150,15)
+plt.xlabel('Basis Cardinal Number')
+plt.ylabel('Relative Energy (AU)')
 plt.tight_layout()
-plt.savefig("figures/pes_dma_nacl.png", dpi = (400))
+plt.show()
+# plt.savefig("figures/pes_dma_mg.png", dpi = (400))

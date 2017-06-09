@@ -92,6 +92,7 @@
 
 ### Methods
 * Basis set convergence of metal cations!
+![convergence](../figures/pes_metals.png)
 * Final method CCSD(T)-F12*/Def2-QZVPPD
 * Results - Metal cations approach CBS limit - verify w/ expt
 
@@ -159,8 +160,14 @@
     + Gas phase M05-2X/6-311+G(2d,2p) = 14.9 eV
     + Solvent calc M05-2X-SMD(MeCN)/6-311+G(2d,2p) = 3.3 eV!
     + Na expt'l = 5.1 eV \cite{CRC2016} Gas = 5.0 eV Solvent = 1.9 eV
+  - Also standard DFT-based methods cannot properly localize charges \cite{Cheng2016} because of delocalization error\cite{Cohen2008}
+    + New schemes are being implemented to constrain charges in DFT\cite{Melander2016}
+      * BH+HLYP is only hybrid which captures correct charge localization state
+    + Possible future solution is DFT+U method\cite{Liechtenstein1995, Dudarev1998}
+      * Treat charge localized sites with additional potential term
 * Interaction is short range w/ implicit solvent
   - Less than 5 Angstrom
+
 
 #### Do metal cations decrease BDEs?
 
@@ -214,10 +221,8 @@
   |--------------|--------------------|----------------------------|
   |  TS          |  $2.7 \times 10^5$ |   0.0                      |
   |  TS-Na       |  $7.8 \times 10^7$ |  -3.4                      |
-  |  TS-Mg       |  N/A               |                            |
   |  TS-Na-ClO4  |  $3.2 \times 10^6$ |  -1.5                      |
   |  TS-Na-Cl    |  $1.8 \times 10^7$ |  -2.5                      |
-  | TS-Mg-(ClO4)2|  N/A               |                            |
   |  TS-Mg-Cl2   | $2.1\times10^{12}$ |  -9.4                      |          
 
   </center>
