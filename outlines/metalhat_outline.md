@@ -185,16 +185,14 @@
   | DIA (acetyl)    | 99.1(90.7) | 97.8(89.0) | 97.5(89.1) | 97.7(88.9) |  96.7  |         |
   | DIA (a)         | 96.6(87.9) | 95.7(87.0) | 96.5(87.4) | 96.5(87.4) |  126.9 |         |
   | DIA (b)         | 97.9(88.1) | 96.4(86.4) | 94.8(85.2) | 93.1(84.3) |  85.7  |         |
-  | DIA (c)         | 93.1(84.7) | 93.0(84.2) | 93.8(84.9) | 93.1()           |  123.2 |         |
-  | DIA (d)         | 96.9(87.0) | 95.3(85.4) | 95.5(85.3) |            |  127.1 |         |
+  | DIA (c)         | 93.1(84.7) | 93.0(84.2) | 93.8(84.9) |            |  123.2 |         |
+  | DIA (d)         | 96.9(87.0) | 95.3(85.4) | 95.5(85.3) | 95.5(85.34)|  127.1 |         |
   | DMSO            | 102.2(93.6)| 103.4(94.7)| 104.4(95.5)| 103.7(97.4)|  106.7 |  105.5  |
-  | MeCN            | 96.6(88.3) | 97.4(89.1) | 98.3(89.9) |            |  99.5  |         |
-  | HMPA(a)         | 93.9(85.6) | 92.9(84.3) | 93.8(85.8) |            |  98.7  |         |
-  | TBPO(a)         | 97.8(88.6) | 97.2(87.6) | 97.4(88.0) |            |  97.9  |         |
-  | TBPO(b)         | 96.9(87.9) | 95.1(86.2) | 95.5(86.7) |            | 143.3  |         |
+  | MeCN            | 96.6(88.3) | 97.4(89.1) | 98.3(89.9) | 98.1(89.8) |  99.5  |  99.3   |  
 
   ![DMA resonance forms](../figures/DMA-resonance.png)
 
+  ![DMA resonance forms](../figures/DMA-resonance-effect.png)
   </center>
 
   * Yes, metal cation binding do decrease BDEs
@@ -207,6 +205,7 @@
       - Increases effective charge at Carbonyl C, therefore increasing hyperconjugative overlap w/ acetyl and decreasing BDE
       - Decreases effective charge at N, therefore decreases hyperconjugative overlap w/ cis/trans and increases BDE
 
+  * DIA rad b (cis beta) - stabilized by binding of Na/NaCl to O: and C*
 
   ### How well does DFT capture unimolecular decay of CumO* w/ metals?
 
@@ -252,7 +251,7 @@
 
 * DMA w/ CumO and BnO studied in \cite{Salamone2013}
   - BnO described as having being kinetically limited by formation of strong pre-reaction complex w/ $\alpha$-C-H of BnO
-    + $k_H'$ is unimolecular and dominant for cis-N-methyl where $\Delta G^\ddagger$ = 5.7 kcal/mol ($5.4 \times 10^8 s^-1$)
+    + $k_H'$ is unimolecular and dominant for cis-N-methyl where $\Delta G^\ddagger$ = 5.7 kcal/mol ($5.4 \times 10^8 s^{-1}$)
   - CumO has non-specific binding due to lack of hydrogen bond donation group but increased dispersion interactions w/ methyl groups
 <center>
 

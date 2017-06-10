@@ -259,7 +259,7 @@ For all the three methods tested, the average of the root mean square deviations
 
 \section{Exploring the nature of metal cation substrate interactions}
 
-The first step to understanding the effect non-redox active metal have on HAT reaction barrier heights is investigating the nature of the binding interaction. \ref{fig:pes-dma-na}A,B show the potential energy surfaces (PESs) of the binding of sodium ion, and sodium chloride to DMA, respectively. There are three surfaces in each plot representing the same potential energy surface in the gas-phase (black circles), and in a continuum solvent field of (grey squares) or water (white circles). For both sodium ion and sodium chloride, the gas-phase PES demonstrates severe over-binding with respect to a realistic system. This is indicated by a much deeper well than both solvents and a long range interaction that does not tail off within a reasonable distance. This simply underscores the importance of including solvent effects in studying the effects of metal cations. Intestingly, for the effects of differnt solvent appears to be quite small. In both cases the difference between the mininum of the water PES is about 2.5 \kcalmol, while the differences in range of interaction is neglible. The small differences in binding interactions indicate that the effects as measured in MeCN should also apply to the more biologically relevant aqueous system. Furthermore, Ingold and Litwinienko have shown that \ch{C-H} abstraction by oxygen-centred radicals does not depend strongly on solvent.\cite{Litwinienko200}
+The first step to understanding the effect non-redox active metal have on HAT reaction barrier heights is investigating the nature of the binding interaction. \ref{fig:pes-dma-na}A,B show the potential energy surfaces (PESs) of the binding of sodium ion, and sodium chloride to DMA, respectively. There are three surfaces in each plot representing the same potential energy surface in the gas-phase (black circles), and in a continuum solvent field of (grey squares) or water (white circles). For both sodium ion and sodium chloride, the gas-phase PES demonstrates severe over-binding with respect to a realistic system. This is indicated by a much deeper well than both solvents and a long range interaction that does not tail off within a reasonable distance. This simply underscores the importance of including solvent effects in studying the effects of metal cations. Intestingly, for the effects of differnt solvent appears to be quite small. In both cases the difference between the mininum of the water PES is about 2.5 \kcalmol, while the differences in range of interaction is neglible. Furthermore, the minimum of the PES well in all cases falls at about the same distance (2.1--2.2 \AA) in the gas-phase and in both solvents. The small differences in binding interactions indicate that the effects as measured in MeCN should also apply to the more biologically relevant aqueous system. Furthermore, Ingold and Litwinienko have shown that \ch{C-H} abstraction by oxygen-centred radicals does not depend strongly on solvent.\cite{Litwinienko200}
 
 For both the ion and the salt of sodium, the binding interaction approaches zero well before 5 \AA, or the size of the first solvation shell of the sodium ion.\cite{Degreve1996} This result is consistent with literature that studies the Hofmeister series, where it has been shown that biologically relavant cations are only able to influence their immediate solvation shell.\cite{Omta2003, Funker2011} Furthermore, \citet{Heyda2009} utilized molecular dynamics simulations of $N$-methylacetamide in aqueous solutions of NaCl, NaBr, KCl, and KBr to obtained radial distribution functions (RDFs). The RDFS are in agree with the the calculated PESs in that the most probable distance to find \ch{Na^+} from the amidic oxygen-centre is at about 2--2.5 \AA separation. Heyda et al. also showed that \ch{Na^+} preferentially binds with the amide as compared to \ch{Br^+}, and that the nature of the halide counteranion is unimportant in the interaction. From these results it is possible an important conclusion: The use of \ch{Cl-} in the calculations should reasonable reflect the trends observed by Salamone et al. with \ch{ClO4-} and \ch{OTf-}.
 
@@ -312,21 +312,27 @@ The ionization of DMA by \ch{Mg^2+} is favourable by about 6 eV, and unfavourabl
 \label{fig:pes-dma-mg}
 \end{figure}
 
-The inclusion of MeCN and water solvent appear at first glance to alleviate this problem. Note however that both PESs cross over zero binding at about 3 \kcalmol\, indicating there is still delocalization. Additionally, for magnesium chloride in the gas-phase, there also appears to be delocalization error occuring, as evident by the PES crossing zero just below 4 \kcalmol. On the other hand, the inclusion of solvent with \ch{MgCl2} give reasonable PESs with a binding interaction of about 25 \kcalmol\ for both water and MeCN, and a tailing off at about 3 \AA. Therefore, the effects of magnesium on HAT reaction barrier may possibly using \ch{MgCl2}.
+The inclusion of MeCN and water solvent appear at first glance to alleviate this problem. Note however that both PESs cross over zero binding at about 3 \kcalmol\, indicating there is still delocalization. Additionally, for magnesium chloride in the gas-phase, there also appears to be delocalization error occuring, as evident by the PES crossing zero just below 4 \kcalmol. On the other hand, the inclusion of solvent with \ch{MgCl2} give reasonable PESs with a binding interaction of about 25 \kcalmol\ for both water and MeCN, and a tailing off at about 3 \AA. Therefore, the effects of magnesium on HAT reaction barrier may possibly using \ch{MgCl2}, however to avoid further complications, I have elected to focus only on sodium for future considerations.
 
-Next, I performed calculations to determine if the interaction of metal cations systematically increase the bond strengths of \ch{C-H} bonds by decreasing hyperconjugative overlap between neighbouring $\pi$-systems and \ch{C-H} $\sigma^*$ anti-bonding orbitals. The bond dissociation enthalpies (BDEs) and free energies (BDFEs) for several substrates in the presence of \ch{Na^+}, \ch{NaCl}, \ch{Mg^2+}, and \ch{MgCl2} are listed in~\ref{tab:bde-metal}.
+Next, I performed calculations to determine if the interaction of metal cations systematically increase the bond strengths of \ch{C-H} bonds by decreasing hyperconjugative overlap between neighbouring $\pi$-systems and \ch{C-H} $\sigma^*$ anti-bonding orbitals. The bond dissociation enthalpies (BDEs) and free energies (BDFEs) for several substrates in the presence of \ch{Na^+} and \ch{NaCl} are listed in~\ref{tab:bde-metal}.
 
 \begin{table}[!htbp]
-  \caption[Bond dissociation enthalpies(free energies) of DMA, DMSO, and MeCN with and without metal cations.]{Bond dissociation enthalpies(free energies) of DMA, DMSO, and MeCN with and without metal cations calulated at the M05-2X-SMD/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ level of theory. ROCBS-QB3 BDEs and BDFEs are included for reference. All values are in \kcalmol.}
+  \caption[Bond dissociation enthalpies(free energies) of DMA, DMSO, MeCN, and DIA with and without metal cations.]{Bond dissociation enthalpies(free energies) of DMA, DMSO, MeCN, and DIA with \ch{Na^+}, \ch{NaCl}, and without metal cations (Bare) calulated at the M05-2X-SMD/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ level of theory. ROCBS-QB3 BDEs and BDFEs without metals are included for reference. All values are in \kcalmol.}
   \label{tab:bde-metal}
-  \hspace*{-1.5cm}
-  \begin{tabular}{l c c c c c c}
-    Substrate       & ROCBS-QB3   &    Bare    &\ch{Na+}    &\ch{NaCl}  &\ch{Mg^2+}&\ch{MgCl2}  \\
+  \begin{tabular}{l c c c c}
+    Substrate       & ROCBS-QB3   &    Bare    &\ch{Na+}    &\ch{NaCl}   \\
     \hline
-    DMA (acetyl)    & 99.5(91.3)  & 98.5(90.3) & 97.8(91.0) & 98.4(90.4) &  97.4(88.7)  &  97.8(90.2)   \\
-    DMA (cis)       & 93.9(86.0)  & 92.2(84.5) & 93.2(85.8) & 94.0(89.4) &  138.3(129.3) &  93.5(86.3)   \\
-    DMA (trans)     & 92.3(84.3)  & 91.6(83.4) & 92.8(85.5) & 92.6(86.1) &  137.3(128.8) &  93.3(86.3)   \\
-    DMSO            & 102.2(93.6) & 103.4(94.7)& 104.4(95.5)& 103.7(97.4)&  106.7(97.9) &  105.5(96.1)  \\
-    MeCN            & 96.6(88.3)  & 97.4(89.1) & 98.3(89.9) & 98.1(89.8) &  99.5(91.2)  &
+    DMA (acetyl)    & 99.5(91.3)  & 98.5(90.3) & 97.8(91.0) & 98.4(90.4) \\
+    DMA (cis)       & 93.9(86.0)  & 92.2(84.5) & 93.2(85.8) & 94.0(89.4) \\
+    DMA (trans)     & 92.3(84.3)  & 91.6(83.4) & 92.8(85.5) & 92.6(86.1) \\
+    DMSO            & 102.2(93.6) & 103.4(94.7)& 104.4(95.5)& 103.7(97.4)\\
+    MeCN            & 96.6(88.3)  & 97.4(89.1) & 98.3(89.9) & 98.1(89.8) \\
+    DIA (acetyl)    & 99.1(90.7)  & 97.8(89.0) & 97.5(89.1) & 97.7(88.9) \\
+    DIA ($\alpha$-cis)  & 96.6(87.9)  & 95.7(87.0) & 96.5(87.4) & 95.3(86.4) \\
+    DIA ($\beta$-cis)   & 97.9(88.1)  & 96.4(86.4) & 94.8(85.2) & 93.1(84.3) \\
+    DIA ($\alpha$-trans)& 93.1(84.7)  & 93.0(84.2) & 93.8(84.9) & 94.0(84.9) \\
+    DIA ($\beta$-trans) & 96.9(87.0)  & 95.3(85.4) & 95.5(85.3) & 95.5(85.3))
   \end{tabular}
 \end{table}
+
+For DMA, the methyl groups cis and trans relative to the carbonyl are the weakest. The inclusion of \ch{Na^+} increases the cis BDE by 1.0 \kcalmol\ and the trans BDE by 1.2 \kcalmol. Surprisingly,
