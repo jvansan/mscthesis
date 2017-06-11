@@ -116,6 +116,8 @@ Secondly, the nature of the binding of metal ions to substrates is still poorly 
 Thirdly, I address the effect that metal ions have on the HAT barrier heights.
 Experiments demonstrate that under certain conditions the presence of metal ions can decrease HAT reactivity. If metal ions do effectively increase C-H bond strengths, this will certainly be a contributing factor to the free energy barrier. There will likely be additional factors such as polarization in the TS complex, or other effects of possible charge transfer from the substrate to metal ions. To investigate this, I have primarily studied HAT reactions involving DMA and oxygen-centred radicals. I was also interested in structural differences of the oxygen-centred radical, thus I have utilized the \bno and \cumo, which differ significantly in their ability to form strong pre-reaction complexes with hydrogen bond accepting substrates. Note that in this portion of the study, I was met with abundant technical difficulties related to optimizing TS structures including metal cations, and thus the scope of my results and discussion have been reduced.
 
+\jnote{Include chemdraw structures of susbtrates studied herein. Also, finish framing the important questions here.}
+
 
 
 I have also performed calculations with the bulkier DIA substrate to see if steric bulk does have an influence on the ability of a metal cation to effect HAT reactions.  These results
@@ -160,7 +162,7 @@ While performing CCSD(T)/CBS calculations, I noticed that the metal cations (and
   \label{fig:pes_metals}
 \end{figure}
 
-In order to perform complete basis set (CBS) extrapolation, the total energy of a molecule/atom should converge smoothly to the CBS limit.\cite{Truhlar1998} However,~\ref{fig:pes_metals} shows the poor basis set convergence of CCSD(T,Full)/aug-pc$N$ ($N$=1,2,3,4) calculations for alkali and alkaline earth-metals. The energy of each ion relative to the smallest basis set is shown. For \ch{Li^+} the value appears to converge reasonably, however this is expected as there are only 2 electrons in this ion. For all of \ch{Na^+}, \ch{Mg^{2+}}, \ch{K^+}, and \ch{Ca^{2+}}, there appears to be no convergence to the CBS limit as each line continues down linearly. This is problematic as it means that CBS extrapolation would result in a significant degree of uncertainty in the estimated CBS limit total energy.
+In order to perform complete basis set (CBS) extrapolation, the total energy of a molecule/atom should converge smoothly to the CBS limit.\cite{Truhlar1998} However,~\ref{fig:pes_metals} shows the poor basis set convergence of CCSD(T,Full)/aug-pc$N$ ($N$=1,2,3,4) calculations for alkali and alkaline earth-metals. The energy of each ion relative to the smallest basis set is shown. For \ch{Li^+} the value appears to converge reasonably, however this because there are only 2 electrons in this ion. For all of \ch{Na^+}, \ch{Mg^{2+}}, \ch{K^+}, and \ch{Ca^{2+}}, there appears to be no convergence to the CBS limit as each line continues down linearly. This is problematic as it means that CBS extrapolation would result in a significant degree of uncertainty in the estimated CBS limit total energy.
 
 The poor convergence was thought to be a result of poorly suited basis sets to full core-correlation. However, the same CCSD(T,Full) calculations using the core-correlation (cc-pCV$N$Z) basis sets as show unsatisfactory convergence for \ch{Na^+} and \ch{Mg^{2+}} (See Appendix~\ref{ap:hat}, ~\ref{fig:ap_pes_metals}). Therefore, I was tasked with finding a method which would give results which best approximate alkali and alkaline metal binding at the complete basis set limit. I decided to use an explicitly correlated CCSD(T) treatment known as ``F12$^*$'' to more rapidly approach the CBS limit.\cite{Tenno2012} I tested both the core-correlation consistent basis set developed for used with explicitly correlation (cc-pCV$X$Z-F12),\cite{Peterson2008} and the Ahlrich basis sets (Def2-SVP,-TZVPPD, and -QZVPPD).\cite{Rappoport2010} Both these basis sets combined with the CCSD(T,Full)-F12$^*$ methodology gave satisfactory convergence to the CBS limit for the sodium and magnesium ion (See Appendix ~\ref{ap:hat},~\ref{fig:ap_metals_explicit}) for the convergence of all metal ions calculated with the CCSD(T,Full-F12$^*$/Def2-QZVPPD method). Given that Def2-QZVPPD is available for almost every atom on the periodic table, and the observed convergence to the CBS limit, this basis set was selected for benchmark quality binding energies.
 
@@ -290,7 +292,7 @@ For both the ion and the salt of sodium, the binding interaction approaches zero
 \ch{DMA + Na^+ -> DMA^+ + Na} \quad &\Delta E = +4 \mathrm{eV}
 \end{align*}
 
-The ionization of DMA by \ch{Mg^2+} is favourable by about 6 eV, and unfavourable by \ch{Na+} by about 4 eV. Therefore, DFT-based methods will prefer to delocalize the charge between DMA and \ch{Mg^2+}, but not for \ch{Na+}. A possible resolution to this is to used a constrained DFT method which enables one to specify atomic occupancies,\cite{Melander2016} however this technique is not currently available in most common quantum chemical packages.
+The ionization of DMA by \ch{Mg^2+} is favourable by about 6 eV, and unfavourable by \ch{Na+} by about 4 eV. In a real system, magnesium ions exist invariably in the +2 oxidation state. DFT-based methods prefer to delocalize the charge, resulting in non-physical binding between DMA and \ch{Mg^2+}, but not for \ch{Na+}. A possible resolution to this is to used a constrained DFT method which enables one to specify atomic occupancies,\cite{Melander2016} however this technique is not currently available in most common quantum chemical packages.
 
 \begin{figure}[!htbp]
 \centering
@@ -312,27 +314,82 @@ The ionization of DMA by \ch{Mg^2+} is favourable by about 6 eV, and unfavourabl
 \label{fig:pes-dma-mg}
 \end{figure}
 
-The inclusion of MeCN and water solvent appear at first glance to alleviate this problem. Note however that both PESs cross over zero binding at about 3 \kcalmol\, indicating there is still delocalization. Additionally, for magnesium chloride in the gas-phase, there also appears to be delocalization error occuring, as evident by the PES crossing zero just below 4 \kcalmol. On the other hand, the inclusion of solvent with \ch{MgCl2} give reasonable PESs with a binding interaction of about 25 \kcalmol\ for both water and MeCN, and a tailing off at about 3 \AA. Therefore, the effects of magnesium on HAT reaction barrier may possibly using \ch{MgCl2}, however to avoid further complications, I have elected to focus only on sodium for future considerations.
+The inclusion of MeCN and water solvent appear at first glance to alleviate this problem. Note however that both PESs cross over zero binding at about 3 \kcalmol\, indicating there is still delocalization. Additionally, for magnesium chloride in the gas-phase, there also appears to be delocalization error occuring, as evident by the PES crossing zero just below 4 \kcalmol. On the other hand, the inclusion of either water or MeCN solvent with \ch{MgCl2} give reasonable PESs with a binding interaction of about 25 \kcalmol\ for both water and MeCN, and a tailing off at about 3 \AA, or slightly larger than the size of the first hydration shell of \ch{Mg^2+} (ca. 2\AA).\cite{Chatterjee2013} Therefore, the effects of magnesium on HAT reaction barrier may possibly using \ch{MgCl2}, however to avoid further complications, I have elected to focus only on sodium for future considerations.
 
-Next, I performed calculations to determine if the interaction of metal cations systematically increase the bond strengths of \ch{C-H} bonds by decreasing hyperconjugative overlap between neighbouring $\pi$-systems and \ch{C-H} $\sigma^*$ anti-bonding orbitals. The bond dissociation enthalpies (BDEs) and free energies (BDFEs) for several substrates in the presence of \ch{Na^+} and \ch{NaCl} are listed in~\ref{tab:bde-metal}.
+Next, I performed calculations to determine if the interaction of metal cations systematically increase the bond strengths of \ch{C-H} bonds by decreasing hyperconjugative overlap between neighbouring $\pi$-systems and \ch{C-H} $\sigma^*$ anti-bonding orbitals. The BDEs for several substrates in the presence of \ch{Na^+} and \ch{NaCl} are listed in~\ref{tab:bde-metal}. The ROCBS-QB3 BDEs for each of the susbtrates is included to demonstrate that the relative order of BDEs for substrates with multiple \ch{C-H} bonds is reasonable. The BDE for an arbitrary metal subtrate complex (\ch{M\bond{dotted}X-H}) can be calculated as:
+
+\begin{equation}
+BDE = E(\ch{M\bond{dotted}X^.}) + E(\ch{H^.}) - E(\ch{M\bond{dotted}X-H})
+\end{equation}
 
 \begin{table}[!htbp]
-  \caption[Bond dissociation enthalpies(free energies) of DMA, DMSO, MeCN, and DIA with and without metal cations.]{Bond dissociation enthalpies(free energies) of DMA, DMSO, MeCN, and DIA with \ch{Na^+}, \ch{NaCl}, and without metal cations (Bare) calulated at the M05-2X-SMD/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ level of theory. ROCBS-QB3 BDEs and BDFEs without metals are included for reference. All values are in \kcalmol.}
+  \caption[Bond dissociation enthalpies of DMA, DMSO, MeCN, and DIA with and without metal cations.]{Bond dissociation enthalpies of DMA, DMSO, MeCN, and DIA with \ch{Na^+}, \ch{NaCl}, and without metal cations (Bare) calulated at the M05-2X-SMD/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ level of theory. ROCBS-QB3 BDEs without metals are included for reference. All values are in \kcalmol.}
   \label{tab:bde-metal}
   \begin{tabular}{l c c c c}
     Substrate       & ROCBS-QB3   &    Bare    &\ch{Na+}    &\ch{NaCl}   \\
     \hline
-    DMA (acetyl)    & 99.5(91.3)  & 98.5(90.3) & 97.8(91.0) & 98.4(90.4) \\
-    DMA (cis)       & 93.9(86.0)  & 92.2(84.5) & 93.2(85.8) & 94.0(89.4) \\
-    DMA (trans)     & 92.3(84.3)  & 91.6(83.4) & 92.8(85.5) & 92.6(86.1) \\
-    DMSO            & 102.2(93.6) & 103.4(94.7)& 104.4(95.5)& 103.7(97.4)\\
-    MeCN            & 96.6(88.3)  & 97.4(89.1) & 98.3(89.9) & 98.1(89.8) \\
-    DIA (acetyl)    & 99.1(90.7)  & 97.8(89.0) & 97.5(89.1) & 97.7(88.9) \\
-    DIA ($\alpha$-cis)  & 96.6(87.9)  & 95.7(87.0) & 96.5(87.4) & 95.3(86.4) \\
-    DIA ($\beta$-cis)   & 97.9(88.1)  & 96.4(86.4) & 94.8(85.2) & 93.1(84.3) \\
-    DIA ($\alpha$-trans)& 93.1(84.7)  & 93.0(84.2) & 93.8(84.9) & 94.0(84.9) \\
-    DIA ($\beta$-trans) & 96.9(87.0)  & 95.3(85.4) & 95.5(85.3) & 95.5(85.3))
+    DMA (acetyl)    & 99.5 & 98.5 & 97.8 & 98.4 \\
+    DMA (cis)       & 93.9 & 92.2 & 93.2 & 94.0 \\
+    DMA (trans)     & 92.3 & 91.6 & 92.8 & 92.6 \\
+    DMSO            & 102.2 & 103.4 & 104.4 & 103.7 \\
+    MeCN            & 96.6 & 97.4 & 98.3 & 98.1 \\
+    DIA (acetyl)    & 99.1 & 97.8 & 97.5 & 97.7 \\
+    DIA ($\alpha$-cis)  & 96.6 & 95.7 & 96.5 & 95.3 \\
+    DIA ($\beta$-cis)   & 97.9 & 96.4 & 94.8 & 93.1 \\
+    DIA ($\alpha$-trans)& 93.1 & 93.0 & 93.8 & 94.0 \\
+    DIA ($\beta$-trans) & 96.9 & 95.3 & 95.5 & 95.5
   \end{tabular}
 \end{table}
 
-For DMA, the methyl groups cis and trans relative to the carbonyl are the weakest. The inclusion of \ch{Na^+} increases the cis BDE by 1.0 \kcalmol\ and the trans BDE by 1.2 \kcalmol. Surprisingly,
+For DMA, the $N$-methyl groups cis and trans relative to the carbonyl are the weakest and therefore most thermodynamically favourable. Furthermore, \citet{Salamone2013} showed that both \bno and \cumo prefer to abstract from the $N$-methyl groups of DMA, rather than the acetyl group. The inclusion of \ch{Na^+} increases the cis BDE by 1.0 \kcalmol\ and the trans BDE by 1.2 \kcalmol, while \ch{NaCl} increases the cis BDE by 1.8 \kcalmol\ and the trans BDE by 1.0 \kcalmol. From the NBO analysis, the average hyperconjugative weakening for the $N$-methyl \ch{C-H} bonds is 5.6 and 5.9 \kcalmol for the cis and trans positions, respectively. The inclusion of \ch{Na^+} decreases the weakening to the 3.7 and 4.1 \kcalmol, while \ch{NaCl} decreases the weakening to 5.4 and 5.5 \kcalmol\ for the cis and trans posistions respectively. Therefore, the decrease in bond strengthing effect in going from \ch{Na^+} to \ch{NaCl} does not fully reflect the change in hyperconjugative bond weakening. The differences can be ascribed to effects from charge transfer which differentially stabilize the parent and radical complexes of DMA. Additionally the calculated cis-DMA BDE increases with \ch{NaCl}, which is due an destabilizing hydrogen-bond like interaction between the \ch{Cl^-} and the acetyl methyl group of the cis-methyl radical of DMA. \ref{fig:dma-na-cl}a-d shown the structures of DMA-NaCl and the three radicals, and it can be seen in~\ref{fig:dma-na-cl}c that the cis radical complex is the only strucuture with an interaction between DMA and \ch{Cl^-}. One possible reason for this difference is a stronger repulsive interaction between the cis radical and the \ch{Cl^-}, as compared to the other radicals.
+
+\begin{figure}[!htbp]
+	\centering
+
+	\subfigure[DMA-NaCl]{
+		\includegraphics[width=4cm]{figures/dma-na-cl}
+	}
+  \subfigure[Acetyl radical]{
+		\includegraphics[width=4cm]{figures/dma-na-cl-acetyl}
+	}
+  \subfigure[Cis radical]{
+    \includegraphics[width=6cm]{figures/dma-na-cl-cis}
+  }
+  \subfigure[Trans radical]{
+    \includegraphics[width=4cm]{figures/dma-na-cl-trans}
+  }
+
+	\caption[Structures of the DMA-NaCl complex and associated radical complexes.]{Structures of \textbf{a} the DMA-NaCl complex, \textbf{b} the DMA-NaCl acetyl radical complex, \textbf{c} the DMA-NaCl cis radical complex, and \textbf{d} the DMA-NaCl trans radical complex. Key interaction distances are shown in units of \AA. Element color key: white is carbon, light blue is hydrogen, red is oxygen, blue is nitrogen, purple is sodium, and yellow is chlorine.}
+	\label{fig:dma-na-cl}
+\end{figure}
+
+Interestingly, the predicted BDE for the acetyl radical of DMA decreases with both \ch{Na^+} and \ch{NaCl}. This can be attributed to the change in electronic structure associated with complexation. Consider the two possible resonance forms of DMA shown in ~\ref{fig:dma-res}. Normally, the two forms contribute roughly equally to the overall electronic structure of DMA so that there is a net bond order of 1.5 between the C and O and the C and N. The complexation of DMA to \ch{Na^+} slightly increases the contribution of the zwitterionic form, resulting in a decrease in electron density at the carbonyl carbon. This is evidenced by the increase in NPA charge at the carbonyl from +0.72 in DMA to +0.74 in the DMA-\ch{Na^+} complex. The positively-charged carbon centre inductively withdraws electron density, stabilizing the acetyl radical and decreasing the effective BDE. The amidic nitrogen becomes net more positive, but still has an NPA charge which is negative, and so there is no inductive stabilization effect for the $N$-methyl radicals.
+
+\begin{figure}[!htpb]
+  \centering
+  \includegraphics[width=0.7\textwidth]{figures/DMA-resonance.eps}
+  \caption{The resonance forms of DMA.}
+  \label{fig:dma-res}
+\end{figure}
+
+For MeCN and DMSO the complexation of either \ch{Na^+} or \ch{NaCl} results in a decrease in \ch{C-H} BDE. In MeCN, the hyperconjugative overlap between the \ch{C+N} $\pi$-system and the \ch{C-H} $\sigma^*$ anti-bonding orbital decreases as a result of the interaction between \ch{Na^+} and the nitrogen centre. DMSO has a non-Lewis structure, however there is normally a nominal hyperconjugative overlap between the sulphur centre and the \ch{C-H} $\sigma^*$ anti-bonding orbitals. This overlap decreases as a result of the interaction of \ch{Na^+} with the oxygen-centre of DMSO.
+
+Upon complexation of \ch{Na+} of \ch{NaCl}, the BDEs of the more sterically bulky amide substrate DIA follow the same trend that is observed as for DMA: The acetyl \ch{C-H} BDE decreases due to inductive stabilization, while the \ch{C-H} bonds $\alpha$ to the amidic nitrogen centre increase as a result of decreased hyperconjugative overlap. Alkoxyl radicals are not expected to abstract from \ch{C-H} bonds $\beta$ to the nitrogen centre in DIA or other longer chain $N$-alkyl amides, as the incipient radical is not stabilized by amidic $\pi$-system. Note however that due to steric repulsion, the $\alpha$-radicals of DIA cannot lie directly in the $\pi$-plane. As such the $\alpha$-\ch{C-H} BDEs of DIA are greater than those of DMA, and are closer to the $\beta$-\ch{C-H} BDEs than perhaps expected. The effects of sodium binding to the amidic oxygen are almost nill for the $\beta$-trans C-H bond of DIA, however there is a significant decrease in the $\beta$-cis \ch{C-H} BDE. Figure~\ref{fig:dia-na-cl}a,b shows the structures of the DIA-NaCl complex and the $\beta$-cis radical complex, where it can seen that the metal cation interacts with both the oxygen-centre and the carbon-centred radical. This interaction stabilizes the radical complex and thus decrease the effective BDE.
+
+\begin{figure}[!htbp]
+	\centering
+
+	\subfigure[DIA-NaCl]{
+		\includegraphics[width=4cm]{figures/dia-na-cl}
+	}
+  \subfigure[Acetyl radical]{
+		\includegraphics[width=4cm]{figures/dia-na-cl-rad-b}
+	}
+
+  \caption[Structures of the DIA-NaCl complex and radical complex.]{Structures of \textbf{a} the DMA-NaCl complex, \textbf{b} the DIA-NaCl $\beta$-cis radical complex. Key interaction distances are shown in units of \AA. Element color key: white is carbon, light blue is hydrogen, red is oxygen, blue is nitrogen, purple is sodium, and yellow is chlorine.}
+	\label{fig:dia-na-cl}
+\end{figure
+
+All of these results together confirm that specific metal-substrate interactions can increase the effect BDEs of abstractable \ch{C-H} bonds by decreasing hyperconjugative overlap. However, this is complicated by the possibility for secondary interactions between the metal or counter-anion. Furthermore, additional factors such as induction can alter the effects. It appears that for \ch{C-H} bonds $\alpha$ to electron-rich species which hyperconjugatively overlap with the $\sigma^*$ anti-bonding orbital, the complexation of non-redox active metals increases the effective \ch{C-H} bond strength. However, if the \ch{C-H} bond is adjacent to an electron-poor centre, such as the carbon of a carbonyl, metal complexation actually decreases the bond strength slightly. In the context of HAT reaction barrier heights, increasing the effective \ch{C-H} bond strength should decrease the reaction-rate slightly by destabilizing the TS complex. However, there are other important factors to consider such as polarity in the TS complex.
+
+\section{HAT reactions including }
