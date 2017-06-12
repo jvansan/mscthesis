@@ -245,32 +245,48 @@
 
 ### Reactions of DMA w/ RO*
 
-* Full reaction coordinates including metals cations were not successful in many cases
-  - Optimizations including metal cations failed
-* Present mostly data including NaCl (and others where applicable)
-
 * DMA w/ CumO and BnO studied in \cite{Salamone2013}
   - BnO described as having being kinetically limited by formation of strong pre-reaction complex w/ $\alpha$-C-H of BnO
     + $k_H'$ is unimolecular and dominant for cis-N-methyl where $\Delta G^\ddagger$ = 5.7 kcal/mol ($5.4 \times 10^8 s^{-1}$)
   - CumO has non-specific binding due to lack of hydrogen bond donation group but increased dispersion interactions w/ methyl groups
+
 <center>
 
 ![Previously calculated data for DMA w/ CumO and BnO](../figures/dma-ro-calc.png)
 
-|   Reaction   |  Abstraction Site   |  $\Delta G^\ddagger$ |  $\Delta \Delta G^\ddagger$ |
+|   Reaction   |  Abstraction Site   |  $\Delta G(H)^\ddagger$ |  $\Delta \Delta G(H)^\ddagger$ |
 |--------------|---------------------|----------------------|-----------------------------|
-|  DMA + CumO  |  trans              |  17.3                |                             |
-|              |  cis                |  17.5                |                             |
-|              |  acetyl             |  21.6                |                             |
-|DMA-Na-Cl+CumO|  trans              |  20.3                |    3.0                      |
-|              |  cis                |  18.4                |    0.9                      |
-|              |  acetyl             |  21.0                |   -0.6                      |
-|  DMA + BnO   |  trans              |  16.5                |                             |
-|              |  cis                |  17.5                |                             |
-|              |  acetyl             |  20.8                |                             |
-|DMA-Na-Cl+BnO |  trans              |  18.6                |    2.1                      |
-|              |  cis                |  17.8                |    0.3                      |
-|              |  acetyl             |  22.0                |    1.2                      |
+|  DMA + CumO  |  trans              |  17.3(3.4)           |                             |
+|              |  cis                |  17.5(3.8)           |                             |
+|              |  acetyl             |  21.6(7.5)           |                             |
+|DMA-Na-Cl+CumO|  trans              |  20.3(3.7)           |    3.0(0.3)                 |
+|              |  cis                |  18.4(1.2)           |    0.9(-2.6)                |
+|              |  acetyl             |  21.0(4.3)           |   -0.6(-3.2)                |
+|  DMA + BnO   |  trans              |  16.5(3.7)           |                             |
+|              |  cis                |  17.5(3.6)           |                             |
+|              |  acetyl             |  20.8(7.8)           |                             |
+|DMA-Na-Cl+BnO |  trans              |  18.6(1.7)           |    2.1(-2.0)                |
+|              |  cis                |  17.8(4.7)           |    0.3(1.1)                 |
+|              |  acetyl             |  22.0(4.7)           |    1.2(-3.1)                |
+
+
+
+#### Full RXN coordinates into Appendix
+DMA-BnO
+
+![DMA-BnO](../figures/dma-bno.png)
+
+DMA-BnO-NaCl
+
+![DMA-BnO-NaCl](../figures/dma-bno-nacl.png)
+
+DMA-CumO
+
+![DMA-CumO](../figures/dma-cumo.png)
+
+DMA-CumO-NaCl
+
+![DMA-CumO](../figures/dma-cumo-nacl.png)
 
 </center>
 
@@ -287,3 +303,91 @@
     + Na-Cl interacting with aromatic ring in TS (only case where this happens)
       * Stretches Na--O interaction and may decreases effect
       * Could be calculation error - unable to isolate another TS structure
+
+* DMA w/ HO* experimentally studies in 1970\cite{Hayon1970}
+  - On basis of UV-Vis ~90% of abstraction takes place from N-methyl sites
+  - $k_H = 3.5 \times 10^9 M^{-1}s^{-1}$ in Water by pulse radiolysis expt.
+  - Snelgrove-Ingold equation \cite{Snelgrove2001} gives estimated kH in MeCN
+    + alpha DMA = 0.73, beta H2O = 0.38, beta MeCN = 0.44 \cite{Abraham2010}
+    + H2O: log(3.5E9) = X - 8.3*0.73*0.38 --> X = 12.846
+    + MeCN: Y = 12.846 - 8.3*0.73*0.44 --> Y = 10.181 --> kH = 1.5E10
+  - HO* ~100x faster reaction than BnO and 10000x faster reaction than CumO
+    + Only frozen TS structures for DMA+OH -> contain one imaginary frequency :. proper TS structures
+
+  |   Reaction   |  Abstraction Site   |  $\Delta G(H)^\ddagger$ |  $\Delta \Delta G(H)^\ddagger$ |
+  |--------------|---------------------|----------------------|-----------------------------|
+  |  DMA + HO    |  trans              |  8.9(0.0)            |                             |
+  |              |  cis                |  7.9(-2.7)           |                             |
+  |              |  acetyl             |  9.9(0.5)            |                             |
+  |DMA-Na-Cl+HO  |  trans              |             |                    |
+  |              |  cis                |             |                    |
+  |              |  acetyl             |             |                    |  
+
+
+### Reactions of DIA w/ RO*
+
+|   Reaction   |  Abstraction Site   |  $\Delta G^\ddagger$ |  $\Delta \Delta G^\ddagger$ |
+|--------------|---------------------|----------------------|-----------------------------|
+|  DIA + CumO  |  alpha-trans        |  22.3                |                             |
+|              |  alpha-cis          |  19.1                |                             |
+|              |  acetyl             |  19.1                |                             |
+|              |  beta-trans         |  18.6                |                             |
+|              |  beta-cis           |  18.4                |                             |
+|DIA-Na-Cl+CumO|  alpha-trans        |                  |                             |
+|              |  alpha-cis          |                  |                             |
+|              |  acetyl             |                  |                             |
+|              |  beta-trans         |                  |                             |
+|              |  beta-cis           |                  |                             |
+|  DIA + BnO   |  alpha-trans        |  20.4                |                             |
+|              |  alpha-cis          |  18.6                |                             |
+|              |  acetyl             |  19.8                |                             |
+|              |  beta-trans         |  15.9                |                         |
+|              |  beta-cis           |  19.1                |                         |
+|DIA-Na-Cl+BnO |  alpha-trans        |                  |                             |
+|              |  alpha-cis          |                  |                             |
+|              |  acetyl             |                  |                             |
+|              |  beta-trans         |                  |                             |
+|              |  beta-cis           |                  |                             |
+
+### Reactions of DMSO w/ RO*
+
+<center>
+
+|   Reaction   | Orientation|  $\Delta G(H)^\ddagger$ |  $\Delta \Delta G(H)^\ddagger$ |
+|--------------|------------|----------------------|-----------------------------|
+|  DMSO + CumO | Open       |  20.9(8.9)           |                             |
+|DMSO-NaCl+CumO| Cisoid     |  22.4(5.2)           |  1.5(-3.7)                  |
+| DMSO + BnO   | ALT        |  10.4(-2.2)          |                             |
+| DMSO-NaCl+BnO| ALT        |  13.4(-3.4)          |  2.0(-1.2)                  |
+| DMSO + BnO   | Cisoid     |  22.7(10.4)          |                             |
+| DMSO-NaCl+BnO| Cisoid     |  22.1(7.8)           |                             |
+
+DMSO-CumO (red = NaCl)
+
+![DMSO-CumO](../figures/dmso-cumo.png)
+
+DMSO-BnO (red = NaCl)
+
+</center>
+
+### Reactions of HMPA w/ RO*
+
+* Alt reaction won't happen b/c products too high in energy even though TS is lower in energy
+
+|   Reaction   |  $\Delta G^\ddagger$ |  $\Delta \Delta G^\ddagger$ |
+|--------------|----------------------|-----------------------------|
+|  HMPA + CumO |  17.4                |                             |
+|HMPA-NaCl+CumO|                  |                             |
+|  HMPA + BnO  |  16.0                |                             |
+|HMPA-NaCl+BnO |                  |                             |
+
+### Reactions of TBPO w/ RO*
+
+* Alt reaction won't happen b/c products too high in energy even though TS is lower in energy
+
+|   Reaction   |  $\Delta G^\ddagger$ |  $\Delta \Delta G^\ddagger$ |
+|--------------|----------------------|-----------------------------|
+|  TBPO + CumO |  20.1                |                             |
+|TBPO-NaCl+CumO|                  |                             |
+|  TBPO + BnO  |  19.0                |                             |
+|TBPO-NaCl+BnO |                  |                             |
