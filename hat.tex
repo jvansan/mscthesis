@@ -28,8 +28,7 @@ A great deal of research has focussed on \ch{Ca^{2+}} in the context of reactive
 
 Given the significant importance alkali and alkaline earth metals play in biological systems, their impact on protein oxidation must be considered. However, until recently, kinetic studies of protein oxidation have not investigated the mechanistic role of non-redox active metals. In a series of three papers,\cite{Salamone2013a, Salamone2015metals, Salamone2016} Bietti and colleagues have shown that alkali and alkaline earth metals have an inhibitory effect on HAT reactions involving \cumo\ and organic substrates. Some of the experimental rate constants from these papers are summarized in~\ref{tab:hat-metals}. All rate constants were obtained by time-resolved LFP in nitrogen or argon-saturated acetonitrile (MeCN) at 298 K, as was previously described in Section~\ref{sec:hat-methods}. All of the experimental results have been rationalized on the basis of Lewis acid metals cations interactions with Lewis basic substrates.
 
-\bgroup
-\def\arraystretch{1.2}%  1 is the default, change whatever you need
+
 \begin{table}
   \caption{Summary of rate constants for reactions of \cumo\ with various organic substrates in the presence of alkali and alkaline earth methal salts.}
   \label{tab:hat-metals}
@@ -66,7 +65,6 @@ Given the significant importance alkali and alkaline earth metals play in biolog
       & \ch{Ca(ClO4)2} 0.2 M & $k_{H1}$ = 1.2\E{6} & 1.0
   \end{tabular}
 \end{table}
-\egroup
 
 Firstly, for hydrocarbons, cyclic ethers, and tertiary amines, \cumo\ hydrogen abstraction rate constants in the presence of excess concentrations of lithium and magnesium salts were measured.\cite{Salamone2013a} In the presence of \ch{LiClO4} and \ch{Mg(ClO4)2}, the rate of abstraction by \cumo\ from 1,4-cyclohexadiene (CHD) increases very slightly. Since CHD has no Lewis basic centres, the increase in HAT rate constant was explained on the basis of metal cation interactions with \cumo, very slightly increasing the hydrogen abstraction ability by withdrawing electron density from the aromatic ring. Metal cations were also shown to increase the unimolecular decay of \cumo\ by $\beta$-scission (See Section~\ref{sec:hat-methods}). The largest kinetic effect was observed with \ch{LiClO4} with $k_\beta$ = 1.8\E{6} $s^{-1}$, which is a
 roughly 3-fold increase as compared to the rate in MeCN at 298 K ($k_\beta$\cite{Avila1995} = 6.3\E{5} $s^{-1}$). This effect is significantly less than the observed kinetic solvent effect on \cumo\ $\beta$-scission measured in \ch{H2O} or 2,2,2-trifluoroethanol ($k_\beta$ = 1.0\E{7} and 6.1\E{6} $s^{-1}$, respectively).\cite{Bietti2005, Neta1984} Therefore, the kinetic effects of these alkali and alkaline metal salts interacting via Lewis acid-base interactions with the oxygen-centre of \cumo\ are less than the effects of hydrogen-bonding by solvents.
@@ -131,7 +129,7 @@ All quantum mechanical calculations were performed using either the Gaussian 09 
 
 To test the effects of metal cations on HAT barrier heights, calculations were first performed for the reactions not involving metal cations. Geometry optimizations were performed at the M05-2X\cite{Zhao2006}/6-31+G$^{**}$ level of theory. Transition state (TS) structures were obtained by first freezing the abstraction donor-hydrogen-acceptor bond lengths with multiple initial orientations. The frozen bonds were then relaxed to obtain the final TS structures, which were then used to identify the appropriate pre- and post-reaction complexes. All structures were subjected to harmonic vibrational frequency calculations, which were visualized using the Chemcraft program\cite{ccraft} to verify minima (or saddle-points with a single imaginary frequency connecting reactants to products for TS structures). Single-point energy calculations were performed at the M05-2X/6-311+G(2d,2p) level of theory. The effects of MeCN solvent were estimated by inclusion of the SMD\cite{Marenich2009} continuum solvent model in single-point energy calculations.
 
-The inclusion of metal cations into the TS structures proved to be technically challenging. It was my expectation that I could simply include metal cations and necessary counter-anions into the minimum energy complex structures and re-optimize, however this was not the case. TS structures were once again obtained by constrained optimization with the inclusion of the metal cation and counter-anion and freezing the abstraction donor-hydrogen-acceptor bond lengths, providing a guess TS structure. However, in most cases the force constants (which are necessary for a TS optimization calculation) from the guess TS structure were not representative of the true TS structure, thus force constants were recalculated for every step along the optimization, using the ``CalcAll'' keyword in Gaussian. This is a very computationally expensive procedure. Even using this method, many TS structures including metal cations failed to converge. Therefore, guess TS structures which contain a single imaginary frequency connecting reactants to products are used in place. This technique provides genuine TS structures, although they may not be the most stabile TS structure. Nonetheless, the guess TS structure can be used provide an estimate of the reaction barrier height. Where available final TS structures were used to identify the appropriate pre- and post-reaction complexes.
+The inclusion of metal cations into the TS structures proved to be technically challenging. It was my expectation that I could simply include metal cations and necessary counter-anions into the minimum energy complex structures and re-optimize, however this was not the case. TS structures were once again obtained by constrained optimization with the inclusion of the metal cation and counter-anion and freezing the abstraction donor-hydrogen-acceptor bond lengths, providing a guess TS structure. However, in most cases the force constants (which are necessary for a TS optimization calculation) from the guess TS structure were not representative of the true TS structure, thus force constants were recalculated for every step along the optimization, using the ``CalcAll'' keyword in Gaussian. This is a very computationally expensive procedure. Even using this method, many TS structures including metal cations failed to converge. Therefore, guess TS structures which contain a single imaginary frequency connecting reactants to products are used in place. This technique provides genuine TS structures, although they may not be the most stabile TS structure. Nonetheless, the guess TS structure can be used provide an estimate of the reaction barrier height which are verified with calculations that were successful. Where available final TS structures were used to identify the appropriate pre- and post-reaction complexes.
 
 Natural bond order (NBO) and natural population analysis (NPA) were utilized in order to investigate the electronic structures involved in the HAT reactions and the effects of metal cation binding.\cite{Reed1983, Reed1985, Glendening2012} Version 3.1 of the NBO software package,\cite{NBO3} as implemented in the Gaussian 09 package was used in all cases.\cite{Frisch2009} NBO analysis provides a means for estimating the physical effects of chemically intuitive orbital interactions while NPA charges are a reliable means for calculating the occupancies and charges of atomic centres.\cite{Landis2014, Weinhold2016}
 
@@ -230,7 +228,7 @@ B97\cite{Becke1997}D3\cite{Grimme2010} &  1.50/0.47 &  5.94/-2.19  &  1.69/-1.37
 $\omega$B97\cite{Chai2008a} &  0.61/0.23 &  2.13/-1.72  &  1.41/-0.97 &  1.78/-7.57 \\
 $\omega$B97XD\cite{Chai2008} &  1.12/-0.94 &  1.02/-4.52  &  2.24/-2.21 &  0.65/-8.64 \\
 HSEH1PBE\cite{Heyd2004, Heyd2005} &  1.30/1.29 &  4.28/-0.16  &  1.23/-0.23 &  3.45/-6.95 \\
-B3LYP-D3(BJ)\cite{Grimme2010, Johnson2006} &  2.86/2.86 &  7.50/ 0.34  &  1.92/1.34 &  7.05/-4.33 \\
+B3LYP-D3(BJ)\cite{Grimme2010, Jis consistent with the observed increase in BDE of about ohnson2006} &  2.86/2.86 &  7.50/ 0.34  &  1.92/1.34 &  7.05/-4.33 \\
 BLYP-D3(BJ)       &  2.89/2.88 &  8.40/-0.14  &  1.83/1.06 &  8.14/-5.30 \\
 B3PW91-D3(BJ)     &  1.47/1.40 &  5.81/-0.44  &  1.02/-0.14 &  3.88/-5.69 \\
 BMK-D3(BJ)        &  1.03/0.80 &  4.05/-1.06  &  1.02/-0.43 &  2.03/-5.49 \\
@@ -399,12 +397,10 @@ Hydrogen abstraction reactions involving the oxygen-centred radicals \bno\ and \
 
 Herein, I have calculated the reaction barrier heights for all three abstractable positions of DMA for HAT reactions involving \cumo\ and \bno, both with and without \ch{NaCl}. These data are summarized in~\ref{tab:DMA-dG}. The free energy barriers calculated at the M05-2X-SMD(MeCN)/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ are systematically higher than those previously calculated by about 8.5 \kcalmol.\cite{Salamone2013} The reason for this is unclear, given that M05-2X has previously been used successfully to calculate accurate HAT rate constants.\cite{Galano2013} However, the relative ranking and energies for the reaction barrier heights for the different \ch{C-H} bonds are appropriate. Therefore, although these results cannot be used to predict rate constants, they are useful for studying the change in barrier height due to the addition of NaCl.
 
-\bgroup
-\def\arraystretch{1.2}%  1 is the default, change whatever you need
 \begin{table}[!htbp]
-\caption[Calculated free energy (enthalpy) for direct HAT from different \ch{C-H} bonds in DMA by \cumo and \bno, with and without \ch{NaCl}.]{Calculated free energy (enthalpy) ($\Delta G(H)^\ddagger$, \kcalmol) for direct HAT from different \ch{C-H} bonds in DMA by \cumo and \bno, with and without \ch{NaCl}. The change barrier height is calculated relative to the same abstraction site without the inclusion of \ch{NaCl}. All barrier heights are relative to separated reactants and were calculated at the M05-2X-SMD(MeCN)/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ level of theory.}
+\caption[Calculated free energy (enthalpy) for direct HAT from different \ch{C-H} bonds in DMA by \cumo\ and \bno, with and without \ch{NaCl}.]{Calculated free energy (enthalpy) ($\Delta G(H)^\ddagger$, \kcalmol) for direct HAT from different \ch{C-H} bonds in DMA by \cumo\ and \bno, with and without \ch{NaCl}. The change barrier height is calculated relative to the same abstraction site without the inclusion of \ch{NaCl}. All barrier heights are relative to separated reactants and were calculated at the M05-2X-SMD(MeCN)/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ level of theory.}
 \label{tab:DMA-dG}
-\begin{tabular}{l l c c}
+  \begin{tabular}{l l c c}
 Reaction   & Abstraction Site &  $\Delta G(H)^\ddagger$ & $\Delta\Delta G(H)^\ddagger$ \\
 \hline
 DMA + \cumo   &  trans              &  17.3(3.4)           &              \\
@@ -419,6 +415,29 @@ DMA + \bno    &  trans              &  16.5(3.7)           &              \\
 DMA-NaCl + \bno &  trans              &  18.6(1.7)         &    2.1(-2.0) \\
               &  cis                &  17.8(4.7)           &    0.3(1.1)  \\
               &  acetyl             &  22.0(4.7)           &    1.2(-3.1)
-\end{tabular}
+  \end{tabular}
 \end{table}
-\egroup
+
+Focussing first on the barrier heights for HAT between DMA and \cumo, the results of complexation with \ch{NaCl} is variable. For each of the acetyl, cis, and trans \ch{C-H} bond positions of DMA, there are three different effects upon complexation of \ch{NaCl}. For the trans position, both the free energy and enthalpic barriers increase, for the cis position the free energy barrier increases and the enthalpic barrier decreases, and for the acetyl position both the free energy and enthalpic barriers decrease. The reason for this relies on examining the TS structures, which are shown in~\ref{fig:dma-cumo-ts}a-c.
+
+\begin{figure}
+  \centering
+
+  \subfigure[Trans DMA-NaCl + \cumo]{
+		\includegraphics[width=5cm]{figures/dma-nacl-cumo-trans}
+	}
+  \subfigure[Cis DMA-NaCl + \cumo]{
+		\includegraphics[width=5cm]{figures/dma-nacl-cumo-cis}
+	}
+
+  \subfigure[Acetyl DMA-NaCl + \cumo]{
+    \includegraphics[width=5cm]{figures/dma-nacl-cumo-acetyl}
+  }
+
+  \caption[TS structures of HAT reaction between DMA and \cumo\ including NaCl.]{TS structures of HAT reaction between DMA and \cumo\ including NaCl for different \ch{C-H} bonds: \textbf{a} trans, \textbf{b} cis, and \textbf{c} acetyl. Key interatomic distances are shown in units of \AA. Element color key: white is carbon, light blue is hydrogen, red is oxygen, blue is nitrogen, purple is sodium, yellow is chlorine, and orange is a dummy atom in the centre of an aromatic ring.}
+  \label{fig:dma-cumo-ts}
+\end{figure}
+
+For the TS structure representing abstraction from the trans position \ch{C-H} bond of DMA by \cumo\ (\ref{fig:dma-cumo-ts}a), there is a calculated 0.3 \kcalmol\ increase in $\Delta H^\ddagger$ which is somewhat less than the predicted increase in BDE of 1.0 \kcalmol. This difference can be ascribed as due to the effect of charge transfer: NPA indicates a 0.04 $e^-$ transfer from DMA to \ch{Na^+}. Furthermore, TSs for HAT between \ch{C-H} bond and oxygen-centred radicals are characterized by a degree of charge separation.\cite{Roberts1999} NPA indicates that in the trans position TS structure excluding \ch{NaCl} the charge separation is 0.24 $e^-$, but the charge separation increases with the inclusion of \ch{NaCl} to 0.26 $e^-$. This increased charge separation results in a lower enthlapic barrier than expected solely on the basis of the increase in \ch{C-H} BDE as a consequence of increasing the proton-transfer like character associated with charge separation. The increase in $\Delta G^\ddagger$ is 3.0 \kcalmol, indicating that the complexation of metal cations increases the entropic penalty in forming the TS structure, or in other words the TS is ``tighter'' than in the absence of metal cations.
+
+In abstraction of the cis position \ch{C-H} bond of DMA by \cumo, there is a calculated 2.6 \kcalmol\ decrease in $\Delta H^\ddagger$ and an increase of 0.9 \kcalmol\ in $\Delta G^\ddagger$. The decrease in enthalpic barrier is inconsistent with the predicted increase in BDE of 1.8 \kcalmol\ upon complexation with \ch{NaCl}. The TS structure in~\ref{fig:dma-cumo-ts}b shows a possible long range interaction between \ch{Na^+} and the aromatic ring of \cumo. Additionally, NPA reveals a 0.07 $e^-$ charge transfer between DMA and \ch{Na^+}. The comibination of these two factors stabilizes the TS and decreases $\Delta H^\ddagger$. It is only the entropic penalty associated with complexation of \ch{NaCl} which results in an increase in free energy barrier.
