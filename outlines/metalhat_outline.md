@@ -292,7 +292,7 @@ DMA-NaCl-BnO Cis TS --> pi--M + M--alpha-CH
 
 ![DMA-NaCl-Cumo Cis TS](../figures/dma-nacl-bno-cis.png)
 
-DMA-NaCl-BnO Trans TS --> pi--M 
+DMA-NaCl-BnO Trans TS --> pi--M
 
 ![DMA-NaCl-Cumo Trans TS](../figures/dma-nacl-bno-trans.png)
 
@@ -353,20 +353,20 @@ DMA-CumO-NaCl
 
 ### Reactions of DIA w/ CumO* (# = freeze TS)
 
-|   Reaction   |  Abstraction Site   |  $\Delta G^\ddagger$ |  $\Delta \Delta G^\ddagger$ |
+|   Reaction   |  Abstraction Site   |  $\Delta G(H)^\ddagger$ |  $\Delta \Delta G(H)^\ddagger$ |
 |--------------|---------------------|----------------------|-----------------------------|
-|  DIA + CumO  |  alpha-trans        |  22.3                |                             |
-|              |  alpha-cis          |  19.1                |                             |
-|              |  acetyl             |  19.1                |                             |
-|              |  beta-trans         |  18.6                |                             |
-|              |  beta-cis           |  18.4                |                             |
-|DIA-Na-Cl+CumO|  alpha-trans        |                  |                             |
-|              |  alpha-cis          |                  |                             |
-|              |  acetyl#            |  17.8(3.8)       |                             |
-|              |  acetyl             |                  |                             |
-|              |  beta-trans         |                  |                             |
-|              |  beta-cis           |                  |                             |
-
+|  DIA + CumO  |  alpha-trans        |  22.3(9.4)           |                             |
+|              |  alpha-cis          |  19.1(5.4)           |                             |
+|              |  beta-trans         |  18.6(6.0)           |                             |
+|              |  beta-cis           |  18.4(6.5)           |                             |
+|              |  acetyl             |  19.1(7.4)           |                             |
+|DIA-Na-Cl+CumO|  alpha-trans#       |  17.0(3.9)           |   -5.3(-5.5                 |
+|              |  alpha-cis#         |  12.7(-2.4)          |   -6.4(-7.8)                |
+|              |  beta-trans         |  19.8(6.8)           |    0.7(1.4)                 |
+|              |  beta-trans#        |  19.6(6.9)           |    0.5(1.5)                 |
+|              |  beta-cis#          |  16.8(4.2)           |   -1.6(-2.3)                |
+|              |  acetyl#            |  17.8(3.8)           |    0.8(-0.1)                |
+|              |  acetyl             |  17.9(3.7)           |    0.9(-0.2)                |
 
 ### Reactions of DMSO w/ RO*
 

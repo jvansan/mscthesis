@@ -228,7 +228,7 @@ B97\cite{Becke1997}D3\cite{Grimme2010} &  1.50/0.47 &  5.94/-2.19  &  1.69/-1.37
 $\omega$B97\cite{Chai2008a} &  0.61/0.23 &  2.13/-1.72  &  1.41/-0.97 &  1.78/-7.57 \\
 $\omega$B97XD\cite{Chai2008} &  1.12/-0.94 &  1.02/-4.52  &  2.24/-2.21 &  0.65/-8.64 \\
 HSEH1PBE\cite{Heyd2004, Heyd2005} &  1.30/1.29 &  4.28/-0.16  &  1.23/-0.23 &  3.45/-6.95 \\
-B3LYP-D3(BJ)\cite{Grimme2010, Jis consistent with the observed increase in BDE of about ohnson2006} &  2.86/2.86 &  7.50/ 0.34  &  1.92/1.34 &  7.05/-4.33 \\
+B3LYP-D3(BJ)\cite{Grimme2010, Johnson2006} &  2.86/2.86 &  7.50/ 0.34  &  1.92/1.34 &  7.05/-4.33 \\
 BLYP-D3(BJ)       &  2.89/2.88 &  8.40/-0.14  &  1.83/1.06 &  8.14/-5.30 \\
 B3PW91-D3(BJ)     &  1.47/1.40 &  5.81/-0.44  &  1.02/-0.14 &  3.88/-5.69 \\
 BMK-D3(BJ)        &  1.03/0.80 &  4.05/-1.06  &  1.02/-0.43 &  2.03/-5.49 \\
@@ -239,7 +239,8 @@ PBE0-D3(BJ)       &  1.92/1.92 &  5.37/ 0.20  &  1.33/0.40 &  4.47/-5.74 \\
 PBE-D3(BJ)        &  2.24/2.23 &  7.57/-0.22  &  1.44/0.30 &  5.90/-6.67 \\
 TPSS-D3(BJ)       &  2.03/1.99 &  6.93/-0.30  &  1.25/0.06 &  4.56/-6.03
 \end{longtable}
-\let\LTleft\undefined
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
 
 Given the magnitude of the binding energies, the overall agreement between the benchmark values and the DFT-based method values with both moderate and large basis sets is very good. Interestingly, the application of the empirical D3(BJ) dispersion correction systematically decreases agreement with benchmark values as it increases over-binding. Also, going from moderate to large basis sets systematically increases the predicted binding energies, as indicated by an increase in MSE across the board. I chose three of the best performing methods (BMK-D3(BJ), TPSS-D3(BJ), and M05-2X) and performed geometry optimizations with moderate basis sets on the benchmark structures to determine if the choice of method would significantly impact the minimum energy bound structure. These results are listed in~\ref{tab:ccsd-metal-opt}.
 
@@ -260,7 +261,7 @@ For all the three methods tested, the average of the root mean square deviations
 
 The first step to understanding the effect non-redox active metal have on HAT reaction barrier heights is investigating the nature of the binding interaction. \ref{fig:pes-dma-na}A,B show the potential energy surfaces (PESs) of the binding of sodium ion, and sodium chloride to DMA, respectively. There are three surfaces in each plot representing the same potential energy surface in the gas-phase (black circles), and in a continuum solvent field of (grey squares) or water (white circles). For both sodium ion and sodium chloride, the gas-phase PES demonstrates severe over-binding with respect to a realistic system. This is indicated by a much deeper well than both solvents and a long range interaction that does not tail off within a reasonable distance. This simply underscores the importance of including solvent effects in studying the effects of metal cations. Intestingly, for the effects of differnt solvent appears to be quite small. In both cases the difference between the mininum of the water PES is about 2.5 \kcalmol, while the differences in range of interaction is neglible. Furthermore, the minimum of the PES well in all cases falls at about the same distance (2.1--2.2 \AA) in the gas-phase and in both solvents. The small differences in binding interactions indicate that the effects as measured in MeCN should also apply to the more biologically relevant aqueous system. Furthermore, Ingold and Litwinienko have shown that \ch{C-H} abstraction by oxygen-centred radicals does not depend strongly on solvent.\cite{Litwinienko2007}
 
-For both the ion and the salt of sodium, the binding interaction approaches zero well before 5 \AA, or the size of the first solvation shell of the sodium ion.\cite{Degreve1996} This result is consistent with literature that studies the Hofmeister series, where it has been shown that biologically relavant cations are only able to influence their immediate solvation shell.\cite{Omta2003, Funker2011} Furthermore, \citet{Heyda2009} utilized molecular dynamics simulations of $N$-methylacetamide in aqueous solutions of NaCl, NaBr, KCl, and KBr to obtained radial distribution functions (RDFs). The RDFS are in agree with the the calculated PESs in that the most probable distance to find \ch{Na^+} from the amidic oxygen-centre is at about 2--2.5 \AA separation. Heyda et al. also showed that \ch{Na^+} preferentially binds with the amide as compared to \ch{K^+}, and that the nature of the halide counteranion is unimportant in the interaction. From these results it is possible an important conclusion: The use of \ch{Cl-} in the calculations should reasonable reflect the trends observed by Salamone et al. with \ch{ClO4-} and \ch{OTf-}.
+For both the ion and the salt of sodium, the binding interaction approaches zero well before 5 \AA, or the size of the first solvation shell of the sodium ion.\cite{Degreve1996} This result is consistent with literature that studies the Hofmeister series, where it has been shown that biologically relavant cations are only able to influence their immediate solvation shell.\cite{Omta2003, Funkner2011} Furthermore, \citet{Heyda2009} utilized molecular dynamics simulations of $N$-methylacetamide in aqueous solutions of NaCl, NaBr, KCl, and KBr to obtained radial distribution functions (RDFs). The RDFS are in agree with the the calculated PESs in that the most probable distance to find \ch{Na^+} from the amidic oxygen-centre is at about 2--2.5 \AA separation. Heyda et al. also showed that \ch{Na^+} preferentially binds with the amide as compared to \ch{K^+}, and that the nature of the halide counteranion is unimportant in the interaction. From these results it is possible an important conclusion: The use of \ch{Cl-} in the calculations should reasonable reflect the trends observed by Salamone et al. with \ch{ClO4-} and \ch{OTf-}.
 
 \begin{figure}[!htbp]
 \centering
@@ -356,7 +357,7 @@ For DMA, the $N$-methyl groups cis and trans relative to the carbonyl are the we
     \includegraphics[width=4cm]{figures/dma-na-cl-trans}
   }
 
-	\caption[Structures of the DMA-NaCl complex and associated radical complexes.]{Structures of \textbf{a} the DMA-NaCl complex, \textbf{b} the DMA-NaCl acetyl radical complex, \textbf{c} the DMA-NaCl cis radical complex, and \textbf{d} the DMA-NaCl trans radical complex. Key interaction distances are shown in units of \AA. Element color key: white is carbon, light blue is hydrogen, red is oxygen, blue is nitrogen, purple is sodium, and yellow is chlorine.}
+	\caption[Structures of the DMA-NaCl complex and associated radical complexes.]{Structures of \textbf{a} the DMA-NaCl complex, \textbf{b} the DMA-NaCl acetyl radical complex, \textbf{c} the DMA-NaCl cis radical complex, and \textbf{d} the DMA-NaCl trans radical complex. Key interaction distances are shown in units of \AA. Element colour key: white is carbon, light blue is hydrogen, red is oxygen, blue is nitrogen, purple is sodium, and green is chlorine.}
 	\label{fig:dma-na-cl}
 \end{figure}
 
@@ -371,7 +372,7 @@ Interestingly, the predicted BDE for the acetyl radical of DMA decreases with bo
 
 For MeCN and DMSO the complexation of either \ch{Na^+} or \ch{NaCl} results in a decrease in \ch{C-H} BDE. In MeCN, the hyperconjugative overlap between the \ch{C+N} $\pi$-system and the \ch{C-H} $\sigma^*$ anti-bonding orbital decreases as a result of the interaction between \ch{Na^+} and the nitrogen centre. DMSO has a non-Lewis structure, however there is normally a nominal hyperconjugative overlap between the sulphur centre and the \ch{C-H} $\sigma^*$ anti-bonding orbitals. This overlap decreases as a result of the interaction of \ch{Na^+} with the oxygen-centre of DMSO.
 
-Upon complexation of \ch{Na+} of \ch{NaCl}, the BDEs of the more sterically bulky amide substrate DIA follow the same trend that is observed as for DMA: The acetyl \ch{C-H} BDE decreases due to inductive stabilization, while the \ch{C-H} bonds $\alpha$ to the amidic nitrogen centre increase as a result of decreased hyperconjugative overlap. Alkoxyl radicals are not expected to abstract from \ch{C-H} bonds $\beta$ to the nitrogen centre in DIA or other longer chain $N$-alkyl amides, as the incipient radical is not stabilized by amidic $\pi$-system. However, that due to steric repulsion, the $\alpha$-radicals of DIA cannot lie directly in the $\pi$-plane. As such the $\alpha$-\ch{C-H} BDEs of DIA are greater than those of DMA, and are closer to the $\beta$-\ch{C-H} BDEs than perhaps expected. The effects of sodium binding to the amidic oxygen are almost nill for the $\beta$-trans C-H bond of DIA, however there is a significant decrease in the $\beta$-cis \ch{C-H} BDE. Figure~\ref{fig:dia-na-cl}a,b shows the structures of the DIA-NaCl complex and the $\beta$-cis radical complex, where it can seen that the metal cation interacts with both the oxygen-centre and the carbon-centred radical. This interaction stabilizes the radical complex and thus decrease the effective BDE, however this interaction is likely not possible in the TS structure and is not expected to effect to effective BDE in a HAT reaction.
+Upon complexation of \ch{Na+} of \ch{NaCl}, the BDEs of the more sterically bulky amide substrate DIA follow the same trend that is observed as for DMA: The acetyl \ch{C-H} BDE decreases due to inductive stabilization, while the \ch{C-H} bonds $\alpha$ to the amidic nitrogen centre increase as a result of decreased hyperconjugative overlap. Alkoxyl radicals are not expected to abstract from \ch{C-H} bonds $\beta$ to the nitrogen centre in DIA or other longer chain $N$-alkyl amides, as the incipient radical is not stabilized by amidic $\pi$-system. However, that due to steric repulsion, the $\alpha$-radicals of DIA cannot lie directly in the $\pi$-plane. As such the $\alpha$-\ch{C-H} BDEs of DIA are greater than those of DMA, and are closer to the $\beta$-\ch{C-H} BDEs than perhaps expected. The effects of sodium binding to the amidic oxygen are almost nil for the $\beta$-trans C-H bond of DIA, however there is a significant decrease in the $\beta$-cis \ch{C-H} BDE. Figure~\ref{fig:dia-na-cl}a,b shows the structures of the DIA-NaCl complex and the $\beta$-cis radical complex, where it can seen that the metal cation interacts with both the oxygen-centre and the carbon-centred radical. This interaction stabilizes the radical complex and thus decrease the effective BDE, however this interaction is likely not possible in the TS structure and is not expected to effect to effective BDE in a HAT reaction.
 
 \begin{figure}[!htbp]
 	\centering
@@ -383,7 +384,7 @@ Upon complexation of \ch{Na+} of \ch{NaCl}, the BDEs of the more sterically bulk
 		\includegraphics[width=4cm]{figures/dia-na-cl-rad-b}
 	}
 
-  \caption[Structures of the DIA-NaCl complex and radical complex.]{Structures of \textbf{a} the DMA-NaCl complex, \textbf{b} the DIA-NaCl $\beta$-cis radical complex. Key interaction distances are shown in units of \AA. Element color key: white is carbon, light blue is hydrogen, red is oxygen, blue is nitrogen, purple is sodium, and yellow is chlorine.}
+  \caption[Structures of the DIA-NaCl complex and radical complex.]{Structures of \textbf{a} the DMA-NaCl complex, \textbf{b} the DIA-NaCl $\beta$-cis radical complex. Key interaction distances are shown in units of \AA. Element colour key: white is carbon, light blue is hydrogen, red is oxygen, blue is nitrogen, purple is sodium, and green is chlorine.}
 	\label{fig:dia-na-cl}
 \end{figure}
 
@@ -398,7 +399,7 @@ Hydrogen abstraction reactions involving the oxygen-centred radicals \bno\ and \
 Herein, I have calculated the reaction barrier heights for all three abstractable positions of DMA for HAT reactions involving \cumo\ and \bno, both with and without \ch{NaCl}. These data are summarized in~\ref{tab:DMA-dG}. The free energy barriers calculated at the M05-2X-SMD(MeCN)/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ are systematically higher than those previously calculated by about 8.5 \kcalmol.\cite{Salamone2013} The reason for this is unclear, given that M05-2X has previously been used successfully to calculate accurate HAT rate constants.\cite{Galano2013} However, the relative ranking and energies for the reaction barrier heights for the different \ch{C-H} bonds are appropriate. Therefore, although these results cannot be used to predict rate constants, they are useful for studying the change in barrier height due to the addition of NaCl.
 
 \begin{table}[!htbp]
-\caption[Calculated free energy (enthalpy) for direct HAT from different \ch{C-H} bonds in DMA by \cumo\ and \bno, with and without \ch{NaCl}.]{Calculated free energy (enthalpy) ($\Delta G(H)^\ddagger$, \kcalmol) for direct HAT from different \ch{C-H} bonds in DMA by \cumo\ and \bno, with and without \ch{NaCl}. The change barrier height is calculated relative to the same abstraction site without the inclusion of \ch{NaCl}. All barrier heights are relative to separated reactants and were calculated at the M05-2X-SMD(MeCN)/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ level of theory.}
+\caption[Calculated free energy (enthalpy) barrier for direct HAT from different \ch{C-H} bonds in DMA by \cumo\ and \bno, with and without \ch{NaCl}.]{Calculated free energy (enthalpy) barrier ($\Delta G(H)^\ddagger$, \kcalmol) for direct HAT from different \ch{C-H} bonds in DMA by \cumo\ and \bno, with and without \ch{NaCl}. The change in barrier height is calculated relative to the same abstraction site without the inclusion of \ch{NaCl}. All barrier heights are relative to separated reactants and were calculated at the M05-2X-SMD(MeCN)/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ level of theory.}
 \label{tab:DMA-dG}
   \begin{tabular}{l l c c}
 Reaction   & Abstraction Site &  $\Delta G(H)^\ddagger$ & $\Delta\Delta G(H)^\ddagger$ \\
@@ -434,11 +435,11 @@ Focussing first on the barrier heights for HAT between DMA and \cumo, the result
     \includegraphics[width=5cm]{figures/dma-nacl-cumo-acetyl}
   }
 
-  \caption[TS structures of HAT reaction between DMA and \cumo\ including NaCl.]{TS structures of HAT reaction between DMA and \cumo\ including NaCl for different \ch{C-H} bonds: \textbf{a} trans, \textbf{b} cis, and \textbf{c} acetyl. Key interatomic distances are shown in units of \AA. Element color key: white is carbon, light blue is hydrogen, red is oxygen, blue is nitrogen, purple is sodium, yellow is chlorine, and orange is a dummy atom in the centre of an aromatic ring.}
+  \caption[TS structures of HAT reaction between DMA and \cumo\ including NaCl.]{TS structures of HAT reaction between DMA and \cumo\ including NaCl for different \ch{C-H} bonds: \textbf{a} trans, \textbf{b} cis, and \textbf{c} acetyl. Key interatomic distances are shown in units of \AA. Element colour key: white is carbon, light blue is hydrogen, red is oxygen, blue is nitrogen, purple is sodium, green is chlorine, and peach is a dummy atom in the centre of an aromatic ring.}
   \label{fig:dma-cumo-ts}
 \end{figure}
 
-For the TS structure representing abstraction from the trans position (relative to the carbonyl) \ch{C-H} bond of DMA by \cumo\ (\ref{fig:dma-cumo-ts}a), there is a calculated 0.3 \kcalmol\ increase in $\Delta H^\ddagger$, which is somewhat less than the predicted increase in BDE of 1.0 \kcalmol. This difference can be ascribed as due to the effect of charge transfer: NPA indicates a 0.04 $e^-$ transfer from DMA to \ch{Na^+}. Furthermore, TSs for HAT between \ch{C-H} bond and oxygen-centred radicals are characterized by a degree of charge separation.\cite{Roberts1999} NPA indicates that in the trans position TS structure excluding \ch{NaCl} the charge separation is 0.24 $e^-$, but the charge separation increases with the inclusion of \ch{NaCl} to 0.26 $e^-$. This increased charge separation results in a lower enthlapic barrier than expected solely on the basis of the increase in \ch{C-H} BDE as a consequence of increasing the proton-transfer like character associated with charge separation. The increase in $\Delta G^\ddagger$ is 3.0 \kcalmol, indicating that the complexation of metal cations increases the entropic penalty in forming the TS structure, or in other words the TS is ``tighter'' than in the absence of metal cations.
+For the TS structure representing abstraction from the trans position (relative to the carbonyl) \ch{C-H} bond of DMA by \cumo\ (\ref{fig:dma-cumo-ts}a), there is a calculated 0.3 \kcalmol\ increase in $\Delta H^\ddagger$, which is somewhat less than the predicted increase in BDE of 1.0 \kcalmol. This difference can be ascribed as due to the effect of charge transfer: NPA indicates a 0.04 $e^-$ transfer from DMA to \ch{Na^+}. Furthermore, TSs for HAT between \ch{C-H} bond and oxygen-centred radicals are characterized by a degree of charge separation.\cite{Roberts1999} NPA indicates that in the trans position TS structure excluding \ch{NaCl} the charge separation is 0.24 $e^-$, but the charge separation increases with the inclusion of \ch{NaCl} to 0.26 $e^-$. This increased charge separation results in a lower enthalpic barrier than expected solely on the basis of the increase in \ch{C-H} BDE. By increasing charge separation in the TS structure, it becomes easier to abstract the hydrogen atom as it increases the proton-transfer like character. The increase in $\Delta G^\ddagger$ is 3.0 \kcalmol, indicating that the complexation of metal cations increases the entropic penalty in forming the TS structure, or in other words the TS is tighter than in the absence of metal cations.
 
 In abstraction of the cis position \ch{C-H} bond of DMA by \cumo, there is a calculated 2.6 \kcalmol\ decrease in $\Delta H^\ddagger$ and an increase of 0.9 \kcalmol\ in $\Delta G^\ddagger$. The decrease in enthalpic barrier is inconsistent with the predicted increase in BDE of 1.8 \kcalmol\ upon complexation with \ch{NaCl}. The TS structure in~\ref{fig:dma-cumo-ts}b shows a possible long range interaction between \ch{Na^+} and the aromatic ring of \cumo which draws electron density and increases the reactivity. Additionally, NPA predicts a 0.07 $e^-$ charge transfer between DMA and \ch{Na^+}. The combination of these two factors stabilizes the TS and decreases $\Delta H^\ddagger$. The entropic penalty associated with complexation of \ch{NaCl} results in an increase in free energy barrier.
 
@@ -460,23 +461,108 @@ For HAT between DMA and \bno, the interaction between \ch{NaCl} and \bno, are st
     \includegraphics[width=5cm]{figures/dma-nacl-bno-acetyl}
   }
 
-  \caption[TS structures of HAT reaction between DMA and \bno\ including NaCl.]{TS structures of HAT reaction between DMA and \bno\ including NaCl for different \ch{C-H} bonds: \textbf{a} trans, \textbf{b} cis, and \textbf{c} acetyl. Key interatomic distances are shown in units of \AA. Element color key: white is carbon, light blue is hydrogen, red is oxygen, blue is nitrogen, purple is sodium, yellow is chlorine, and orange is a dummy atom in the centre of an aromatic ring.}
-  \label{fig:dma-cumo-ts}
+  \caption[TS structures of HAT reaction between DMA and \bno\ including NaCl.]{TS structures of HAT reaction between DMA and \bno\ including NaCl for different \ch{C-H} bonds: \textbf{a} trans, \textbf{b} cis, and \textbf{c} acetyl. Key interatomic distances are shown in units of \AA. Element colour key: white is carbon, light blue is hydrogen, red is oxygen, blue is nitrogen, purple is sodium, green is chlorine, and peach is a dummy atom in the centre of an aromatic ring.}
+  \label{fig:dma-bno-ts}
 \end{figure}
 
-For both \cumo\ and \bno, the presence of possible secondary interactions between \ch{NaCl} and the radicals obfuscates the results. Therefore, in order to determine if non-redox active metal cations may act as chemo-protective agents in biological systems, I have performed calculated involving the more biologically relevant \ch{HO^.} radical. Although there is no literature value for $k_H$ of the HAT reaction between DMA and \ch{HO^.}, I have used the Snelgrove-Ingold equation\cite{Snelgrove2001} to estimate the rate constant as 1.5\E{10} \Ms, which two and 5 orders of magnitude greater than \bno\ and \cumo, respectively. Unfortunately, I was unsuccessful in performing full optimization calculations in the presence of the metal salt. However, the ``guess'' TS structures obtained by freezing the hydrogen atom acceptor donor bonds (as described in the methods section) herein represent approximated transition state structures and therefore can provide an estimate of the effects of metal salts in a more biologically relevant model. The calculated reaction barriers are presented in~\ref{tab:dma-oh}.
+For both \cumo\ and \bno, the presence of possible secondary interactions between \ch{NaCl} and the radicals obfuscates the results. Therefore, in order to determine if non-redox active metal cations may act as chemo-protective agents in biological systems, I have performed calculated involving the more biologically relevant \ch{HO^.} radical. Although there is no literature value for $k_H$ of the HAT reaction between DMA and \ch{HO^.}, I have used the Snelgrove-Ingold equation\cite{Snelgrove2001} to estimate the rate constant as 1.5\E{10} \Ms, which is two and five orders of magnitude greater than \bno\ and \cumo, respectively. Unfortunately, I was unsuccessful in performing full optimization calculations in the presence of the metal salt. However, the ``guess'' TS structures obtained by freezing the hydrogen atom acceptor donor bonds (as described in the methods section) herein represent approximated transition state structures and therefore provide an estimate of the effects of metal salts in a more biologically relevant model. The calculated reaction barriers are presented in~\ref{tab:dma-oh}.
 
 \begin{table}[!htbp]
-\caption[Calculated free energy (enthalpy) for direct HAT from different \ch{C-H} bonds in DMA by \ch{HO^.}, with and without \ch{NaCl}.]{Calculated free energy (enthalpy) ($\Delta G(H)^\ddagger$, \kcalmol) for direct HAT from different \ch{C-H} bonds in DMA by \ch{HO^.}, with and without \ch{NaCl}. The change barrier height is calculated relative to the same abstraction site without the inclusion of \ch{NaCl}. All barrier heights are relative to separated reactants and were calculated at the M05-2X-SMD(MeCN)/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ level of theory.}
+\caption[Calculated free energy (enthalpy) barrier for direct HAT from different \ch{C-H} bonds in DMA by \ch{HO^.}, with and without \ch{NaCl}.]{Calculated free energy (enthalpy) barrier ($\Delta G(H)^\ddagger$, \kcalmol) for direct HAT from different \ch{C-H} bonds in DMA by \ch{HO^.}, with and without \ch{NaCl}. The change in barrier height is calculated relative to the same abstraction site without the inclusion of \ch{NaCl}. All barrier heights are relative to separated reactants and were calculated at the M05-2X-SMD(MeCN)/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ level of theory. $^*$Indicates estimated barrier based on ``guess'' TS structure.}
 \label{tab:dma-oh}
   \begin{tabular}{l l c c}
 Reaction   & Abstraction Site &  $\Delta G(H)^\ddagger$ & $\Delta\Delta G(H)^\ddagger$ \\
 \hline
-DMA + \ch{HO^.} &  trans              &  8.9(0.0)            &                \\
+DMA + \ch{HO^.} &  trans           &  8.9(0.0)            &                \\
             &  cis                &  7.9(-2.7)           &                    \\
             &  acetyl             &  9.9(0.5)            &                    \\
-DMA-NaCl + \ch{HO^.}&  trans      &  13.1(1.3)           &  4.2(1.3)          \\
-            &  cis                &  12.9(0.2)           &  5.0(2.9)          \\
-            &  acetyl             &  16.6(2.0)           &  7.7(1.5)          \\
+DMA-NaCl + \ch{HO^.}&  trans$^*$      &  13.1(1.3)           &  4.2(1.3)          \\
+            &  cis$^*$                &  12.9(0.2)           &  5.0(2.9)          \\
+            &  acetyl$^*$             &  16.6(2.0)           &  7.7(1.5)          \\
   \end{tabular}
 \end{table}
+
+For the direct HAT reaction between \ch{OH^.} and DMA abstraction occurs primarily from the cis position \ch{C-H} bond of DMA. The calculated free energy (enthalpic) barrier is 7.9(-2.7) \kcalmol, which gives a calculated rate constant of 1.0 \E{7} \Ms, or three orders of magnitude lower than the predicted rate constants of 1.5 \E{10} \Ms. This result in unsurprising given the poor agreement of HAT reaction between DMA and \bno\ and \cumo. The complexation of \ch{NaCl} to DMA increases the estimated free energy reaction barriers across the board by 4.2--7.7 \kcalmol, suggesting that if \ch{Na^+} interacts closely with DMA in vivo, then non-redox active metals may have a chemo-protective effect against hydrogen abstraction by \ch{HO^.}.
+
+For the acetyl position \ch{C-H} bond of DMA, the enthalpic barrier increases by 1.5 \kcalmol, even though the calculated BDE decreases slightly upon complexation of \ch{NaCl}. This can once again be explained by the effects of charge transfer in the TS complex. For the TS structure representing direct HAT between \ch{HO^.} the acetyl position of DMA-NaCl, there is a calculated charge transfer from DMA to \ch{Na^+} of 0.02 $e^-$, which results in a decrease in charge separation between \ch{HO^.} and DMA from 0.26 $e^-$ without \ch{NaCl} to 0.25 $e^-$ with \ch{NaCl}. Although this effect is small, it appears to significantly effect the ability of \ch{HO^.} to abstract a hydrogen atom from DMA. The same argument applies to both the cis and trans \ch{C-H} bond positions of DMA, for which the enthalpic barrier increases by more than the calculated change in BDE.
+
+\subsection{DIA}
+
+Next, to study the effect steric bulk has on the HAT reactions between amides and oxygen-centred radical, I have performed a study of HAT between DIA and \cumo. The HAT reaction between DIA and \cumo was previously studied by \citet{Salamone2014}, however only the $\alpha$-N-alkyl positions were studied theoretically. Since the BDEs for $\alpha$- and $\beta$-N-alkyl \ch{C-H} positions are relatively close in energy, I calculated the reaction barriers for these positions as well. The calculated free energy (enthalpic) barriers excluding and including \ch{NaCl} are listed in~ref{tab:dia-cumo}. By applying the Boltzmann distribution about 73\% of abstractions by \cumo\ from DIA will take place from either the cis- or trans-$\beta$ positions of DIA. Therefore, abstraction from bulky amides by bulky oxygen-centred radicals are likely controlled by steric considerations. Note also that many of the TS optimizations were not successful with the inclusion of \ch{NaCl} and in which case ``guess'' TS structures have been used to estimate the barrier heights.
+
+\begin{table}[!htbp]
+\caption[Calculated free energy (enthalpy) for direct HAT from different \ch{C-H} bonds in DIA by \cumo, with and without \ch{NaCl}.]{Calculated free energy (enthalpy) ($\Delta G(H)^\ddagger$, \kcalmol) for direct HAT from different \ch{C-H} bonds in DIA by \cumo, with and without \ch{NaCl}. The change in barrier height is calculated relative to the same abstraction site without the inclusion of \ch{NaCl}. All barrier heights are relative to separated reactants and were calculated at the M05-2X-SMD(MeCN)/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ level of theory. $^*$Indicates estimated barrier based on ``guess'' TS structure.}
+\label{tab:dia-cumo}
+  \begin{tabular}{l l c c}
+    Reaction   &  Abstraction Site   &  $\Delta G(H)^\ddagger$ &  $\Delta \Delta G(H)^\ddagger$ \\
+    \hline
+    DIA + \cumo    &  $\alpha$-trans    &  22.3(9.4)  &              \\
+                   &  $\alpha$-cis      &  19.1(5.4)  &              \\
+                   &  $\beta$-trans     &  18.6(6.0)  &              \\
+                   &  $\beta$-cis       &  18.4(6.5)  &              \\
+                   &  acetyl         &  19.1(7.4)  &              \\
+    DIA-NaCl + \cumo &  $\alpha$-trans$^*$  &  17.0(3.9)  &   -5.3(-5.5)  \\
+                   &  $\alpha$-cis$^*$      &  12.7(-2.4) &   -6.4(-7.8) \\
+                   &  $\beta$-trans     &  19.8(6.8)  &    0.7(1.4)  \\
+                   &  $\beta$-trans$^*$     &  19.6(6.9)  &    0.5(1.5)  \\
+                   &  $\beta$-cis$^*$       &  16.8(4.2)  &   -1.6(-2.3) \\
+                   &  acetyl$^*$         &  17.8(3.8)  &    0.8(-0.1) \\
+                   &  acetyl             &  17.9(3.7)  &    0.9(-0.2)
+  \end{tabular}
+\end{table}
+
+For the
+
+\subsection{Strong hydrogen bond accepting substates}
+
+In the investigation of the effects of metal cations on HAT reactions between DMA and \cumo\ Salamone et al. demonstrated that in DMSO solvent, HAT reactivity is not significantly effected by the addition of metal salts.\cite{Salamone2015metals} This can be explained on the basis of the stronger Lewis basicity of DMSO as as compared to DMA, resulting in the competitive binding of \ch{M^n+} to DMSO over DMA. The rate constant for HAT between DMSO and \cumo\ is 1.8 \E{4} \Ms\ while that for DMSO and \cumo\ is 1.2 \E{6} \Ms\ in MeCN solvent at 298 K, therefore only small changes in $k_{obs}$ are expected for HAT between \cumo\ and DMA in DMSO solvent with metal salts. I am interested in how metal salts effect the HAT reactivity of DMSO and other related strong hydrogen bond accepting substrates. We previously showed that DMSO and \bno\ react via an ``alternative'' HAT reaction, where \bno\ acts at the hydrogen atom donor rather than acceptor. The net reaction yields benzaldehyde, dimethyl sulfide, and \ch{HO^.} as the DMSO-H radical decomposes in a concerted manner following the alternative HAT TS. \cumo lacks the acidic $\alpha$-\ch{C-H} bond to donate, and therefore can only undergo conventional HAT. I performed computational studies to determined if metal cations could effect this reactivity and if the related (HMPA and TBPO) substrates displayed similar reactivity.
+
+Focus first of the reactions of DMSO with \cumo\ and \bno\ in the presence of \ch{NaCl}. The reactions studied are shown in~\ref{fig:dmso-rxn} and the calculated free energy (enthlpy) barriers are listed in~\ref{tab:dmso-dG}. Also, the TS structures for the reactions in~\ref{fig:dmso-rxn} are shown in~\ref{fig:dmso-ts}a-f. Firstly, for HAT between DMSO and \cumo\ in the presence of \ch{NaCl}, the free energy barrier increases by 1.5 \kcalmol\, however the enthalpic barrier decreases by 3.7 \kcalmol. This can be explained in a similar manner to the reactions of DMA: \ch{Na^+} interacts both with the oxygen of DMSO and the aromatic system of \cumo, resulting in a stabilization of the TS and a decrease in enthalpic barrier in spite of a predicted increase in \ch{C-H} BDE. This binding however results in a tighter TS structure, thus the entropic cost increases and so does the $\Delta G^\ddagger$.
+
+\begin{scheme}
+  \includegraphics[width=\textwidth]{figures/dmso-rxn.eps}
+  \caption[The HAT reactions of DMSO with \cumo\ and \bno.]{The HAT reactions of DMSO with \textbf{1} \cumo, \textbf{2} the ``alternative'' HAT reaction with \bno, and \textbf{3} the conventional HAT reaction with \bno.}
+  \label{fig:dmso-rxn}
+\end{scheme}
+
+\begin{table}[!htbp]
+\caption[Calculated free energy (enthalpy) barrier for HAT between DMSO and \cumo, and conventional and alternative HAT with \bno, with and without \ch{NaCl}.]{Calculated free energy (enthalpy) barrier ($\Delta G(H)^\ddagger$, \kcalmol) for HAT between DMSO and \cumo, and conventional and alternative HAT with \bno, with and without \ch{NaCl}. The change in barrier height is calculated relative to the same reaction without the inclusion of \ch{NaCl}. All barrier heights are relative to separated reactants and were calculated at the M05-2X-SMD(MeCN)/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ level of theory.}
+\label{tab:dmso-dG}
+\begin{tabular}{l c c}
+Reaction    &  $\Delta G(H)^\ddagger$ &  $\Delta \Delta G(H)^\ddagger$ \\
+\hline
+\textbf{1}  & 20.9(8.9)  &              \\
+\textbf{1} + NaCl & 22.4(5.2)  &  1.5(-3.7)   \\
+\textbf{2}    & 10.4(-2.2) &              \\
+\textbf{2} + NaCl & 13.4(-3.4) &  2.0(-1.2) \\
+\textbf{3} & 22.7(10.4) &                  \\
+\textbf{3} + NaCl & 22.1(5.2) & -0.6(-5.2)
+\end{tabular}
+\end{table}
+
+\begin{figure}
+  \centering
+  \subfigure[DMSO + \cumo]{
+		\includegraphics[width=5cm]{figures/dmso-cumo}
+	}
+  \subfigure[DMSO-NaCl + \cumo]{
+		\includegraphics[width=5cm]{figures/dmso-nacl-cumo}
+	}
+
+  \subfigure[Alternative DMSO + \bno]{
+    \includegraphics[width=5cm]{figures/dmso-bno-rev}
+  }
+  \subfigure[Alternative DMSO-NaCl + \bno]{
+    \includegraphics[width=5cm]{figures/dmso-nacl-bno-rev}
+  }
+
+  \subfigure[Conventional DMSO + \bno]{
+    \includegraphics[width=5cm]{figures/dmso-bno}
+  }
+  \subfigure[Conventional DMSO-NaCl + \bno]{
+    \includegraphics[width=5cm]{figures/dmso-nacl-bno}
+  }
+
+  \caption[TS structures of HAT reaction between DMSO and \cumo, and the reverse and conventional HAT reaction with \bno\ excluding and including \ch{NaCl}.]{TS structures of HAT reaction between DMSO and \cumo, and the reverse and conventional HAT reaction with \bno\ excluding and including \ch{NaCl}. Key interatomic distances are shown in units of \AA. Element colour key: white is carbon, light blue is hydrogen, red is oxygen, yellow is sulphur, purple is sodium, green is chlorine, and peach is a dummy atom in the centre of an aromatic ring.}
+  \label{fig:dmso-bno-ts}
+\end{figure}
