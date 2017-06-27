@@ -34,7 +34,7 @@ print("Allylic slope %1.3f"%slope)
 print(len(mat1))
 
 
-plt.scatter(mat2[:,3], mat2[:,2], s=60, facecolors='none', edgecolors='r',label = 'Non-fit')
+plt.scatter(mat2[:,3], mat2[:,2], s=60, facecolors='none', edgecolors='r',label = 'Excluded')
 
 # add labels to each data point
 ax.annotate('1',     xy=(92.8 , 6.00)) ##14diazabicyclo222octane
