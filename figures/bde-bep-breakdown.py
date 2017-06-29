@@ -8,7 +8,7 @@ from pylab import *
 mat1 = genfromtxt("figures/data/rocbsqb3_alkyl_all.tsv")
 mat2 = genfromtxt("figures/data/rocbsqb3_alkyl_cyclicalkanes.tsv")
 mat3 = genfromtxt("figures/data/rocbsqb3_alkyl_otheralkanes.tsv")
-mat4 = genfromtxt("figures/data/rocbsqb3_alkyl_satamines.tsv")
+#mat4 = genfromtxt("figures/data/rocbsqb3_alkyl_satamines.tsv")
 mat5 = genfromtxt("figures/data/rocbsqb3_alkyl_hbdonors.tsv")
 mat6 = genfromtxt("figures/data/rocbsqb3_alkyl_hetneighbours.tsv")
 
@@ -22,30 +22,39 @@ slope, intercept, r_value, p_value, std_err = stats.linregress(mat1[:,3],mat1[:,
 x = np.arange(120)
 y = slope*x+intercept
 
-plt.plot(x,y,'-k',label="All Alkyl $R^2$ = %.3f" %r_value**2)
+ax.plot(x,y,':k',label="All Alkyl $R^2$ = %.3f" %r_value**2)
 
 slope, intercept, r_value, p_value, std_err = stats.linregress(mat2[:,3],mat2[:,2])
-plt.scatter(mat2[:,3], mat2[:,2], s=30, label = "Cyclic Alkanes $R^2$ = %.3f" %r_value**2, color='red', marker='s')
+ax.scatter(mat2[:,3], mat2[:,2], s=30, label = "Cyclic Alkanes $R^2$ = %.3f" %r_value**2, color='red', marker='s')
+x = np.arange(120)
+y = slope*x+intercept
+ax.plot(x,y,'--r')
+
 
 slope, intercept, r_value, p_value, std_err = stats.linregress(mat3[:,3],mat3[:,2])
-plt.scatter(mat3[:,3], mat3[:,2], s=30, label = "Other Alkanes $R^2$ = %.3f" %r_value**2, color='blue', marker='^')
+ax.scatter(mat3[:,3], mat3[:,2], s=30, label = "Other Alkanes", color='blue', marker='^')
 
-plt.scatter(mat4[:,3], mat4[:,2], s=30, label = "Tert. Amines" %r_value**2, color='black', marker='v')
+# ax.scatter(mat4[:,3], mat4[:,2], s=30, label = "Tert. Amines" %r_value**2, color='black', marker='v')
 
 slope, intercept, r_value, p_value, std_err = stats.linregress(mat5[:,3],mat5[:,2])
-plt.scatter(mat5[:,3], mat5[:,2], s=30, label = "H-Bond Donors $R^2$ = %.3f" %r_value**2, color='orange', marker='o')
+ax.scatter(mat5[:,3], mat5[:,2], s=30, label = "H-Bond Donors $R^2$ = %.3f" %r_value**2, color='orange', marker='o')
+
 
 slope, intercept, r_value, p_value, std_err = stats.linregress(mat6[:,3],mat6[:,2])
-plt.scatter(mat6[:,3], mat6[:,2], s=30, label = "Het. Neighbours $R^2$ = %.3f" %r_value**2, color='green', marker='D')
+ax.scatter(mat6[:,3], mat6[:,2], s=30, label = "Het. Neighbours $R^2$ = %.3f" %r_value**2, color='green', marker='D')
+x = np.arange(120)
+y = slope*x+intercept
+ax.plot(x,y,'-g')
 
 # add labels to each data point
 ax.annotate('3',  xy=( 95.5,4.90))   #Cyclopentane
 ax.annotate('4',  xy=( 99.9,4.96))   #Cyclohexane
 ax.annotate('5',  xy=( 94.7,5.20))   #Cycloheptane
-ax.annotate('6',  xy=( 91.5,5.27))   #Cyclooctane
+ax.annotate('6',  xy=( 91.5,5.37))   #Cyclooctane
 
 ax.annotate('7',  xy=( 99.7,4.55)) #22dimethylbutane
 ax.annotate('8',  xy=( 98.2,5.45)) #23dimethylbutane
+
 ax.annotate('9',  xy=(100.8,5.30))    #Adamantane-sec
 ax.annotate('10', xy=( 100.3,5.85))     #Adamantane-ter
 
@@ -61,7 +70,7 @@ ax.annotate('18', xy=( 99.2,5.70))    #DABCO
 
 ax.annotate('19', xy=( 92.7,6.16))    #Tetrahydrofuran
 ax.annotate('20', xy=( 97.6,5.10))    #Dioxane
-ax.annotate('21', xy=(102.9,4.20))    #Dimethylsulfoxide
+ax.annotate('21', xy=(101.2,4.25))    #Dimethylsulfoxide
 ax.annotate('22', xy=( 89.9,7.00))    #Benzaldehyde
 ax.annotate('23', xy=( 94.3,5.92))    #HMPA
 ax.annotate('24', xy=( 94.8,5.65))     #DiethylEther

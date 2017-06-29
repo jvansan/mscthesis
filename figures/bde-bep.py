@@ -42,7 +42,7 @@ ax.annotate("y = %1.4f x + %1.4f \n$R^2$ = %1.3f"%(slope,intercept,r_value**2), 
 print("Allylic slope %1.3f"%slope)
 
 
-plt.scatter(mat2[:,3], mat2[:,2], s=60, facecolors='none', edgecolors='r',label = 'Non-fit')
+plt.scatter(mat2[:,3], mat2[:,2], s=60, facecolors='none', edgecolors='r',label = 'Excluded')
 
 # add labels to each data point
 ax.annotate('1',  xy=( 97.1,3.30))   #Acetone

@@ -67,7 +67,7 @@ ax.annotate('27',	 xy=(94.0 , 3.30)) ##Acetone
 ax.annotate('28',	 xy=(97.4 , 3.48)) ##Acetonitrile
 ax.annotate('29',	 xy=(79.4 , 6.17)) ##BenzylAlcohol
 ax.annotate('30',	 xy=(86.2 , 6.15)) ##DibenzylEther
-ax.annotate('31',	 xy=(81.4 , 5.48)) ##Triphenylmethane
+# ax.annotate('31',	 xy=(81.4 , 5.48)) ##Triphenylmethane
 
 # properties and show plot
 plt.legend(fancybox=True,prop={'size':8},scatterpoints=1)
