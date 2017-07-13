@@ -1,23 +1,38 @@
 \documentclass{article}
-\title{Test document}
-\author{Jeff van Santen}
-\usepackage{chemformula}
-\usepackage{achemso}
-\usepackage[numbers,sort&compress,super]{natbib}
-%\bibliographystyle{achemso}
-\setkeys{acs}{usetitle = true}
-\newcommand{\jnote}[1]{\textcolor{blue}{(#1)}}
-\newcommand{\cumo}{Cum\ch{O^.}}
-\newcommand{\bno}{Bn\ch{O^.}}
-\newcommand{\Ms}{M$^{-1}$s$^{-1}$~}
-\newcommand{\kcalmol}{kcal mol$^{-1}$~}
-\newcommand{\E}[1]{$\times 10^#1$}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 
-\begin{document}
-
-\include{intro_old}
-
-\newpage
-\bibliography{\string~/Dropbox/bib/MSc}%name of your .bib file
-
-\end{document}
+    \begin{document}
+\begin{figure}[htb]
+    \centering
+    \begin{subfigure}[b]{\textwidth}
+        \includegraphics[width=0.6\textwidth]{example-image}
+        \subcaption{$Q^{*}$ values for arm 1}
+        \label{fig:arm1}
+    \end{subfigure}
+%
+    \begin{subfigure}[b]{\textwidth}
+        \includegraphics[width=0.6\textwidth]{example-image}
+        \subcaption{$Q^{*}$ values for arm 2}
+        \label{fig:arm2}
+    \end{subfigure}
+    \caption{$Q^{*}$ values for different arms}
+\end{figure}
+\begin{figure}[htb]\ContinuedFloat
+    \centering
+    \begin{subfigure}[b]{\textwidth}
+        \includegraphics[width=0.6\textwidth]{example-image}
+        \subcaption{$Q^{*}$ values for arm 3}
+        \label{fig:arm3}
+    \end{subfigure}
+%
+    \begin{subfigure}[b]{\textwidth}
+        \includegraphics[width=0.6\textwidth]{example-image}
+        \subcaption{$Q^{*}$ values for arm 4}
+        \label{fig:arm4}
+    \end{subfigure}
+    \caption{$Q^{*}$ values for different arms (cont.)}
+    \label{fig:arms}
+\end{figure}
+    \end{document}
