@@ -1,4 +1,7 @@
 ### LaTeX ###
+## Temporary files
+*diss_working*
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
