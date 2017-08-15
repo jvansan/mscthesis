@@ -720,23 +720,23 @@ For both the ion and the salt of sodium in water and MeCN, the binding
 interaction only approaches zero. Even at 6 \AA, the predicted binding energy
 of DMA in water with \ch{Na^+} and \ch{NaCl} are 1.1 and 0.7 \kcalmol,
 respectively. This is an indication that M05-2X-SMD does not properly capture
-long-range interactions of DMA with sodium. This may either be a result of
-multireference character, or a result of SMD not fully capturing the screening
-effect of solvent. Nonetheless, the interaction approaches zero before 5 \AA,
-which corresponds well with the size of the first solvation shell of the sodium
-ion.\cite{Degreve1996} This result is consistent with literature that studies
-the Hofmeister series, where it has been shown that biologically relevant
-cations are only able to influence their immediate solvation
-shell.\cite{Omta2003, Funkner2011} Furthermore, \citet{Heyda2009} utilized
-molecular dynamics simulations of $N$-methylacetamide in aqueous solutions of
-NaCl, NaBr, KCl, and KBr to obtained radial distribution functions (RDFs). The
-RDFS are in agreement with the calculated PESs in that the most probable
-distance to find \ch{Na^+} from the amidic oxygen-centre is at about 2--2.5
-\AA\ separation. Heyda et al. also showed that \ch{Na^+} binds more strongly
-with the amide than \ch{K^+}, and that the nature of the halide counteranion
-does not contribute significantly to the overall interaction. This is
-consistent with the results of Salamone et al. which showed that the nature of
-the counteranion plays a neglible role to the effect on rate
+long-range interactions of DMA with sodium. This may either be a result of an
+incorrect treatement of multireference character, or a result of SMD not fully
+capturing the screening effect of solvent. Nonetheless, the interaction
+approaches zero before 5 \AA, which corresponds well with the size of the first
+solvation shell of the sodium ion.\cite{Degreve1996} This result is consistent
+with literature that studies the Hofmeister series, where it has been shown
+that biologically relevant cations are only able to influence their immediate
+solvation shell.\cite{Omta2003, Funkner2011} Furthermore, \citet{Heyda2009}
+utilized molecular dynamics simulations of $N$-methylacetamide in aqueous
+solutions of NaCl, NaBr, KCl, and KBr to obtained radial distribution functions
+(RDFs). The RDFS are in agreement with the calculated PESs in that the most
+probable distance to find \ch{Na^+} from the amidic oxygen-centre is at about
+2--2.5 \AA\ separation. Heyda et al. also showed that \ch{Na^+} binds more
+strongly with the amide than \ch{K^+}, and that the nature of the halide
+counteranion does not contribute significantly to the overall interaction. This
+is consistent with the results of Salamone et al. which showed that the nature
+of the counteranion plays a neglible role to the effect on rate
 constants.\cite{Salamone2013a} From these results it is possible to draw an
 important conclusion: The use of \ch{Cl^-} in the calculations should
 reasonably reflect the trends observed by Salamone et al.  with \ch{ClO4^-} and
@@ -863,21 +863,21 @@ BDE = E(\ch{M\bond{dotted}X^.}) + E(\ch{H^.}) - E(\ch{M\bond{dotted}X-H})
   without metal cations.]{Bond dissociation enthalpies of DMA, DMSO, MeCN, and
   DIA with \ch{Na^+}, \ch{NaCl}, and without metal cations (Bare) calculated at
   the M05-2X-SMD(MeCN)/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ level of theory.
-  ROCBS-QB3 BDEs without metals are included for reference. All values are in
-  \kcalmol.} \label{tab:bde-metal}
+  SMD=MeCN ROCBS-QB3 BDEs without metals are included for reference. All values
+  are in \kcalmol.} \label{tab:bde-metal}
   \begin{tabular}{l c c c c}
     Substrate       & ROCBS-QB3   &    Bare    &\ch{Na+}    &\ch{NaCl}   \\
     \hline
-    DMA (acetyl)    & 99.5 & 98.5 & 97.8 & 98.4 \\
-    DMA (cis)       & 93.9 & 92.2 & 93.2 & 94.0 \\
-    DMA (trans)     & 92.3 & 91.6 & 92.8 & 92.6 \\
-    DMSO            & 102.2 & 103.4 & 104.4 & 103.7 \\
-    MeCN            & 96.6 & 97.4 & 98.3 & 98.1 \\
-    DIA (acetyl)    & 99.1 & 97.8 & 97.5 & 97.7 \\
-    DIA ($\alpha$-cis)  & 96.6 & 95.7 & 96.5 & 95.3 \\
-    DIA ($\beta$-cis)   & 97.9 & 96.4 & 94.8 & 93.1 \\
-    DIA ($\alpha$-trans)& 93.1 & 93.0 & 93.8 & 94.0 \\
-    DIA ($\beta$-trans) & 96.9 & 95.3 & 95.5 & 95.5
+    DMA (acetyl)    & 97.7 & 98.5 & 97.8 & 98.4 \\
+    DMA (cis)       & 91.9 & 92.2 & 93.2 & 94.0 \\
+    DMA (trans)     & 90.6 & 91.6 & 92.8 & 92.6 \\
+    DMSO            & 101.1 & 103.4 & 104.4 & 103.7 \\
+    MeCN            & 94.8 & 97.4 & 98.3 & 98.1 \\
+    DIA (acetyl)    & - & 97.8 & 97.5 & 97.7 \\
+    DIA ($\alpha$-cis)  & - & 95.7 & 96.5 & 95.3 \\
+    DIA ($\beta$-cis)   & - & 96.4 & 94.8 & 93.1 \\
+    DIA ($\alpha$-trans)& - & 93.0 & 93.8 & 94.0 \\
+    DIA ($\beta$-trans) & - & 95.3 & 95.5 & 95.5
   \end{tabular}
 \end{table}
 
