@@ -8,16 +8,16 @@ Constants} \label{ch:bde}
 
 The Bell-Evans-Polanyi (BEP) principle is a conceptual framework that states,
 for two closely related reactions, the difference in activation energy is
-proportional to the difference in their enthalpy of
+proportional to the difference in their enthalpies of
 reaction.\cite{Bell1936,Evans1938,Dill2003} This is commonly expressed as the
 linear free energy relationship (LFER): $E_a = E_0 + \alpha \Delta H$
-(Equation~\ref{eq:bep}). Initially, the BEP principle was used as a simple
-model to explain the Br{\o}nsted catalysis law, which states that the stronger
-an acid is, the faster the catalyzed reaction will proceed.\cite{Bronsted1924}
-A key assumption is made for the BEP principle: the position of the TS along
-the reaction coordinate is the same for all reactions. The relationship can be
-described schematically: the more stable the product, the lower the reaction
-barrier, as seen in~\ref{fig:bep}.
+(Equation~\ref{eq:bep}). Initially, the BEP principle was used as a simple model
+to explain the Br{\o}nsted catalysis law, which states that the stronger an acid
+is, the faster the catalyzed reaction will proceed.\cite{Bronsted1924} A key
+assumption associated with the BEP principle is that the position of the TS
+along the reaction coordinate is the same for all reactions. The relationship is
+described schematically in ~\ref{fig:bep}: the more stable the product, the
+lower the reaction barrier.
 
 \begin{figure}[!htbp]
   \centering
@@ -27,44 +27,43 @@ barrier, as seen in~\ref{fig:bep}.
 \end{figure}
 
 A modern utilization of the BEP principle is to estimate rate constants of
-related reactions. This is a desirable, because as system size increases, ab
-initio computational modelling becomes computationally challenging, or even
-infeasible due to the exponential scaling of computational cost with system
-size. Therefore, the main purpose of LFERs is to apply previous knowledge to
-new systems and help develop insights. For example, much of our groups' work
-focuses on studying simple protein models. By thoroughly investigating small
-systems with ab initio approaches, it is possible to extrapolate the
-fundamental concepts to large-scale systems. Furthermore, if one can establish
-that there exists a LFER between activation energy and bond strength for a
-specific model, then the difference in bond dissociation enthalpy (BDE) can be
-used to estimated HAT reaction rates in a large-scale protein system.
+related reactions. The main purpose of LFERs is to apply understanding of known
+systems to new systems in order to develop novel chemical insight. For example,
+much of our groups' work focuses on studying simple protein models. By
+thoroughly investigating small systems with ab initio approaches, it is possible
+to extrapolate the fundamental concepts to large-scale systems. Furthermore, if
+one can establish that there exists a LFER between activation energy and bond
+strength for a specific model, then the difference in bond dissociation enthalpy
+(BDE) can be used to estimated HAT reaction rates in a large-scale protein
+system.
 
-In application of the BEP principle in HAT reactions, plots of the logarithm of
-the rate constant ($k_H$) against BDEs are commonly used: $\log(k_\mathrm{H}) =
-\alpha \Delta H + constant$. For HAT reactions involving abstraction by \cumo,
-the enthalpy of reaction ($\Delta H$) is directly related to the strength of
-the breaking bond: $\Delta H =$ BDE(\ch{C-H}) $-$ BDE(\ch{CumO-H}). If the
-relationship holds for a series of related HAT reactions, then BDEs should
-correlate with the activation energy. It would then stand that an increase in
-bond strength represents a destabilization in the TS complex, and thus a
-decrease in reaction rate. This concept is also important for the work in
-Chapter~\ref{ch:hat}, where the interaction of non-redox active metal cations
-results in an increase in effective bond strength, and decrease in rate
-constant. It is also important to note that if the BEP principle breaks down
-for reactions that appear related, then additional physico-chemical factors,
-such as non-covalent binding (\emph{viz.} Chapter~\ref{ch:arrhenius}), or
-stereo-electronics may be influencing the reaction barrier.
+The application of the BEP principle in HAT reactions, utlizes the relationship
+between the logarithm of the rate constant ($k_H$) and the BDEs:
+$\log(k_\mathrm{H}) = \alpha \Delta H + constant$. For HAT reactions involving
+abstraction by \cumo, the enthalpy of reaction ($\Delta H$) is directly related
+to the strength of the breaking bond: $\Delta H =$ BDE(\ch{C-H}) $-$
+BDE(\ch{CumO-H}). If the relationship holds for a series of related HAT
+reactions, then BDEs should correlate with the activation energy
+(Equation~\ref{eq:bep}). It would then stand that an increase in bond strength
+represents a destabilization in the TS complex, and thus a decrease in reaction
+rate. This concept is also important for the work in Chapter~\ref{ch:hat}, where
+the interaction of non-redox active metal cations results in an increase in
+effective bond strength, and decrease in rate constant. It is also important to
+note that if the BEP principle breaks down for reactions that appear related,
+then additional physico-chemical factors, such as non-covalent binding
+(\emph{viz.} Chapter~\ref{ch:arrhenius}), or stereo-electronics may be
+influencing the reaction barrier.
 
 An interesting application of the BEP principle is the work of
-\citet{Pratt2003}, in which the free radical oxidation of unsaturated lipids
-was examined. They studied the correlation of theoretically determined allylic
-or benzylic C-H and \ch{C-OO^.} bond strengths with experimentally-measured HAT
+\citet{Pratt2003}, in which the free radical oxidation of unsaturated lipids was
+examined. They studied the correlation of theoretically determined allylic or
+benzylic C-H and \ch{C-OO^.} bond strengths with experimentally-measured HAT
 rate constants and \ch{O2} addition rate constants, respectively. BEP plots
 ($\log k$ vs. BDE) for a large range of polyunsaturated fatty acid models show
 good correlation ($R^2 = 0.92$) for \ch{C-OO^.} bonds examined, and reasonable
-correlation ($R^2 = 0.82$) for \ch{C-H} bonds. This demonstrates that BDEs may
-directly impact the reaction barrier height, in line with the BEP principle.
-Additionally, these results provide the important ability to predict rate
+correlation ($R^2 = 0.82$) for \ch{C-H} bonds. This demonstrates that factors
+which effect BDES also effect reaction barrier height, in line with the BEP
+principle. Additionally, these results provide the ability to predict rate
 constants for HAT and oxygen addition reactions related to unsaturated lipid
 models, by means of calculating BDEs. Another area of research in which the BEP
 principle is often applied is heterogenous catalysis.\cite{Panov2015}
@@ -73,17 +72,18 @@ There is a significant gap in the literature on the BEP principle: there are no
 criteria for how broadly the BEP principle can be utilized. In fact, the
 theoretical validity of the BEP relationship has come into question, and a call
 has been made to theoreticians for a detailed analysis of the BEP
-principle.\cite{vanSanten2010} In this work, I explore this issue. In order to
-achieve this, I have studied HAT reactions involving the abstraction of C-H
-bonds by \cumo\ under the same experimental conditions, for which many rate
-constants have been published.\cite{Bietti2010, Bietti2011, Pischel2001,
-Salamone2011, Salamone2012, Salamone2012a, Salamone2013, Salamone2015}
-Additional unpublished rate constants have been provided by our experimental
-colleagues in Rome. The substrates of interest are diverse in nature and
-include branched and cyclic alkanes, linear and cyclic amines and ethers, and
-substrates with allylic or benzylic \ch{C-H} bonds. The BDEs for these
-substrates range from $\sim$76--100 \kcalmol. The experimentally determined
-rate constants are listed in Appendix~\ref{ap:bde},~\ref{tab:expt-bde}.
+principle.\cite{vanSanten2010} In this work, I explore the relationship between
+BDEs and $\log(k_\mathrm{H})$. In order to achieve this, I have studied HAT
+reactions involving the abstraction of C-H bonds by \cumo\ under the same
+experimental conditions, for which many rate constants have been
+published.\cite{Bietti2010, Bietti2011, Pischel2001, Salamone2011, Salamone2012,
+Salamone2012a, Salamone2013, Salamone2015} Additional unpublished rate constants
+have been provided by our experimental colleagues in Rome. The substrates of
+interest are diverse in nature and include branched and cyclic alkanes, linear
+and cyclic amines and ethers, and substrates with allylic or benzylic \ch{C-H}
+bonds. The BDEs for these substrates range from $\sim$76--100 \kcalmol. The
+experimentally determined rate constants are listed in
+Appendix~\ref{ap:bde},~\ref{tab:expt-bde}.
 
 The above studies, as well as many others, have used \cumo\ and the closely
 related $t$-butoxyl radical (\ch{$t$-BuO^.}) as models for reactive
@@ -99,7 +99,7 @@ The BDE of \ch{CumO-H} is 106.7 \kcalmol, a value that is larger than all the
 \ch{C-H} bonds studied herein.\bibnote{Calculated using the ROCBS-QB3 composite
 method.} Therefore, HAT reactions involving \cumo\ and the organic substrates
 of interest are all exothermic on the order of 5--32 \kcalmol. Hammond's
-postulate\cite{Hammond1955} states that the the transition states for these HAT
+postulate\cite{Hammond1955} states that the transition states for these HAT
 reaction should most closely resemble the reactants in structure (i.e.  an
 early TS), and the BEP $\alpha$ values should all be less than
 0.5.\cite{Russell1973} If the BEP principle holds as a LFER, the substrates
@@ -284,28 +284,16 @@ composite procedures), and well-established accuracy.\cite{Somers2015,
 Simmie2015} CBS-QB3\cite{Montgomery1999, Montgomery2000} utilizes DFT-based
 B3LYP optimization and scaled frequencies (factor = 0.990) with modified
 triple-zeta Pople style basis sets. Electronic energies are obtained by
-extrapolating medium basis set CCSD(T) and MP4SDQ single point energy
-calculations to the complete basis set limit. Small empirical corrections are
-added to achieve more accurate results compared to the parametrization
-sets.\cite{Petersson2001} ROCBS-QB3 is a similar procedure to CBS-QB3, except
-spin-restricted wave functions are used in place of unrestricted wave
-functions. This is done to eliminate spin contamination, and the use of a
-restricted open-shell definition has been shown to produce more accurate
-BDEs.\cite{DiLabio1999} The (RO)CBS-QB3 methods have been implemented for the
-first, second, and third periods of elements.
-
-Atomic pair natural orbital (APNO) expansions are a method used for averaging
-over multiple Slater determinants. The use of APNOs allows for small basis set
-extrapolation of higher order correlation energies to converge more rapidly to
-the complete basis set limit. This approach is used in the CBS-APNO
-method.\cite{Ochterski1996} Geometries and scaled frequencies (factor = 0.989)
-are obtained at the QCISD/6-311G(d,p) level of theory. Similar to CBS-QB3,
-extrapolating moderate basis set MP4SDQ and QCISD(T) results gives the
-electronic energy. An empirical correction is also used in CBS-APNO. Although
-CBS-APNO is more accurate, the expansion of APNOs makes CBS-APNO more
-computationally demanding than CBS-QB3. As a result, CBS-APNO has only been
-implemented for first and second row periods and thus less commonly used in the
-literature.  \\
+extrapolating medium basis set MP2 single point energy calculations to the
+complete basis set limit, along with corrections for electron correlation from
+MP4(SQD) and CCSD(T). Small empirical corrections are added to achieve more
+accurate results compared to the parametrization sets.\cite{Petersson2001}
+ROCBS-QB3 is a similar procedure to CBS-QB3, except spin-restricted wave
+functions are used in place of unrestricted wave functions. This is done to
+eliminate spin contamination, and the use of a restricted open-shell definition
+has been shown to produce more accurate BDEs.\cite{DiLabio1999} The (RO)CBS-QB3
+methods have been implemented for the first, second, and third periods of
+elements. \\
 
 \noindent \textbf{G$n$ methods}
 
@@ -328,13 +316,13 @@ transoid conformations were explored. All optimization calculations were
 performed at the B3LYP-D3(BJ)/6-31+G$^*$ level of theory, followed by
 single-point energy calculations at the B3LYP-D3(BJ)/6-311+G(2d,2p) level of
 theory with the SMD continuum solvent model\cite{Marenich2009} to approximate
-solvent effects. Transition states were visualized using the Chemcraft
-program\cite{ccraft} to confirm a single imaginary frequency connecting
-reactants to products. In some cases, a small secondary imaginary frequency was
-observed, indicating a TS complex that is not fully optimized. Necessary steps
-were taken to re-optimize the structures and eliminate the small imaginary
-frequencies, however, this was not always successful. Nonetheless, I am
-confident the structures reported herein sufficiently represent the true TS
+acetonitrile solvent effects. Transition states were visualized using the
+Chemcraft program\cite{ccraft} to confirm a single imaginary frequency
+connecting reactants to products. In some cases, a small secondary imaginary
+frequency was observed, indicating a TS complex that is not fully optimized.
+Necessary steps were taken to re-optimize the structures and eliminate the small
+imaginary frequencies, however, this was not always successful. Nonetheless, I
+am confident the structures reported herein sufficiently represent the true TS
 complex geometries and relative energies. Results from structures that are not
 fully optimized are indicated appropriately as such.
 
@@ -412,17 +400,17 @@ identified as being inaccurate by Salamone et al.\protect\cite{Salamone2012}}
 \end{figure}
 
 The method that gives the best combined agreement with W1BD and literature is
-ROCBS-QB3 with an MAE = 0.18 (1.64) \kcalmol. It is also apparent, from the
-one-to-one plots in~\ref{fig:1-1-ROCBSQB3}, that ROCBS-QB3 matches well with
-literature and experiment. In comparison, CBS-QB3 has an MAE = 0.32 (1.88)
-\kcalmol, while CBS-APNO has an MAE = 0.20 (1.40) \kcalmol. The LDBS approach
-also performs well with an MAE = 0.22 (1.60) \kcalmol. The G4 method deviates
-from the W1BD reference by about 0.5 \kcalmol\ more, however, it appears to
-give reasonable agreement with experimental results (MAE = 0.70 (1.21) mol).
-The use of the MP2 variant of G4 gives somewhat questionable results, with an
-MAE of 0.88 (1.60) \kcalmol, as well as a large outlier of 6.2 \kcalmol\ that
-is not present in the other data from composite methods. One-to-one plots of
-all other methods are presented in Appendix~\ref{ap:bde}.
+ROCBS-QB3 with an MAE from W1BD (literature) = 0.18 (1.64) \kcalmol. It is also
+apparent, from the one-to-one plots in~\ref{fig:1-1-ROCBSQB3}, that ROCBS-QB3
+matches well with literature and experiment. In comparison, CBS-QB3 has an MAE =
+0.32 (1.88) \kcalmol, while CBS-APNO has an MAE = 0.20 (1.40) \kcalmol. The LDBS
+approach also performs well with an MAE = 0.22 (1.60) \kcalmol. The G4 method
+deviates from the W1BD reference by about 0.5 \kcalmol\ more, however, it
+appears to give reasonable agreement with experimental results (MAE = 0.70
+(1.21) mol). The use of the MP2 variant of G4 gives somewhat questionable
+results, with an MAE of 0.88 (1.60) \kcalmol, as well as a large outlier of 6.2
+\kcalmol\ that is not present in the other data from composite methods.
+One-to-one plots of all other methods are presented in Appendix~\ref{ap:bde}.
 
 \begin{figure}[H]
   \hspace*{-1.5cm}
@@ -496,39 +484,39 @@ shown in~\ref{fig:bde-bep}.
   are approximate.} \label{fig:bde-bep}
 \end{figure}
 
-As with the experimental results in~\ref{fig:bep-expt}, there clearly exists
-two distinct regions in~\ref{fig:bde-bep}. This is congruent with our initial
+As with the experimental results in~\ref{fig:bep-expt}, there clearly exists two
+distinct regions in~\ref{fig:bde-bep}. This is congruent with our initial
 hypothesis that there should exist two linear relations: one for
 allylic/benzylic C-H bonds, and another for alkyl C-H bonds. However, there
 remains a considerable amount of scatter in the data, thus correlation of the
 expected BEP relations is poor. For the allylic/benzylic series of C-H BDEs
-which result in a radical which is delocalized, the coefficient of
-determination is $R^2 = 0.89$. This result is consistent with work of Pratt et
-al.\cite{Pratt2003}, which found a BEP plot $R^2 =0.82$ for the abstraction of
-C-H bonds from models for unsaturated fatty acids. Most of the rate constants
-used in the work of Pratt et al. are for the abstraction of \ch{C-H} by peroxyl
-radicals, which were obtained through an experimental method that gives
-estimated HAT rate constants with large associated errors. Thus, they suggested
-that the degree of scatter is associated with experimental errors. The same
-however cannot be said for the rate constants associated with this work.
+which result in a radical which is delocalized, the coefficient of determination
+is $R^2 = 0.89$. This result is consistent with work of Pratt et
+al.\cite{Pratt2003}, which obtained an $R^2 = 0.82$ from the BEP plot for the
+abstraction of C-H bonds from models for unsaturated fatty acids. Most of the
+rate constants used in the work of Pratt et al. are for the abstraction of
+\ch{C-H} by peroxyl radicals, which were obtained through an experimental method
+that gives estimated HAT rate constants with large associated errors. Thus, they
+suggested that the degree of scatter is associated with experimental errors. The
+same however cannot be said for the rate constants associated with this work.
 Therefore, there may be additional physico-chemical factors at play.
 
 The alkyl C-H BDEs show very weak correlation with \cumo\ HAT rate constants,
 with an $R^2 =0.63$. One possibility is that applying the BEP principle to such
 a large grouping of substrates is inappropriate. Thus, I have re-plotted this
-data in~\ref{fig:bep-breakdown}, breaking the data into several smaller
-chemical groupings: cyclic alkanes, other alkanes (branched and adamantane),
-hydrogen bond donating (H-Bond Donors) species, and other \ch{C-H} bonds with
-heteroatom neighbours (Het. Neighbours). Doing so appears to reveal one
-reasonably well-correlated trend for \ch{C-H} bonds with heteroatom neighbours
-($R^2 = 0.84$). There are two data points for the tertiary amines
-(triethylamine and 1,4-diazobicyclo[2.2.2]octane\jnote{larger error in kH}),
-which do not fit well with the expected trend, however it is unclear why they
-do not fit into the other points in the heteroatomic neighbours trend.
+data in~\ref{fig:bep-breakdown}, breaking the data into several smaller chemical
+groupings: cyclic alkanes, other alkanes (branched and adamantane), hydrogen
+bond donating (H-Bond Donors) species, and other \ch{C-H} bonds with heteroatom
+neighbours (Het. Neighbours). Doing so appears to reveal one reasonably
+well-correlated trend for \ch{C-H} bonds with heteroatom neighbours ($R^2 =
+0.84$). There are two data points for the tertiary amines (triethylamine and
+1,4-diazobicyclo[2.2.2]octane, which do not fit well with the expected trend,
+however it is unclear why they do not fit into the other points in the
+heteroatomic neighbours trend.
 
-Excluding points the tertiary amines results in an $R^2 = 0.92$.  The cyclic
+Excluding points for the tertiary amines results in an $R^2 = 0.92$.  The cyclic
 alkanes are somewhat poorly correlated ($R^2 = 0.73$). Within the ``other
-alkanes'' grouping consists of the two branched alkanes, 2,3-dimethylbutane and
+alkanes'' grouping there are two branched alkanes, 2,3-dimethylbutane and
 2,2-dimethylbutane, as well as the secondary and tertiary \ch{C-H} positions of
 adamantane. There may be a separate correlation for each of these, however
 there are to few data points to explore this make this assertion. Extremely
@@ -677,34 +665,34 @@ conformation that maximizes non-covalent interactions while minimizing steric
 repulsion is adopted. In the cases of acetone, acetonitrile,
 hexamethylphosphoramide (HMPA), and DMSO, a very weak hydrogen bonding
 interaction is formed between the \ch{X=O} (or \ch{C+N} for acetonitrile)
-moieties and the C-H of the methyl of \cumo. In all but two cases, this
-involves a cisoid (partially-stacked) complex so that dispersion interactions
-are maximized. The two outliers are benzaldehyde and cyclooctane. In order for
-benzaldehyde to adopt a cisoid TS structure, there are two possibilities.
-First, a T-shaped conformation could be adopted, rather than a slipped-parallel
+moieties and the C-H of the methyl of \cumo. In all but two cases, this involves
+a cisoid (partially-stacked) complex so that dispersion interactions are
+maximized. The two outliers are benzaldehyde and cyclooctane. In order for
+benzaldehyde to adopt a cisoid TS structure, there are two possibilities. First,
+a T-shaped conformation could be adopted, rather than a slipped-parallel
 $\pi$-stacked conformation. On the basis of the benzene-benzene non-covalently
 bound dimer,\cite{Sinnokrot2002} this conformation is very slightly favourable
 by circa 0.1 \kcalmol. However, this would require a rotation of nearly
 90$^\circ$ of the \ch{C(CH3)2O^.} of \cumo, which has a predicted energetic
-cost\footnotemark\ of 4.2 \kcalmol, and so this conformation is unlikely. On
-the other hand, the \ch{C(CH3)2O^.} of \cumo\ could rotate to accommodate a
+cost\footnotemark\ of 4.2 \kcalmol, and so this conformation is unlikely. On the
+other hand, the \ch{C(CH3)2O^.} of \cumo\ could rotate to accommodate a
 partially slipped-parallel $\pi$-stacking conformation in the TS complex. Note
 that I was unable to obtain TS structures for either of the described possible
 cisoid conformations for the benzaldehyde-\cumo\ TS complex, as geometry
 optimization calculations did not converge. For cyclooctane, the difference in
 free energy between the cisoid and transoid TS structures is 1.8 \kcalmol,
-however both structures were unable to be fully optimized and contain a
-secondary small imaginary frequency. The reason for the transoid TS structure
+however both structures contain a secondary small imaginary frequency, and those
+do not represent true TS structures. The reason for the transoid TS structure
 being more stable is somewhat unclear, but it is possible that the non-optimal
 nature of the TS structures is the cause. Furthermore, it is possible that the
-cyclooctane molecule undergoes a conformational change in forming the TS
-complex which was not accounted for in these calculations. Cyclooctane has many
+cyclooctane molecule undergoes a conformational change in forming the TS complex
+which was not accounted for in these calculations. Cyclooctane has many
 conformations that are close in relative energy.\cite{Dorofeeva1985}
 
 \footnotetext{Calculated at the B3LYP-D3(BJ)/6-311+G(2d,2p) level of theory.}
 
 TS complex structures and mechanism aside, there is one striking feature in the
-reaction barriers calculated for HAT reactions involving \cumo: all the the
+reaction barriers calculated for HAT reactions involving \cumo: all the
 reactions studied are entropy-controlled at 298 K. This means that the
 free-energy barrier, and thus rate constant, is controlled by the entropic
 contributions, rather than the enthalpic contributions, i.e., $-T\Delta
