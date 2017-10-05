@@ -300,7 +300,7 @@ electron from the atomic nucleus, $n$ is a natural number that plays the role
 of the principle quantum number, and $x$, $y$, and $z$ are cartesian
 coordinates. The angular component $x^a y^b z^c$ describes the shape of the
 function, such that if a+b+c=0 $\phi_i^{STO}$ is of $s$-type; if $a+b+c=1$,
-$\phi_i^{GTO}$ is of $p$-type, and so forth. Although STOs approximate the long
+$\phi_i^{STO}$ is of $p$-type, and so forth. Although STOs approximate the long
 and short range behaviour of atomic orbitals correctly, performing integration
 with these functions is computationally very demanding, due primarily to the
 complexity of the integrals involved describing in electron-electron
@@ -598,10 +598,10 @@ where the parenthesis indicate the use of perturbative arguments. Note also
 that traditionally, the use of CCSD(T) implies excitation of only the valence
 electrons, unless otherwise stated.
 
-CCSD(T) is commonly referred to as the \emph{gold standard} in quantum
-chemistry and is often used to obtain benchmark quality results for
-thermochemistry and NCIs.\cite{Levine2013} However, CCSD(T) scales with $N^7$
-number of basis functions, and is thus significantly more computationally
+CCSD(T) is commonly referred to as the \emph{gold standard} in quantum chemistry
+and is often used to obtain benchmark quality results for thermochemistry and
+non-covalent interactions (NCIs).\cite{Levine2013} However, CCSD(T) scales with
+$N^7$ number of basis functions, and is thus significantly more computationally
 expensive than HF or MP2, restricting its application to small systems of
 molecules. Quadratic configuration interaction (QCI) is closely related to CC,
 except that is uses quadratic operators in place of exponential ones. QCISD(T)
@@ -682,7 +682,7 @@ Chapter~\ref{ch:bde}.
   The exact energy can only be achieved at the limits of an infinite basis set
   and complete correlation. Using a combination of Method 1 (low
   correlation/large basis set) and Method 2 (high correlation/small basis set),
-  the Composite method approaches the exact energy.} \label{fig:comp}
+  the composite method approaches the exact energy.} \label{fig:comp}
 \end{figure}
 
 \subsection{Density-functional theory}
@@ -936,14 +936,14 @@ computational costs.
 
 \subsection{Geometry optimization}
 
-All QM methods depend parametrically on the geometry of a molecular system.
-That is the electronic energy of a system depends on the positions of the
-nuclei. While the wave functions can describe any arbitrary geometry, we are
-typically only interested in certain geometries of a molecule. These geometries
-of interest are normally stationary states along a the potential energy surface
-(PES) of a system, that is, points where the gradient of energy with respect to
-nuclear coordinates is zero. Therefore, we perform \emph{geometry optimization}
-calculations to determine these points.
+All QM methods depend parametrically on the geometry of a molecular system. That
+is the electronic energy of a system depends on the positions of the nuclei.
+While the wave functions can describe any arbitrary geometry, we are typically
+only interested in certain geometries of a molecule. These geometries of
+interest are normally stationary states along a the PES of a system, that is,
+points where the gradient of energy with respect to nuclear coordinates is zero.
+Therefore, we perform \emph{geometry optimization} calculations to determine
+these points.
 
 Molecular systems have complex PESs. For a non-linear molecule, the nuclear PES
 has 3$N$-6 dimensions, where $N$ is the number of nuclei
