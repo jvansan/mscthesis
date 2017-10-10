@@ -152,7 +152,7 @@ To obtain accurate pre-reaction complex binding energies, the substrates and
 complexes were subject to single-point energy calculations using the
 LC-$\omega$PBE long-range corrected density functional\cite{Vydrov2006,
 Vydrov2006a} with D3(BJ) dispersion corrections and pc-2 basis sets with
-truncated $f$-type functions (pc-2-spd).\cite{Johnson2013} This method was
+$f$-type basis functions removed (pc-2-spd).\cite{Johnson2013} This method was
 selected on the recommendation of work by \citet{Johnson2013}, which
 demonstrated the accuracy of this method for the calculation of NCIs. On the
 basis of the reported mean absolute error in Reference \citenum{Johnson2013} for
@@ -176,8 +176,7 @@ correlation is genuine, that is, NCIs may have an impact on A-factors. I shall
 demonstrate that the data that do not correlate are reasonable outliers. In
 fact, using simple rationale I shall demonstrate that different regimes of
 steric bulk results in different mechanistic processes leading to the TS
-complex. As a result, deviations from the relationship between A-factor and
-binding energy are observed.
+complex.
 
 \begin{figure}[!htbp]
   \centering
@@ -232,22 +231,23 @@ substrate approach sufficient proximity for a reaction to take place, NCIs lead
 to the formation of a weakly bound complex. If this complex has the appropriate
 geometry for a hydrogen transfer to occur, it is considered a pre-reaction
 complex, otherwise it is considered an initial encounter complex. An initial
-encounter complex can pass over an additional energy barrier to reach the
+encounter complex must pass over an additional energy barrier to reach the
 appropriate pre-reaction complex. With respect to the species
 in~\ref{tab:Arrhenius-expt}, the complexes formed involve various degrees of
 $\pi$-$\pi$, LP-$\pi$, and LP-LP interactions, which contribute to the weakly
 attractive, dispersion interactions. Furthermore, these same orbital
-interactions can lead to the formation of an additional electronic channel,
-enabling a PCET mechanism.\cite{DiLabio2005, DiLabio2007} Returning now to
-Equation~\ref{eq:A-theory}, the different types of orbital interactions may
-control the contributions of $k_{PCET}$ to the overall rate constants.
+interactions in the TS complex can lead to the formation of an additional
+electronic channel, enabling a PCET mechanism.\cite{DiLabio2005, DiLabio2007}
+Returning now to Equation~\ref{eq:A-theory}, the different types of orbital
+interactions may control the contributions of $k_{PCET}$ to the overall rate
+constants.
 
 While the data herein explore only the geometries of the pre-reaction complexes
 involved in the hydrogen transfer reactions, the presumptive TS structures will
 have similar structures and more importantly, orbital interactions. Therefore,
-by applying these principles, it is possible to rationalize the deviations from
-the observed trendline in~\ref{fig:Arrhenius}. Specifically, there are three
-distinct chemical processes occurring.
+by considering the similarities between pre-reaction and TS complexes, it is
+possible to rationalize the deviations from the observed trendline
+in~\ref{fig:Arrhenius}.
 
 \begin{figure}[!htbp]
   \centering
@@ -282,9 +282,9 @@ in~\ref{fig:com2-3}, and are very similar in structure. Both are
 hydroxylamine-nitroxyl couples with similar degrees of steric bulk adjacent to
 the reacting centres. The $t$-butyl groups of 3, and the methyl groups of 2 (the
 NO-ON dihedral angles are 65$^\circ$ and 68$^\circ$, respectively) prevent the
-alignment of the NO-H-ON frameworks for PCET. Thus, while the presumptive TS
-structure may have some degree of LP-LP orbital interaction, the overall
-mechanism is dominated by direct HAT.
+overlap of the N LP orbitals in of the NO-H-ON frameworks to allow for PCET.
+Thus, while the presumptive TS structure may have some degree of LP-LP orbital
+interaction, the overall mechanism is dominated by direct HAT.
 
 In the most stable stacked conformation, complex 4, as seen in~\ref{fig:com4},
 steric clash of the para-position $t$-butyl groups obstructs $\pi$-$\pi$ overlap
@@ -424,7 +424,7 @@ additional investigation.
 Once again, complexes 2--4 and 8--10 follow the observed trend. In all cases,
 these complexes may have some PCET contribution to $k_{HAT}$ through either
 LP-$\pi$ or LP-LP orbital overlap. Interpretation of~\ref{fig:Arrhenius} in this
-manner allows for two possible explanations. The simpler is that all these
+manner allows for two possible explanations. The simplest is that all these
 complexes proceed through a mechanism in which $k_{HAT} \approx k_{direct}$
 ($k_{PCET} \ll k_{direct}$). In this case, the A-factor is a direct reflection
 of $k_{HAT}$ and this the pre-reaction complex binding energy correlates well
