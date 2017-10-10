@@ -44,15 +44,15 @@ abstraction by \cumo, the enthalpy of reaction ($\Delta H$) is directly related
 to the strength of the breaking bond: $\Delta H =$ BDE(\ch{C-H}) $-$
 BDE(\ch{CumO-H}). If the relationship holds for a series of related HAT
 reactions, then BDEs should correlate with the activation energy
-(Equation~\ref{eq:bep}). It would then stand that an increase in bond strength
-represents a destabilization in the TS complex, and thus a decrease in reaction
-rate. This concept is also important for the work in Chapter~\ref{ch:hat}, where
-the interaction of non-redox active metal cations results in an increase in
-effective bond strength, and decrease in rate constant. It is also important to
-note that if the BEP principle breaks down for reactions that appear related,
-then additional physico-chemical factors, such as non-covalent binding
-(\emph{viz.} Chapter~\ref{ch:arrhenius}), or stereo-electronics may be
-influencing the reaction barrier.
+(Equation~\ref{eq:bep}). It would then stand to reason that an increase in bond
+strength represents a destabilization in the TS complex, and thus a decrease in
+reaction rate. This concept is also important for the work in
+Chapter~\ref{ch:hat}, where the interaction of non-redox active metal cations
+results in an increase in effective bond strength, and decrease in rate
+constant. It is also important to note that if the BEP principle breaks down for
+reactions that appear related, then additional physico-chemical factors, such as
+non-covalent binding (\emph{viz.} Chapter~\ref{ch:arrhenius}), or
+stereo-electronics may be influencing the reaction barrier.
 
 An interesting application of the BEP principle is the work of
 \citet{Pratt2003}, in which the free radical oxidation of unsaturated lipids was
@@ -142,15 +142,16 @@ relations.
   \caption[Bell-Evans-Polanyi plot of experimental rate constants against
   literature BDEs.]{Bell-Evans-Polanyi plot of experimental rate constants
   (normalized for the number of equivalent hydrogen atoms) for HAT between
-  \cumo\ and substrates against literature BDEs. BDEs for dimethyl sulfoxide
-  and hexamethylphosphoramide are from Ref.~\protect\citenum{Salamone2012},
-  while all other BDEs are from Ref.~\protect\citenum{Luo2002}. Points 21--26
-  and 29--30 were excluded from linear regression as possible outliers.}
+  \cumo\ and substrates against weakest literature C-H BDEs of the substrates.
+  BDEs for dimethyl sulfoxide and hexamethylphosphoramide are from
+  Ref.~\protect\citenum{Salamone2012}, while all other BDEs are from
+  Ref.~\protect\citenum{Luo2002}. Points 21--26 and 29--30 were excluded from
+  linear regression as possible outliers.}
   \label{fig:bep-expt}
 \end{figure}
 
 There is a considerable amount of scatter in~\ref{fig:bep-expt}, thus possible
-outlier were excluded from the initial linear-regression analysis. The scatter
+outliers were excluded from the initial linear-regression analysis. The scatter
 may be due to differences in experimental procedures in the measurement of
 BDEs, which are measurable using a large number of different experimental
 techniques. A great deal of data exists in the literature, much of which has
@@ -438,10 +439,10 @@ methods are not possible. Importantly, we can now confidently continue
 investigating the BEP relationships using reliably calculated BDE data from the
 ROCBS-QB3 method. Furthermore, these results can be extended to even larger
 systems as the ROCBS-QB3 approach is one of the least computationally-expensive
-composite methods. For example, calculations on the cyclohexane molecule, which
-take about 20 minutes using ROCBS-QB3 on SGI Altix compute nodes with 6
-processors and 8 GB RAM, while G4 takes approximately 27 times longer, the LDBS
-approach takes about 500 times longer, and W1BD takes about 1100 times longer.
+composite methods. For example, calculations on the cyclohexane molecule take
+about 20 minutes using ROCBS-QB3 on SGI Altix compute nodes with 6 processors
+and 8 GB RAM, while G4 takes approximately 27 times longer, the LDBS approach
+takes about 500 times longer, and W1BD takes about 1100 times longer.
 
 \section{Analysis of the Bell-Evans-Polanyi principle}
 
@@ -485,14 +486,14 @@ shown in~\ref{fig:bde-bep}.
 \end{figure}
 
 As with the experimental results in~\ref{fig:bep-expt}, there clearly exists two
-distinct regions in~\ref{fig:bde-bep}. This is congruent with our initial
+distinct regions in~\ref{fig:bde-bep}. This is congruent with the initial
 hypothesis that there should exist two linear relations: one for
 allylic/benzylic C-H bonds, and another for alkyl C-H bonds. However, there
 remains a considerable amount of scatter in the data, thus correlation of the
-expected BEP relations is poor. For the allylic/benzylic series of C-H BDEs
-which result in a radical that is delocalized, the coefficient of determination
-is $R^2 = 0.89$. This result is consistent with work of Pratt et
-al.\cite{Pratt2003}, which obtained an $R^2 = 0.82$ from the BEP plot for the
+expected BEP relations is poor. For the allylic/benzylic series of C-H BDEs, for
+which bond scissions results in a radical that is delocalized, the coefficient
+of determination is $R^2 = 0.89$. This result is consistent with work of Pratt
+et al.\cite{Pratt2003}, which obtained an $R^2 = 0.82$ from the BEP plot for the
 abstraction of C-H bonds from models for unsaturated fatty acids. Most of the
 rate constants used in the work of Pratt et al. are for the abstraction of
 \ch{C-H} by peroxyl radicals, which were obtained through an experimental method
@@ -510,7 +511,7 @@ bond donating (H-Bond Donors) species, and other \ch{C-H} bonds with heteroatom
 neighbours (Het. Neighbours). Doing so appears to reveal one reasonably
 well-correlated trend for \ch{C-H} bonds with heteroatom neighbours ($R^2 =
 0.84$). There are two data points for the tertiary amines (triethylamine and
-1,4-diazobicyclo[2.2.2]octane, which do not fit well with the expected trend,
+1,4-diazobicyclo[2.2.2]octane) that do not fit well with the expected trend,
 however it is unclear why they do not fit into the other points in the
 heteroatomic neighbours trend.
 
@@ -671,8 +672,9 @@ maximized. The two outliers are benzaldehyde and cyclooctane. In order for
 benzaldehyde to adopt a cisoid TS structure, there are two possibilities. First,
 a T-shaped conformation could be adopted, rather than a slipped-parallel
 $\pi$-stacked conformation. On the basis of the benzene-benzene non-covalently
-bound dimer,\cite{Sinnokrot2002} this conformation is very slightly favourable
-by circa 0.1 \kcalmol. However, this would require a rotation of nearly
+bound dimer,\cite{Sinnokrot2002} the T-shaped conformation is very slightly
+favourable compared to the $\pi$-stacked conformation by circa 0.1 \kcalmol.
+However, forming the T-shaped TS structure would require a rotation of nearly
 90$^\circ$ of the \ch{C(CH3)2O^.} of \cumo, which has a predicted energetic
 cost\footnotemark\ of 4.2 \kcalmol, and so this conformation is unlikely. On the
 other hand, the \ch{C(CH3)2O^.} of \cumo\ could rotate to accommodate a
@@ -794,26 +796,26 @@ calculated BDEs. Therefore, the experimental results are likely serendipitous,
 especially considering the reactions are entropy-controlled and
 non-isoentropic.
 
-Further analysis of the allylic/benzylic relation demonstrates a clear
-breakdown in the BEP principle. If one begins with toluene with a BDE of 89.7
-\kcalmol\ and $\Delta H^\ddagger$ of -3.5 \kcalmol, then the addition of two
-methyl substituents forms cumene, with a BDE of 86.9 \kcalmol\ and $\Delta
-H^\ddagger$ of -5.8 \kcalmol, indicating the stabilization of the TS by
+Further analysis of the allylic/benzylic relation demonstrates a clear breakdown
+in the BEP principle. If one begins with toluene with a BDE of 89.7 \kcalmol\
+and $\Delta H^\ddagger$ of -3.5 \kcalmol, then the addition of two methyl
+substituents forms cumene, with a BDE of 86.9 \kcalmol\ and $\Delta H^\ddagger$
+of -5.8 \kcalmol, indicating the relative stabilization of the TS by
 substituents. However, if one adds another phenyl group instead of two methyl
 groups, diphenylmethane is obtained, which has a BDE of 82.8 \kcalmol. This
 indicates that phenyl is a better radical stabilizing group, however $\Delta
 H^\ddagger$ is -5.6 \kcalmol, which is slightly higher than that of cumene. The
-difference can be partially attributed then to differences in progress along
-the reaction coordinate. Evidence of this difference is the spin density
-localized on the O-centre of \cumo\ in the TS complex, which should go to zero
-as the reactants move to products. The \ch{O^.} spin densities are 0.477 $e^-$,
-0.528 $e^-$, and 0.518 $e^-$ for toluene, cumene, and diphenylmethane,
-respectively. Therefore, the progress along the reaction coordinate is furthest
-for toluene, and progressively less far for diphenylmethane and cumene. Note,
-that the \ch{O^.} spin densities for cyclopentane, cyclohexane, and cyclooctane
-are 0.455 $e^-$, 0.452 $e^-$, and 0.458 $e^-$, respectively. Therefore the
-progress along the reaction coordinate for the cycloalkanes is roughly the
-same.
+difference can be partially attributed then to differences in progress along the
+reaction coordinate. Evidence of this difference is the spin density localized
+on the O-centre of \cumo\ in the TS complex, which should go to zero as the
+reactants move to products. The \ch{O^.} spin densities are 0.477 $e^-$, 0.528
+$e^-$, and 0.518 $e^-$ for toluene, cumene, and diphenylmethane, respectively.
+Therefore, the progress along the reaction coordinate is furthest for toluene,
+and progressively less far for diphenylmethane and cumene. Note, that the
+\ch{O^.} spin densities for cyclopentane, cyclohexane, and cyclooctane are 0.455
+$e^-$, 0.452 $e^-$, and 0.458 $e^-$, respectively. Therefore the progress along
+the reaction coordinate for the cycloalkanes is roughly the same, which may
+explain the $R^2$ of nearly 1.
 
 Such contradictory data makes it very difficult to draw any conclusions.
 Instead, I shall make some suggestions as to why the BEP principle is an
@@ -822,55 +824,53 @@ organic substrates:
 
 \begin{enumerate}
   \item HAT reactions between \cumo\ and these organic substrates may be
-	  decidedly exothermic, resulting in reactions with no enthalpic
-	  barrier associated with the breaking of a \ch{C-H} bonds and the
-	  formation of an \ch{O-H} bond. This is supported by the fact that the
-	  calculated enthalpic barriers are all very low or even negative.
-	  Therefore, any remaining nominal activation energy is a result of
-	  stereo-electronic interactions between \cumo\ and the substrate.
-	  Also, the high reactivity of \cumo\ also suggests that abstraction
-	  from the weakest bond in a substrate will not always occur.  The site
-	  of abstraction will most likely be determined by the orientation of
-	  the substrate upon collision. This is likely an additional reason why
-	  $\log{k_H/n}$ does not correlate with the calculated \ch{C-H} BDEs.
+  decidedly exothermic, resulting in reactions with no enthalpic barrier
+  associated with the breaking of a \ch{C-H} bonds and the formation of an
+  \ch{O-H} bond. This is supported by the fact that the calculated enthalpic
+  barriers are all very low or even negative. Therefore, any remaining nominal
+  activation energy is a result of stereo-electronic interactions between \cumo\
+  and the substrate. The high reactivity of \cumo\ also suggests that
+  abstraction from the weakest bond in a substrate will not always occur.  The
+  site of abstraction will most likely be determined by the orientation of the
+  substrate upon collision. This is likely an additional reason why
+  $\log{k_H/n}$ does not correlate with the calculated \ch{C-H} BDEs.
 
-  \item Polar effects have been shown to be extremely important in the
-	  stability of the TS complex.\cite{Roberts1999} The species involved
-	  in HAT reactions are often neutral radicals, thus the influence of
-	  charge transfer in the TS complex can have important implications.
-	  Consider the TS of a generic HAT reaction in~\ref{fig:hatts}, there
-	  are four obvious resonance forms. Oxygen-centred radicals are
-	  electrophilic in nature, thus the importance of the third resonance
-	  structure increases. The BEP principle does not account for polarity
-	  in the TS complex, as these effects are not captured by the BDE of
-	  the substrate, thus $\Delta H^\ddagger$ does not correlate well with
-	  BDE. This issue was addressed by \citet{Roberts1994}, who suggested
-	  an extension of the BEP principle to include simple empirical
-	  parameters that capture the polar effects in the transition state.
+  \item Polar effects have been shown to be extremely important in the stability
+  of the TS complex.\cite{Roberts1999} The species involved in HAT reactions are
+  often neutral radicals, thus the influence of charge transfer in the TS
+  complex can have important implications. Consider the TS of a generic HAT
+  reaction in~\ref{fig:hatts}, there are four obvious resonance forms.
+  Oxygen-centred radicals are electrophilic in nature, thus the importance of
+  the third resonance structure increases. The BEP principle does not account
+  for polarity in the TS complex, as these effects are not captured by the BDE
+  of the substrate, thus $\Delta H^\ddagger$ does not correlate well with BDE.
+  This issue was addressed by \citet{Roberts1994}, who suggested an extension of
+  the BEP principle to include simple empirical parameters that capture the
+  polar effects in the transition state.
 
   \begin{scheme}[!htbp]
-    {\huge\ch{[X-H-Y]}$^\ddagger$} \\
+    {\huge\ch{[O-H-C]}$^\ddagger$} \\
     \vspace{0.5cm}
     {\large
-    \ch{[X^.H-Y]}$^\ddagger$ \ch{<-> [X-H Y^.]}$^\ddagger$ \ch{<->
-      [X:^-H^.Y^+]}$^\ddagger$ \ch{<-> [X^+H^.Y:^-]}$^\ddagger$}
+    \ch{[O^.H-C]}$^\ddagger$ \ch{<-> [O-H C^.]}$^\ddagger$ \ch{<->
+      [O:^-H^.C^+]}$^\ddagger$ \ch{<-> [O^+H^.C:^-]}$^\ddagger$}
     \caption{A generic HAT transition state structures and possible resonance forms.}
   \label{fig:hatts}
   \end{scheme}
 
-\item The BEP principle is an over-simplification that does not capture nearly
-enough of the physics associated with the deceptively complex hydrogen
-abstraction reactivity of \cumo\ (or \ch{$t$-BuO^.}). Therefore, I suggest that
-the BEP principle should not be used as a tool for predicting activation
-energies or rate constants. One method that has been popularized by Mayer is
-the use of Marcus cross-relations.\cite{Mayer2010} This predictive method has
-also been used to explain reactions that have negative enthalpic
-barriers.\cite{Mader2004} An alternative approach is that of Zavitsas, that
-predicts activation energies based on so-called ``triplet
-repulsion''\footnotemark\ and radical delocalization.\cite{Zavitsas1995,
-Zavitsas2012} It is clear from the analysis herein that the BEP principle is
-valid only as a conceptual framework, rather than a true linear relationship.
-\end{enumerate}
+  \item The BEP principle is an over-simplification that does not capture nearly
+  enough of the physics associated with the deceptively complex hydrogen
+  abstraction reactivity of \cumo\ (or \ch{$t$-BuO^.}). Therefore, I suggest
+  that the BEP principle should not be used as a tool for predicting activation
+  energies or rate constants. One method that has been popularized by Mayer is
+  the use of Marcus cross-relations.\cite{Mayer2010} This predictive method has
+  also been used to explain reactions that have negative enthalpic
+  barriers.\cite{Mader2004} An alternative approach is that of Zavitsas, that
+  predicts activation energies based on so-called ``triplet
+  repulsion''\footnotemark\ and radical delocalization.\cite{Zavitsas1995,
+  Zavitsas2012} It is clear from the analysis herein that the BEP principle is
+  valid only as a conceptual framework, rather than a true linear relationship.
+  \end{enumerate}
 
 \footnotetext{Zavitsas uses the term ``triplet repulsion'' to  describe
 repulsion between the parallel spins of the hydrogen atom acceptor and donor
