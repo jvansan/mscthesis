@@ -93,8 +93,6 @@ $\alpha(\omega)/\beta(\omega)$ are orthonormal, so too is $\chi_i(\mathbf{x})$
 \bra{\chi_i(\mathbf{x})}\ket{\chi_j(\mathbf{x})} = \delta_{ij}
 \end{equation}
 
-\subsection{The Hartree product}
-
 The first steps towards describing an $N$ electron wave function come from the
 work in the late 1920s by Hartree. The early \emph{Hartree method} took an
 approach in which the wave function of $N$ non-interacting electrons
@@ -118,11 +116,11 @@ independent operators
   \hat{h}(i) = -\frac{1}{2} \nabla_i^2 + V(\mathbf{r}_i)
 \end{equation}
 
-\noindent such that the first term describes an electron's kinetic, and the
-second term describes potential felt by a single electron. If we consider the
-case that ignores electron-electron repulsion, then case $V$ describes only
+\noindent such that the first term describes an electron's kinetic energy, and
+the second term describes potential felt by a single electron. If we consider
+the case that ignores electron-electron repulsion, then case $V$ describes only
 the nuclear-electron attraction. Alternatively, the electron-electron repulsion
-may be included as an average potential.
+may be included as an average potential.s
 
 Solutions to the Schr{\"o}dinger equation for this system of non-interacting
 electrons are facile to obtain as each $h(i)$ depends only on the variables of
@@ -180,11 +178,12 @@ elements of the determinant:
 
 Slater determinants are completely dependent on the spin orbitals from which it
 is formed, to within a sign. Therefore, Slater determinants also form an
-orthonormal set. Additionally, the introduction of antisymmetry into the
-Hartree product incorporates so-called \emph{exchange correlation}. This means
-that the motion of two electrons with parallel spin are correlated. However,
-since the motion of electrons with opposite spin are not correlated, a single
-determinant wave function is said to be uncorrelated.
+orthonormal set. Additionally, the introduction of antisymmetry into the Hartree
+product incorporates so-called \emph{exchange correlation}. This means that the
+motion of two electrons with parallel spin are correlated because each
+spin-orbital can only contain one electron. However, since the motion of
+electrons with opposite spin are not correlated, a single determinant wave
+function is said to be uncorrelated.
 
 \subsection{The Hartree-Fock approximation}
 
@@ -227,9 +226,9 @@ defined as
   \hat{f}(i) = -\frac{1}{2}\nabla^2_i + \sum_{A=1}^M\frac{Z_A}{r_{iA}} + v^{HF}(i)
 \end{equation}
 
-\noindent The first two terms are familiarly the non-interacting one electron
-Hamiltonian, $\hat{h}(i)$. The third term, $v^{HF}(i)$, is the average
-potential experienced by each electron in the presence of other electrons.
+\noindent The first two terms are the non-interacting one electron Hamiltonian,
+$\hat{h}(i)$. The third term, $v^{HF}(i)$, is the average potential experienced
+by each electron in the presence of other electrons.
 
 With these approximations, the quantum problem is now reduced to solving the
 eigenvalue Hartree-Fock equation of the form
@@ -279,12 +278,12 @@ method.
 
 Choosing optimal basis functions can help significantly in terms of determining
 the ground state wave function $\Psi_0$. Quantum chemists rely on the choice of
-\emph{basis sets}, defined as the vector space in which an \emph{ab initio}
-problem is defined. Basis sets usually refer to the set of one particle
-functions, which are used to form MOs in a linear combination of atomic
-orbitals (LCAO-MO) like approach. For a system with $N$ electrons, the LCAO-MO
-approach gives $N$/2 occupied orbitals in the ground state. The remaining basis
-functions in a set are combined to give \emph{virtual} (unoccupied) orbitals.
+\emph{basis sets}, defined as the vector space in which an ab initio problem is
+defined. Basis sets usually refer to the set of one particle functions, which
+are used to form MOs in a linear combination of atomic orbitals (LCAO-MO) like
+approach. For a system with $N$ electrons, the LCAO-MO approach gives $N$/2
+occupied orbitals in the ground state. The remaining basis functions in a set
+are combined to give \emph{virtual} (unoccupied) orbitals.
 
 Early basis sets were composed of \emph{Slater-type orbitals} (STOs), due to
 their resemblance to the atom orbitals (AOs) of the hydrogen atom. These are
@@ -305,6 +304,10 @@ and short range behaviour of atomic orbitals correctly, performing integration
 with these functions is computationally very demanding, due primarily to the
 complexity of the integrals involved describing in electron-electron
 interactions.
+
+In order to make the integration over orbitals computationally efficient,
+modern basis sets are almost exclusively composed of \emph{Gaussian-type
+orbitals} (GTOs), which can generally be represented as
 
 \begin{equation}
 \phi_i^{GTO}(\alpha,a,b,c,x,y,z) = N e^{-\alpha r^2} x^a y^b z^c
@@ -329,7 +332,7 @@ efficient.\cite{Gill1994}
 
 \subsubsection{Basis set nomenclature}
 
-Standard basis sets are composed of basis functions that represent atomic
+Standard basis sets are composed of basis functions used represent atomic
 orbitals and that each basis function is a CGTO composed of several GTOs. A
 \emph{minimal basis set} is one in which each AO is represented by a single
 basis function. To more accurately represent AOs, more basis functions should
@@ -358,7 +361,7 @@ atom's AOs.\cite{Szabo1996} \emph{Diffuse functions} are basis functions that
 extend further into space, typically by the inclusion of a very shallow
 Gaussian function (small $\zeta$ exponent). Diffuse functions are necessary to
 accurately describe anions, very electronegative atoms, and large systems in
-which NCIs are important.
+which non-covalent interactions (NCIs) are important.
 
 \subsubsection{Commonly used basis sets}
 
@@ -372,26 +375,26 @@ quantum chemistry.
 \vspace{1mm}
 
 Perhaps the most utilized basis sets in chemistry are those arising from the
-group of Pople.\cite{Hehre1969, Ditchfield1971, Hehre1972} These basis sets
-were defined by fitting to HF wave functions. The earliest of these basis sets
-are the minimal STO-$N$G basis sets, where $N$ describes the number of GTOs
-that go into each contraction.
+group of Pople.\cite{Hehre1969, Ditchfield1971, Hehre1972} These basis sets were
+defined by minimizing the  to HF energy. The earliest of these basis sets are
+the minimal STO-$N$G basis sets, where $N$ describes the number of GTOs that go
+into each contraction.
 
 The practise of using minimal basis sets has diminished significantly as
 technology has advanced, thus these basis sets are largely considered out of
 date. It is more common to utilize the split-valence basis sets, denoted as
 $n-ijG$ or $n-ijkG$ for double and triple zeta split-valence basis sets,
-respectively. In this system of notation, $n$ represents the number of GTOs
-that comprise the core AOs, and $i, j, k$ describe the number of GTOs for
+respectively. In this system of notation, $n$ represents the number of GTOs that
+describe the core AOs, and $i, j, k$ describe the number of GTOs for
 contractions in the valence AOs. Polarization functions are denoted either with
 asterisks or with the specific shell and number of functions that are being
 added. Diffuse functions are denoted with either a single or double ``+'',
 indicating diffuse $s$ and $p$-type functions for non-hydrogen atoms, and the
 addition of diffuse $s$-type functions for hydrogen, respectively. For example,
-the 6--31+G(d,p) $\equiv$ 6--31+G** double-zeta basis set is one that has: 6
-GTOs per core AO, 3 GTOs for the first valence set of AOs, and 1 GTO for the
-second, along with $s$ and $p$ diffuse functions of the heavy atoms, a single
-$d$ polarization function of heavy atoms, and a single $p$ polarization
+the 6--31+G(d,p) $\equiv$ 6--31+G** double-zeta basis set for C and H is one
+that has: 6 GTOs per core AO, 3 GTOs for the first valence set of AOs, and 1 GTO
+for the second, along with $s$ and $p$ diffuse functions of the heavy atoms, a
+single $d$ polarization function of heavy atoms, and a single $p$ polarization
 function of hydrogen atoms.
 
 \vspace{3mm}
@@ -406,12 +409,12 @@ referred to as ``correlation consistent'' basis sets are commonly used in, but
 not limited to, state of the art wave function calculations. These basis sets
 are said to be correlation consistent as they treat electron correlation
 (\emph{vide infra}) in a manner that systematically approached the complete
-basis set limit. Correlation consistent basis sets are denoted as
-``cc-pV$N$Z'', where $N$=D,T,Q,5,6,\ldots is the cardinal number of the basis
-set. These are large sets containing polarization functions by default and can
-be additionally augmented with diffuse functions, denoted by ``aug.'' An
+basis set limit. Correlation consistent basis sets are denoted as ``V$N$Z'',
+where $N$=2(D),3(T),4(Q),5,6,\ldots is the cardinal number of the basis set.
+These are large sets containing polarization functions by default and can be
+additionally augmented with diffuse functions, denoted by the prefix ``aug.'' An
 variant of these basis sets that are used for including core-correlation are
-denoted by ``cc-pVC$N$Z''.\cite{Peterson2002} A commonly used basis set is
+denoted by ``cc-pCV$N$Z''.\cite{Peterson2002} A commonly used basis set is
 aug-cc-pVTZ, which is a triple-zeta basis set with implicit polarization
 functions and specified diffuse functions on all atoms.
 
@@ -426,8 +429,8 @@ complete basis set limit in density-functional theory calculations through the
 use of higher order polarization functions. The notation adopted is ``pc-$X$'',
 where $X$ is the cardinal number of the basis set minus one (i.e. $X$ = $N$-1).
 Polarization functions are included by default in these basis sets, and
-additional diffuse functions can be specified with the same ``aug'' notation as
-the correlation consistent basis sets.
+additional diffuse functions can be specified with the same ``aug'' prefix used
+for as the correlation consistent basis sets.
 
 \vspace{3mm}
 \noindent{\large\emph{Ahlrich basis sets}}
@@ -450,25 +453,24 @@ set with polarization and diffuse functions.
 \subsection{Post-Hartree-Fock methods}
 
 The HF method gives an approximation to the ground state wave function of a
-molecule for a reasonable computational cost (scaling with $N^4$ number of
-basis function). There is however, a lack of the complete description of
+molecule for a reasonable computational cost (scaling with $N^4$ number of basis
+function). There is however, a lack of the complete description of
 \emph{dynamical electron correlation},\cite{Cramer2004} and thus significant
 deviations from experimental results can be observed. Dynamical electron
 correlation is a measure of how much one electron's movement is affected by the
-presence of other electrons. As described previously, the HF method includes
+motion of other electrons. As described previously, the HF method includes
 correlation through the average electron field potential term, however this
 field is in general, not static, thus correlation must be treated directly in
 order to obtain accurate results. The majority of methods take the HF wave
-function $\Psi_0$ as the starting point. Normally, the total energy is obtained
-by inclusion of an energy term for correlation $E_{corr}$, which can be defined
-as
+function $\Psi_0$ as the starting point. The correlation energy is defined as
+the difference between the exact energy and the HF energy:
 
 \begin{equation}
-  E_{corr} = \Xi_{exact} - E_0
+  E_{corr} = E_{exact} - E_0
 \end{equation}
 
 \noindent $E_{corr}$ is the difference between the full non-relativistic energy
-from the Schr{\"o}dinger equation, $\Xi_{exact}$, and a reference ground state
+from the Schr{\"o}dinger equation, $E_{exact}$, and a reference ground state
 energy $E_0$, usually the HF energy.
 
 We shall briefly describe two important methods for accounting for electron
@@ -513,17 +515,17 @@ $\hat{H}$, which gives the HF energy. The first-order energy is
   E_{MP1} = \bra{\phi_0}\hat{V}\ket{\phi_0} = 0
 \end{equation}
 
-\noindent by Brillouin's Theorem of singly excited determinants. Thus, the
-first useful correction occurs at the second order of perturbation, which is
-known as MP2. Additional orders of perturbation are referred to as MP3, MP4,
-\emph{etc}. The MP2 method has been popular in quantum chemistry because it
-scales with $N^5$ number of basis functions and is a significant improvement on
-the treatment of electron correlation compared to HF.\@ One may expect higher
-order of perturbation theory to more accurately describe a system. Practically
-however, the expansions used in MP$N$ theory do not converge smoothly to a
-limit with higher order of perturbation.\cite{Leininger2000} As a result, for
-molecular properties calculated with MP3 or higher are not guaranteed to give
-more accurate results than MP2.
+\noindent by Brillouin's Theorem of singly excited determinants. Thus, the first
+useful correction occurs at the second order of perturbation, which is known as
+MP2. Additional orders of perturbation are referred to as MP3, MP4, \emph{etc}.
+The MP2 method has been popular in quantum chemistry because it scales with
+$N^5$ number of basis functions and is a significant improvement on the
+treatment of electron correlation compared to HF.\@ One may expect higher order
+of perturbation theory to more accurately describe a system. Practically
+however, the expansions used in MP$N$ theory do not in all cases converge
+smoothly to a limit with higher order of perturbation.\cite{Leininger2000} As a
+result, for molecular properties calculated with MP3 or higher are not
+guaranteed to give more accurate results than MP2.
 
 \subsubsection{Configuration interaction and coupled cluster theory}
 
@@ -588,24 +590,24 @@ treatment to treat systems of molecules accurately. It is for this reason that
 CC has superseded CI as the dominant highly correlated method in quantum
 chemistry.
 
-The inclusion of higher order excitations becomes decreasingly important with
-degree of excitation; however, the inclusion of triples is often found to be
-necessary for the accurate description of electron correlation (i.e. CCSDT).
-The computation of triples is prohibitively expensive in all but the simplest
-of systems, thus approximations based on perturbation theory are often used in
-substitution. The most commonly used perturbative triples method is CCSD(T),
-where the parenthesis indicate the use of perturbative arguments. Note also
-that traditionally, the use of CCSD(T) implies excitation of only the valence
+The inclusion of higher order excitations become less important with increasing
+orders of excitation; however, the inclusion of triples is often found to be
+necessary for the accurate description of electron correlation (i.e. CCSDT). The
+computation of triples is prohibitively expensive in all but the simplest of
+systems, thus approximations based on perturbation theory are often used
+instead. The most commonly used perturbative triples method is CCSD(T), where
+the parenthesis indicate the use of perturbative arguments. Note also that
+traditionally, the use of CCSD(T) implies excitation of only the valence
 electrons, unless otherwise stated.
 
 CCSD(T) is commonly referred to as the \emph{gold standard} in quantum chemistry
 and is often used to obtain benchmark quality results for thermochemistry and
-non-covalent interactions (NCIs).\cite{Levine2013} However, CCSD(T) scales with
-$N^7$ number of basis functions, and is thus significantly more computationally
-expensive than HF or MP2, restricting its application to small systems of
-molecules. Quadratic configuration interaction (QCI) is closely related to CC,
-except that is uses quadratic operators in place of exponential ones. QCISD(T)
-and CCSD(T) gives very similar results.\cite{Pople1987}
+NCIs.\cite{Levine2013} However, CCSD(T) scales with $N^7$ number of basis
+functions, and is thus significantly more computationally expensive than HF or
+MP2, restricting its application to small systems of molecules. Quadratic
+configuration interaction (QCI) is closely related to CC, except that is uses
+quadratic operators in place of exponential ones. QCISD(T) and CCSD(T) gives
+very similar results.\cite{Pople1987}
 
 \subsection{The complete basis set limit}
 
@@ -615,11 +617,11 @@ In accordance with the variational principle, the energy obtained by a
 particular method will always be greater than or equal to the exact energy. The
 exact energy can only be achieved with an infinite basis set, a value known as
 the \emph{complete basis set} (CBS) limit.\cite{Truhlar1998} Since this is
-computationally infeasible, specific tricks have been developed to approximate
-the CBS limit. Specifically, molecular properties calculated using the HF and
-post-HF methods have been shown to asymptotically approach the CBS limit in a
-smooth manner when appropriate basis sets are used. Therefore, to obtain
-results estimating a molecular property at the CBS limit ($Y(\infty)$),
+computationally infeasible, specific approaches have been developed to
+approximate the CBS limit. Specifically, molecular properties calculated using
+the HF and post-HF methods have been shown to asymptotically approach the CBS
+limit in a smooth manner when appropriate basis sets are used. Therefore, to
+obtain results estimating a molecular property at the CBS limit ($Y(\infty)$),
 properties can be fit to three-parameter\cite{Feller1992,Feller1993} or
 two-parameter functions:\cite{Helgaker1997,Halkier1998}
 
@@ -631,14 +633,14 @@ two-parameter functions:\cite{Helgaker1997,Halkier1998}
 \noindent where the molecular property as a function of basis set cardinal
 number $Y(x)$ is fit using parameters $A$ and $B$. Typically calculations of
 this nature are performed using the correlation consistent basis sets
-(cc-pV$N$Z), however there is evidence that the polarization consistent basis
-sets (pc-$X$) more rapidly approach the CBS limit for some molecular
-properties.\cite{Kupka2007} The true \emph{gold standard} in quantum chemistry
-is referred to as CCSD(T)/CBS, which typically means CCSD(T) with complete
-basis set extrapolation with aug-cc-pV$N$Z basis sets, where $N$=D, T, Q, or 5.
-Although extrapolation is useful for approximating highly accurate results,
-there is an inherent amount of uncertainty associated with the final fitted
-results, which may be unclear from the nomenclature.
+(cc-pV$N$Z), however there is evidence that for DFT based calculations, the
+polarization consistent basis sets (pc-$X$) more rapidly approach the CBS limit
+for some molecular properties.\cite{Kupka2007} The true \emph{gold standard} in
+quantum chemistry is referred to as CCSD(T)/CBS, which typically means CCSD(T)
+with complete basis set extrapolation with aug-cc-pV$N$Z basis sets, where
+$N$=D, T, Q, or 5. Although extrapolation is useful for approximating highly
+accurate results, there is an inherent amount of uncertainty associated with the
+final fitted results, which may be unclear from the nomenclature.
 
 \subsubsection{Explicit correlation methods}
 
@@ -646,7 +648,7 @@ A new technique that is gaining popularity among post-HF methods is the
 inclusion of so called \emph{explicit correlation}.\cite{Shiozaki2008,Kohn2008}
 The introduction of additional functions dependent on inter-electronic distance
 coordinates allows for explicit correlation of electrons.\cite{Tenno2012} As a
-result, the dynamical correlation of electrons is treated more accurately with
+result the dynamical correlation of electrons is treated more accurately with
 reduced basis sets, therefore accurate results can be achieved at a reduced
 computational cost. Basis set extrapolation can also be performed on explicitly
 correlated results: this is quickly become the standard
@@ -776,7 +778,7 @@ cost.\cite{Cramer2004}
 The XC functionals described up to this point (LDAs, GGAs, meta-GGAs) depend
 only on the electron density and derivatives of the electron density. The
 fourth and fifth rungs of the ladder improve upon the prior functionals by
-inclusion of terms dependent on additional properties. While this approach
+inclusion of terms dependent on additional properties. While these approaches
 improves upon the accuracy of these functionals, it comes with an increase in
 computational cost. On the fourth rung sit functionals that depend to some
 percentage on the HF exact exchange. When the ratio of HF exchange is fixed,
@@ -784,7 +786,7 @@ these functionals are termed hybrid functionals. Alternatively, functionals are
 said to be range-separated corrected if a different amount of exact-exchange to
 describe long and short-range behaviours. In the cases of hybrid and
 range-separated functionals, the added computational cost comes from the
-calculation of the HF exact exchange.
+calculation of the HF exact exchange ($N^4$).
 
 Alternatively, one can describe the fourth rung functionals as the depending
 upon the properties of the occupied molecular orbitals. The fifth rung then, is
@@ -927,7 +929,7 @@ for systems in which charge-transfer may occur.
 
 As is the case for most experimental methods, identifying the correct
 theoretical methods requires the careful consideration of the problem at hand.
-Choosing a DFT based method requires calibration, however, once a method has
+Choosing a DFT based method requires calibration. However, once a method has
 been tested and is known to provide reasonably accurate results, DFT methods
 have the ability to help understand chemical problem with relatively low
 computational costs.
@@ -959,7 +961,7 @@ In order to efficiently perform geometry optimization, numerical analysis
 techniques are employed. All geometry optimization methods follow the same
 general framework.\cite{Hratchian2005} First, energy and necessary derivatives
 are computed from an initial geometry. Second, the geometry is modified to step
-towards the nearest stationary state. And last, some test is performed to
+towards the nearest stationary state. And lastly, some test is performed to
 determine if the new geometry is near enough to the stationary state along the
 PES.\@ The most efficient method to do this is the \emph{Newton method}, in
 which the energy is expanded in a Taylor series (truncated at the second order
@@ -1038,9 +1040,9 @@ $\nu_i$ are then obtained by
 \end{equation}
 
 \noindent and the lowest 6 modes are then discarded to account for 3$N$-6
-normal modes. These lowest energy modes generally correspond the internal
-rotations, and thus must be discarded to correctly obtain thermochemical
-corrections.
+translations and rotations. These lowest energy modes generally correspond the
+internal rotations, and thus must be discarded to correctly obtain
+thermochemical corrections.
 
 From these frequencies, the \emph{zero-point vibrational energy} (ZPE,
 $E_{ZPE}$) is calculated:
@@ -1072,13 +1074,13 @@ Up until this point we have been viewing molecules from a microscopic
 perspective; however, this is not useful for describing properties of bulk
 systems. Fortunately, fundamental statistical thermodynamics can be used to
 approximately describe a system in bulk.\cite{McQuarrie1999,McQuarrie2000} We
-approximate our system as an ensemble of non-interacting particles: the ideal
-gas. Within statistical thermodynamics, the fundamental starting point is the
-partition function $Q$,\bibnote{Note that $Q$ is actually a function of the
-number of moles, volume of a system, and temperature. This description, denoted
-as $Q(N,V,T)$, has been omitted for simplicity.} from which all thermodynamic
-properties can be calculated. For our ensemble, the molecular partition
-function is
+approximate our system as an ensemble of non-interacting particles: using the
+Ideal Gas approximation. Within statistical thermodynamics, the fundamental
+starting point is the partition function $Q$,\bibnote{Note that $Q$ is actually
+a function of the number of moles, volume of a system, and temperature. This
+description, denoted as $Q(N,V,T)$, has been omitted for simplicity.} from which
+all thermodynamic properties can be calculated. For our ensemble, the molecular
+partition function is
 
 \begin{equation}
   Q = \sum_J e^{\varepsilon_j/k_B T}
@@ -1087,7 +1089,7 @@ function is
 \noindent where a Boltzmann distribution of $j$ energy states $\varepsilon$ is
 taken at temperature $T$, and $k_B$ is the Boltzmann constant. All calculations
 herein are defined under conditions of temperature $T$ = 298.15 K and pressure
-$P$ = 1 atm.
+$P$ = 1 atm, and concentration = 1 M.
 
 Normally, the molecular partition function is decomposed into contributions
 from translational, vibrational, rotational, and electronic motion:
@@ -1267,11 +1269,11 @@ equation}
 barrier height. This equation dates back to the 1880s, when Arrhenius noticed
 that the reactions depended more heavily on temperature than was intuitive, and
 thus introduced the $A$ constant, known often as the Arrhenius
-pre-factor.\cite{McQuarrie1997} The Arrhenius pre-factor is an empirical
-measure of how factors other than kinetic energy affect the rate constant. From
-the perspective of theory, Equation~\ref{eq:arrhenius} has little meaning as
-the parameters are empirical. Thus, to study rate constants theoretically we
-must turn to \emph{transition state theory}.
+pre-factor.\cite{McQuarrie1997} The Arrhenius pre-factor is an empirical measure
+of the frequency of collisions which have the correct orientation for a reaction
+to occur. From the perspective of theory, Equation~\ref{eq:arrhenius} has little
+meaning as the parameters are empirical. Thus, to study rate constants
+theoretically we must turn to \emph{transition state theory}.
 
 \subsubsection{Transition state theory}
 
@@ -1305,11 +1307,11 @@ quasi-equilibrium between the reactants and TS complex
 \label{fig:tst-pes}
 \end{figure}
 
-In TST, we define the TS complex to exist throughout a small region of width
-$\delta$ above the reaction barrier (\ref{fig:tst-pes}). From the second step
-of the reaction in Equation~\ref{eq:tst}, we can define a reaction rate
-dependent on the concentration $[\ch{AB}^\ddagger]$ and $v_c$, a factor that
-defines the frequency with which the complexes proceed over the barrier:
+In TST, we define the TS complex to exist within a small region of width
+$\delta$ above the reaction barrier (\ref{fig:tst-pes}). From the second step of
+the reaction in Equation~\ref{eq:tst}, we can define a reaction rate dependent
+on the concentration $[\ch{AB}^\ddagger]$ and $v_c$, a factor that defines the
+frequency with which the complexes proceed over the barrier:
 
 \begin{equation}
   r = v_c [\ch{AB}^\ddagger]
@@ -1396,7 +1398,7 @@ $v_c\delta$ yields
 \label{eq:f}
 \end{equation}
 
-Now, define the standard Gibbs free energy of activation ($\Delta ^\ddagger
+We now, define the standard Gibbs free energy of activation ($\Delta ^\ddagger
 G^0$) to be the change in Gibbs free energy in going from reactants to TS.\@
 The thermodynamical expression is
 
@@ -1493,10 +1495,10 @@ complete description of the rate constant.
 
 \subsubsection{Quantum mechanical tunnelling}
 
-Atoms are quantum mechanical particles, and are thus subject to the strange
-probabilistic behaviours observed at the microscopic level. QM tunnelling
-refers to the ability of particles to penetrate the reaction barrier, rather
-than surmounting it classically (\ref{fig:tunnelling}). While all reactions are
+Atoms are quantum mechanical particles, and are thus subject to the
+probabilistic behaviours observed at the microscopic level. QM tunnelling refers
+to the ability of particles to penetrate the reaction barrier, rather than
+surmounting it classically (\ref{fig:tunnelling}). While all reactions are
 subject to QM tunnelling, we will show that due to the low mass of the hydrogen
 atom, QM tunnelling can play a significant role in HAT reactions.
 
@@ -1565,7 +1567,7 @@ endoergic, tunnelling does not occur. Alternatively, one says tunnelling only
 occurs in exoergic or energy-neutral reactions.
 
 The solutions to the Schr{\"o}dinger equation for the Eckart potential are
-analytical, thus that transmission coefficient $\kappa$ can easily be computed
+analytical, thus the transmission coefficient $\kappa$ can easily be computed
 using standard numerical techniques. These tunnelling corrections will be
 applied, where applicable as
 
