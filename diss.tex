@@ -164,7 +164,12 @@ Additional Committee Members include:
 
 \include{conclusion}
 
-\nocite{Hyperchem16}
+% \nocite used to fix warnings from placing citations in Appendices
+% These citations still appear in normal bibliography
+\nocite{Hyperchem16, Marshall2011, Rezac2013, Iron2003, Peterson2008,
+Rappoport2010, Perdew1986, Perdew1991, Becke1993a, Boese2004, Yanai2004,
+Zhao2008, Zhao2006b, Schultz2005, Adamo1999, Ernzerhof1999, Perdew1996, Tao2003,
+Becke1997, Chai2008a, Chai2008, Heyd2004, Heyd2005, Kabsch1976}
 
 % This file is setup to use a bibtex file sample.bib and uses the
 % plain style.  Other styles may be used depending on the conventions
@@ -172,13 +177,11 @@ Additional Committee Members include:
 %
 % Note: the bibliography must come before the appendices.
 
-
-%change heading ``Chapter 5 Bibliography''->''Bibliography''
+%change heading ``Chapter 5 Bibliography''->''References''
 \newpage %newpage needed otherwise pagestyle applied to previous chapter. Does not actually create a new page
 \pagestyle{fancy}\chead{References}\rhead{}\cfoot{}\rfoot{\thepage}
 
 %Bibliography style is discipline dependent. Mathematic student can use e.g. SIAM
-%\bibliographystyle{achemso}
 \bibliography{\string~/Dropbox/bib/MSc}%name of your .bib file
 
 \newpage
@@ -186,7 +189,7 @@ Additional Committee Members include:
 \addtocontents{toc}{%
 \protect\renewcommand*\protect\cftchappresnum{\appendixname~}}
 
-%%\part{Appendix}
+% \part{Appendix}
 
 \appendix
 \addappheadtotoc %uses the current page number when it makes the entry in the ToC
