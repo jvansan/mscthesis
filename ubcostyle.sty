@@ -10,6 +10,7 @@
 \renewcommand\thesubparagraph {\theparagraph.\arabic{subparagraph}}
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{2}
+\usepackage[margin=1.5in]{geometry}
 
 % Remove name clash errors in CLS
 \let\listschemename\relax
@@ -20,6 +21,7 @@
 \usepackage{fancyhdr}
 \addtolength{\headheight}{1.6pt}
 \usepackage[hang,flushmargin]{footmisc}
+\usepackage{setspace}
 
 % Chemistry
 % ---------------
@@ -33,7 +35,7 @@
 % extend memory and register space
 \usepackage{etex}
 % Better error messages
-%\usepackage{checkend}
+\usepackage{checkend}
 
 % Bibliography and citations
 % --------------------------
@@ -79,7 +81,7 @@
 \usepackage[subfigure]{tocloft}
 \renewcommand{\cftchapdotsep}{\cftdotsep}
 \renewcommand{\cftchappresnum}{\chaptername\space}
-\settowidth{\cftchapnumwidth}{\widthof{\appendixname 99:~}}
+\settowidth{\cftchapnumwidth}{\widthof{\appendixname 99.9: }}
 \renewcommand{\cftchapaftersnum}{:\space}
 
 \renewcommand\cfttabpresnum{Table }

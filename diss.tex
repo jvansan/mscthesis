@@ -15,7 +15,7 @@
 %\subtitle{With a Subtitle}
 \author{Jeffrey A. van Santen} % Name as on Diploma
 \copyrightyear{2017}
-\submitdate{Draft 2017} % date of approved thesis
+\submitdate{Draft 2017} % date of approved thesis (Month Year)
 \program{Chemistry}%or Mathematics, or Interdisciplinary Studies
 \previousdegree{B.Sc. Hons. Chemistry, The University of British Columbia, 2015}
 
@@ -24,8 +24,10 @@
 
 
 \usepackage{ubcostyle} %loads packages
-\usepackage[doublespacing]{setspace}
 
+% ===================================================================
+% CHANGE THE FOLLOWING COMMANDS ACCORDING TO YOUR NEEDS
+% ===================================================================
 \newcommand{\jnote}[1]{\textcolor{blue}{(#1)}}
 \newcommand{\cumo}{Cum\ch{O^.}}
 \newcommand{\bno}{Bn\ch{O^.}}
@@ -35,14 +37,9 @@
 \newcommand{\E}[1]{$\times 10^{#1}$}
 
 % ===================================================================
-% CHANGE THE FOLLOWING COMMANDS ACCORDING TO YOUR NEEDS
-% ===================================================================
-
-% ===================================================================
 
 % Uncomment the next line if there are more than one appendix
 % \renewcommand*\appendixname{Appendices}
-
 
 \begin{document}
 
@@ -119,13 +116,14 @@ Additional Committee Members include:
 \include{abstract}
 
 %%%% PREFACE
-\newpage
-\input{preface}
+% \newpage
+% \input{preface}
 
 %%% TABLES
 \newpage
 \phantomsection \label{tableofcontent}%set anchor at right location
 \tableofcontents                % Mandatory: generate toc
+\addcontentsline{toc}{chapter}{\contentsname}
 \newpage
 \phantomsection \label{listoftab}%set anchor at right location
 \addcontentsline{toc}{chapter}{\listtablename}
@@ -137,7 +135,7 @@ Additional Committee Members include:
 \newpage
 \phantomsection \label{listofscheme}%set anchor at right location
 %\addcontentsline{toc}{chapter}{\listschemename}
-\listofschemes                  % Mandatory if thesis has figures
+\listofschemes                  % Mandatory if thesis has schemes
 \newpage
 \include{abbrev}
 
@@ -194,7 +192,6 @@ Becke1997, Chai2008a, Chai2008, Heyd2004, Heyd2005, Kabsch1976}
 \appendix
 \addappheadtotoc %uses the current page number when it makes the entry in the ToC
 \appendixpage
-%\pagestyle{plain}
 
 \addtocontents{toc}{
 \setlength{\cftbeforechapskip}{\cftbeforesecskip}
@@ -203,7 +200,7 @@ Becke1997, Chai2008a, Chai2008, Heyd2004, Heyd2005, Kabsch1976}
 \protect\renewcommand{\protect\cftchapdotsep}{\cftsecdotsep}
 }
 
-\input{append}
+\include{append}
 
 \end{document}
 \endinput
