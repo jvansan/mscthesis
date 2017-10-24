@@ -123,7 +123,7 @@ benchmark quality data for a wide variety of metals binding to biologically
 relevant substrates and oxygen-centred radicals does not exist to calibrate
 DFT-based methods. Therefore, I performed a benchmark study which incorporated
 all the biologically relevant alkali and alkaline earth-metal cations, models
-for dipeptides including amino acid side chains, oxygen-centred radicals, and
+for dipeptides including amino acid side-chains, oxygen-centred radicals, and
 solvents which are utilized in the experimental mechanistic studies involved in
 probing these systems. Unfortunately, due to computational restrictions
 (\emph{vide infra}), benchmark quality calculations on the originally proposed
@@ -476,5 +476,272 @@ change in BDE. For the significantly more reactive \ch{HO^.} radical, the metal
 is less likely to interact with the oxygen centre, thus the effects observed
 depend only on interactions with DMA. As a result, the reaction barrier
 increases in all cases upon complexation of \ch{NaCl}.
+
+\subsection{Strong hydrogen bond accepting substates}
+
+In the investigation of the effects of metal cations on HAT reactions between
+DMA and \cumo\ Salamone et al. demonstrated that in DMSO solvent, HAT reactivity
+is not significantly affected by the addition of metal
+salts.\cite{Salamone2015metals} This can be explained on the basis of the
+stronger Lewis basicity of DMSO as as compared to DMA, resulting in the
+competitive binding of \ch{M^n+} to DMSO over DMA. The rate constant for HAT
+between DMSO and \cumo\ in DMSO solvent is 1.8 \E{4} \Ms\ while that for DMSO
+and \cumo\ is 1.2 \E{6} \Ms\ in MeCN solvent at 298 K, therefore only small
+changes in $k_{obs}$ are expected for HAT between \cumo\ and DMA in DMSO solvent
+with metal salts. I am interested in how metal salts affect the HAT reactivity
+of DMSO and other related strong hydrogen bond accepting substrates. We
+previously showed that DMSO and \bno\ react via a radical H-atom donation
+reaction, where \bno\ acts counterintuitively as the hydrogen atom donor rather
+than acceptor. The net reaction yields benzaldehyde, dimethyl sulfide, and
+\ch{HO^.} as the DMSO-H radical decomposes in a concerted manner following the
+radical donation of the hydrogen atom by the radical.
+
+An important driving force in this reaction is the formation of benzaldehyde by
+cleavage of an acidic $\alpha$-\ch{C-H} bond. This is not possible in \cumo\,
+therefore \cumo\ does not react through radical H-atom donation. I have
+performed computational studies to determined if metal cations could affect this
+reactivity and if the related (HMPA and TBPO) substrates displayed similar
+reactivity.
+
+\begin{scheme}[!htbp]
+  \includegraphics[width=\textwidth]{figures/dmso-rxn.eps}
+  \caption[The HAT reactions of DMSO with \cumo\ and \bno.]{The HAT reactions
+  of DMSO with \textbf{1} \cumo, \textbf{2} the radical H-atom donation reaction
+  with \bno, and \textbf{3} the conventional HAT reaction with \bno.}
+  \label{fig:dmso-rxn}
+\end{scheme}
+
+\begin{table}[!htbp]
+\caption[Calculated free energy (enthalpy) barrier for HAT between DMSO and
+\cumo, and conventional HAT and radical H-atom donation with \bno, with and
+without \ch{NaCl}.]{Calculated free energy (enthalpy) barrier ($\Delta
+G(H)^\ddagger$, \kcalmol) for HAT between DMSO and \cumo, and conventional HAT
+and radical H-atom donation with \bno, with and without \ch{NaCl}. The change in
+barrier height ($\Delta \Delta G(H)^\ddagger$) is calculated relative to the
+same reaction without the inclusion of \ch{NaCl}. All barrier heights are
+relative to separated reactants (or complexed DMSO-NaCl) and were calculated at
+the M05-2X-SMD(MeCN)/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ level of theory.}
+\label{tab:dmso-dG}
+\begin{tabular}{l c c}
+Reaction    &  $\Delta G(H)^\ddagger$ &  $\Delta \Delta G(H)^\ddagger$ \\
+\hline
+\textbf{1}  & 20.9(8.9)  &              \\
+\textbf{1} + NaCl & 22.4(5.2)  &  1.5(-3.7)   \\
+\textbf{2}    & 10.4(-2.2) &              \\
+\textbf{2} + NaCl & 13.4(-3.4) &  2.0(-1.2) \\
+\textbf{3} & 22.7(10.4) &                  \\
+\textbf{3} + NaCl & 22.1(5.2) & -0.6(-5.2)
+\end{tabular}
+\end{table}
+
+\begin{figure}[!htbp]
+  \setcounter{subfigure}{0}
+  \centering
+  \subfigure[DMSO + \cumo]{
+		\includegraphics[width=5cm]{figures/dmso-cumo}
+	}
+  \subfigure[DMSO-NaCl + \cumo]{
+		\includegraphics[width=4.7cm]{figures/dmso-nacl-cumo}
+	}
+
+  \subfigure[Radical H-atom Donation DMSO + \bno]{
+    \includegraphics[width=5cm]{figures/dmso-bno-rev}
+  }
+  \subfigure[Radical H-atom Donation DMSO-NaCl + \bno]{
+    \includegraphics[width=5cm]{figures/dmso-nacl-bno-rev}
+  }
+
+  \subfigure[HAT DMSO + \bno]{
+    \includegraphics[width=5cm]{figures/dmso-bno}
+  }
+  \subfigure[HAT DMSO-NaCl + \bno]{
+    \includegraphics[width=5cm]{figures/dmso-nacl-bno}
+  }
+
+\caption[TS structures of HAT reaction between DMSO and \cumo, and the
+conventional HAT and radical H-atom donation reactions with \bno\ excluding and
+including \ch{NaCl}.]{TS structures of HAT reaction between DMSO and \cumo, and
+the conventional HAT and radical H-atom donation reactions reaction with \bno\
+excluding and including \ch{NaCl}. Key interatomic distances are shown in units
+of \AA. Element colour key: white is carbon, light blue is hydrogen, red is
+oxygen, yellow is sulphur, purple is sodium, green is chlorine, and peach is a
+dummy atom in the centre of an aromatic ring.}
+\label{fig:dmso-ts}
+\end{figure}
+
+Focussing first of the reactions of DMSO with \cumo\ and \bno\ in the presence
+of \ch{NaCl}. The reactions studied are shown in~\ref{fig:dmso-rxn} and the
+calculated free energy (enthalpic) barriers are listed in~\ref{tab:dmso-dG}.
+Also, the TS structures for the reactions in~\ref{fig:dmso-rxn} are shown
+in~\ref{fig:dmso-ts}a-f. Firstly, for HAT between DMSO and \cumo\ in the
+presence of \ch{NaCl} (Reaction 1,~\ref{fig:dmso-ts}b), the free energy barrier
+increases by 1.5 \kcalmol\, however the enthalpic barrier decreases by 3.7
+\kcalmol. This can be explained in a similar manner to the reactions of DMA:
+\ch{Na^+} interacts both with the oxygen of DMSO and the aromatic system of
+\cumo, resulting in a stabilization of the TS and a decrease in enthalpic
+barrier in spite of a predicted increase in \ch{C-H} BDE. This binding however
+results in a tighter TS structure, thus the entropic cost increases and so does
+the $\Delta G^\ddagger$.
+
+Next, the reaction of DMSO with \bno\ was previously
+characterized\cite{Salamone2012} as occurring through the rate determining
+formation of a strong pre-reaction complex, however, we more recently showed the
+reaction likely takes place through a reaction in which \bno\ acts as a hydrogen
+atom donor, rather than acceptor.\cite{vanSanten2016} For this radical H-atom
+donation reaction between DMSO and \bno\ in the presence of \ch{NaCl} (Reaction
+2,~\ref{fig:dmso-ts}d), the free energy barrier increases as a result of
+\ch{NaCl} complexation. This is appears to be an entropic effect as a result of
+binding, as $\Delta H^\ddagger$ decreases by 1.2 \kcalmol\ due to the
+interaction of \ch{Na} with DMSO and the aromatic ring of \bno. In this TS
+structure excluding \ch{NaCl} there is some charge separation, however, DMSO
+(the acceptor) has a partial positive charge and \bno\ (the donor) has a partial
+negative charge. This is contrary to typical HAT reactions between
+oxygen-centred radicals and \ch{C-H} bonds where in the TS structure, the donor
+typically has a partial positive charge and the acceptor has a partial positive
+charge. Therefore, the significant reduction in charge separation from 0.25
+$e^-$ to 0.11 $e^-$ appears to play a lesser role. This may be due to the
+unusual electronic structure of sulfoxide compounds, which cannot easily be
+defined using simple Lewis structures. The radical H-atom donation reaction is
+likely driven by the concerted cleavage of the \ch{S=O} bond of DMSO-H.
+
+While the conventional HAT reaction between DMSO and \bno\ is unlikely to occur
+as the barrier is ca.\@ 12 \kcalmol\ higher than the radical H-atom donation
+reaction, it is still interesting to consider the effect that \ch{NaCl} has on
+the reaction barrier height. \ref{fig:dmso-ts}f shows that in the TS structure
+for the HAT reaction between DMSO and \bno\ in the presence of \ch{NaCl}, there
+is a relatively close interaction with both the oxygen of DMSO and the aromatic
+ring of \bno. As a result, the free energy (enthalpic) barrier decreases by
+0.6(5.2) \kcalmol. NPA estimates a relatively large (as compared to the DMA HAT
+reactions) 0.10 $e^-$ charge transfer from DMSO to \ch{Na}, resulting in a
+decrease in charge separation in the TS structure from 0.27 $e^-$ to 0.21 $e^-$.
+
+Turning now to the reactions of \bno\ with the substrates HMPA and TBPO, which
+are closely related phosphine oxide compounds that are commonly used as organic
+solvents. These two substrates are also closely related to DMSO in that they are
+strong hydrogen bond accepting substrates, and therefore may undergo a radical
+H-atom donation reaction in which \bno\ donates an acidic $\alpha$-\ch{C-H}
+hydrogen atom, rather than accepting in the conventional manner. The reaction
+coordinate diagrams from HMPA with \bno\ and TBPO with \bno\ are shown
+in~\ref{fig:hmpa-tbpo-bno}a and b, respectively. In the possible radical H-atom
+donation reactions for both substrates the free energy barrier is lower than the
+conventional HAT barrier by 6 \kcalmol\ for HMPA and 10 \kcalmol\ for TBPO.
+However, in both cases the process is energetically uphill, and so is unlikely
+to occur. For both the radical products HMPA-H and TBPO-H, the cleavage of the
+\ch{P=O} bond for the subsequent loss of \ch{HO^.} in analogy to the reaction of
+DMSO results in an additional 20 \kcalmol\ energy cost owing to the
+significantly greater strength of \ch{P=O} bonds as compared to \ch{S=O} bonds
+(The BDEs are 86 \kcalmol\ in DMSO vs. 147 \kcalmol\ in
+HMPA).\bibnote{Calculated using the ROCBS-QB3 method.} Therefore, radical H-atom
+donation reactivity of \bno to DMSO is likely partially driven by the cleavage
+of the \ch{S=O} bond in DMSO.
+
+\begin{figure}[!htbp]
+  \setcounter{subfigure}{0}
+  \centering
+  \subfigure[HMPA + \bno]{
+		\includegraphics[width=15cm]{figures/hmpa-bno-rxn}
+	}
+
+  \subfigure[TBPO + \bno]{
+		\includegraphics[width=15cm]{figures/tbpo-bno-rxn}
+	}
+  \caption[Reaction profiles for HAT between HMPA with \bno\, and TBPO with
+  \bno.]{Reaction profiles for HAT between \textbf{a} HMPA with \bno\,
+  \textbf{b} and TBPO with \bno. Relative free energies in \kcalmol\ are shown
+  for the HAT (black) and radical H-atom donation (red) reactions.}
+  \label{fig:hmpa-tbpo-bno}
+\end{figure}
+
+
+As \bno\ does not donate a hydrogen atom to HMPA or TBPO, I did not seek the
+determine the effects of \ch{NaCl} on these reaction barriers. Note also, that
+unlike DMSO, NBO analysis reveals no strong hyperconjugative overlap between the
+\ch{P=O} orbitals and the abstractable \ch{C-H} bonds of TBPO or HMPA. From an
+orbital energetic standpoint, this is expected, given the overall higher energy
+of the \ch{P=O} bond, as compared to the \ch{S=O} bond. Therefore, the effects
+of metal complexation to the phosphine oxygen (where \ch{Na} will bind) should
+not significantly affect the \ch{C-H} bond strengths or enthalpic barrier
+heights. The HAT reaction barrier heights of \ch{NaCl} with with HMPA and TBPO
+for the HAT reaction with \cumo\ are listed in~\ref{tab:hmpa-tbpo}. The TS
+structures for direct HAT reactions between HMPA or TBPO with \cumo\ and \bno\
+including \ch{NaCl} are shown in~\ref{fig:hmpa-tbpo-ts}.
+
+
+\begin{table}[!htbp]
+\caption[Calculated free energy (enthalpy) barrier for HAT between HMPA and TBPO
+with \cumo\ with and without \ch{NaCl}.]{Calculated free energy (enthalpy)
+barrier ($\Delta G(H)^\ddagger$, \kcalmol) for HAT between HMPA and TBPO with
+\cumo\ with and without \ch{NaCl}. The change in barrier height ($\Delta \Delta
+G(H)^\ddagger$) is calculated relative to the same reaction without the
+inclusion of \ch{NaCl}. All barrier heights are relative to separated reactants
+(or complexed HMPA/TBPO-NaCl) and were calculated at the
+M05-2X-SMD(MeCN)/6-311+G(2d,2p)//M05-2X/6-31+G$^{**}$ level of theory.
+$^*$Indicates estimated barrier based on ``guess'' TS structure.}
+\label{tab:hmpa-tbpo}
+\begin{tabular}{l c c}
+Reaction   &  $\Delta G(H)^\ddagger$ &  $\Delta \Delta G(H)^\ddagger$ \\
+\hline
+HMPA + \cumo      &  17.4(3.8)       &                            \\
+HMPA-NaCl + \cumo &  12.8(-1.0)$^*$  &  -4.6(-4.8)                \\
+HMPA + \bno      &  16.0(2.6)        &                            \\
+HMPA-NaCl + \bno &  14.5(1.6)$^*$    &  -1.5(-1.0)                \\
+TBPO + \cumo      &  20.1(6.8)       &                            \\
+TBPO-NaCl + \cumo &  21.6(6.0)       &  1.5(-0.8)                 \\
+TBPO + \bno      &   19.0(6.9)      &                            \\
+TBPO-NaCl + \bno &   19.1(4.8)      &   0.1(-2.1)                \\
+\end{tabular}
+\end{table}
+
+\begin{figure}[!htbp]
+  \setcounter{subfigure}{0}
+  \centering
+  \subfigure[HMPA-NaCl + \cumo]{
+		\includegraphics[width=5cm]{figures/hmpa-nacl-cumo}
+	}
+  \subfigure[HMPA-NaCl + \bno]{
+		\includegraphics[width=5cm]{figures/hmpa-nacl-bno}
+	}
+
+  \subfigure[TBPO-NaCl + \cumo]{
+    \includegraphics[width=5cm]{figures/tbpo-nacl-cumo}
+  }
+  \subfigure[TBPO-NaCl + \bno]{
+    \includegraphics[width=5cm]{figures/tbpo-nacl-bno}
+  }
+
+  \caption[TS structures of HAT reaction between HMPA and TBPO with \cumo\ and
+  \bno\ including \ch{NaCl}.]{TS structures of HAT reaction between HMPA and
+  TBPO with \cumo\ and \bno\ including \ch{NaCl}. Key interatomic distances are
+  shown in units of \AA. Element colour key: white is carbon, light blue is
+  hydrogen, red is oxygen, orange is phosphorous, purple is sodium, green is
+  chlorine, and peach is a dummy atom in the centre of an aromatic ring.}
+  \label{fig:hmpa-tbpo-ts}
+\end{figure}
+
+For HMPA with \cumo\ and \bno\ in the presence of \ch{NaCl}, the HAT reaction
+barrier decreases in both cases. For the reaction with \cumo\
+(\ref{fig:hmpa-tbpo-ts}a), this can be explained on the basis of the interaction
+between \ch{Na} with both the phosphine oxygen and the aromatic system of
+\cumo. However for the reaction with \bno\ (\ref{fig:hmpa-tbpo-ts}b), there is
+not such interaction with the aromatic system of \bno. In this case, the
+decrease in reaction barrier can be ascribed to the lack of rotation of the
+\ch{CH2O^.} moiety of \bno. Previously computational
+investigations\cite{Salamone2011a,Salamone2012} demonstrate a typical rotation
+of the \ch{CH2O^.} moiety of \bno\ of about 30 to 45$^\circ$, while the TS in
+\ref{fig:hmpa-tbpo-ts}b has an angle of about 5$^\circ$. In the HAT reaction
+between HMPA and \bno\ excluding \ch{NaCl}, there is a rotation of this moiety
+by ca. 30$^\circ$. The complexation of \ch{NaCl} breaks the hydrogen bond
+between the $\alpha$-\ch{C-H} bond of \bno\ with the oxygen of HMPA, and forms a
+now interaction between \ch{Cl^-} and the $\alpha$-\ch{C-H} bond of \bno. This
+new interaction stabilizes the TS and allows the oxygen-centre of \bno\ to
+remain in the plain of the aromatic system.
+
+Finally, for the reactions of TBPO with \cumo\ and \bno\ there are long range
+interactions of \ch{Na} with the aromatic systems resulting in a decrease in
+$\Delta H^\ddagger$. The free energy barrier for \cumo\ is not significantly
+affected, while it increases by about 1.5 \kcalmol\ for \bno. This is likely due
+to the longer range interaction of \ch{Na} with \cumo\ as compared to \bno\
+(4.0 \AA\ vs. 3.6 \AA, respectively).
+
 
 \end{doublespace}
