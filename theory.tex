@@ -43,7 +43,7 @@ Nuclei move slowly relative to electrons, due to their much greater mass. This
 is the central pillar of the Born-Oppenheimer approximation that is nearly
 always applied in molecular electronic structure calculations. The application
 of this approximation allows for the simplification of Equation~\ref{eq:ham}:
-using a separation of electronic an nuclear variables, the second term for
+using a separation of electronic and nuclear variables, the second term for
 nuclear kinetic energy is solved separately. Also, the last term of nuclear
 repulsion is constant, and thus is generally ignored. This leaves us with the
 electronic Hamiltonian
@@ -83,7 +83,7 @@ representing the same integral in the middle. The right-hand side of
 Equation~\ref{eq:orthonormal} is the standard Kronecker delta.
 
 The spin of an electron is represented by two orthonormal functions
-$\alpha(\omega)$ and $\beta(\omega)$, or spin up and spin down. If a wave
+$\alpha(\omega)$ and $\beta(\omega)$, or spin-up and spin-down. If a wave
 function describes both the spatial distribution and spin of an electron it is
 a spin orbital, $\chi_i(\mathbf{r})$, where \textbf{x} represents both the
 spatial distribution and spin coordination of an electron ($\mathbf{x} = \{
@@ -119,9 +119,9 @@ independent operators
 
 \noindent such that the first term describes an electron's kinetic energy, and
 the second term describes potential felt by a single electron. If we consider
-the case that ignores electron-electron repulsion, then case $V$ describes only
+the case that ignores electron-electron repulsion, then $V$ describes only
 the nuclear-electron attraction. Alternatively, the electron-electron repulsion
-may be included as an average potential.s
+may be included as an average potential.
 
 Solutions to the Schr{\"o}dinger equation for this system of non-interacting
 electrons are facile to obtain as each $h(i)$ depends only on the variables of
@@ -271,7 +271,7 @@ $\varepsilon_i$, which are generally the desire solutions. By performing a
 transformation of basis to an orthonormal basis, the overlap matrix
 $\mathbf{S}$ becomes the identity matrix $\mathbb{1}$, and simplifies the
 problem. Thus, utilizing~\ref{eq:roothan} reduces the problem to the of
-diagonalisation $\mathbf{F}$. Unfortunately, this must be done iteratively, as
+diagonalization $\mathbf{F}$. Unfortunately, this must be done iteratively, as
 $\mathbf{F}$ depends on its own solution, hence the name self-consistent field
 method.
 
@@ -333,8 +333,8 @@ efficient.\cite{Gill1994}
 
 \subsubsection{Basis set nomenclature}
 
-Standard basis sets are composed of basis functions used represent atomic
-orbitals and that each basis function is a CGTO composed of several GTOs. A
+Standard basis sets are composed of basis functions used to represent atomic
+orbitals where each basis function is a CGTO composed of several GTOs. A
 \emph{minimal basis set} is one in which each AO is represented by a single
 basis function. To more accurately represent AOs, more basis functions should
 be used, although basis set size needs to be balanced with computational cost.
@@ -368,7 +368,7 @@ which non-covalent interactions (NCIs) are important.
 
 A large number of basis sets currently exist in the
 literature.\cite{Jensen2012} While not all basis sets are created equally, we
-shall briefly describe four of the most commonly used basis sets used in
+shall briefly consider four of the most commonly used basis sets used in
 quantum chemistry.
 
 \vspace{3mm}
@@ -410,10 +410,10 @@ referred to as ``correlation consistent'' basis sets are commonly used in, but
 not limited to, state of the art wave function calculations. These basis sets
 are said to be correlation consistent as they treat electron correlation
 (\emph{vide infra}) in a manner that systematically approached the complete
-basis set limit. Correlation consistent basis sets are denoted as ``V$N$Z'',
+basis set limit. Correlation consistent basis sets are denoted as ``cc-V$N$Z'',
 where $N$=2(D),3(T),4(Q),5,6,\ldots is the cardinal number of the basis set.
 These are large sets containing polarization functions by default and can be
-additionally augmented with diffuse functions, denoted by the prefix ``aug.'' An
+additionally augmented with diffuse functions, denoted by the prefix ``aug.'' A
 variant of these basis sets that are used for including core-correlation are
 denoted by ``cc-pCV$N$Z''.\cite{Peterson2002} A commonly used basis set is
 aug-cc-pVTZ, which is a triple-zeta basis set with implicit polarization
@@ -431,7 +431,7 @@ use of higher order polarization functions. The notation adopted is ``pc-$X$'',
 where $X$ is the cardinal number of the basis set minus one (i.e. $X$ = $N$-1).
 Polarization functions are included by default in these basis sets, and
 additional diffuse functions can be specified with the same ``aug'' prefix used
-for as the correlation consistent basis sets.
+for the correlation consistent basis sets.
 
 \vspace{3mm}
 \noindent{\large\emph{Ahlrich basis sets}}
@@ -652,7 +652,7 @@ coordinates allows for explicit correlation of electrons.\cite{Tenno2012} As a
 result the dynamical correlation of electrons is treated more accurately with
 reduced basis sets, therefore accurate results can be achieved at a reduced
 computational cost. Basis set extrapolation can also be performed on explicitly
-correlated results: this is quickly become the standard
+correlated results: this is quickly becoming the standard
 approach.\cite{Feller2013}
 
 
@@ -671,7 +671,7 @@ corrections. There exist many composite methods, each of which makes use of a
 variety of quantum mechanical (QM) methods and different basis set
 extrapolation techniques in order to best approximate energy terms that are
 relevant, with the ultimate goal of achieving the exact energy of a system. In
-our work, we have made use of several composite methods including: the G4 and
+this work, I have made use of several composite methods including: the G4 and
 G4(MP2) methods,\cite{Curtiss2007,Curtiss2007a} CBS-QB3 and CBS-APNO
 methods,\cite{Montgomery1999,Montgomery2000,Ochterski1996} and the W1BD
 method.\cite{Barnes2009} A description of these methods will be provided in
@@ -780,7 +780,7 @@ The XC functionals described up to this point (LDAs, GGAs, meta-GGAs) depend
 only on the electron density and derivatives of the electron density. The
 fourth and fifth rungs of the ladder improve upon the prior functionals by
 inclusion of terms dependent on additional properties. While these approaches
-improves upon the accuracy of these functionals, it comes with an increase in
+improve upon the accuracy of these functionals, they comes with an increase in
 computational cost. On the fourth rung sit functionals that depend to some
 percentage on the HF exact exchange. When the ratio of HF exchange is fixed,
 these functionals are termed hybrid functionals. Alternatively, functionals are
@@ -847,7 +847,7 @@ system is a result of summing over the squared moduli of the KS orbitals:
   \rho(\mathbf{r}) = \sum_i | \chi_i |^2
 \end{equation}
 
-Once again in analogy to HF theory, on applies the variational principle to
+Once again in analogy to HF theory, one applies the variational principle to
 minimize the total energy functional in Equation~\ref{eq:DFT} with respect to
 $\chi$. The effective potential that variationally minimizes the energy is
 given by\cite{Parr1995}
@@ -879,7 +879,7 @@ completely fail at describing non-covalent
 interactions.\cite{DiLabio2016,OterodelaRoza2017} This shortcoming leads to
 poor descriptions of chemistry beyond equilibrium geometries, including
 transition states. Fortunately, there are several methods that can correct for
-this problem, commonly through the addition an energy correction term
+this problem, commonly through the addition of an energy correction term
 $E_{disp}$ to the DFT energy $E_{DFT}$, as
 
 \begin{equation}
@@ -1339,9 +1339,9 @@ expressions for the reaction rate, which allows us to derive the following
 \label{eq:b}
 \end{equation}
 
-We must now invoke the statistical thermodynamics to make sense of
-Equation~\ref{eq:b}. We can rewrite the equilibrium expression $K_c^\ddagger$
-in terms of partition functions of each molecular species:
+We must now invoke statistical thermodynamics to make sense of
+Equation~\ref{eq:b}. We can rewrite the equilibrium expression $K_c^\ddagger$ in
+terms of partition functions of each molecular species:
 
 \begin{equation}
     K_c^{\ddagger} = \frac{[\ch{AB}^\ddagger]/c^0}{[\ch{A}]/c^0[\ch{B}]/c^0}
@@ -1399,7 +1399,7 @@ $v_c\delta$ yields
 \label{eq:f}
 \end{equation}
 
-We now, define the standard Gibbs free energy of activation ($\Delta ^\ddagger
+We now define the standard Gibbs free energy of activation ($\Delta ^\ddagger
 G^0$) to be the change in Gibbs free energy in going from reactants to TS.\@
 The thermodynamical expression is
 
@@ -1421,7 +1421,7 @@ enthalpy and entropy as
   \Delta^\ddagger G^0 = \Delta^\ddagger H^0 - T \Delta^\ddagger S^0
 \end{equation}
 
-\noindent which, upon substitution gives the equation
+\noindent which upon substitution gives the equation
 
 \begin{equation}
   k = \frac{k_B T}{hc^0} e^{-\Delta^\ddagger S^0/R} e^{-\Delta^\ddagger H^0/RT}
@@ -1453,7 +1453,7 @@ ideal gas, then Equation \ref{eq:h}  becomes
 \end{equation}
 
 \noindent Additionally, $\Delta ^\ddagger H^0 = \Delta ^\ddagger U^0 + RT
-\Delta^\ddagger n$ ($\Delta^\ddagger n = 1$), as so Equation~\ref{eq:j} can be
+\Delta^\ddagger n$ ($\Delta^\ddagger n = 1$), so Equation~\ref{eq:j} can be
 rewritten as
 
 \begin{equation}
@@ -1475,8 +1475,8 @@ get
   k = \frac{e^2k_B T}{hc^0}e^{\Delta^\ddagger S^0/R}e^{-E_a/RT}
 \end{equation}
 
-Therefore, a statistical thermodynamical picture of the Arrhenius equation
-arises from TST, and the Arrhenius pre-factor $A$ can be expressed as
+Therefore, a natural statistical thermodynamical picture of the Arrhenius
+equation arises from TST, and the Arrhenius pre-factor $A$ can be expressed as
 
 \begin{equation}
   A = \frac{e^2k_B T}{hc^0}e^{\Delta^\ddagger S^0/R}
