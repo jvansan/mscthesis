@@ -143,9 +143,9 @@ system, it has a basic deficiency: the antisymmetry principle of wave functions
 is not obeyed. The antisymmetry principle states that the electronic wave
 function must change sign (be antisymmetric) with respect to the exchange of
 spacial and spin coordinate of any two electrons. Hartree accounted for this by
-nominally applying the Pauli exclusion principle, however, this description is
-still incomplete in the sense that it does not describe the statistical nature
-of quantum particles.
+nominally applying the Pauli exclusion principle. However, this description is still
+incomplete in the sense that it does not describe the statistical nature of
+quantum particles.
 
 \subsection{Slater determinants}
 
@@ -270,7 +270,7 @@ $\mathbf{\varepsilon}$ is the diagonal matrix of orbital energies
 $\varepsilon_i$, which are generally the desire solutions. By performing a
 transformation of basis to an orthonormal basis, the overlap matrix
 $\mathbf{S}$ becomes the identity matrix $\mathbb{1}$, and simplifies the
-problem. Thus, utilizing~\ref{eq:roothan} reduces the problem to the of
+problem. Thus, utilizing Equation~\ref{eq:roothan} reduces the problem to the of
 diagonalization $\mathbf{F}$. Unfortunately, this must be done iteratively, as
 $\mathbf{F}$ depends on its own solution, hence the name self-consistent field
 method.
@@ -297,7 +297,7 @@ functions of the form
 \noindent where $N$ is a normalization constant, $\zeta$ is a constant related
 to the effective nuclear charge of the nucleus, $r$ is the distance of the
 electron from the atomic nucleus, $n$ is a natural number that plays the role
-of the principle quantum number, and $x$, $y$, and $z$ are cartesian
+of the principal quantum number, and $x$, $y$, and $z$ are Cartesian
 coordinates. The angular component $x^a y^b z^c$ describes the shape of the
 function, such that if a+b+c=0 $\phi_i^{STO}$ is of $s$-type; if $a+b+c=1$,
 $\phi_i^{STO}$ is of $p$-type, and so forth. Although STOs approximate the long
@@ -315,7 +315,7 @@ orbitals} (GTOs), which can generally be represented as
 \end{equation}
 
 \noindent where $N$ is a normalization constant, $\alpha$ is the orbital
-exponent coefficient, $x$, $y$, and $z$ are cartesian coordinates, $r$ is the
+exponent coefficient, $x$, $y$, and $z$ are Cartesian coordinates, $r$ is the
 radius ($r^2=x^2+y^2+z^2$), and the angular portion is described the same as in
 an STO.\@ It takes a linear combination of several GTOs to represent the same
 function as an STO. These linear combinations of GTOS are known as
@@ -377,7 +377,7 @@ quantum chemistry.
 
 Perhaps the most utilized basis sets in chemistry are those arising from the
 group of Pople.\cite{Hehre1969, Ditchfield1971, Hehre1972} These basis sets were
-defined by minimizing the  to HF energy. The earliest of these basis sets are
+defined by minimizing the HF energy. The earliest of these basis sets are
 the minimal STO-$N$G basis sets, where $N$ describes the number of GTOs that go
 into each contraction.
 
@@ -474,14 +474,14 @@ the difference between the exact energy and the HF energy:
 from the Schr{\"o}dinger equation, $E_{exact}$, and a reference ground state
 energy $E_0$, usually the HF energy.
 
-We shall briefly describe two important methods for accounting for electron
+We shall briefly consider two important methods for accounting for electron
 correlation and obtaining $E_{corr}$: M{\o}ller-Plesset perturbation theory,
 and the related configuration interaction and coupled cluster theories.
 
 \subsubsection{M{\o}ller-Plesset perturbation theory}
 
 M{\o}ller-Plesset (MP) perturbation theory is a special case of
-Rayleigh-Sch{\"o}dinger perturbation theory in which the Hamiltonian for a
+Rayleigh-Schr{\"o}dinger perturbation theory in which the Hamiltonian for a
 system can be approximated by
 
 \begin{equation}
@@ -725,7 +725,7 @@ correction to electron-electron repulsion. All the functionals, except the XC
 functionals have an exact form. It is therefore the XC functionals in which
 there is currently empiricism.
 
-The ultimate goal in describing XC functionals is to find the ``correct'' XF
+The ultimate goal in describing XC functionals is to find the ``correct'' XC
 functional that gives the exact energy of a system from the electron denisty.
 At this point, this must be done using approximations, for which there are
 several degrees of complexity. These approaches follow a hierarchical scheme,
@@ -888,12 +888,12 @@ $E_{disp}$ to the DFT energy $E_{DFT}$, as
 
 \noindent It is common to employ the empirical D3 pair-wise correction of
 Grimme,\cite{Grimme2010} paired with of the Becke-Johnson damping
-functions,\cite{Johnson2006} denoted as D3(BJ). This correction works by
+function,\cite{Johnson2006} denoted as D3(BJ). This correction works by
 calculating the dispersion interactions between all pairs of atoms $A$ and $B$
 separated by distance $R_{AB}$, with the following equation:
 
 \begin{equation}
-  E_{disp} - \sum_{A>B} \frac{C_6^{AB}}{R_{AB}^6} f_6(R_{AB}) + s_8
+  E_{disp} = \sum_{A>B} \frac{C_6^{AB}}{R_{AB}^6} f_6(R_{AB}) + s_8
   \frac{C_8^{AB}}{R_{AB}^8} f_8(R_{AB})
 \end{equation}
 
@@ -943,7 +943,7 @@ All QM methods depend parametrically on the geometry of a molecular system. That
 is the electronic energy of a system depends on the positions of the nuclei.
 While the wave functions can describe any arbitrary geometry, we are typically
 only interested in certain geometries of a molecule. These geometries of
-interest are normally stationary states along a the PES of a system, that is,
+interest are normally stationary states along the PES of a system, that is,
 points where the gradient of energy with respect to nuclear coordinates is zero.
 Therefore, we perform \emph{geometry optimization} calculations to determine
 these points.
@@ -1124,7 +1124,7 @@ is
 \end{equation}
 
 The rotational partition function depends on the geometry of a system. For a
-single molecule $q_{rot}$=1. For a linear molecule, the rotational partition
+single atom $q_{rot}$=1. For a linear molecule, the rotational partition
 function is
 
 \begin{equation}
@@ -1235,8 +1235,8 @@ and geometry optimization calculations.
 
 \subsection{Rate constants and transition state theory}
 
-In the discussion of chemical kinetics, the rate ($r$) of a bimolecular
-reaction
+In the discussion of chemical kinetics, the rate ($r$) of a reaction involving
+two species
 
 \begin{equation}
   \ch{$a$ A + $b$ B <=> $c$ C + $d$ D}
@@ -1247,7 +1247,7 @@ reaction
 described as
 
 \begin{equation}
-  r = \frac{d \text{C}}{dt} =\frac{d \text{D}}{dt} = k[A]^a [B]^b
+  r = \frac{1}{c}\frac{d \text{C}}{dt} = \frac{1}{d}\frac{d \text{D}}{dt} = k[A]^a [B]^b
 \end{equation}
 
 \noindent where $k$ is the rate constant, $t$ is time, $A, B, C$, and $D$ are
@@ -1283,7 +1283,7 @@ developed primarily by Eyring.\cite{McQuarrie1997,Steinfeld1998} In TST we
 focus on the TS complex, which is defined as a transient species that exists
 at the top of the energy barrier of a reaction. If we consider the same
 reaction in Equation~\ref{eq:a}, and set all the coefficients to 1, then TST
-states the reaction proceeds in two steps, the first of that includes a
+states the reaction proceeds in two steps, the first of which includes a
 quasi-equilibrium between the reactants and TS complex
 
 \begin{equation}
@@ -1294,25 +1294,25 @@ quasi-equilibrium between the reactants and TS complex
 \noindent with an equilibrium constant ($K_c^{\ddagger}$) expression
 
 \begin{equation}
-  K_c^{\ddagger} = \frac{[\ch{AB}^\ddagger]/c^0}{[\ch{A}]/c^0[\ch{B}]/c^0}
+  K_c^{\ddagger} = \frac{[\ch{AB}^\ddagger]/c^\circ}{[\ch{A}]/c^\circ[\ch{B}]/c^\circ}
 \label{eq:K}
 \end{equation}
 
-\noindent where $c^0$ is the standard-state concentration (normally taken to be
+\noindent where $c^\circ$ is the standard-state concentration (normally taken to be
 1 M).
 
 \begin{figure}[htb]
     \centering
     \includegraphics[width=0.6\textwidth]{figures/TST-PES.png}
-    \caption[A reaction coordinate diagram for a generic reaction.]{A reaction coordinate diagram for the reaction of Equation~\ref{eq:tst}. The TS complex is defined to exist in the small region $\delta$ above the reaction barrier.}
+    \caption[A reaction coordinate diagram for a generic reaction.]{A reaction coordinate diagram for the reaction of Equation~\ref{eq:tst}. The TS complex is defined to exist in the small region $\delta$ on top the reaction barrier.}
 \label{fig:tst-pes}
 \end{figure}
 
 In TST, we define the TS complex to exist within a small region of width
-$\delta$ above the reaction barrier (\ref{fig:tst-pes}). From the second step of
-the reaction in Equation~\ref{eq:tst}, we can define a reaction rate dependent
-on the concentration $[\ch{AB}^\ddagger]$ and $v_c$, a factor that defines the
-frequency with which the complexes proceed over the barrier:
+$\delta$ on top of the reaction barrier (\ref{fig:tst-pes}). From the second
+step of the reaction in Equation~\ref{eq:tst}, we can define a reaction rate
+dependent on the concentration $[\ch{AB}^\ddagger]$ and $v_c$, a factor that
+defines the frequency with which the complexes proceed over the barrier:
 
 \begin{equation}
   r = v_c [\ch{AB}^\ddagger]
@@ -1329,13 +1329,13 @@ expressions for the reaction rate, which allows us to derive the following
 
 
 \begin{equation}
-  r = v_c\frac{[\ch{A}][\ch{B}]K_c^\ddagger}{c^0}
+  r = v_c\frac{[\ch{A}][\ch{B}]K_c^\ddagger}{c^\circ}
 \end{equation}
 
 \noindent or
 
 \begin{equation}
-  k = \frac{v_c K_c^\ddagger}{c^0}
+  k = \frac{v_c K_c^\ddagger}{c^\circ}
 \label{eq:b}
 \end{equation}
 
@@ -1344,8 +1344,8 @@ Equation~\ref{eq:b}. We can rewrite the equilibrium expression $K_c^\ddagger$ in
 terms of partition functions of each molecular species:
 
 \begin{equation}
-    K_c^{\ddagger} = \frac{[\ch{AB}^\ddagger]/c^0}{[\ch{A}]/c^0[\ch{B}]/c^0}
-    = \frac{(q^\ddagger/V)c^0}{(q_A/V)(q_b/V)}
+    K_c^{\ddagger} = \frac{[\ch{AB}^\ddagger]/c^\circ}{[\ch{A}]/c^\circ[\ch{B}]/c^\circ}
+    = \frac{(q^\ddagger/V)c^\circ}{(q_A/V)(q_b/V)}
 \label{eq:c}
 \end{equation}
 
@@ -1366,14 +1366,14 @@ degrees of freedom of the TS complex. We can use this and rewrite
 Equations~\ref{eq:c} and~\ref{eq:b} as
 
 \begin{equation}
-  K_c^{\ddagger} =  \frac{\sqrt{2\pi m^\ddagger k_B T}}{h}\delta\frac{(q_{int}^\ddagger/V)c^0}{(q_A/V)(q_b/V)}
+  K_c^{\ddagger} =  \frac{\sqrt{2\pi m^\ddagger k_B T}}{h}\delta\frac{(q_{int}^\ddagger/V)c^\circ}{(q_A/V)(q_b/V)}
 \end{equation}
 
 \noindent and
 
 \begin{equation}
  k = v_c \frac{\sqrt{2\pi m^\ddagger
-     k_B T}}{hc^0}\delta\frac{(q_{int}^\ddagger/V)c^0}{(q_A/V)(q_b/V)}
+     k_B T}}{hc^\circ}\delta\frac{(q_{int}^\ddagger/V)c^\circ}{(q_A/V)(q_b/V)}
 \label{eq:d}
 \end{equation}
 
@@ -1395,22 +1395,22 @@ $v_c\delta$ yields
 
 \begin{equation}
   k =
-  \frac{\sqrt{k_B T}}{hc^0}\frac{(q_{int}^\ddagger/V)c^0}{(q_A/V)(q_b/V)} = \frac{k_B T}{hc^0}K_c^\ddagger
+  \frac{\sqrt{k_B T}}{hc^\circ}\frac{(q_{int}^\ddagger/V)c^\circ}{(q_A/V)(q_b/V)} = \frac{k_B T}{hc^\circ}K_c^\ddagger
 \label{eq:f}
 \end{equation}
 
 We now define the standard Gibbs free energy of activation ($\Delta ^\ddagger
-G^0$) to be the change in Gibbs free energy in going from reactants to TS.\@
+G^\circ$) to be the change in Gibbs free energy in going from reactants to TS.\@
 The thermodynamical expression is
 
 \begin{equation}
-  \Delta ^\ddagger G^0 = -RT \ln K_c^\ddagger
+  \Delta ^\ddagger G^\circ = -RT \ln K_c^\ddagger
 \end{equation}
 
 \noindent which can be substituted into Equation~\ref{eq:f}
 
 \begin{equation}
-  k = \frac{k_B T}{hc^0} e^{-\Delta^\ddagger G^0/RT}
+  k = \frac{k_B T}{hc^\circ} e^{-\Delta^\ddagger G^\circ/RT}
 \label{eq:g}
 \end{equation}
 
@@ -1418,19 +1418,19 @@ The standard Gibbs free energy of activation can be expressed in terms of
 enthalpy and entropy as
 
 \begin{equation}
-  \Delta^\ddagger G^0 = \Delta^\ddagger H^0 - T \Delta^\ddagger S^0
+  \Delta^\ddagger G^\circ = \Delta^\ddagger H^\circ - T \Delta^\ddagger S^\circ
 \end{equation}
 
 \noindent which upon substitution gives the equation
 
 \begin{equation}
-  k = \frac{k_B T}{hc^0} e^{-\Delta^\ddagger S^0/R} e^{-\Delta^\ddagger H^0/RT}
+  k = \frac{k_B T}{hc^\circ} e^{\Delta^\ddagger S^\circ/R} e^{-\Delta^\ddagger H^\circ/RT}
 \label{eq:M}
 \end{equation}
 
 At this point, we can draw a direct comparison to the Arrhenius equation
 (Equation~\ref{eq:arrhenius}) by expressing $E_a$ in terms of $\Delta^\ddagger
-H^0$ and $A$ in terms of $\Delta^\ddagger S^0$.  We must differentiate the
+H^\circ$ and $A$ in terms of $\Delta^\ddagger S^\circ$.  We must differentiate the
 natural logarithm of Equation~\ref{eq:f}, as well as
 Equation~\ref{eq:arrhenius} (assuming that $A$ is independent of temperature):
 
@@ -1444,20 +1444,20 @@ Equation~\ref{eq:arrhenius} (assuming that $A$ is independent of temperature):
   \label{eq:i}
 \end{equation}
 
-\noindent Next, we use the fact that $d \ln K_c / dT = \Delta U^0/RT^2$ for an
+\noindent Next, we use the fact that $d \ln K_c / dT = \Delta U^\circ/RT^2$ for an
 ideal gas, then Equation \ref{eq:h}  becomes
 
 \begin{equation}
-  \frac{d \ln k}{dT} = \frac{1}{T} + \frac{\Delta ^\ddagger U^0}{RT^2}
+  \frac{d \ln k}{dT} = \frac{1}{T} + \frac{\Delta ^\ddagger U^\circ}{RT^2}
   \label{eq:j}
 \end{equation}
 
-\noindent Additionally, $\Delta ^\ddagger H^0 = \Delta ^\ddagger U^0 + RT
+\noindent Additionally, $\Delta ^\ddagger H^\circ = \Delta ^\ddagger U^\circ + RT
 \Delta^\ddagger n$ ($\Delta^\ddagger n = 1$), so Equation~\ref{eq:j} can be
 rewritten as
 
 \begin{equation}
-  \frac{d \ln k}{dT} = \frac{\Delta ^\ddagger H^0 + 2RT}{RT^2}
+  \frac{d \ln k}{dT} = \frac{\Delta ^\ddagger H^\circ + 2RT}{RT^2}
   \label{eq:k}
 \end{equation}
 
@@ -1465,21 +1465,21 @@ rewritten as
 get
 
 \begin{equation}
-  E_a = \Delta^\ddagger H^0 + 2RT
+  E_a = \Delta^\ddagger H^\circ + 2RT
   \label{eq:Ea-vs-dH}
 \end{equation}
 
 \noindent which then converts Equation~\ref{eq:M} into the form
 
 \begin{equation}
-  k = \frac{e^2k_B T}{hc^0}e^{\Delta^\ddagger S^0/R}e^{-E_a/RT}
+  k = \frac{e^2k_B T}{hc^\circ}e^{\Delta^\ddagger S^\circ/R}e^{-E_a/RT}
 \end{equation}
 
 Therefore, a natural statistical thermodynamical picture of the Arrhenius
 equation arises from TST, and the Arrhenius pre-factor $A$ can be expressed as
 
 \begin{equation}
-  A = \frac{e^2k_B T}{hc^0}e^{\Delta^\ddagger S^0/R}
+  A = \frac{e^2k_B T}{hc^\circ}e^{\Delta^\ddagger S^\circ/R}
 \label{eq:afactor}
 \end{equation}
 
@@ -1574,7 +1574,7 @@ applied, where applicable as
 
 \begin{equation}
   k_{calc} = \kappa k_{TST} = \kappa
-\frac{k_B T}{hc^0}e^{-\Delta^\ddagger G^0}
+\frac{k_B T}{hc^\circ}e^{-\Delta^\ddagger G^\circ}
 \end{equation}
 
 \end{doublespace}
