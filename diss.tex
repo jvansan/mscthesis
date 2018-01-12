@@ -36,6 +36,13 @@
 \newcommand{\hham}{\mathscr{H}}
 \newcommand{\E}[1]{$\times 10^{#1}$}
 
+\usepackage{calc}
+
+\newlength{\remaining}
+\newcommand{\titleline}[1]{%
+\setlength{\remaining}{\textwidth-\widthof{\textsc{#1}}}
+\noindent\underline{\textsc{#1}\hspace*{\remaining}}\par}
+
 % ===================================================================
 
 % Uncomment the next line if there are more than one appendix
@@ -66,47 +73,47 @@ Graduate Studies for acceptance, a thesis entitled: {\sc \@title } submitted by
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % UPDATE THE FOLLOWING AS PER YOUR THESIS COMMITTEE
 
-\noindent\underline{\hspace{30em}} \\
-Supervisor, Professor (please print name and faculty/school above the line)
+\noindent\titleline{Dr. Gino DiLabio, Irving K. Barber School of Arts and Sciences} \\
+\noindent Supervisor, Professor (please print name and faculty/school above the line)
 
 \vspace{\linespace}
 
-\noindent\underline{\hspace{30em}} \\
-Supervisory Committee Member, Professor (please print name and faculty/school above the line)
+\noindent\titleline{Dr. W. Stephen McNeil, Irving K. Barber School of Arts and Sciences} \\
+\noindent Supervisory Committee Member, Professor (please print name and faculty/school above the line)
 
 \vspace{\linespace}
 
-\noindent\underline{\hspace{30em}} \\
-Supervisory Committee Member, Professor (please print name and faculty/school above the line)
+\noindent\titleline{Dr. Frederic Menard, Irving K. Barber School of Arts and Sciences} \\
+\noindent Supervisory Committee Member, Professor (please print name and faculty/school above the line)
 
 \vspace{\linespace}
 
-\noindent\underline{\hspace{30em}} \\
-University Examiner, Professor (please print name and faculty/school above the line)
+\noindent\titleline{Dr. Michael Deyholos, Irving K. Barber School of Arts and Sciences} \\
+\noindent University Examiner, Professor (please print name and faculty/school above the line)
 
 \vspace{\linespace}
 
-\noindent\underline{\hspace{30em}} \\
-External Examiner, Professor (please print name and faculty/school above the line)
+\noindent\titleline{\hspace{30em}} \\
+\noindent External Examiner, Professor (please print name and faculty/school above the line)
 
 \vspace{\linespace}
 
-\noindent\underline{\hspace{30em}} \\
-(Date Submitted to Grad Studies)
+\noindent\titleline{December 22, 2017} \\
+\noindent(Date Submitted to Grad Studies)
 
 \vspace{\linespace}
 
-Additional Committee Members include:
+\noindent Additional Committee Members include:
 
 \vspace{\linespace}
 
-\noindent\underline{\hspace{30em}} \\
-(please print name and faculty/school above the line)
+\noindent\titleline{\hspace{30em}} \\
+\noindent (please print name and faculty/school above the line)
 
 \vspace{\linespace}
 
-\noindent\underline{\hspace{30em}} \\
-(please print name and faculty/school above the line)
+\noindent\titleline{\hspace{30em}} \\
+\noindent (please print name and faculty/school above the line)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END COMMITTEE PAGE
 \normalsize
