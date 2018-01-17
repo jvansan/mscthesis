@@ -14,8 +14,8 @@
 \title{Hydrogen Atom Transfer Reactions and the Effects of Non-Redox Active Metal Cations}
 %\subtitle{With a Subtitle}
 \author{Jeffrey A. van Santen} % Name as on Diploma
-\copyrightyear{2017}
-\submitdate{December 2017} % date of approved thesis (Month Year)
+\copyrightyear{2018}
+\submitdate{January 2018} % date of approved thesis (Month Year)
 \program{Chemistry}%or Mathematics, or Interdisciplinary Studies
 \previousdegree{B.Sc. Hons. Chemistry, The University of British Columbia, 2015}
 
@@ -46,7 +46,8 @@
 % ===================================================================
 
 % Uncomment the next line if there are more than one appendix
-% \renewcommand*\appendixname{Appendices}
+\renewcommand*\appendixtocname{Appendices}
+\renewcommand*\appendixpagename{Appendices}
 
 \begin{document}
 
@@ -93,9 +94,6 @@ Graduate Studies for acceptance, a thesis entitled: {\sc \@title } submitted by
 
 \vspace{\linespace}
 
-\noindent\titleline{\hspace{30em}} \\
-\noindent External Examiner, Professor (please print name and faculty/school above the line)
-
 \vspace{\linespace}
 
 \noindent\titleline{December 22, 2017} \\
@@ -103,17 +101,6 @@ Graduate Studies for acceptance, a thesis entitled: {\sc \@title } submitted by
 
 \vspace{\linespace}
 
-\noindent Additional Committee Members include:
-
-\vspace{\linespace}
-
-\noindent\titleline{\hspace{30em}} \\
-\noindent (please print name and faculty/school above the line)
-
-\vspace{\linespace}
-
-\noindent\titleline{\hspace{30em}} \\
-\noindent (please print name and faculty/school above the line)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END COMMITTEE PAGE
 \normalsize
@@ -129,8 +116,8 @@ Graduate Studies for acceptance, a thesis entitled: {\sc \@title } submitted by
 %%% TABLES
 \newpage
 \phantomsection \label{tableofcontent}%set anchor at right location
-\tableofcontents                % Mandatory: generate toc
 \addcontentsline{toc}{chapter}{\contentsname}
+\tableofcontents                % Mandatory: generate toc
 \newpage
 \phantomsection \label{listoftab}%set anchor at right location
 \addcontentsline{toc}{chapter}{\listtablename}
@@ -196,10 +183,11 @@ Becke1997, Chai2008a, Chai2008, Heyd2004, Heyd2005, Kabsch1976}
 
 % \part{Appendix}
 
-\appendix
+\appendices
 \addappheadtotoc %uses the current page number when it makes the entry in the ToC
 \appendixpage
 
+% \protect\renewcommand*\chaptername{Appendix}
 \addtocontents{toc}{
 \setlength{\cftbeforechapskip}{\cftbeforesecskip}
 \setlength{\cftchapindent}{\cftsecindent}
